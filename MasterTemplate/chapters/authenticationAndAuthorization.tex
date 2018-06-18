@@ -1,0 +1,57 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Authentication and Authorization}\label{chap:authenticationandauthorization}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapterstart
+
+“Cloud-based services, the social Web, and rapidly expanding mobile platforms will depend on identity management to provide a seamless user experience.”   \citet{Corre:2017:WHI}.
+
+Modern Devices are changing our every day life. They change the way how we access information, interact with each other and share content. 
+With this change of user behavior also the way we think of authentication and authorization methods has to adjust. Users are find themselves struggling using multiple devices, accounts and services. The users burden of this site-by-site account management is putting security at risk. The goal of new authentication and authorization solutions is to help the user managing his accounts by providing single-sign-on, based on an exchange of identity-related assertion across security domains in a scalable way \citet{Corre:2017:WHI}.  
+
+\section{Authentication}
+
+“Digital identity is the unique representation of a subject engaged in an online transaction. The process used to verify a subject’s association with their real-world identity is called identity proofing” \citet{NIST:2017:DIG}
+
+A digital identity as explained above is the result of what we call the authentication process. It is a way of identifying the user as whom he claims to be. A very typical authentication process is performed by asking the user for its username and password. If the user provides a correct user name and password, an application assumes the user is indeed the owner of the account he wants to log on \citet{Boyed:2012:GSOA}. 
+
+The evidence provided by the user in the authentication process is called credentials. Most of the time as mentioned above credentials are provided in the form of username and password. However credentials also may take other forms like PIN’s, key cards, eye scanners and so on \citet{Todorov:2007:MUI}. 
+
+Credentials, which prove the identity of an entity and are used as authenticators in authentication systems, are called factors. \citet{NIST:2017:DIG} categorize following types of factors:
+
+\begin{itemize}  
+\item Something the user knows - Cognitive information the user has to remember. Examples include passwords, PIN, answers to secret questions.
+\item What the user has - something the user owns. Examples include a security token, driving license, one-time password (OTP). 
+What the user is - biometric information of the user. Examples include fingerprint, voice, and face.  
+\item What the user is - biometric information of the user. Examples include fingerprint, voice, and face. 
+\end{itemize}
+
+ Other types of information which are not considere athentication factors but  can be used to enrich the authentication proceess according to \citet{Dasgupta:2017:AUA} are:
+ 
+ \begin{itemize}
+ 	\item Where the user is - the location was the user can be used as a fourth factor of authentication of a user. Examples include GPS, IP addresses.
+ 	\item When the user logs on - Time can also be extracted as a separate factor. Verification of employee’s identification in different office hours can prevent many kinds of grave data breaches. The time factor can easily prevent online banking fraud events to a great extent. 
+ \end{itemize}
+
+
+
+
+To secure a solution properly it should at least use two factors of the three listed above.To make use of more then one factor of a pool of potential credentials to verify the identity of a user is referred to as Multi-factor Authentication (MFA). The goal of multi-factor authentication is it to provide a layered defense and make it harder for unauthorized individuals to gain access. If one of the factors breaks, the service can still rely on the non-compromised authentication factors \citet{Dasgupta:2017:AUA}. 
+
+When designing an authentication process with using multiple factors the designers of the process should be very aware of the type of application and the information that has to be secured. For example a solution for an international bank should have different standards then an app for a making an grocery list. On the one hand, difficult and complex authentication processes for trivial applications might scare away users. On the other hand simple methods for applications protecting sensitive data might drive users away as well \citet{NIST:2017:DIG} . 
+
+The factors are an important part of the authentication process which result should be an authenticated user. \citet{Todorov:2007:MUI} identifies three typical components that are part of the authentication:
+
+ \begin{itemize}
+ \item The Supplicant, which is the party that provides the evidence to prove the identity of a user or client. The result of the authentication process should be the authenticated user or client.  
+ \item The Authenticator, also called server, is responsible for ascertaining the user identity. Once the identity is proved, the authenticator can authorize or audit the user access to resources. 
+ \item Security authority database, which is storage or mechanism to check the user's credentials. The storage can be represented by as much as a flat file, a server on the network providing centralized user authentication or a distributed authentication server. 
+\end{itemize}
+
+It is vital that all the components of a user authentication system can communicate independently of each other. Whether or not all communication channels are used depends on the authentication mechanism and the model of trust that it implements. For example, the Kerberos authentication protocol does not feature direct communication between the authenticator and security server \cite{Todorov:2007:MUI}. 
+
+
+
+\section{Authorization}
+
+\chapterend
