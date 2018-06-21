@@ -433,6 +433,37 @@
       \field{title}{Digital Identity Guidelines}
       \field{year}{2017}
     \endentry
+    \entry{JerichoSystems:IS}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=ff24a4ed647df7d25ddd9a2566d85d14}{%
+           family={JerichoSystems},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff24a4ed647df7d25ddd9a2566d85d14}
+      \strng{fullhash}{ff24a4ed647df7d25ddd9a2566d85d14}
+      \strng{bibnamehash}{ff24a4ed647df7d25ddd9a2566d85d14}
+      \strng{authorbibnamehash}{ff24a4ed647df7d25ddd9a2566d85d14}
+      \strng{authornamehash}{ff24a4ed647df7d25ddd9a2566d85d14}
+      \strng{authorfullhash}{ff24a4ed647df7d25ddd9a2566d85d14}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Identity Silo}
+      \field{urlmonth}{6}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.jerichosystems.com/technology/glossaryterms/identity_silo.html
+      \endverb
+      \verb{url}
+      \verb https://www.jerichosystems.com/technology/glossaryterms/identity_silo.html
+      \endverb
+    \endentry
     \entry{Li:2008:TRP:2043628.2043631}{article}{}
       \name{author}{4}{}{%
         {{uniquename=0,uniquepart=base,hash=5ea5c8fa2a24693c3fb36a24e333ad75}{%

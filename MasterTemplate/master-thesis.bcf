@@ -2030,11 +2030,23 @@
     <bcf:citekey order="52">Dasgupta:2017:AUA</bcf:citekey>
     <bcf:citekey order="53">Dasgupta:2017:AUA</bcf:citekey>
     <bcf:citekey order="54">Dasgupta:2017:AUA</bcf:citekey>
-    <bcf:citekey order="55">NIST:2017:DIG</bcf:citekey>
-    <bcf:citekey order="56">NIST:2017:DIG</bcf:citekey>
+    <bcf:citekey order="55">Dasgupta:2017:AUA</bcf:citekey>
+    <bcf:citekey order="56">Tomkins:2009:DPF</bcf:citekey>
     <bcf:citekey order="57">Todorov:2007:MUI</bcf:citekey>
-    <bcf:citekey order="58">Todorov:2007:MUI</bcf:citekey>
-    <bcf:citekey order="59">Todorov:2007:MUI</bcf:citekey>
+    <bcf:citekey order="58">Dasgupta:2017:AUA</bcf:citekey>
+    <bcf:citekey order="59">NIST:2017:DIG</bcf:citekey>
+    <bcf:citekey order="60">Todorov:2007:MUI</bcf:citekey>
+    <bcf:citekey order="61">Todorov:2007:MUI</bcf:citekey>
+    <bcf:citekey order="62">JerichoSystems:IS</bcf:citekey>
+    <bcf:citekey order="63">Boyed:2012:GSOA</bcf:citekey>
+    <bcf:citekey order="64">NIST:2017:DIG</bcf:citekey>
+    <bcf:citekey order="65">NIST:2017:DIG</bcf:citekey>
+    <bcf:citekey order="66">Todorov:2007:MUI</bcf:citekey>
+    <bcf:citekey order="67">Boyed:2012:GSOA</bcf:citekey>
+    <bcf:citekey order="68">Todorov:2007:MUI</bcf:citekey>
+    <bcf:citekey order="69">Boyed:2012:GSOA</bcf:citekey>
+    <bcf:citekey order="70">Prochazka:2010:UCA</bcf:citekey>
+    <bcf:citekey order="71">Lynch:2017:IIG</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
