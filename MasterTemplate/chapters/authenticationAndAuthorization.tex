@@ -9,6 +9,48 @@
 Modern Devices are changing our every day life. They change the way how we access information, interact with each other and share content. 
 With this change of user behavior also the way we think of authentication and authorization methods has to adjust. Users are find themselves struggling using multiple devices, accounts and services. The users burden of this site-by-site account management is putting security at risk. The goal of new authentication and authorization solutions is to help the user managing his accounts by providing single-sign-on, based on an exchange of identity-related assertion across security domains in a scalable way (\citet{Corre:2017:WHI}).  
 
+\section{Security Considerations}
+
+Before getting further into the topic of authentication and authorization, this section will shed light on some basic security Principles concerning authentication and authorization that help to understand the need for authentication and authorization mechanisms. 
+
+
+Some basic design principles formulated by Saltzer and Schroeder in 1975 where paraphrased by \cite{Neumann:2018:PTC} and are still relevant today. The principles give a basic overview of what should be the focus when designing a secure system. The ten basic security principles are:
+
+\begin{itemize}
+	\item The economy of mechanism: Keep the design as simple as possible.
+	\item Fail-safe defaults: Access should be explicit permitted rather then explicit denied. The default should be that all access is denied, this is for example true for Access Control Lists (ACLs). 
+	\item Complete mediation: Every access to every object has to be checkt for authority without exceptions. 
+	\item Open design: The design of an application should not be secret, it can not be assumed that design secrecy will enhance security. This if for example true in cryptography, the design of cryptographic algorithms is available for the public, just the keys remain secret. 
+	\item Separation of privileges: Two keys should be used to protect resources if feasible and privileges should be separated.  
+	\item Least privilege: Every application and user should be provided with lest privileges they need to complete their job. The existence of overly powerful mechanisms such as superuser is inherently dangerous. 
+	\item Least common mechanism: Minimize the amount of mechanism common to more than one user and depended on by all users.   
+	\item Psychological acceptability: Keep it simple. The design of the interface for the user should be easy to understand so that the user routinely and automatically applies the protection mechanism correctly. 
+	\item Work factor: Make cost-to-protect commensurate with threats and expected risks. It should not be possible to circumvent the mechanismn with the resources of the attacker.   
+	\item Recording of compromises: Provide nonbypassable tamperproof trails of evidence.
+\end{itemize}
+	
+Besides formulating these very important principles, \cite{Saltzer:PICS} also discus the terms "privacy" and "security". Those therms get frequently used in from authors writing about information storing systems, like in this paper, but are often used very differently. \cite{Saltzer:PICS} for example define "privacy" as the ability of an individual to specify whether, when and to whom sensible information is released. And the describe security as a technique that can control who is able to modify resources on a computer. 
+
+A more recent description of the terms security and privacy comes form \cite{Brooks:2017:IPE}. \cite{Brooks:2017:IPE} state the importance of the distinction between privacy and security. This distinction is between privacy and security are essential because there are security issues unrelated to privacy, just as there are privacy issues that are unrelated to security. While security concerns arise from illegal system behavior, privacy concerns arise from byproducts of authorized personally identifiable information (PII) processing. Even byproducts that are considered to protect PII can raise security concerns, for example it can be questioned to which degree a tool for persistent activity monitoring should reveal information about individuals that are related to security purposes. However, security and privacy have in commont that they want to protect personal information and resources or PII.
+
+These security issues and privacy issues of course raise certain concerns for users as well as for companies offering authentication services. When it comes to protecting personal resources, there are three primary concerns. According to \cite{Todorov:2007:MUI} those three concerns are:  
+
+\begin{itemize}
+	\item Confidentiality: The term confidentiality means that personal information will be protected from 
+	disclosure to unauthorized individuals and organizations.
+	\item Integrity: The integrity of information is protecting information from accidental or intentional
+	tampering. Modification of confidential data may affect the data validity. 
+	\item Availability: Availability is the need to be able to access information at the time a user requests it. 
+	This includes the availability of services that expose information. 
+\end{itemize}
+
+In an ideal world companies offering those services will do everything to use the best technologies regarding countermeasures to protect confidentiality, integrity, and availability. Establishing countermeasures, however, can be expensive leading to a tradeoff between costs and level of production of information. A typical approach to establishing information security management is to analyze risks first and then form counter measurements (\cite{Todorov:2007:MUI}). 
+
+
+	
+
+  
+
 \section{Authentication}
 
 “Digital identity is the unique representation of a subject engaged in an online transaction. The process used to verify a subject’s association with their real-world identity is called identity proofing” (\citet{NIST:2017:DIG})
@@ -99,15 +141,20 @@ The aim of Single Sign-On(SSO) is to design an authentication system that serves
 
 According to \cite{Lynch:2017:IIG} two SSO solutions gained broad acceptance. On the one hand, SAML-based federations using SOAP, focusing on large enterprises also including governments and educational networks. On the other hand the Web Authorization Protocol was introduced which is a combination of the Protocols OpenID and OAuth. SAML federations have been customized to address the security concerns of those institutions that typically have a large user base, significantly protected resources, complex authorization patterns and data and services spread across multiple domains. However in a Web 2.0 world, the SAML solutions where seen as too rigid and too severe to mantain; a lightweight SSO was needed. This was when the Web Authorization Protocol comes into play. The approach of this protocol is taking advantage of the lightweight RESTful APIs which are reusing the existing HTTP architecture features and the JavaScript Object Notation(JSON).
 
-One of the very well-known solutions based on Security Assertion Markup Language version 2 (SAML2) is Shibboleth. Shibboleth is one of the leading middlewares for building identity federations in a higher education sphere. To offer authentication, authorization and attribute assertion between entities. Entities defined by Shibboleth are:
+One of the very well-known solutions based on Security Assertion Markup Language version 2 (SAML2) is Shibboleth. Shibboleth is one of the leading middlewares for building identity federations in a higher education sphere. To offer authentication, authorization and attribute assertion between entities. \cite{Prochazka:2010:UCA} identifies following entities defined by Shibboleth are:
 
 \begin{itemize}
-	\item Identity Provider
-	\item Service Provider
+	\item Identity Provider (IdP)
+	\item Service Provider (SP)
 	\item Discovery Service
 	\item Metadata Operator
 	\item Federation Operator
 \end{itemize}
+
+ The discovery service is used to find the users organization IdP. The IdP defines an attribute release policy and releases diffrent sets af the user's attributes to different SPs. Users are only able to agree or disagree with the whole set of attributes because the decision comes from the IdP. When the user tries to log on, to a service of a Service Provider, he gets redirected to a page where he can choose and IdP previously found by the Discovery Service. If an SP wants to provide its service to multiple federations it has to negotiate policy and technical detail with each federation operator. The federation operator manages the federation policies and introduces SPs and IdPs. Furthermore the federations operator has to maintain and manage the information about all entities in an federation which is contained in the Metadata. A problem with this architecture is that the SP has to keep track of changes of the technical specification of various federation operators to maintain the configuration for each federation operator. A solution would be a significant federation registration, but this is indeed not possible because of technical and administrative severity and political will. This solution is also somewhat misleading for users since they have to maintain multiple credentials, select from multiple identifiers and so on \cite{Prochazka:2010:UCA}.
+ 
+ According to \cite{Prochazka:2010:UCA} Shibboleth Shibboleth is too restrictive, a solution with a centrally managed point of IdPs and SPs is preferred. Also, users should not have to deal with redundant accounts.
+
 
 
 

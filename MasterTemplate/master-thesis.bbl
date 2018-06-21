@@ -638,6 +638,46 @@
       \field{title}{User centric authentication for web applications}
       \field{year}{2010}
     \endentry
+    \entry{Saltzer:PICS}{online}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=cfb790afdb69efea04e84b8e75b31111}{%
+           family={Saltzer},
+           familyi={S\bibinitperiod},
+           given={Jerome\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=96b2f6176645e3ad6b2f3db87c3bede3}{%
+           family={Schroeder},
+           familyi={S\bibinitperiod},
+           given={Michael\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5e33328e66d768fe8e3e5529c6d77927}
+      \strng{fullhash}{5e33328e66d768fe8e3e5529c6d77927}
+      \strng{bibnamehash}{5e33328e66d768fe8e3e5529c6d77927}
+      \strng{authorbibnamehash}{5e33328e66d768fe8e3e5529c6d77927}
+      \strng{authornamehash}{5e33328e66d768fe8e3e5529c6d77927}
+      \strng{authorfullhash}{5e33328e66d768fe8e3e5529c6d77927}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Prodection of Information in Computer Systems}
+      \field{urlmonth}{6}
+      \field{urlyear}{2018}
+      \field{year}{1975}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://www.cs.virginia.edu/~evans/cs551/saltzer/
+      \endverb
+      \verb{url}
+      \verb http://www.cs.virginia.edu/~evans/cs551/saltzer/
+      \endverb
+    \endentry
     \entry{Todorov:2007:MUI}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=3db7a4ae1b20614d37a58d79890c7927}{%
