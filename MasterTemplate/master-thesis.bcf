@@ -2016,11 +2016,26 @@
     <bcf:citekey order="38">Boyed:2012:GSOA</bcf:citekey>
     <bcf:citekey order="39">Todorov:2007:MUI</bcf:citekey>
     <bcf:citekey order="40">Boyed:2012:GSOA</bcf:citekey>
-    <bcf:citekey order="41">Prochazka:2010:UCA</bcf:citekey>
-    <bcf:citekey order="42">Lynch:2017:IIG</bcf:citekey>
-    <bcf:citekey order="43">Prochazka:2010:UCA</bcf:citekey>
-    <bcf:citekey order="44">Prochazka:2010:UCA</bcf:citekey>
-    <bcf:citekey order="45">Prochazka:2010:UCA</bcf:citekey>
+    <bcf:citekey order="41">Tkalec:2015</bcf:citekey>
+    <bcf:citekey order="42">Serilleja:2015:Scothio</bcf:citekey>
+    <bcf:citekey order="43">Serilleja:2015:Scothio</bcf:citekey>
+    <bcf:citekey order="44">Tkalec:2015</bcf:citekey>
+    <bcf:citekey order="45">Serilleja:2015:Scothio</bcf:citekey>
+    <bcf:citekey order="46">Serilleja:2015:Scothio</bcf:citekey>
+    <bcf:citekey order="47">Serilleja:2015:Scothio</bcf:citekey>
+    <bcf:citekey order="48">Serilleja:2015:Scothio</bcf:citekey>
+    <bcf:citekey order="49">Tkalec:2015</bcf:citekey>
+    <bcf:citekey order="50">JWT:IETF:Jones:2015</bcf:citekey>
+    <bcf:citekey order="51">Siriwardena:JWTJWSJWE:2016</bcf:citekey>
+    <bcf:citekey order="52">Google:2018:OAuthPlayground</bcf:citekey>
+    <bcf:citekey order="53">Google:2018:OAuthPlayground</bcf:citekey>
+    <bcf:citekey order="54">JWT:IETF:Jones:2015</bcf:citekey>
+    <bcf:citekey order="55">Siriwardena:JWTJWSJWE:2016</bcf:citekey>
+    <bcf:citekey order="56">Prochazka:2010:UCA</bcf:citekey>
+    <bcf:citekey order="57">Lynch:2017:IIG</bcf:citekey>
+    <bcf:citekey order="58">Prochazka:2010:UCA</bcf:citekey>
+    <bcf:citekey order="59">Prochazka:2010:UCA</bcf:citekey>
+    <bcf:citekey order="60">Prochazka:2010:UCA</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -240,6 +240,42 @@
       \field{title}{Digital Identity Guidelines}
       \field{year}{2017}
     \endentry
+    \entry{Google:2018:OAuthPlayground}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=2720e823db87672e3be1971d976ca746}{%
+           family={Inc.},
+           familyi={I\bibinitperiod},
+           given={Google},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2720e823db87672e3be1971d976ca746}
+      \strng{fullhash}{2720e823db87672e3be1971d976ca746}
+      \strng{bibnamehash}{2720e823db87672e3be1971d976ca746}
+      \strng{authorbibnamehash}{2720e823db87672e3be1971d976ca746}
+      \strng{authornamehash}{2720e823db87672e3be1971d976ca746}
+      \strng{authorfullhash}{2720e823db87672e3be1971d976ca746}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{subtitle}{OAuth 2.0 Playground}
+      \field{title}{Google Developers}
+      \field{urlmonth}{7}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developers.google.com/oauthplayground/
+      \endverb
+      \verb{url}
+      \verb https://developers.google.com/oauthplayground/
+      \endverb
+    \endentry
     \entry{JerichoSystems:IS}{online}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=ff24a4ed647df7d25ddd9a2566d85d14}{%
@@ -269,6 +305,55 @@
       \endverb
       \verb{url}
       \verb https://www.jerichosystems.com/technology/glossaryterms/identity_silo.html
+      \endverb
+    \endentry
+    \entry{JWT:IETF:Jones:2015}{manual}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=e8cd213a3d041f0c368fbe6f8807c6ef}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=fc7b2f652546db5bf03feb0236e6df52}{%
+           family={Bradley},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=eebb42075b60148aa7107e41262f056f}{%
+           family={Sakimura},
+           familyi={S\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Internet Engineering Task Force (IETF)}%
+      }
+      \strng{namehash}{c0aa9cd789a6d677175fcfd06f8de16b}
+      \strng{fullhash}{c0aa9cd789a6d677175fcfd06f8de16b}
+      \strng{bibnamehash}{c0aa9cd789a6d677175fcfd06f8de16b}
+      \strng{authorbibnamehash}{c0aa9cd789a6d677175fcfd06f8de16b}
+      \strng{authornamehash}{c0aa9cd789a6d677175fcfd06f8de16b}
+      \strng{authorfullhash}{c0aa9cd789a6d677175fcfd06f8de16b}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{JSON Web Token (JWT)}
+      \field{urlmonth}{7}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tools.ietf.org/html/rfc7519
+      \endverb
+      \verb{url}
+      \verb https://tools.ietf.org/html/rfc7519
       \endverb
     \endentry
     \entry{Lynch:2017:IIG}{article}{}
@@ -418,6 +503,118 @@
       \endverb
       \verb{url}
       \verb http://www.cs.virginia.edu/~evans/cs551/saltzer/
+      \endverb
+    \endentry
+    \entry{Serilleja:2015:Scothio}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=213275fabc3ea2ba50825b571943c9ff}{%
+           family={Sevilleja},
+           familyi={S\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Scotch.io}%
+      }
+      \strng{namehash}{213275fabc3ea2ba50825b571943c9ff}
+      \strng{fullhash}{213275fabc3ea2ba50825b571943c9ff}
+      \strng{bibnamehash}{213275fabc3ea2ba50825b571943c9ff}
+      \strng{authorbibnamehash}{213275fabc3ea2ba50825b571943c9ff}
+      \strng{authornamehash}{213275fabc3ea2ba50825b571943c9ff}
+      \strng{authorfullhash}{213275fabc3ea2ba50825b571943c9ff}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{21}
+      \field{month}{1}
+      \field{title}{The ins and outs of Token Based Authentication}
+      \field{urlmonth}{7}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication
+      \endverb
+      \verb{url}
+      \verb https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication
+      \endverb
+    \endentry
+    \entry{Siriwardena:JWTJWSJWE:2016}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=9ce0eaf78e13ddd2c4b1e42bf4eef728}{%
+           family={Siriwardena},
+           familyi={S\bibinitperiod},
+           given={Prabath},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9ce0eaf78e13ddd2c4b1e42bf4eef728}
+      \strng{fullhash}{9ce0eaf78e13ddd2c4b1e42bf4eef728}
+      \strng{bibnamehash}{9ce0eaf78e13ddd2c4b1e42bf4eef728}
+      \strng{authorbibnamehash}{9ce0eaf78e13ddd2c4b1e42bf4eef728}
+      \strng{authornamehash}{9ce0eaf78e13ddd2c4b1e42bf4eef728}
+      \strng{authorfullhash}{9ce0eaf78e13ddd2c4b1e42bf4eef728}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{JWT, JWS and JWE for Not So Dummies! (Part 1)}
+      \field{urlmonth}{7}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://medium.facilelogin.com/jwt-jws-and-jwe-for-not-so-dummies-b63310d201a3
+      \endverb
+      \verb{url}
+      \verb https://medium.facilelogin.com/jwt-jws-and-jwe-for-not-so-dummies-b63310d201a3
+      \endverb
+    \endentry
+    \entry{Tkalec:2015}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=b9e60978f265a30b76aa321003ff76f4}{%
+           family={Tkalec},
+           familyi={T\bibinitperiod},
+           given={Tino},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Toptal}%
+      }
+      \strng{namehash}{b9e60978f265a30b76aa321003ff76f4}
+      \strng{fullhash}{b9e60978f265a30b76aa321003ff76f4}
+      \strng{bibnamehash}{b9e60978f265a30b76aa321003ff76f4}
+      \strng{authorbibnamehash}{b9e60978f265a30b76aa321003ff76f4}
+      \strng{authornamehash}{b9e60978f265a30b76aa321003ff76f4}
+      \strng{authorfullhash}{b9e60978f265a30b76aa321003ff76f4}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{An Example in Laravel and AngularJS}
+      \field{title}{JSON Web Token Tutorial}
+      \field{urlmonth}{7}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.toptal.com/web/cookie-free-authentication-with-json-web-tokens-an-example-in-laravel-and-angularjs
+      \endverb
+      \verb{url}
+      \verb https://www.toptal.com/web/cookie-free-authentication-with-json-web-tokens-an-example-in-laravel-and-angularjs
       \endverb
     \endentry
     \entry{Todorov:2007:MUI}{book}{}

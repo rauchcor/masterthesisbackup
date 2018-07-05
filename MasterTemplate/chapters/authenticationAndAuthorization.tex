@@ -121,14 +121,109 @@ To reflect on authentication it can be said that authentication is a very import
 
 The authentication and authorization process are very closely related to each other and for users often hard to separate. After the authentication process of a user, the application has now proof that the user is who he claims to be, but not every user is the same. After  the user authenticates, the user may want to access data or services. Based on the information provided by the authentication process the application has the possibility to allow or deny the user to access information or services. In other words we have to check if the user is authorized to access data of a service. Furthermore authorization, offers granular control to distinguish between read, write or execute access to individual resources, typically access control list (ACL) are used for each operation [cf.(\cite{Todorov:2007:MUI}, \cite{Boyed:2012:GSOA})].
 
-  Systems offer a user login process or sign-in process, in order to receive the information necessary to make authorization decisions,. The process initiates the authentication process between user and the system. As a result of this process, the user receives a system or application specific structure called an access token. The access token holds information about the user which will indicate what kind of resources the user can access. For every action the user then has to provide the access token and based on the information provided within the access token is then either granted or denied access [cf. (\cite{Todorov:2007:MUI})]. 
+  Systems offer a user login process or sign-in process, in order to receive the information necessary to make authorization decisions. The login process initiates the authentication process between user and the system. As a result of this process, the user receives a system or application specific structure called an access token. The access token holds information about the user which will indicate what kind of resources the user can access. For every action the user then has to provide the access token and based on the information provided within the access token is then either granted or denied access [cf. (\cite{Todorov:2007:MUI})]. 
 
-
-Access Control lists
-
-Delegated Authorization
 Delegated authorization is granting access to another person or application to act on behalf of the user.
 \cite{Boyed:2012:GSOA}
+
+
+\section{Token-base Authentication}
+
+
+The way web developers write back-end applications has changed significantly with the rising popularity of single page and mobile applications. Backend-developers no longer spend a lot of time building markup. Instead, they build APIs for front-end applications to consume. The split up of front-end and back-end allows the back-end to focus on business logic and data management while the front-end solely focus on the representation of the content. The number one way single page and mobile web applications are authenticating users according to \cite{Tkalec:2015} is token-based authentication.
+
+\cite{Serilleja:2015:Scothio} shares the view that token-based authentication is the modern way to handle authentication. Token-based authentication should be considered because of various factors. It is optimal for mobile applications which work in a stateless way and need to adapt to the sudden change of demand in a scalable way. Furthermore, token-based authentication provides extra security and applications can pass on authenticated users to other applications. However before taking a closer look at token-based authentication, it should be taken into account how \cite{Serilleja:2015:Scothio} and \cite{Tkalec:2015} concluded that token-based authentication is the best alternative for modern web applications to authenticate their users. Therefore, \cite{Serilleja:2015:Scothio} for example examines how authentication was done in the past. One approach to authenticate users used in th past that puts token-based authentication in perspective is server-based authentication. 
+
+\paragraph{Server-Based Authentication.}
+A lot of modern-day API’s built on the Representational State Transfer(REST) programming paradigm which basis is the HTTP protocol which is stateless as well. A protocol that is stateless does not recall the actions that were taken beforehand which means for example that if we authenticate the user, in the next request we have to authenticate the user again because the application will not know the user anymore [cf. (\cite{Serilleja:2015:Scothio})]. 
+
+The aim of server-based authentication is for the application to remember the user that logged on at the application. The application has to store the information on the server, which can be done in a few different ways on the session, usually in memory on the disk. The workflow of a server-based authentication starts with the server delivering the website and the user logging in with username and password. The server saves the information from the user login info in a session. After the session is established, the session is checked on the server for every request. If the session is valid, the server returns the requested data to the server. However, since modern single-application ant mobile applications are on the rise, this method to authenticate user shown some problems, especially when it comes to scalability [cf. (\cite{Serilleja:2015:Scothio})]. 
+
+The session handling with server-based authentication is especially hard on the server’s bandwidth. Most of the time the session gets established in memory on the server when the user authenticates. This approach leads to an enormous overhead. The second problem with this approach is that the information of the user is held in memory on the server. Since more and more companies are moving servers to the cloud, this is not only a security issue but replicating servers to scale is limited. Also nowadays users want to access their data at any moment from every device. Providing the user with the possibility to access data across multiple mobile devices is vital, which means cross-origin resource sharing has to be enabled. With server-based authentication, it is possible to run into problems with the forbidden request when the user tries to access data from another domain [cf. (\cite{Serilleja:2015:Scothio})].
+
+
+\paragraph{
+	Token-based authentication with JSON Web Token
+}
+
+The most important thing about token-based authentication is that it is stateless, much like HTTP. The server does not have to hold the session of the user over an extended period on the server. Instead, the user can request resources by offering a token generated by an authentication server. The token send in the query string or Authorization header can then be validated at the resource server, and the secure resource will be returned to the user. The approach of using JSON Web Tokens gives one the ability to scale applications without considering on which domain the user logged on. Another advantage besides being scalable is that token-based authentication gives one the possibility to reuse the same token for authenticating the user. Therefore, it gets easier to build applications that share permission with other application because many separate servers, running on multiple platforms and domains can reuse the same token. The approach also gives performance advantages compared to server-side authentication because there is no need to find and deserialize the session on each request. However, since it is best practice to encrypt the token, the token still needs to be validated, and the content needs to be parsed. One way to implement token-based authentication is with the help of JSON Web Tokens. JSON Web Tokens are gaining popularity fast and are backed by huge companies like Google and Microsoft. Also the Internet Engineering Task Force defines a standard specification. OpenID and OAuth also use the JSON Web Token as a standard; therefore, the usage of the JSON Web Token will be explained in detail [cf. (\cite{Tkalec:2015})].
+
+
+JSON Web Token (JWT) is a compact structure that holds information about the authentication of a user or claims. The structure is indented for space-constrained environments such as HTTP Authorization headers. The payload of the JSON Web Token is of JSON, enabling the claims to be digitally signed or integrity protected with a Message Authentication Code (MAC) and encrypted [cf. (\cite{JWT:IETF:Jones:2015})].
+
+The standard is used to transport data between interested parties. The transferred data can be for example the identity of a user or user’s entitlements. Furthermore, with the possibility of digital signatures and encryption data can be transferred securely over an unsecured channel. The signatures also allow asserting the identity of a user if the recipient trusts JWT asserting party [cf. (\cite{Siriwardena:JWTJWSJWE:2016})].
+
+An example of a JWT Token is an id\_token. Google provides for Developers an OAuth 2.0 Playground, where developers can choose a scope and try it out against the Google API. To get an excellent example of a JWT, I selected the OAuth2 API v2 and authorized the API [cf. (\cite{Google:2018:OAuthPlayground})].
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/googleOAuthPlaygroundOAuthAPI}
+	\caption[OAuth API]{Google Developers Playground OAuth 2.0 API}
+	\label{fig:googleoauthplaygroundoauthapi}
+\end{figure}
+
+After choosing and authorizing, the API Google returns an Authorization Code. This Authorization Code is specific for a certain Authentication Flow defined by OAuth and can then be exchanged for the tokens. As a result all information for the scopes that where selected beforehand is returned. Because OAuth 2 API v2 was selected, the returned value is an id\_token. This id\_token is a nice representation of a JWT and holds the standard information that are required according to the OAuth specification  [cf. (\cite{Google:2018:OAuthPlayground})].
+
+
+\lstset{caption=JWT Token,breaklines=true, breakatwhitespace=true, basicstyle=\small\ttfamily, label=lst:jwt, tabsize=3, basewidth={0.55em}, fontadjust, language=XML}
+
+\begin{lstlisting}
+eyJhbGciOiJSUzI1NiIsImtpZCI6ImRhZDQ0NzM5NTc2NDg1ZWMzMGQyMjg4NDJlNzNh
+Y2UwYmMzNjdiYzQifQ
+.
+eyJhenAiOiI0MDc0MDg3MTgxOTIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJh
+dWQiOiI0MDc0MDg3MTgxOTIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIi
+OiIxMTIzMDE5MzgzMjI4MTAyMzk3MTIiLCJlbWFpbCI6ImNvcm5lbGlhcmF1Y2hAZ214
+LmF0IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJSdjJRQjZoZzFqdDZR
+aHRJWG5laWVnIiwiZXhwIjoxNTI5NzQ3MTk2LCJpc3MiOiJodHRwczovL2FjY291bnRz
+Lmdvb2dsZS5jb20iLCJpYXQiOjE1Mjk3NDM1OTYsIm5hbWUiOiJDb25ueSBSYXVjaCIs
+InBpY3R1cmUiOiJodHRwczovL2xoNC5nb29nbGV1c2VyY29udGVudC5jb20vLWJFbEt3
+aDVaNUJnL0FBQUFBQUFBQUFJL0FBQUFBQUFBQk5rL0p5Qm1XTW9uYUlJL3M5Ni1jL3Bo
+b3RvLmpwZyIsImdpdmVuX25hbWUiOiJDb25ueSIsImZhbWlseV9uYW1lIjoiUmF1Y2gi
+LCJsb2NhbGUiOiJkZSJ9
+.
+yibOtrXy9_-cfOWytzwGuE4zqLv-MK_2-PYIKR_xecJt9ACnMnNMSmio6i8Vu7U061wF
+OTb-qRennHbvy3lTRZLcTXttIrIUl-NdnZs2BrTSGWrw9aRzEjIHAXiY4fGRHj9VZXs_
+_J3Nn0EoBmT7Cnua2hb4U_X3hAyGpEvlSGKc5HvbyzOAtNh081Cyj1TI-AidCPTuC5vh
+68C55tLJ87PWNm8WU1rCPOPBdVTjhYlqJKCpgUJ39_p_MXL_uHBZXRrvbOyV_tZVlw47
+rjd8GFnBq1QqsYAR-6wrFbNL1pY6tPyriqZnQdi5KqYWPUwGpXbFDUfhZAmWXT8-PTsc
+gQETEp8o3RvRHtfSu8Gx4UOhukt9_VxVdHmpFw
+\end{lstlisting}
+
+
+The JWT Token in the figure above is presented as a sequence of URL-save base64url-encoded values. The different values are separated by a (‘.’) character. How many parts a JWT has is dependent on how the JWT is serialized. Either by using the JWS Compact Serialization or JWE Compact Serialization  [cf. (\cite{JWT:IETF:Jones:2015})].
+
+
+To make sense of this JWT token in the figure above it is best to look at each of the three parts of the JWT separately. When decoding the first part of the JWT we receive a JSON object. Each part can be decoded individually but if a quick representation of a token is needed developers are best advice to use \href{https://jwt.io/} {https://jwt.io/}. The website not only decodes the information of the token it also verifies the token.The figure above shows a warning that pops up if the token is not flawless. The verification of the token and the signing is done with multiple libraries that inform about certain vulnerabilities of the JSON Web Token. The first decoded part of the JWT gives us the following JSON.
+
+
+\lstset{
+	caption=JOSE Header,
+	label=lst:joseheader
+	string=[s]{"}{"},
+	stringstyle=\color{blue},
+	comment=[l]{:},
+	commentstyle=\color{black}
+}
+\begin{lstlisting}
+{
+	"alg": "HS256",
+	"typ": "JWT"
+}
+\end{lstlisting}
+
+
+This is the JOSE Header, representing the type of the token, the cryptographic operation applied and optionally additional properties of the JWT. Based on the information of the JOSE Header it can be said if the JWT is a JWS or a JWE. When speaking of JWT we speak of one of the implementations of JWT because in fact JWT does not exist itself. Concrete implementation of the JWT are JSON Web Signature (JWS) or JSON Web (Encryption). The figure below gives an optical representation of the structure [cf. (\cite{Siriwardena:JWTJWSJWE:2016})].
+
+
+\begin{figure}[h]
+	\centering
+\includegraphics[width=0.8\linewidth]{images/jwtjwsjwe}
+\caption[JWT Inheritence]{JWT Inheritance}
+\label{fig:jwtjwsjwe}
+\end{figure}
+
 
 
 \section{Single Sign-On}
