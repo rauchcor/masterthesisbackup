@@ -166,7 +166,7 @@ An example of a JWT Token is an id\_token. Google provides for Developers an OAu
 After choosing and authorizing, the API Google returns an Authorization Code. This Authorization Code is specific for a certain Authentication Flow defined by OAuth and can then be exchanged for the tokens. As a result all information for the scopes that where selected beforehand is returned. Because OAuth 2 API v2 was selected, the returned value is an id\_token. This id\_token is a nice representation of a JWT and holds the standard information that are required according to the OAuth specification  [cf. (\cite{Google:2018:OAuthPlayground})].
 
 
-\lstset{caption=JWT Token,breaklines=true, breakatwhitespace=true, basicstyle=\small\ttfamily, label=lst:jwt, tabsize=3, basewidth={0.55em}, fontadjust, language=XML}
+\lstset{caption=JWT Token,breaklines=true, breakatwhitespace=true, basicstyle=\small\ttfamily, label={lst:jwt}, tabsize=3, basewidth={0.55em}, fontadjust, language=XML}
 
 \begin{lstlisting}
 eyJhbGciOiJSUzI1NiIsImtpZCI6ImRhZDQ0NzM5NTc2NDg1ZWMzMGQyMjg4NDJlNzNh
@@ -200,7 +200,7 @@ To make sense of this JWT token in the figure above it is best to look at each o
 
 \lstset{
 	caption=JOSE Header,
-	label=lst:joseheader
+	label={lst:joseheader},
 	string=[s]{"}{"},
 	stringstyle=\color{blue},
 	comment=[l]{:},
@@ -214,17 +214,113 @@ To make sense of this JWT token in the figure above it is best to look at each o
 \end{lstlisting}
 
 
-This is the JOSE Header, representing the type of the token, the cryptographic operation applied and optionally additional properties of the JWT. Based on the information of the JOSE Header it can be said if the JWT is a JWS or a JWE. When speaking of JWT we speak of one of the implementations of JWT because in fact JWT does not exist itself. Concrete implementation of the JWT are JSON Web Signature (JWS) or JSON Web (Encryption). The figure below gives an optical representation of the structure [cf. (\cite{Siriwardena:JWTJWSJWE:2016})].
+The JSON object in \ref{lst:joseheader} is the JOSE Header, representing the type of the token, the cryptographic operations applied and optionally additional properties of the JWT. Based on the information of the JOSE Header it can explained if the JWT is a JWS or a JWE. When speaking of JWT we speak of one of the implementations of JWT because in fact JWT does not exist itself. Concrete implementation of the JWT are JSON Web Signature (JWS) or JSON Web (Encryption). The figure below gives an optical representation of the structure [cf. (\cite{Siriwardena:JWTJWSJWE:2016})].
 
 
 \begin{figure}[h]
-	\centering
-\includegraphics[width=0.8\linewidth]{images/jwtjwsjwe}
+\centering
+\includegraphics[width=0.6\linewidth]{images/jwtjwsjwe}
 \caption[JWT Inheritence]{JWT Inheritance}
 \label{fig:jwtjwsjwe}
 \end{figure}
 
+ The 'type' Header Parameter we can examine in \ref{lst:joseheader} indicates the kind of token, considering the example it is a JSON Web Token. The second parameter is the 'alg' Header Parameter and is specified in either the 'JSON Web Security (JWS)' reference documentation written by \cite{JWS:IETF:Jones:2015} or the JSON Web Encryption (JWE) reference documentation written by \cite{JWE:IETF:Jones:2015}. In this case the JWT is a JWS, since a JWE needs more specific Header Parameter. In the JWS the 'alg' Header Parameter gives information about the algorithm which was used to create the signature. Which kind of arguments are accepted by the 'alg' Header Parameter are explained in yet another specification called 'Json Web Signature and Encryption Algorithms' written by \cite{JWA:Jones:2015}. In the example \ref{lst:joseheader} the 'HS256' algorithm is used, meaning that the JWS was MACed using the HMAC SHA-256 algorithm. The definition of the 'alg' Header Parameter in the 'JSON Web Signature (JWS)' reference documentation is very similar to the definition in the 'JSON Web Encryption (JWE)' reference documentation except the cryptographic algorithmn is used to encrpt or determine the value of the CEK. \cite{JWE:IETF:Jones:2015} also defines an 'enc' Encrption Algoritmn Header, which is usde for content encryption on plaintext. The authenticated encryption performed produces a cipher text and the authentication tag. Also for the 'enc' Header Parameter the valid arguments can be found in the 'Json Web Signature and Encryption Algorithms' written by \cite{JWA:Jones:2015}. The algorithm used must be an AEAD algorithm with a specified key length. There are further Header Parameter that can be defined, here are just the most important JOSE Header Parameter for the purpose of this document listed. 
+ 
+ The second decoded part of the example in \ref{lst:jwt} JWT Token, represents the claim set. The representation of the claim set is a JSON, where each key has to be unique. If the keys are duplicated one can either end up with a JSON parsing error or the last one of the duplicated keys is returned. 
+ 
+ \lstset{
+ 	caption=Claim Set,
+ 	label={lst:claimset},
+ 	string=[s]{"}{"},
+ 	stringstyle=\color{blue},
+ 	comment=[l]{:},
+ 	commentstyle=\color{black}
+ }
+ \begin{lstlisting}
+ {
+	 "azp": "407408718192.apps.googleusercontent.com",
+	 "aud": "407408718192.apps.googleusercontent.com",
+	 "sub": "112301938322810239712",
+	 "email": "corneliarauch@gmx.at",
+	 "email_verified": true,
+	 "at_hash": "Rv2QB6hg1jt6QhtIXneieg",
+	 "exp": 1529747196,
+	 "iss": "https://accounts.google.com",
+	 "iat": 1529743596,
+	 "name": "Conny Rauch",
+	 "picture": "https://lh4.googleusercontent.com/-bElKwh5Z5Bg/AAAAAAAAAAI/AAAAAAAABNk/JyBmWMonaII/s96-c/photo.jpg",
+	 "given_name": "Conny",
+	 "family_name": "Rauch",
+	 "locale": "de"
+ }
+ \end{lstlisting}
 
+The decoded value form the example in Listing \ref{lst:jwt} of the Google OAuth 2.0 Playground \cite{Google:2018:OAuthPlayground} returns a JSON object shown in the Listing \ref{lst:claimset}. The claim set we receive is composed of mandatory and optional claims. Specifically requested in this example were the login, email and profile scope which effected the claims returned from the Google OAuth 2.0 API. Mandatory claims for the login with OpenID are iss, iat, aud, sub and exp and an optional clam tha was returned form the API is azp. This claims will be discussed in more deteail in the chapter about OpenID and OAuth 2.0. For the profile scope the specific claims that were returned are name, picture, given\_name, family\_name and locale. Email specific claims are email and email\_verified. Furthermore identity providers can include additional elements that are neighter madatory or optional claims [cf. ({\cite{Google:2018:OAuthPlayground}),(\cite{Siriwardena:JWTJWSJWE:2016})]}].
+
+The last and third part from the example in  Listing \ref{lst:jwt}  represents the base64url-encoded signature. To know which kind of signature the decoded code is resembling a peak at the JOSE Header will help. The JOSE Header as mentioned before gives information about the cryptographic elements that were used related to the signature. In case of Listing \ref{lst:signaturejwt} the Google OAuth 2.0 API uses RASSSA-PKCS1-V1\_5 with the SHA-256 hashing algorithm. However the \href{https://jwt.io/} {https://jwt.io/} website does not provide us with the decoded public key. 
+
+ \lstset{
+	caption=Signature JWT,
+	label={lst:signaturejwt},
+	string=[s]{"}{"},
+	stringstyle=\color{blue},
+	comment=[l]{:},
+	commentstyle=\color{black}
+}
+\begin{lstlisting}
+{
+RSASHA256(
+	base64UrlEncode(header) + "." +
+	base64UrlEncode(payload),
+	Public Key or Certificate.
+)
+}
+\end{lstlisting}
+
+
+To serialize an encrypted message, one has to follow either the JWS or the JWE specification. Each of the specification has the type’s compact serialization and serialization. Google OpenID Connect uses the compact serialization. In fact, the OpenID Connect specification suggest using the JWS compact serialization or the JWE compact serialization. In this paper only the compact serialization will be discussed, the specification of the other serialization method can be either looked up in the JWE specification or the JWS specification. To call a JWS or a JWE, a JWT it has to follow the compact serialization [cf. (\cite{JWS:IETF:Jones:2015}), ({\cite{JWE:IETF:Jones:2015})].
+	
+Aim of the JWS Compact Serialization is it to present content as a compact, URL-safe string, which is either digitally signed or MACed. It is not possible to use multiple signature or MAC in a JWS Compact Serialization and furthermore it is not allowed to use JWS Unprotected Headers. An unprotected header is a JSON object which includes the header element that are not integrity protected, which concludes that a protected header is a JSON object that is integrity protected by using MAC or digital signatures. A JWS Compact Serializations is represented as a concatenated string [cf. (\cite{JWS:IETF:Jones:2015})].
+
+ \lstset{
+	caption=JWS Compact Serialization,
+	label={lst:jwscompactserialization},
+	string=[s]{"}{"},
+	stringstyle=\color{blue},
+	comment=[l]{:},
+	commentstyle=\color{black}
+}
+\begin{lstlisting}
+{
+BASE64URL(UTF8(JWS Protected Header)) '.'
+BASE64URL(JWS Payload) '.'
+BASE64URL(JWS Signature)
+}
+\end{lstlisting}
+
+The first element is called the JOSE header which contains all the information tha advertises the public key corresponding to the private key that was used to sign the message. Elements of the header include the jku, jwk, kid, x5u, x5c, x5t and x5t\#s256. The second element is the JWS Payload or the content to be signed, which does not have to be JSON. To constructed the message the following approach is used  ASCII(BASE64URL-ENCODE(UTF8(JOSE Header)) '.' BASE64URL-ENCODE(JWS Payload)). 
+The last element is the JWS signature, which is computed over the message that was constructed beforehand, using the algorithm defined in the JOSE header. These three key components together are called a JWS token. When using the JWE Compct Serialization the output is called JWE token. Compared to the JWS token, which we seen above the JWS token consists of 5 different key components [cf. (\cite{JWS:IETF:Jones:2015}), (\cite{JWE:IETF:Jones:2015})].
+
+
+ \lstset{
+	caption=JWE Compact Serialization,
+	label={lst:jwecompactserialization},
+	string=[s]{"}{"},
+	stringstyle=\color{blue},
+	comment=[l]{:},
+	commentstyle=\color{black}
+}
+\begin{lstlisting}
+{
+BASE64URL-ENCODE(UTF8(JWE Protected Header)) '.'
+BASE64URL-ENCODE(JWE Encrypted Key) '.'
+BASE64URL-ENCODE(JWE Initialization Vector) '.'
+BASE64URL-ENCODE(JWE Ciphertext) '.'
+BASE64URL-ENCODE(JWE Authentication Tag)
+}
+\end{lstlisting}
+
+Both digital signatures and MACs can be used to provide integrity checking. However specification warns that there a significant differences that have to be consider when designing a protocol. MACs only provide the origination of the identification under specific circumstances. It is normally assumed that the private key used for the signature is only known by a single entity. Although in the case of MAC keys all the entities that use it for integrity computation need to know the MAC key in order to validate the message. That means that with MAC validation one can just tell if a message is generated from one of the entities that knows the symmetric MAC key and not where the message originated [cf. (\cite{JWT:IETF:Jones:2015})].
 
 \section{Single Sign-On}
 

@@ -307,6 +307,94 @@
       \verb https://www.jerichosystems.com/technology/glossaryterms/identity_silo.html
       \endverb
     \endentry
+    \entry{JWA:Jones:2015}{manual}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=e8cd213a3d041f0c368fbe6f8807c6ef}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Internet Engineering Task Force (IETF)}%
+      }
+      \strng{namehash}{e8cd213a3d041f0c368fbe6f8807c6ef}
+      \strng{fullhash}{e8cd213a3d041f0c368fbe6f8807c6ef}
+      \strng{bibnamehash}{e8cd213a3d041f0c368fbe6f8807c6ef}
+      \strng{authorbibnamehash}{e8cd213a3d041f0c368fbe6f8807c6ef}
+      \strng{authornamehash}{e8cd213a3d041f0c368fbe6f8807c6ef}
+      \strng{authorfullhash}{e8cd213a3d041f0c368fbe6f8807c6ef}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{title}{JSON Web Algorithms (JWA)}
+      \field{urlmonth}{7}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tools.ietf.org/html/rfc7518
+      \endverb
+      \verb{url}
+      \verb https://tools.ietf.org/html/rfc7518
+      \endverb
+    \endentry
+    \entry{JWS:IETF:Jones:2015}{manual}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,uniquepart=base,hash=e8cd213a3d041f0c368fbe6f8807c6ef}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=fc7b2f652546db5bf03feb0236e6df52}{%
+           family={Bradley},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=7008ab6a2529a0051b68fc3293ac02b1}{%
+           family={N.},
+           familyi={N\bibinitperiod},
+           given={Sakimura},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Internet Engineering Task Force (IETF)}%
+      }
+      \strng{namehash}{814020d027990afdb51ed127f237d5c2}
+      \strng{fullhash}{814020d027990afdb51ed127f237d5c2}
+      \strng{bibnamehash}{814020d027990afdb51ed127f237d5c2}
+      \strng{authorbibnamehash}{814020d027990afdb51ed127f237d5c2}
+      \strng{authornamehash}{814020d027990afdb51ed127f237d5c2}
+      \strng{authorfullhash}{814020d027990afdb51ed127f237d5c2}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{title}{JSON Web Signatures (JWS)}
+      \field{urlmonth}{7}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.rfc-editor.org/rfc/pdfrfc/rfc7515.txt.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.rfc-editor.org/rfc/pdfrfc/rfc7515.txt.pdf
+      \endverb
+    \endentry
     \entry{JWT:IETF:Jones:2015}{manual}{}
       \name{author}{3}{}{%
         {{uniquename=0,uniquepart=base,hash=e8cd213a3d041f0c368fbe6f8807c6ef}{%
@@ -354,6 +442,50 @@
       \endverb
       \verb{url}
       \verb https://tools.ietf.org/html/rfc7519
+      \endverb
+    \endentry
+    \entry{JWE:IETF:Jones:2015}{manual}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=e8cd213a3d041f0c368fbe6f8807c6ef}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=16392bf1220eec01b69d5658f98f8601}{%
+           family={Hildebrand},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Internet Engineering Task Force (IETF)}%
+      }
+      \strng{namehash}{8ee99f14e8cb98fcbd1c2de2fe1579fb}
+      \strng{fullhash}{8ee99f14e8cb98fcbd1c2de2fe1579fb}
+      \strng{bibnamehash}{8ee99f14e8cb98fcbd1c2de2fe1579fb}
+      \strng{authorbibnamehash}{8ee99f14e8cb98fcbd1c2de2fe1579fb}
+      \strng{authornamehash}{8ee99f14e8cb98fcbd1c2de2fe1579fb}
+      \strng{authorfullhash}{8ee99f14e8cb98fcbd1c2de2fe1579fb}
+      \field{sortinit}{J}
+      \field{sortinithash}{fce5f8d0bd05e8d93f3dbe21c78897ca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{title}{JSON Web Encryption (JWE)}
+      \field{urlmonth}{7}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.rfc-editor.org/rfc/pdfrfc/rfc7516.txt.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.rfc-editor.org/rfc/pdfrfc/rfc7516.txt.pdf
       \endverb
     \endentry
     \entry{Lynch:2017:IIG}{article}{}
