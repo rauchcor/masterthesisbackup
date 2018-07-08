@@ -100,6 +100,59 @@
       \field{title}{An Introduction to Privacy Engineering and Risk Management in Federal Systems}
       \field{year}{2017}
     \endentry
+    \entry{Cirani:OBAS}{article}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,uniquepart=base,hash=c2de97213707751dcb48a265d28ec8a0}{%
+           family={Cirani},
+           familyi={C\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=0c4ab9ffaf71690a398602f8698fd862}{%
+           family={Picone},
+           familyi={P\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8d043822f654bb74d7ae291e26023e2e}{%
+           family={Gonizzi},
+           familyi={G\bibinitperiod},
+           given={Pietro},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=5bc5b372c5f848dd21db1fd400624781}{%
+           family={Veltri},
+           familyi={V\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=4a649769d73b7b1d3060a6e9dbe57118}{%
+           family={Ferrari},
+           familyi={F\bibinitperiod},
+           given={Gianluigi},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{03b76d268995fe7d2a90232c3c426b15}
+      \strng{fullhash}{002700627f35a8288ca3ded01b755cad}
+      \strng{bibnamehash}{002700627f35a8288ca3ded01b755cad}
+      \strng{authorbibnamehash}{002700627f35a8288ca3ded01b755cad}
+      \strng{authornamehash}{03b76d268995fe7d2a90232c3c426b15}
+      \strng{authorfullhash}{002700627f35a8288ca3ded01b755cad}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Sensors Journal, IEEE}
+      \field{month}{02}
+      \field{title}{IoT-OAS: An OAuth-Based Authorization Service Architecture for Secure Services in IoT Scenarios}
+      \field{volume}{15}
+      \field{year}{2015}
+      \field{pages}{1224\bibrangedash 1234}
+      \range{pages}{11}
+    \endentry
     \entry{Corre:2017:WHI}{online}{}
       \name{author}{5}{}{%
         {{uniquename=0,uniquepart=base,hash=0d61596a004e195578795ef6744682e8}{%
@@ -552,6 +605,135 @@
       \verb http://www.csl.sri.com/users/neumann/chats4.pdf
       \endverb
     \endentry
+    \entry{Pashalidis:2003:10.1007/3-540-45067-X_22}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=065f91cc854aadf82a3831cd8ae72a73}{%
+           family={Pashalidis},
+           familyi={P\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=75438a8458e3151b9860c01ae811179a}{%
+           family={Mitchell},
+           familyi={M\bibinitperiod},
+           given={Chris\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=bdef05af0acb8fc3515512a29bea5163}{%
+           family={Safavi-Naini},
+           familyi={S\bibinithyphendelim N\bibinitperiod},
+           given={Rei},
+           giveni={R\bibinitperiod}}}%
+        {{hash=50b88b8345afd2f07bec6ea7fb69ca7a}{%
+           family={Seberry},
+           familyi={S\bibinitperiod},
+           given={Jennifer},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{a878997fd7b9245d38faebb146746393}
+      \strng{fullhash}{a878997fd7b9245d38faebb146746393}
+      \strng{bibnamehash}{a878997fd7b9245d38faebb146746393}
+      \strng{authorbibnamehash}{a878997fd7b9245d38faebb146746393}
+      \strng{authornamehash}{a878997fd7b9245d38faebb146746393}
+      \strng{authorfullhash}{a878997fd7b9245d38faebb146746393}
+      \strng{editorbibnamehash}{85bab6af6fb769b8afb7bddf8409a47a}
+      \strng{editornamehash}{85bab6af6fb769b8afb7bddf8409a47a}
+      \strng{editorfullhash}{85bab6af6fb769b8afb7bddf8409a47a}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{At present, network users have to manage one set of authentication credentials (usually a username/password pair) for every service with which they are registered. Single Sign-On (SSO) has been proposed as a solution to the usability, security and management implications of this situation. Under SSO, users authenticate themselves only once and are logged into the services they subsequently use without further manual interaction. Several architectures for SSO have been developed, each with different properties and underlying infrastructures. This paper presents a taxonomy of these approaches and puts some of the SSO schemes, services and products into that context. This enables decisions about the design and selection of future approaches to SSO to be made within a more structured context; it also reveals some important differences in the security properties that can be provided by various approaches.}
+      \field{booktitle}{Information Security and Privacy}
+      \field{isbn}{978-3-540-45067-2}
+      \field{title}{A Taxonomy of Single Sign-On Systems}
+      \field{year}{2003}
+      \field{pages}{249\bibrangedash 264}
+      \range{pages}{16}
+    \endentry
+    \entry{Prasad:MMWPT}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=da44b210ada051b1494ec34c1c7d0a04}{%
+           family={Prasad},
+           familyi={P\bibinitperiod},
+           given={Prakhar},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=78e474682688f3ce503e00f71fac8a3d}{%
+           family={Ursell},
+           familyi={U\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editora}{1}{}{%
+        {{hash=d043c2a72aced3e8e20efa5270c881d7}{%
+           family={Nair},
+           familyi={N\bibinitperiod},
+           given={Rahul},
+           giveni={R\bibinitperiod}}}%
+      }
+      \name{editorb}{1}{}{%
+        {{hash=f5cd0e479a6597c7022458c35c252d1a}{%
+           family={Noronha},
+           familyi={N\bibinitperiod},
+           given={Amrita},
+           giveni={A\bibinitperiod}}}%
+      }
+      \name{editorc}{1}{}{%
+        {{hash=9bfc3c74b64945b8197cae1f98aa2eed}{%
+           family={Birwatkar},
+           familyi={B\bibinitperiod},
+           given={Shweta\bibnamedelima H.},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Birminigham}%
+      }
+      \list{publisher}{1}{%
+        {Packt Publishing Ltd.}%
+      }
+      \strng{namehash}{da44b210ada051b1494ec34c1c7d0a04}
+      \strng{fullhash}{da44b210ada051b1494ec34c1c7d0a04}
+      \strng{bibnamehash}{da44b210ada051b1494ec34c1c7d0a04}
+      \strng{authorbibnamehash}{da44b210ada051b1494ec34c1c7d0a04}
+      \strng{authornamehash}{da44b210ada051b1494ec34c1c7d0a04}
+      \strng{authorfullhash}{da44b210ada051b1494ec34c1c7d0a04}
+      \strng{editorbibnamehash}{78e474682688f3ce503e00f71fac8a3d}
+      \strng{editornamehash}{78e474682688f3ce503e00f71fac8a3d}
+      \strng{editorfullhash}{78e474682688f3ce503e00f71fac8a3d}
+      \strng{editorabibnamehash}{d043c2a72aced3e8e20efa5270c881d7}
+      \strng{editoranamehash}{d043c2a72aced3e8e20efa5270c881d7}
+      \strng{editorafullhash}{d043c2a72aced3e8e20efa5270c881d7}
+      \strng{editorbbibnamehash}{f5cd0e479a6597c7022458c35c252d1a}
+      \strng{editorbnamehash}{f5cd0e479a6597c7022458c35c252d1a}
+      \strng{editorbfullhash}{f5cd0e479a6597c7022458c35c252d1a}
+      \strng{editorcbibnamehash}{9bfc3c74b64945b8197cae1f98aa2eed}
+      \strng{editorcnamehash}{9bfc3c74b64945b8197cae1f98aa2eed}
+      \strng{editorcfullhash}{9bfc3c74b64945b8197cae1f98aa2eed}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-78528-458-8}
+      \field{month}{10}
+      \field{title}{Mastering Modern Web Penetration Testing}
+      \field{year}{2016}
+      \field{dateera}{ce}
+    \endentry
     \entry{Prochazka:2010:UCA}{inproceedings}{}
       \name{author}{3}{}{%
         {{uniquename=0,uniquepart=base,hash=05689dbbea26946320dfd6e6db03e377}{%
@@ -596,6 +778,110 @@
       \field{month}{05}
       \field{title}{User centric authentication for web applications}
       \field{year}{2010}
+    \endentry
+    \entry{Rossvoll:2013:RUBIM}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=a1b29a84318920478bad10ef04094773}{%
+           family={Røssvoll},
+           familyi={R\bibinitperiod},
+           given={Till\bibnamedelima Halbach},
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=5237b6153e28fadc1bb057864a8f6efa}{%
+           family={Fritsch},
+           familyi={F\bibinitperiod},
+           given={Lothar},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1b29a84318920478bad10ef04094773}
+      \strng{fullhash}{a1b29a84318920478bad10ef04094773}
+      \strng{bibnamehash}{a1b29a84318920478bad10ef04094773}
+      \strng{authorbibnamehash}{a1b29a84318920478bad10ef04094773}
+      \strng{authornamehash}{a1b29a84318920478bad10ef04094773}
+      \strng{authorfullhash}{a1b29a84318920478bad10ef04094773}
+      \strng{editorbibnamehash}{5237b6153e28fadc1bb057864a8f6efa}
+      \strng{editornamehash}{5237b6153e28fadc1bb057864a8f6efa}
+      \strng{editorfullhash}{5237b6153e28fadc1bb057864a8f6efa}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The Sixth International Conference on Advances in Computer-Human Interactions.}
+      \field{isbn}{978-1-61208-250-9}
+      \field{title}{Reducing the User Burden of Identity Management: A Prototype Based Case Study for a Social-Media Payment Application}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{pages}{pp 364-370}
+      \range{pages}{-1}
+      \warn{\item Range field 'pages' in entry 'Rossvoll:2013:RUBIM' is malformed, falling back to literal}
+    \endentry
+    \entry{Sakimura:OIDCC}{manual}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,uniquepart=base,hash=eebb42075b60148aa7107e41262f056f}{%
+           family={Sakimura},
+           familyi={S\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=fc7b2f652546db5bf03feb0236e6df52}{%
+           family={Bradley},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e8cd213a3d041f0c368fbe6f8807c6ef}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6ccf609b29472cf5737204bf91f6f3d0}{%
+           family={Medeiros},
+           familyi={M\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{uniquename=0,uniquepart=base,hash=ac0487bdc73c732f23d6cb0dd759a60e}{%
+           family={Mortimore},
+           familyi={M\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{92c525a647c8de9d66a43ff66de47248}
+      \strng{fullhash}{b95db8ffde3ede78658ab1ac5c16a991}
+      \strng{bibnamehash}{b95db8ffde3ede78658ab1ac5c16a991}
+      \strng{authorbibnamehash}{b95db8ffde3ede78658ab1ac5c16a991}
+      \strng{authornamehash}{92c525a647c8de9d66a43ff66de47248}
+      \strng{authorfullhash}{b95db8ffde3ede78658ab1ac5c16a991}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{8}
+      \field{month}{11}
+      \field{title}{OpenID Connect Core 1.0 incorparating errata set 1}
+      \field{urlday}{22}
+      \field{urlmonth}{6}
+      \field{urlyear}{2018}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://openid.net/specs/openid-connect-core-1_0.html#toc
+      \endverb
+      \verb{url}
+      \verb http://openid.net/specs/openid-connect-core-1_0.html#toc
+      \endverb
     \endentry
     \entry{Saltzer:PICS}{online}{}
       \name{author}{2}{}{%

@@ -3,24 +3,34 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapterstart
 
-With the rise of social networks, online services experienced a revolution quite recently and thus have had a significant impact on the way private information gets propagated on the Internet. Information provided by online services is accessed by third-party applications with Application Programming Interfaces (API). Making third-party applications, which were not known upon service subscription able to access information. The trust is no longer just between two parties but also may include some third-parties which bring up concerns about the privacy of personal information, raising the need of secure authorization (Cirani et al., 2015).
-Sakimura et al. (2014), expresses that for the user to be able to use third party information, users are often required to create new accounts for each service they want to access. The complex task of managing all these tasks can lead to identity theft if not done right. 
-In traditional architectures, a third party receives the user’s credentials for the user to be able to access information from the third party as stated before. Pakhard (2016) however points out that sharing the credentials with a third party might lead to security problems. Third parties might be responsible for fatal security gaps, for example by storing passwords in plain-text. Pakhard (2016) further states that the compromise of one third-party will then lead to the compromise of the credentials of the end user. As a result, the safety of the secure resources cannot be granted anymore. Moreover, third-parties will receive the comparatively more significant amount of access to the user data than needed.
-In modern architectures, the process of authentication and authorization of the user is often implemented by a third party. An example of a such a modern Infrastructure is the Cloud. NIST Cloud Computing Standards Roadmap (2011) suggest for identity management, to rely on standards and specifications that are widespread and documented. Example for tools and standards include Internet protocols for accessing services like REST, SOAP, and XML and federate identity standards for service au-thentication such as SAML, OAuth, and OpenID Connect.
+With the rise of social networks, online services experienced a revolution quite recently and thus have had a significant impact on the way private information gets propagated on the Internet. Developers split up backend and frontend solution and build their backed solutions as Application Programming Interfaces (API). These APIs can then be consumed by frontend applications or even third-party applications. This approach especially gained popularity with the rising popularity of mobile and single page applications. However this means that that the trust is no longer just between two parties but also may include third-party applications which. This uncertain trust relation ship brings up concerns for applications and users regarding security and privacy of personal information. Building trust is a substantial part for architects and developers when designing a system. In order to efface security and privacy concerns an advanced access and identity management system is needed. [cf. (\cite{Cirani:OBAS}), (\cite{Tkalec:2015}), (\cite{Rossvoll:2013:RUBIM})].
+
+ 
+
+
+\section{Problem Statement}
+
+In traditional architectures, a third party receives the user’s credentials for the user to be able to access information from the third party as stated before. \cite{Prasad:MMWPT} however points out that sharing the credentials with a third party might lead to security problems. Third parties might be responsible for fatal security gaps, for example by storing passwords in plain-text. \cite{Prasad:MMWPT} further states that the compromise of one third-party will then lead to the compromise of the credentials of the end user. As a result, the safety of the secure resources cannot be granted anymore. Moreover, third-parties will receive the comparatively more significant amount of access to the user data than needed.
+
+Another concern is that users often are required to create new accounts for each service they want to use. On the one hand the process of creating a new account for a service can be annoying for the user because they have to burden of keeping track of multiple accounts and remembering multiple credentials. On the other hand the complex task of managing this accounts can led to problems like password fatigue and in the worst case to identity theft or the compromise of services [cf. \cite{Sakimura:OIDCC}].
+
+
+\section{Research Question}
+What are feasible ways to implement authentication and authorization for enterprises that depend on adaptability and focus on modern single page applications? Furthermore, what are benefits of the token-based authentication with OAuth2 and OpenID Connect versus traditional authentication methods? The questions should be elaborated while considering common security risks of modern web applications.
+
+\section{Hypthesis}
+
+In modern architectures, the process of authentication and authorization of the user is often implemented by a third party. An example of a such an modern Infrastructure is the Cloud. NIST Cloud Computing Standards Roadmap (2011) suggest for identity management, to rely on standards and specifications that are widespread and documented. Example for tools and standards include Internet protocols for accessing services like REST, SOAP, and XML and federate identity standards for service au-thentication such as SAML, OAuth, and OpenID Connect.
+
 In this thesis, the focus is on modern distributed architectures and ways to provide users secure access to protected resources and confidential management of the user’s credentials. The focus is on the protocols OpenID Connect an OAuth 2.0. 
 
 
+\section{Method}
 
 
 
-\paragraph{Scientific Question}
-What are feasible ways to implement authentication and authorization for enterprises that depend on adaptability and focus on modern single page applications? Furthermore, what are benefits of the token-based authentication with OAuth2 and OpenID Connect versus traditional authentication methods? The questions should be elaborated while considering common security risks of modern web applications.
 
 
-\paragraph{Terms and definitions.}
-Technical terms \ldots\ abbreviations are summarised at the end (in~``\nameref{chap:acronyms}''), e.g.\ \ac{ABI} or \ac{MITM}. If \ac{ABI} is referenced again, only the acronym is printed (as hyperlink though).
-
-Code listings require the \textit{listings} package which, in turn, requires some settings\footnote{\ldots because the defaults do not fit all purposes}; see command \verb+\lstset{}+ in preamble of this template. Additionally the package \textit{courier} should be used because the defaults do not provide for proper syntax highlighting. Here is a reference to listing~\ref{lst:main}.
 
 
 \chapterend

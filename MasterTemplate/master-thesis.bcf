@@ -1976,3 +1976,134 @@
     <bcf:datasource type="file" datatype="bibtex">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">Cirani:OBAS</bcf:citekey>
+    <bcf:citekey order="2">Tkalec:2015</bcf:citekey>
+    <bcf:citekey order="3">Rossvoll:2013:RUBIM</bcf:citekey>
+    <bcf:citekey order="4">Prasad:MMWPT</bcf:citekey>
+    <bcf:citekey order="5">Prasad:MMWPT</bcf:citekey>
+    <bcf:citekey order="6">Sakimura:OIDCC</bcf:citekey>
+    <bcf:citekey order="7">Corre:2017:WHI</bcf:citekey>
+    <bcf:citekey order="8">Corre:2017:WHI</bcf:citekey>
+    <bcf:citekey order="9">Corre:2017:WHI</bcf:citekey>
+    <bcf:citekey order="10">Corre:2017:WHI</bcf:citekey>
+    <bcf:citekey order="11">Saltzer:PICS</bcf:citekey>
+    <bcf:citekey order="12">Neumann:2018:PTC</bcf:citekey>
+    <bcf:citekey order="13">Saltzer:PICS</bcf:citekey>
+    <bcf:citekey order="14">Saltzer:PICS</bcf:citekey>
+    <bcf:citekey order="15">Saltzer:PICS</bcf:citekey>
+    <bcf:citekey order="16">Saltzer:PICS</bcf:citekey>
+    <bcf:citekey order="17">Saltzer:PICS</bcf:citekey>
+    <bcf:citekey order="18">Brooks:2017:IPE</bcf:citekey>
+    <bcf:citekey order="19">Brooks:2017:IPE</bcf:citekey>
+    <bcf:citekey order="20">Brooks:2017:IPE</bcf:citekey>
+    <bcf:citekey order="21">Saltzer:PICS</bcf:citekey>
+    <bcf:citekey order="22">Todorov:2007:MUI</bcf:citekey>
+    <bcf:citekey order="23">Todorov:2007:MUI</bcf:citekey>
+    <bcf:citekey order="24">Neumann:2018:PTC</bcf:citekey>
+    <bcf:citekey order="25">NIST:2017:DIG</bcf:citekey>
+    <bcf:citekey order="26">NIST:2017:DIG</bcf:citekey>
+    <bcf:citekey order="27">Boyed:2012:GSOA</bcf:citekey>
+    <bcf:citekey order="28">Boyed:2012:GSOA</bcf:citekey>
+    <bcf:citekey order="29">Todorov:2007:MUI</bcf:citekey>
+    <bcf:citekey order="30">Todorov:2007:MUI</bcf:citekey>
+    <bcf:citekey order="31">NIST:2017:DIG</bcf:citekey>
+    <bcf:citekey order="32">NIST:2017:DIG</bcf:citekey>
+    <bcf:citekey order="33">Dasgupta:2017:AUA</bcf:citekey>
+    <bcf:citekey order="34">Dasgupta:2017:AUA</bcf:citekey>
+    <bcf:citekey order="35">Dasgupta:2017:AUA</bcf:citekey>
+    <bcf:citekey order="36">Dasgupta:2017:AUA</bcf:citekey>
+    <bcf:citekey order="37">Dasgupta:2017:AUA</bcf:citekey>
+    <bcf:citekey order="38">Tomkins:2009:DPF</bcf:citekey>
+    <bcf:citekey order="39">Todorov:2007:MUI</bcf:citekey>
+    <bcf:citekey order="40">Dasgupta:2017:AUA</bcf:citekey>
+    <bcf:citekey order="41">NIST:2017:DIG</bcf:citekey>
+    <bcf:citekey order="42">Todorov:2007:MUI</bcf:citekey>
+    <bcf:citekey order="43">Todorov:2007:MUI</bcf:citekey>
+    <bcf:citekey order="44">Todorov:2007:MUI</bcf:citekey>
+    <bcf:citekey order="45">JerichoSystems:IS</bcf:citekey>
+    <bcf:citekey order="46">Boyed:2012:GSOA</bcf:citekey>
+    <bcf:citekey order="47">NIST:2017:DIG</bcf:citekey>
+    <bcf:citekey order="48">NIST:2017:DIG</bcf:citekey>
+    <bcf:citekey order="49">Todorov:2007:MUI</bcf:citekey>
+    <bcf:citekey order="50">Boyed:2012:GSOA</bcf:citekey>
+    <bcf:citekey order="51">Todorov:2007:MUI</bcf:citekey>
+    <bcf:citekey order="52">Boyed:2012:GSOA</bcf:citekey>
+    <bcf:citekey order="53">Tkalec:2015</bcf:citekey>
+    <bcf:citekey order="54">Serilleja:2015:Scothio</bcf:citekey>
+    <bcf:citekey order="55">Serilleja:2015:Scothio</bcf:citekey>
+    <bcf:citekey order="56">Tkalec:2015</bcf:citekey>
+    <bcf:citekey order="57">Serilleja:2015:Scothio</bcf:citekey>
+    <bcf:citekey order="58">Serilleja:2015:Scothio</bcf:citekey>
+    <bcf:citekey order="59">Serilleja:2015:Scothio</bcf:citekey>
+    <bcf:citekey order="60">Serilleja:2015:Scothio</bcf:citekey>
+    <bcf:citekey order="61">Tkalec:2015</bcf:citekey>
+    <bcf:citekey order="62">JWT:IETF:Jones:2015</bcf:citekey>
+    <bcf:citekey order="63">Siriwardena:JWTJWSJWE:2016</bcf:citekey>
+    <bcf:citekey order="64">Google:2018:OAuthPlayground</bcf:citekey>
+    <bcf:citekey order="65">Google:2018:OAuthPlayground</bcf:citekey>
+    <bcf:citekey order="66">JWT:IETF:Jones:2015</bcf:citekey>
+    <bcf:citekey order="67">Siriwardena:JWTJWSJWE:2016</bcf:citekey>
+    <bcf:citekey order="68">JWS:IETF:Jones:2015</bcf:citekey>
+    <bcf:citekey order="69">JWE:IETF:Jones:2015</bcf:citekey>
+    <bcf:citekey order="70">JWA:Jones:2015</bcf:citekey>
+    <bcf:citekey order="71">JWE:IETF:Jones:2015</bcf:citekey>
+    <bcf:citekey order="72">JWA:Jones:2015</bcf:citekey>
+    <bcf:citekey order="73">Google:2018:OAuthPlayground</bcf:citekey>
+    <bcf:citekey order="74">Google:2018:OAuthPlayground</bcf:citekey>
+    <bcf:citekey order="75">Siriwardena:JWTJWSJWE:2016</bcf:citekey>
+    <bcf:citekey order="76">JWS:IETF:Jones:2015</bcf:citekey>
+    <bcf:citekey order="77">JWE:IETF:Jones:2015</bcf:citekey>
+    <bcf:citekey order="78">JWS:IETF:Jones:2015</bcf:citekey>
+    <bcf:citekey order="79">JWS:IETF:Jones:2015</bcf:citekey>
+    <bcf:citekey order="80">JWE:IETF:Jones:2015</bcf:citekey>
+    <bcf:citekey order="81">JWT:IETF:Jones:2015</bcf:citekey>
+    <bcf:citekey order="82">Prochazka:2010:UCA</bcf:citekey>
+    <bcf:citekey order="83">Pashalidis:2003:10.1007/3-540-45067-X_22</bcf:citekey>
+    <bcf:citekey order="84">Pashalidis:2003:10.1007/3-540-45067-X_22</bcf:citekey>
+    <bcf:citekey order="85">Pashalidis:2003:10.1007/3-540-45067-X_22</bcf:citekey>
+    <bcf:citekey order="86">Pashalidis:2003:10.1007/3-540-45067-X_22</bcf:citekey>
+    <bcf:citekey order="87">Lynch:2017:IIG</bcf:citekey>
+    <bcf:citekey order="88">Prochazka:2010:UCA</bcf:citekey>
+    <bcf:citekey order="89">Prochazka:2010:UCA</bcf:citekey>
+    <bcf:citekey order="90">Prochazka:2010:UCA</bcf:citekey>
+  </bcf:section>
+  <!-- SORTING TEMPLATES -->
+  <bcf:sortingtemplate name="nyt">
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">presort</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2" final="1">
+      <bcf:sortitem order="1">sortkey</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="3">
+      <bcf:sortitem order="1">sortname</bcf:sortitem>
+      <bcf:sortitem order="2">author</bcf:sortitem>
+      <bcf:sortitem order="3">editor</bcf:sortitem>
+      <bcf:sortitem order="4">translator</bcf:sortitem>
+      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="6">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="4">
+      <bcf:sortitem order="1">sortyear</bcf:sortitem>
+      <bcf:sortitem order="2">year</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="5">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="6">
+      <bcf:sortitem order="1">volume</bcf:sortitem>
+      <bcf:sortitem order="2">0</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sortingtemplate>
+  <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="nyt/global//global/global"
+                type="entry"
+                sortingtemplatename="nyt"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
+</bcf:controlfile>

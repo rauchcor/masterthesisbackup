@@ -1,15 +1,17 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'master-thesis.blg'
-[49] biber-MSWIN64:313> INFO - === 
-[78] Biber.pm:371> INFO - Reading 'master-thesis.bcf'
-[187] Biber.pm:857> INFO - Found 20 citekeys in bib section 0
-[204] Biber.pm:3976> INFO - Processing section 0
-[222] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
-[226] bibtex.pm:1500> INFO - LaTeX decoding ...
-[285] bibtex.pm:1316> INFO - Found BibTeX data source 'references.bib'
-[450] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[450] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[450] Biber.pm:3804> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[450] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[483] bbl.pm:617> INFO - Writing 'master-thesis.bbl' with encoding 'UTF-8'
-[500] bbl.pm:720> INFO - Output to master-thesis.bbl
+[30] biber-MSWIN64:313> INFO - === 
+[56] Biber.pm:371> INFO - Reading 'master-thesis.bcf'
+[170] Biber.pm:857> INFO - Found 25 citekeys in bib section 0
+[189] Biber.pm:3976> INFO - Processing section 0
+[207] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
+[213] bibtex.pm:1500> INFO - LaTeX decoding ...
+[295] bibtex.pm:1316> INFO - Found BibTeX data source 'references.bib'
+[334] Utils.pm:193> WARN - Range field 'pages' in entry 'Rossvoll:2013:RUBIM' is malformed, falling back to literal
+[524] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[524] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[524] Biber.pm:3804> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[524] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[559] bbl.pm:617> INFO - Writing 'master-thesis.bbl' with encoding 'UTF-8'
+[582] bbl.pm:720> INFO - Output to master-thesis.bbl
+[582] Biber.pm:110> INFO - WARNINGS: 1
