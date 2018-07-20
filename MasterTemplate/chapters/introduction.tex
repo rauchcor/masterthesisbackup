@@ -3,9 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapterstart
 
-With the rise of social networks, online services experienced a revolution quite recently and thus have had a significant impact on the way private information gets propagated on the Internet. Developers split up backend and frontend solution and build their backed solutions as Application Programming Interfaces (API). These APIs can then be consumed by frontend applications or even third-party applications. This approach especially gained popularity with the rising popularity of mobile and single page applications. However this means that that the trust is no longer just between two parties but also may include third-party applications which. This uncertain trust relation ship brings up concerns for applications and users regarding security and privacy of personal information. Building trust is a substantial part for architects and developers when designing a system. In order to efface security and privacy concerns an advanced access and identity management system is needed. [cf. (\cite{Cirani:OBAS}), (\cite{Tkalec:2015}), (\cite{Rossvoll:2013:RUBIM})].
-
- 
+With the rise of social networks, online services experienced a revolution quite recently and thus have had a significant impact on the way private information gets propagated on the Internet. Developers split up solutions into backend and frontend applications and build their backend solutions as Application Programming Interfaces (API) which can be used to propagate services online. Published APIs can then be consumed by frontend applications or even third-party applications. This approach especially gained popularity with the rise of mobile and single page applications, which heavily depend on a light-weighted fronted. However using APIs to access the business logic means, that the trust relationship is not between two parties but also may include third-party applications. This uncertain trust relationship raises concerns of users and developers regarding security and privacy of personal information. Building trust is a substantial part for architects and developers when designing a system. In order to efface security and privacy concerns of users an advanced access and identity management system is needed. [cf. (\cite{Cirani:OBAS}), (\cite{Tkalec:2015}), (\cite{Rossvoll:2013:RUBIM})].
 
 
 \section{Problem Statement}
@@ -20,8 +18,9 @@ What are feasible ways to implement authentication and authorization for enterpr
 
 \section{Hypthesis}
 
-In modern architectures, the process of authentication and authorization of the user is often implemented by a third party. An example of a such an modern Infrastructure is the Cloud. NIST Cloud Computing Standards Roadmap (2011) suggest for identity management, to rely on standards and specifications that are widespread and documented. Example for tools and standards include Internet protocols for accessing services like REST, SOAP, and XML and federate identity standards for service au-thentication such as SAML, OAuth, and OpenID Connect.
+In modern architectures, the process of authentication and authorization of the user is often implemented by a third party. An example of a such an modern Infrastructure is the Cloud. \cite{NIST:2017:DIG} suggest for identity management, to rely on standards and specifications that are widespread and documented. Example for tools and standards include Internet protocols for accessing services like REST, SOAP, and XML and federate identity standards for service authentication such as SAML, OAuth, and OpenID Connect.
 
+The problem with these infrastructures is that the services are often offered for free but the services need the data of the user in order to work. To solve this problem a solution that uses modern Internet protocols and identity standards while not needing to provide the data of the users to a third party is needed. Therefore the current 
 In this thesis, the focus is on modern distributed architectures and ways to provide users secure access to protected resources and confidential management of the user’s credentials. The focus is on the protocols OpenID Connect an OAuth 2.0. 
 
 

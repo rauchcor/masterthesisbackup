@@ -293,6 +293,91 @@
       \field{title}{Digital Identity Guidelines}
       \field{year}{2017}
     \endentry
+    \entry{NIST:2017:DIGFA}{manual}{}
+      \name{author}{10}{uniquelist=2}{%
+        {{uniquename=0,uniquepart=base,hash=7a9927de15214d1bf5f7b12a22a04740}{%
+           family={Grassi},
+           familyi={G\bibinitperiod},
+           given={Paul\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d25eb5f05ebc722fa7ded6bc194f072f}{%
+           family={Richer},
+           familyi={R\bibinitperiod},
+           given={Justin\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=780570c1866d660109855ada4a8baf3b}{%
+           family={Squire},
+           familyi={S\bibinitperiod},
+           given={Sarah\bibnamedelima K.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d85497410ec739dc54916135b278711c}{%
+           family={Fenton},
+           familyi={F\bibinitperiod},
+           given={James\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=cf35161b44de7589dc3826eb5bea6fbd}{%
+           family={Nadeau},
+           familyi={N\bibinitperiod},
+           given={Ellen\bibnamedelima M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=cb06073aa3ac999b86360804ccfabcff}{%
+           family={Lefkovitz},
+           familyi={L\bibinitperiod},
+           given={Naomi\bibnamedelima B.},
+           giveni={N\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8250c014f4be9c4c4f6c6c6395f24620}{%
+           family={Danker},
+           familyi={D\bibinitperiod},
+           given={Jamie\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=17c2d6846077646d795a8d5caeeca944}{%
+           family={Choong},
+           familyi={C\bibinitperiod},
+           given={Yee-Yin},
+           giveni={Y\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=237f4a3940fb4b4022f8e710ac78031c}{%
+           family={Kirsten},
+           familyi={K\bibinitperiod},
+           given={Greene\bibnamedelima K.},
+           giveni={G\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=cc926bb283be805bb369fbb8674bca8c}{%
+           family={Theafonos},
+           familyi={T\bibinitperiod},
+           given={Mary\bibnamedelima F.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{2}{%
+        {NIST (National Institute of Standards}%
+        {Technology)}%
+      }
+      \strng{namehash}{dae6669882491361c816ca3eb0faa085}
+      \strng{fullhash}{285d05748b7e80a995c9f95558bedeb5}
+      \strng{bibnamehash}{285d05748b7e80a995c9f95558bedeb5}
+      \strng{authorbibnamehash}{285d05748b7e80a995c9f95558bedeb5}
+      \strng{authornamehash}{dae6669882491361c816ca3eb0faa085}
+      \strng{authorfullhash}{285d05748b7e80a995c9f95558bedeb5}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Special Publication 800-63C}
+      \field{month}{07}
+      \field{subtitle}{Federation and Assertion}
+      \field{title}{Digital Identity Guidelines}
+      \field{year}{2017}
+    \endentry
     \entry{Google:2018:OAuthPlayground}{online}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=2720e823db87672e3be1971d976ca746}{%
@@ -996,6 +1081,40 @@
       \verb{url}
       \verb https://medium.facilelogin.com/jwt-jws-and-jwe-for-not-so-dummies-b63310d201a3
       \endverb
+    \endentry
+    \entry{Steiner:Dog:1992}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=c91253cae326aecb3224badef12e7741}{%
+           family={Steiner},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c91253cae326aecb3224badef12e7741}
+      \strng{fullhash}{c91253cae326aecb3224badef12e7741}
+      \strng{bibnamehash}{c91253cae326aecb3224badef12e7741}
+      \strng{authorbibnamehash}{c91253cae326aecb3224badef12e7741}
+      \strng{authornamehash}{c91253cae326aecb3224badef12e7741}
+      \strng{authorfullhash}{c91253cae326aecb3224badef12e7741}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The New Yorker}
+      \field{title}{On the Internet, nobody knows you're a dog}
+      \field{urlmonth}{7}
+      \field{urlyear}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://archives.newyorker.com/?iid=15713&startpage=page0000063#folio=CV1
+      \endverb
+      \verb{url}
+      \verb http://archives.newyorker.com/?iid=15713&startpage=page0000063#folio=CV1
+      \endverb
+      \warn{\item Entry 'Steiner:Dog:1992' (references.bib): Invalid format '1993-06-5' of date field 'date' - ignoring}
     \endentry
     \entry{Tkalec:2015}{online}{}
       \name{author}{1}{}{%
