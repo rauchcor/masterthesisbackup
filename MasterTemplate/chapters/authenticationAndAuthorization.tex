@@ -25,16 +25,44 @@ Besides formulating these very important principles which will be discussed in v
 These security issues and privacy issues, of course, raise particular concerns for users as well as for companies offering authentication services. When it comes to protecting personal resources, there are three primary concerns. According to \cite{Todorov:2007:MUI} those three concerns are Confidentiality, Integrity and Availability. The term confidentiality means that personal information is protected from 
 disclosure to unauthorized individuals and organizations. Integrity or integrity of information is protecting information from accidental or intentional tampering. Modification of confidential data may affect the data validity. Availability is the need to be able to access information at the time a user requests it. The availability of the services that exposes information has to be given as well. In an ideal world companies offering authentication and authorization services will do everything to use the best technologies regarding countermeasures to protect confidentiality, integrity, and availability. Establishing countermeasures, however, can be costly leading to a trade-off between costs and level of production of information. A typical approach to establishing information security management is to analyze risks first and then form counter measurements [cf. (\cite{Todorov:2007:MUI})]. 
 
+\cite{NIST:2017:DIG} splits the risk assessment into different sections, rather then combining proofing, authentication, and federation of digital services into a single Level of Assurance(LOA). In order to provide the most effective approach each of the section is analyzed regarding risk and impacts of failure. The assessment should help to avoid errors and choose based the results which technologies and mitigation strategies should be chosen. Errors that can be avoided with an extensive risk assessment are identity proofing, authentication and federation errors. Identity proofing risks include an malicious applicant successfully poses as someone else or for example the impacts of collecting more information about an applicant then required. Choosing the right level of assurance in the identity proofing process gives robustness and confidence to the determination of an identity. The right authentication assurance level is chosen to mitigate problems in the authentication process and the binding between an authenticator and a specific individual  An example for a potential error is the applicant may use credentials that not rightfully belong to them. And last but not least the right federation assessment helps to mitigate potential federation errors. Federation errors might occur when an identity assertion is compromised. Analyzing this risk makes it easier to choose an assurance level for each category therefore the risk get categorized of harm according to \cite{NIST:2017:DIG}: 
+
+ \begin{itemize}
+	\item Inconvenience, distress, or damage to standing or reputation;
+	\item Financial loss or agency liability
+	\item Harm to agency programs or public interests
+	\item Personal safety
+	\item Civil or criminal violations
+\end{itemize}
+
+Each of the categorize can then be rated with an potential impact level which can be either low, moderate and high. The result of this risk assessment can then be the basis of cosing the appropriate identity, authentication and federation assurance level. The assurance level determination is just relevant for analyzing risk of online transaction offered bey digital services and should not be used for the complete business process which may include offline processing in an completely segmented system. 
+
+
 The result of all design principles, security and privacy considerations should be a system, network or component that is trustworthy. According to \cite{Neumann:2018:PTC} trustworthiness is given if an entity satisfies its specified requirement, after a reliable assessment. The requirements that deserve especially consideration are, those that are critical to an enterprise, mission, system, network or other entity. One of the requirements to make a system trustworthy is a reliable authentication and authorization process. These processes are discussed in more detail in the next sections.
+
+
+\section{Identity Proofing}
+
+“Digital identity is the unique representation of a subject engaged in an online transaction. The process used to verify a subject’s association with their real-world identity is called identity proofing” (\citet{NIST:2017:DIG})
+
+A digital identity as explained above is the result of what is called the authentication process. It is a way of identifying the user as whom he claims to be. To proof the users identity presentation, validation and verification of the minimum attributes is necessary.  [cf. (\citet{Boyed:2012:GSOA})]. 
+
+To become an authenticated user the user has to go through certain steps on the way. These steps the user has to go through are enabled be typical components unique to the authentication process. \cite{Todorov:2007:MUI} identifies three typical components that are part of the authentication the Supplicant, the Authenticator and the Security Database. The Supplicant is the party that provides the evidence to prove the identity of a user or client. The result of the authentication process should be the authenticated user or client. The Authenticator, also called server, is responsible for ascertaining the user identity. After prove of identity, the authenticator can authorize or audit the user access to resources. Security Authority Database, which is storage or  a mechanism to check the user's credentials. The storage can be represented by as much as a flat file, a server on the network providing centralized user authentication or a distributed authentication server [cf. (\cite{Todorov:2007:MUI})]. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{images/componentsUserAuthenticationSystem}
+	\caption[Componets Authentication]{Components User Authentication System}
+	\label{fig:componentsuserauthenticationsystem}
+\end{figure}
+
+
+It is vital that all the components like shown in (figure~\ref{fig:componentsuserauthenticationsystem}), of a user authentication system can communicate independently of each other. Whether or not all communication channels are used depends on the authentication mechanism and the model of trust that it implements. For example, the Kerberos authentication protocol does not feature direct communication between the authenticator and security server [cf. (\cite{Todorov:2007:MUI})]. 
 	
 
 \section{Authentication}
 
-“Digital identity is the unique representation of a subject engaged in an online transaction. The process used to verify a subject’s association with their real-world identity is called identity proofing” (\citet{NIST:2017:DIG})
-
-A digital identity as explained above is the result of what is called the authentication process. It is a way of identifying the user as whom he claims to be. For a very typical authentication process the user provides its username and password when the application demands it. If the user provides a correct username and password, an application assumes the user is indeed the owner of the account he wants to log on [cf. (\citet{Boyed:2012:GSOA})]. 
-
-The evidence provided by the user in the authentication process is called credentials. Most of the time as mentioned above credentials get provided in the form of username and password. Nevertheless, credentials also may take other forms like PIN’s, key cards, eye scanners and so on [cf. (\citet{Todorov:2007:MUI})]. 
+ For a very typical authentication process the user provides its username and password when the application demands it. If the user provides a correct username and password, an application assumes the user is indeed the owner of the account he wants to log on. The evidence provided by the user in the authentication process is called credentials. Most of the time as mentioned above credentials get provided in the form of username and password. Nevertheless, credentials also may take other forms like PIN’s, key cards, eye scanners and so on [cf. (\citet{Todorov:2007:MUI}), (\citet{Boyed:2012:GSOA})]. 
 
 Credentials, which prove the identity of an entity and find use as authenticators in authentication systems, are called factors. \citet{NIST:2017:DIG} categorize following types of factors:
 
@@ -55,7 +83,6 @@ What the user is - biometric information of the user. Examples include fingerpri
 The authenticators are based on secrets that can be either public key pairs (asymmetric keys) or shared secrets (symmetric keys). Public key pairs consists of a private and a public key. The private key gets stored on the authenticator, the holder of the private key can use it to prove that he controls the authenticator. The verifier of the authenticator can then use the public key - most likely recieved with the help of o public key certificate - together with the authentication protocol to verify the identity of the user. Shared secrets can be either symmetric keys or memorized secrets. Both keys and passwords can be used in similar protocols however, there is a huge difference fo the user. Symmetric keys are generally stored on hardware, secrets have to be memorized by the subscriber which can lead to multiple vulnerabilities. The user chooses short memorable passwords while cryptographic keys are typically long enough to make network-based guessing attacks untenable user-chosen passwords may be vulnerable [cf. (\cite{NIST:2017:DIG})]. 
 
 
-
 To secure a solution properly, it should at least use two factors of the three listed above. To make use of more than one factor of a pool of potential credentials to verify the identity of a user is referred to as Multi-factor Authentication (MFA). The goal of multi-factor authentication is it to provide a layered defense and make it harder for unauthorized individuals to gain access. If one of the factors breaks, the service can still rely on the non-compromised authentication factors [cf. (\citet{Dasgupta:2017:AUA})].
 
 Using just one factor is called Single Factor Authentication(SFA). \cite{Dasgupta:2017:AUA} clearly describes the drawbacks SFA has compared to MFA, primarily the universal used password-based authentication. The user needs to remember different passwords for multiple accounts, therefore, the user often reuses one password also known as password fatigue.
@@ -69,44 +96,40 @@ Besides password fatigue \cite{Todorov:2007:MUI} draws attention to one of the s
 
 When designing an authentication process by using multiple factors the designers of the process should be acutely aware of the type of application and the information that has to be secured. For example, a solution for an international bank should have different standards than an app for a making a grocery list. On the one hand, challenging and complex authentication processes for trivial applications might scare away users. On the other hand, simple methods for applications protecting sensitive data might drive users away as well. Application designers should always try to find a middle way that suits both parties, the application owners and the users [cf. (\cite{NIST:2017:DIG})]. 
 
-The factors are an important part of the authentication process which result should be an authenticated user. However, to become an authenticated user the user has to go through certain steps on the way. These steps the user has to go through are enabled be typical components unique to the authentication process. \cite{Todorov:2007:MUI} identifies three typical components that are part of the authentication the Supplicant, the Authenticator and the Security Database. The Supplicant is the party that provides the evidence to prove the identity of a user or client. The result of the authentication process should be the authenticated user or client. The Authenticator, also called server, is responsible for ascertaining the user identity. After prove of identity, the authenticator can authorize or audit the user access to resources. Security Authority Database, which is storage or  a mechanism to check the user's credentials. The storage can be represented by as much as a flat file, a server on the network providing centralized user authentication or a distributed authentication server [cf. (\cite{Todorov:2007:MUI})]. 
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{images/componentsUserAuthenticationSystem}
-	\caption[Componets Authentication]{Components User Authentication System}
-	\label{fig:componentsuserauthenticationsystem}
-\end{figure}
-
-
-It is vital that all the components like shown in (figure~\ref{fig:componentsuserauthenticationsystem}), of a user authentication system can communicate independently of each other. Whether or not all communication channels are used depends on the authentication mechanism and the model of trust that it implements. For example, the Kerberos authentication protocol does not feature direct communication between the authenticator and security server [cf. (\cite{Todorov:2007:MUI})]. 
-
-Application security is a complex task and developing a customized siloed identity solution can be expensive. A Stand-alone identity store can besides being expensive also causes information assurance and administrative problems for organizations  [cf.(\cite{JerichoSystems:IS})]. 
-
-  A federate authentication or identity federation says \cite{Boyed:2012:GSOA} is a system that is maintaining its accounts, for example, username and password databases, with the help of third party service. Often big cooperate IT environments already use such solutions. Environment applications, for example, may trust an Active Directory server, an LDAP server or a SAML provider.    \cite{NIST:2017:DIG} also claims that identity federation is preferred over some siloed identity solution that each serve a single agency or Relying Party (RPs). Furthermore \cite{NIST:2017:DIG} lists certain benefits that come with using federated architectures, as can be examined before. 
-
-\begin{itemize}
-\item Enhanced user experience. For example, an individual can be identity proofed once and reuse the issued credential at multiple RPs. 
-\item Cost reduction to both the user (reduction in authenticators) and the agency (reduction in information technology infrastructure). 
-\item Data minimization as agencies does not need to pay for collection, storage, disposal, and compliance activities related to storing personal information. 
-\item Pseudonymous attribute assertions as agencies can request a minimized set of attributes, to include claims, to fulfill service delivery. 
-\item Mission enablement as agencies can focus on the mission, rather than the business of identity management.
-\end{itemize}
 
 To reflect on authentication it can be said that authentication is a very important part of every applications. As users are getting more concerned on security the pressure on developers grows to provide a solution that secures sensible data while keeping up usability standards, which can often be a trade-off. Complex applications need complex security which can mean high costs for individually developed solutions; therefore application developers should also think about using federate authentication solutions. 
 
 
 \section{Assertion}
 
-
 The authentication and authorization process are very closely related to each other and for users often hard to separate. After the authentication process of a user, the application has now proof that the user is who he claims to be, but not every user is the same. After  the user authenticates, the user may want to access data or services. Based on the information provided by the authentication process the application has the possibility to allow or deny the user to access information or services. In other words we have to check if the user is authorized to access data of a service. Furthermore authorization, offers granular control to distinguish between read, write or execute access to individual resources, typically access control list (ACL) are used for each operation [cf.(\cite{Todorov:2007:MUI}, \cite{Boyed:2012:GSOA})].
 
   Systems offer a user login process or sign-in process, in order to receive the information necessary to make authorization decisions. The login process initiates the authentication process between user and the system. As a result of this process where the user has to proof its identity, the user receives a system or application specific structure. In federated identity system this is called an assertion. The assertion holds an identifier and identification information about the user which can indicate for example what kind of resources the user can access. For every action the user then has to provide the assertion and based on the information provided within the assertion the user is then either granted or denied access. Another example for the usage of the assertion is the personalization of websites [cf. (\cite{Todorov:2007:MUI}), (\cite{NIST:2017:DIG})].
   
-  In federate systems the verifier of authentication information of the user is called Identity Provider (IdP) and the party that receives and uses information is called the Relying Party(S). In the context of the federate identification systems the user, or the one that is trying to access information form a system is called subscriber. The IdP generates an assertion for the verifier associate with the subscriber. This process allows subscribers to access multiple RPs without maintaining separate credentials and the process also supports singe-sign on. \cite{NIST:2017:DIGFA}
+  In federate systems the verifier of authentication information of the user is called Identity Provider (IdP) and the party that receives and uses information is called the Relying Party(RP). In the context of the federate identification systems the user, or the one that is trying to access information form a system is called subscriber. The IdP generates an assertion for the verifier associate with the subscriber. This process allows subscribers to access multiple RPs without maintaining separate credentials and the process also supports singe-sign on. \cite{NIST:2017:DIGFA}
    
-There are different levels of federation assurance that define how assertion should be constructed and secured for a given transactions. Whereas each successive level has to fulfill the requirements of all lower level. The first level requires a bearer a assertion, signed by IdP, for example OpenID Connect Basic Client profile or Security Assertion Markup Language (SAML) Web SSO Artifact Binding profile with no additional feature. The second level requires an assertion like, the OpenID Connect ID Token or SAML Assertion, to be encrypted with the public ke of the RP. Additionally the last federation assertion level requires the subscriber to prove that he is in possession of a key that is bound to the assertion and initially was used to authenticate to the IdP. For any assertion level the IdP has to make sure that an RP can not impersonate the IdP at another RP by signing the assertion. The signing of the assertion can be done by either a MAC using a shared key or a digital signature using an asymmetric key [cf. (\cite{NIST:2017:DIG}), (\cite{NIST:2017:DIGFA})].  
+\cite{NIST:2017:DIG} defines different levels of federation assurance that define how assertion should be constructed and secured for a given transactions. Whereas each successive level has to fulfill the requirements of all lower level. For any assertion level the IdP has to make sure that an RP can not impersonate the IdP at another RP by signing the assertion. The signing of the assertion can be done by either a MAC using a shared key or a digital signature using an asymmetric key. The first level requires a bearer assertion, signed with approved cryptography by an IdP, for example OpenID Connect Basic Client profile or Security Assertion Markup Language (SAML) Web SSO Artifact Binding profile with no additional feature. The second level requires an assertion like, the OpenID Connect ID Token or SAML Assertion, to be encrypted with the public key of the RP, whereas the RP is the only party that is able to decrypt the bearer assertion Additionally to the first two levels the last federation assertion level requires the subscriber to prove that he is in possession of a key that is bound to the assertion (holder of key assertion) and initially was used to authenticate to the IdP. For any assertion level the IdP has to make sure that an RP can not impersonate the IdP at another RP by signing the assertion. The signing of the assertion can be done by either a MAC using a shared key or a digital signature using an asymmetric key [cf. (\cite{NIST:2017:DIG}), (\cite{NIST:2017:DIGFA})].  
 
+One of the factors the differentiate the different federation assurance level is the usage of assertion binding. In order to choose an assertion binding one has to know if an RP requires additional proof that the assertion is bound to a certain subscriber or not. The two diffrent kind of assertion binding to chose from are bearer and holder-of-key assertions. A bearer assertion can be presented by any party in order to proof to have the bearers identity. This means that if an attack is successful in capturing an bear assertion representing a subscriber. The attacker could present the assertion or reference to the RP and impersonate the subscriber. The holder-of-key assertion in comparision holds a reference to a key which indicates which subscriber is representing the assertion. The key is signed and asserted by the issuer of the assertion. 
+
+\section{Popular Federation Systems}
+
+Application security is a complex task and developing a customized siloed identity solution can be expensive. A Stand-alone identity store can besides being expensive also causes information assurance and administrative problems for organizations  [cf.(\cite{JerichoSystems:IS})]. 
+
+A federate authentication or identity federation says \cite{Boyed:2012:GSOA} is a system that is maintaining its accounts, for example, username and password databases, with the help of third party service. Often big cooperate IT environments already use such solutions. Environment applications, for example, may trust an Active Directory server, an LDAP server or a SAML provider.    \cite{NIST:2017:DIG} also claims that identity federation is preferred over some siloed identity solution that each serve a single agency or Relying Party (RPs). Furthermore \cite{NIST:2017:DIG} lists certain benefits that come with using federated architectures, as can be examined before. 
+
+\begin{itemize}
+	\item Enhanced user experience. For example, an individual can be identity proofed once and reuse the issued credential at multiple RPs. 
+	\item Cost reduction to both the user (reduction in authenticators) and the agency (reduction in information technology infrastructure). 
+	\item Data minimization as agencies does not need to pay for collection, storage, disposal, and compliance activities related to storing personal information. 
+	\item Pseudonymous attribute assertions as agencies can request a minimized set of attributes, to include claims, to fulfill service delivery. 
+	\item Mission enablement as agencies can focus on the mission, rather than the business of identity management.
+\end{itemize}
+
+In the next section three very popular assertion technologies are discussed: SAML assertions Kerberos tickets and OpenID Connect tokens.
+Those technologies are not all possible assertion technologies. However they present the most commonly used in federate identity systems. 
+
+ 
 
 
 \section{Token-base Authentication}

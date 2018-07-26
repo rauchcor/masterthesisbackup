@@ -14,18 +14,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Security Considerations}{4}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Authentication}{7}{section.2.2}
+\contentsline {section}{\numberline {2.2}Identity Proofing}{7}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Assertion}{11}{section.2.3}
+\contentsline {section}{\numberline {2.3}Authentication}{8}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Token-base Authentication}{12}{section.2.4}
+\contentsline {section}{\numberline {2.4}Assertion}{11}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Server-Based Authentication.}{13}{section*.4}
+\contentsline {section}{\numberline {2.5}Popular Federation Systems}{13}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{ Token-based authentication with JSON Web Token }{13}{section*.5}
+\contentsline {section}{\numberline {2.6}Token-base Authentication}{14}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Single Sign-On}{20}{section.2.5}
+\contentsline {paragraph}{Server-Based Authentication.}{14}{section*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Conclusion and Outlook}{23}{chapter.3}
+\contentsline {paragraph}{ Token-based authentication with JSON Web Token }{15}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{27}{appendix*.7}
+\contentsline {section}{\numberline {2.7}Single Sign-On}{21}{section.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Conclusion and Outlook}{25}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{29}{appendix*.7}
