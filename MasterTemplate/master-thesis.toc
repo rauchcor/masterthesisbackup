@@ -12,32 +12,32 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Related Work}{4}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Security Considerations}{4}{section.2.1}
+\contentsline {section}{\numberline {2.1}Security Considerations}{5}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Identity Proofing}{7}{section.2.2}
+\contentsline {section}{\numberline {2.2}Identity Proofing}{8}{section.2.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Authentication}{9}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Assertion}{11}{section.2.4}
+\contentsline {section}{\numberline {2.4}Assertion}{12}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Popular Federation Systems}{13}{section.2.5}
+\contentsline {section}{\numberline {2.5}Popular Federation Systems}{14}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Token-base Authentication}{14}{section.2.6}
+\contentsline {section}{\numberline {2.6}Token-base Authentication}{16}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Server-Based Authentication.}{14}{section*.4}
+\contentsline {paragraph}{Server-Based Authentication.}{17}{section*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{ Token-based authentication with JSON Web Token }{15}{section*.5}
+\contentsline {paragraph}{ Token-based authentication with JSON Web Token }{18}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Single Sign-On}{21}{section.2.7}
+\contentsline {section}{\numberline {2.7}Single Sign-On}{24}{section.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Practical Part}{25}{chapter.3}
+\contentsline {chapter}{\numberline {3}Practical Part}{28}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Use Case}{25}{section.3.1}
+\contentsline {section}{\numberline {3.1}Use Case}{28}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Risk Assessment}{26}{section.3.2}
+\contentsline {section}{\numberline {3.2}Risk Assessment}{29}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Solution}{26}{section.3.3}
+\contentsline {section}{\numberline {3.3}Solution}{29}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{27}{chapter.4}
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{30}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{31}{appendix*.7}
+\contentsline {chapter}{References}{34}{appendix*.7}

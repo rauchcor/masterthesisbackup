@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  26 JUL 2018 12:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  3 AUG 2018 10:14
 entering extended mode
 **./master-thesis.tex
 (master-thesis.tex
@@ -1366,7 +1366,7 @@ LaTeX Info: Redefining \nameref on input line 148.
 \openout2 = `titlepages.aux'.
 
  (titlepages.tex
-<images/logo_FHJ_100mm_cmyk.pdf, id=71, 285.065pt x 58.2175pt>
+<images/logo_FHJ_100mm_cmyk.pdf, id=79, 285.065pt x 58.2175pt>
 File: images/logo_FHJ_100mm_cmyk.pdf Graphic file (type pdf)
 <use images/logo_FHJ_100mm_cmyk.pdf>
 Package pdftex.def Info: images/logo_FHJ_100mm_cmyk.pdf  used on input line 11.
@@ -1508,31 +1508,37 @@ Chapter 2.
 
 
 ] [5] [6]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 31.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 34.
 
 ("C:\Users\rauchcor\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.f
 d"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [7]
-<images/componentsUserAuthenticationSystem.jpg, id=206, 320.2875pt x 222.723pt>
+<images/componentsUserAuthenticationSystem.jpg, id=220, 320.2875pt x 222.723pt>
 
 File: images/componentsUserAuthenticationSystem.jpg Graphic file (type jpg)
 <use images/componentsUserAuthenticationSystem.jpg>
 Package pdftex.def Info: images/componentsUserAuthenticationSystem.jpg  used on
- input line 54.
+ input line 58.
 (pdftex.def)             Requested size: 330.05322pt x 229.51599pt.
- [8 <./images/componentsUserAuthenticationSystem.jpg>] [9]
-Overfull \hbox (9.8305pt too wide) in paragraph at lines 88--89
+ [8 <./images/componentsUserAuthenticationSystem.jpg>] [9] [10]
+Overfull \hbox (9.8305pt too wide) in paragraph at lines 99--100
 \T1/ptm/m/n/12 scribes the draw-backs SFA has com-pared to MFA, pri-mar-ily the
  uni-ver-sal used password-
  []
 
-[10] [11] [12] [13] [14] [15]
-<images/googleOAuthPlaygroundOAuthAPI.jpg, id=285, 319.1925pt x 45.92157pt>
+[11] [12] [13] [14]
+<images/federation.jpg, id=302, 389.95688pt x 372.64218pt>
+File: images/federation.jpg Graphic file (type jpg)
+<use images/federation.jpg>
+Package pdftex.def Info: images/federation.jpg  used on input line 162.
+(pdftex.def)             Requested size: 330.05322pt x 315.41112pt.
+ [15 <./images/federation.jpg>] [16] [17] [18]
+<images/googleOAuthPlaygroundOAuthAPI.jpg, id=340, 319.1925pt x 45.92157pt>
 File: images/googleOAuthPlaygroundOAuthAPI.jpg Graphic file (type jpg)
 <use images/googleOAuthPlaygroundOAuthAPI.jpg>
 Package pdftex.def Info: images/googleOAuthPlaygroundOAuthAPI.jpg  used on inpu
-t line 166.
+t line 218.
 (pdftex.def)             Requested size: 330.05322pt x 47.48401pt.
 
 ("C:\Users\rauchcor\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlan
@@ -1543,45 +1549,47 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 c.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 176.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 228.
 
 ("C:\Users\rauchcor\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd
 "
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [16 <./images/googleOAuthPlaygroundOAuthAPI.jpg>]
-Overfull \hbox (3.61511pt too wide) in paragraph at lines 222--223
+) [19 <./images/googleOAuthPlaygroundOAuthAPI.jpg>]
+Overfull \hbox (3.61511pt too wide) in paragraph at lines 274--275
 \T1/ptm/m/n/12 cryp-to-graphic op-er-a-tions ap-plied and op-tion-ally ad-di-ti
 onal prop-er-ties of the JWT. Based
  []
 
-[17]
-<images/jwtjwsjwe.jpg, id=330, 114.318pt x 98.55pt>
+<images/jwtjwsjwe.jpg, id=370, 114.318pt x 98.55pt>
 File: images/jwtjwsjwe.jpg Graphic file (type jpg)
 <use images/jwtjwsjwe.jpg>
-Package pdftex.def Info: images/jwtjwsjwe.jpg  used on input line 227.
+Package pdftex.def Info: images/jwtjwsjwe.jpg  used on input line 279.
 (pdftex.def)             Requested size: 247.54149pt x 213.40617pt.
- [18 <./images/jwtjwsjwe.jpg>] [19]
-Overfull \hbox (12.06343pt too wide) in paragraph at lines 307--309
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[20] [21 <./images/jwtjwsjwe.jpg>] [22]
+Overfull \hbox (12.06343pt too wide) in paragraph at lines 359--361
 \T1/ptm/m/n/12 ASCII(BASE64URL-ENCODE(UTF8(JOSE Header)) '.' BASE64URL-ENCODE(J
 WS
  []
 
-[20] [21] [22] [23] [24])
+[23] [24] [25] [26] [27])
 \openout2 = `chapters/practicalPart.aux'.
 
  (chapters/practicalPart.tex
 Chapter 3.
-[25
+[28
 
 
 
 
-] [26])
+] [29])
 \openout2 = `chapters/conclusion.aux'.
 
  (chapters/conclusion.tex
 Chapter 4.
-[27
+[30
 
 
 
@@ -1592,7 +1600,7 @@ Chapter 4.
  (acronyms.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 8.
-) [28
+) [31
 
 
 
@@ -1615,7 +1623,10 @@ Overfull \hbox (56.12276pt too wide) in paragraph at lines 173--173
  Avail-able from: <[][]$\T1/pcr/m/n/12 https : / / petsymposium .
  []
 
+[32
 
+
+]
 Overfull \hbox (3.47348pt too wide) in paragraph at lines 173--173
 \T1/ptm/m/n/12 <[][]$\T1/pcr/m/n/12 https : / / developers . google . com / oau
 thplayground/$[][]\T1/ptm/m/n/12 > [July 2018]. 
@@ -1628,43 +1639,34 @@ Overfull \hbox (42.41223pt too wide) in paragraph at lines 173--173
 s .
  []
 
-[29
-
-
-] [30]
+[33]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 175.
- [31]
+ [34]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
  (master-thesis.aux (titlepages.aux) (chapters/introduction.aux)
 (chapters/authenticationAndAuthorization.aux) (chapters/practicalPart.aux)
 (chapters/conclusion.aux) (acronyms.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 175.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 175.
-
-
-Package rerunfilecheck Warning: File `master-thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `master-thesis.out':
-(rerunfilecheck)             Before: 2AA0E050F00AF0390526B41F9D9B4A88;1065
-(rerunfilecheck)             After:  6743AF53709CD884489CCD2510F7AD52;1192.
+Package rerunfilecheck Info: File `master-thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 6743AF53709CD884489CCD2510F7AD52;1192.
 Package logreq Info: Writing requests to 'master-thesis.run.xml'.
 \openout1 = `master-thesis.run.xml'.
 
  )
-(\end occurred inside a group at level 1)
+(\end occurred inside a group at level 2)
 
-### simple group (level 1) entered at line 287 ({)
+### simple group (level 2) entered at line 339 ({)
+### simple group (level 1) entered at line 156 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 18600 strings out of 493305
- 307705 string characters out of 3128497
- 774881 words of memory out of 3000000
- 21650 multiletter control sequences out of 15000+200000
+ 18655 strings out of 493305
+ 308974 string characters out of 3128497
+ 776337 words of memory out of 3000000
+ 21688 multiletter control sequences out of 15000+200000
  60656 words of font info for 72 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
- 51i,6n,53p,2138b,1943s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 51i,7n,53p,2138b,2065s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/
 dvips/base/8r.enc}<C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/urw/courier/ucrr8a.pfb><C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.9
@@ -1673,9 +1675,9 @@ MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/rauchcor/AppData/Local/Pr
 ograms/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rauchcor/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rauchcor/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on master-thesis.pdf (39 pages, 310704 bytes).
+Output written on master-thesis.pdf (42 pages, 386255 bytes).
 PDF statistics:
- 565 PDF objects out of 1000 (max. 8388607)
- 164 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 617 PDF objects out of 1000 (max. 8388607)
+ 180 named destinations out of 1000 (max. 500000)
+ 178 words of extra memory for PDF output out of 10000 (max. 10000000)
 

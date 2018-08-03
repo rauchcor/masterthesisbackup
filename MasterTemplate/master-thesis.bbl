@@ -19,6 +19,43 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{Birell:2013:FIMS}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=f19b43270836be231e59a7920fa959be}{%
+           family={Birrell},
+           familyi={B\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=6d85d091befab7e49a7c456eb3176b81}{%
+           family={Schneider},
+           familyi={S\bibinitperiod},
+           given={F.\bibnamedelimi B.},
+           giveni={F\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f05efa9b0c8c36735e2e76be00865cd1}
+      \strng{fullhash}{f05efa9b0c8c36735e2e76be00865cd1}
+      \strng{bibnamehash}{f05efa9b0c8c36735e2e76be00865cd1}
+      \strng{authorbibnamehash}{f05efa9b0c8c36735e2e76be00865cd1}
+      \strng{authornamehash}{f05efa9b0c8c36735e2e76be00865cd1}
+      \strng{authorfullhash}{f05efa9b0c8c36735e2e76be00865cd1}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Security Privacy}
+      \field{month}{9}
+      \field{number}{5}
+      \field{title}{Federated Identity Management Systems: A Privacy-Based Characterization}
+      \field{volume}{11}
+      \field{year}{2013}
+      \field{pages}{36\bibrangedash 48}
+      \range{pages}{13}
+      \keyw{data privacy;government policies;US National Strategy for Trusted Identities in Cyberspace initiative;federated identity management systems;privacy-based characterization;privacy-driven taxonomy;public policy analysis;Authentication;Data storage systems;Identity management;Metasearch;authentication of humans;identity management systems;privacy}
+    \endentry
     \entry{Boyed:2012:GSOA}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=3ad3403ee3680cec214a3a73bea4028a}{%
@@ -249,6 +286,173 @@
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-319-58808-7}
       \field{title}{Advances in User Authentication}
+      \field{year}{2017}
+    \endentry
+    \entry{NIST:2017:DIGEIP}{manual}{}
+      \name{author}{7}{uniquelist=2}{%
+        {{uniquename=0,uniquepart=base,hash=7a9927de15214d1bf5f7b12a22a04740}{%
+           family={Grassi},
+           familyi={G\bibinitperiod},
+           given={Paul\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=d85497410ec739dc54916135b278711c}{%
+           family={Fenton},
+           familyi={F\bibinitperiod},
+           given={James\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=cb06073aa3ac999b86360804ccfabcff}{%
+           family={Lefkovitz},
+           familyi={L\bibinitperiod},
+           given={Naomi\bibnamedelima B.},
+           giveni={N\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8250c014f4be9c4c4f6c6c6395f24620}{%
+           family={Danker},
+           familyi={D\bibinitperiod},
+           given={Jamie\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=17c2d6846077646d795a8d5caeeca944}{%
+           family={Choong},
+           familyi={C\bibinitperiod},
+           given={Yee-Yin},
+           giveni={Y\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9dedd4426e4df6c6b57fd5665a3d7e9f}{%
+           family={Greene},
+           familyi={G\bibinitperiod},
+           given={Kirsten\bibnamedelima K.},
+           giveni={K\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=438c0fa1bf607de27f2908149e582513}{%
+           family={Theafanos},
+           familyi={T\bibinitperiod},
+           given={Mary\bibnamedelima F.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{2}{%
+        {NIST (National Institute of Standards}%
+        {Technology)}%
+      }
+      \strng{namehash}{5e0d7d14b1d6ea237012dc0fa138ab21}
+      \strng{fullhash}{25c59fa2b7f6d936bfca6dd57451e8f3}
+      \strng{bibnamehash}{25c59fa2b7f6d936bfca6dd57451e8f3}
+      \strng{authorbibnamehash}{25c59fa2b7f6d936bfca6dd57451e8f3}
+      \strng{authornamehash}{5e0d7d14b1d6ea237012dc0fa138ab21}
+      \strng{authorfullhash}{25c59fa2b7f6d936bfca6dd57451e8f3}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Special Publication 800-63A}
+      \field{month}{07}
+      \field{subtitle}{Enrollment and Identity Proofing}
+      \field{title}{Digital Identity Guidelines}
+      \field{year}{2017}
+    \endentry
+    \entry{NIST:2017:DIGAL}{manual}{}
+      \name{author}{12}{uniquelist=2}{%
+        {{uniquename=0,uniquepart=base,hash=7a9927de15214d1bf5f7b12a22a04740}{%
+           family={Grassi},
+           familyi={G\bibinitperiod},
+           given={Paul\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=64d6e12bfa074b29d39d7531e4fd5d76}{%
+           family={Fenton},
+           familyi={F\bibinitperiod},
+           given={JamesL.},
+           giveni={J\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=1634d2b77f5dcc6c13316c1b34344ff3}{%
+           family={Newton},
+           familyi={N\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0,
+           suffix={Elain},
+           suffixi={E\bibinitperiod},
+           suffixun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a9bbc3c35da8e126852f4e76465d40cc}{%
+           family={Perner},
+           familyi={P\bibinitperiod},
+           given={Ray\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=fb5a79d6e92d378bb94a3de00ae0137f}{%
+           family={Regenscheid},
+           familyi={R\bibinitperiod},
+           given={Andrew\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d9fbc66ea3007fd8374b405020f08934}{%
+           family={Burr},
+           familyi={B\bibinitperiod},
+           given={William\bibnamedelima E.},
+           giveni={W\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d25eb5f05ebc722fa7ded6bc194f072f}{%
+           family={Richer},
+           familyi={R\bibinitperiod},
+           given={Justin\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=cb06073aa3ac999b86360804ccfabcff}{%
+           family={Lefkovitz},
+           familyi={L\bibinitperiod},
+           given={Naomi\bibnamedelima B.},
+           giveni={N\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8250c014f4be9c4c4f6c6c6395f24620}{%
+           family={Danker},
+           familyi={D\bibinitperiod},
+           given={Jamie\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=17c2d6846077646d795a8d5caeeca944}{%
+           family={Choong},
+           familyi={C\bibinitperiod},
+           given={Yee-Yin},
+           giveni={Y\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9dedd4426e4df6c6b57fd5665a3d7e9f}{%
+           family={Greene},
+           familyi={G\bibinitperiod},
+           given={Kirsten\bibnamedelima K.},
+           giveni={K\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=438c0fa1bf607de27f2908149e582513}{%
+           family={Theafanos},
+           familyi={T\bibinitperiod},
+           given={Mary\bibnamedelima F.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{2}{%
+        {NIST (National Institute of Standards}%
+        {Technology)}%
+      }
+      \strng{namehash}{a252c66974469605b81315e04d485b77}
+      \strng{fullhash}{248e89274bd22b3701bd02770d47f822}
+      \strng{bibnamehash}{248e89274bd22b3701bd02770d47f822}
+      \strng{authorbibnamehash}{248e89274bd22b3701bd02770d47f822}
+      \strng{authornamehash}{a252c66974469605b81315e04d485b77}
+      \strng{authorfullhash}{248e89274bd22b3701bd02770d47f822}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Special Publication 800-63B}
+      \field{month}{07}
+      \field{subtitle}{Authentication and Lifecycle Management}
+      \field{title}{Digital Identity Guidelines}
       \field{year}{2017}
     \endentry
     \entry{NIST:2017:DIG}{manual}{}
