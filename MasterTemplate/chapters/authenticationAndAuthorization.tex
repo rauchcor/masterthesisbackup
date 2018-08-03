@@ -178,14 +178,65 @@ Client-Side Federation. Anonymous credentials systems provide authentication ass
 		\item Mission enablement as agencies can focus on the mission, rather than the business of identity management.
 	\end{itemize}
 	
-	In the next section three very popular assertion technologies are discussed: SAML assertions Kerberos tickets and OpenID Connect tokens. Those technologies are not all possible assertion technologies. However, they present the most commonly used in federated identity systems. 
+	In the next section three very popular assertion technologies are discussed: SAML assertions, Kerberos tickets and OpenID Connect tokens. Those technologies are not all possible assertion technologies. However, they present the most commonly used in federated identity systems. 
+	
+\section{OAuth and OpenID Connect}
 
 
+OAuth 2.0 is a protocol that is used for access control. The protocol adds an authori-zation layer – separating the Client from the Resource Owner. To gain access, an access token is used instead of the resource owner’s credentials. Access Tokens are issued by an Authorization Server and can be used  by the Client to gain access to protected resources hosted by the resource server. OAuth 2.0 uses a token service, which centralizes this logic and reduces complexity for the Client and the APIs [cf. (\cite{Brock:2018:ID4})]
+
+ OpenID Connect and OAuth 2.0 seem very similar, in fact OpenID Connect is a framework build on top of OAuth 2.0. Together they focus on Authentication and Access Control in a way that is suitable for modern applications. OpenID can verify the identity of an End-User and obtain basic profile information about the user. It uses Claims to communicate information to the End-User [cf. (\cite{Sakimura:2014:OpenIDConnect})]
+ 
+ OpenID Connect performs authentication and determines if the user is already logged on or to log on the user. The result is an authentication token which is returned to the user. \cite{Sakimura:2014:OpenIDConnect} defines three different way authentication can flow:
+ 
+ 
+ \begin{enumerate}
+ 	\item \textbf{Authorization Code Flow}  - The Authorization Code Flow returns an Authentification Code which can be used to be exchanged for an id\_token or an access\_token. This is used for Clients that can maintain a secret securly between themselves and the Authorization Server. Typically this aproach is used for sever-to-server communication when no interactive user is present. In this thesis, I focus on  user interaction thus, Ido not include an example [cf. (\cite{Sakimura:2014:OpenIDConnect}, p.10)]
+ 	
+ 		To use the Authorization Code Flow according to \cite{Sakimura:2014:OpenIDConnect} the the following request\_type indicates a Authorization Code Flow:
+ 		\begin{itemize}
+ 		\item	code: The response includes an Authorization Code. 
+ 		\end{itemize}
+ 	
+ 	\item \textbf{Implicit Code Flow} - In the Implicit Code Flow the access token and the ID id token are directly returned to the Client. This behavior may expose information to the End-User or anyone who has access to the End-User’s Agent. Tokens are only returned from the Token Endpoint, the Authorization Endpoints is  not used. Unlike the Authorization Code Flow where separate request are used for authorization and authentification, here the Client will  receive the access token as a result ot the authentification. This also means that there is no refresh token.  This flow is used for Clients which are implemented in a browser using scripting language [cf. (\cite{Sakimura:2014:OpenIDConnect}, p.20), (\cite{Hardt:2012:OAuth2})]
+ 	
+ 	According to \cite{Sakimura:2014:OpenIDConnect}, the following request\_types indicate an Implicit Code Flow:
+ 		\begin{itemize}
+ 		\item	id\_token: The response must include the parameter id\_token. The response does not include an Authorization Code, Access Token, or Access Token Type. 
+ 		\item  id\_token token: The response includes an Access Token, an Access Token Type and an id\_token.
+ 	\end{itemize}
+  	
+ 	\item \textbf{Hybrid Code Flow} - In the hybrid code flow, tokens are returned from the Authorization Endpoint and others are returned from the Token Endpoint. The Token Server will return  not only the id token but also the code. The Client then has to use the code in order to gain the access token through a back channel call. This means there is an additional round trip compared to the Implicit Code Flow. Using the code to receive the access token should minimize the risk of exposing the access token [cf. (\cite{Sakimura:2014:OpenIDConnect})].
+ 	To use the Hybrid Code Flow according to de \cite{Sakimura:2014:OpenIDConnect} put forward that the following request\_types indicate a Hybrid Code Flow:
+ 		\begin{itemize}
+ 		\item	code id\_token: The response includes an Authorization Code and an id\_token.
+ 		\item  code id\_token token: The response includes an Authorization Code, an Access Token, an Access Token Type and an id\_token. 
+ 	\end{itemize} 
+ 		
+ \end{enumerate}
+ 
+ 
  
 
 
 \section{Token-base Authentication}
 
+
+The way web developers write back-end applications has changed significantly with the rising popularity of single page and mobile applications. Backend-developers no longer spend a lot of time building markup. Instead, they build APIs for front-end applications to consume. The split up of front-end and back-end allows the back-end to focus on business logic and data management while the front-end solely focus on the representation of the content. The number one way single page and mobile web applications are authenticating users according to \cite{Tkalec:2015} is token-based authentication.
+
+\cite{Serilleja:2015:Scothio} shares the view that token-based authentication is the modern way to handle authentication. Token-based authentication should be considered because of various factors. It is optimal for mobile applications which work in a stateless way and need to adapt to the sudden change of demand in a scalable way. Furthermore, token-based authentication provides extra security and applications can pass on authenticated users to other applications. However, before taking a closer look at token-based authentication, it should be taken into account how \cite{Serilleja:2015:Scothio} and \cite{Tkalec:2015} concluded that token-based authentication is the best alternative for modern web applications to authenticate their users. Therefore, \cite{Serilleja:2015:Scothio}, for example, examines how authentication was done in the past. One approach to authenticate users used in the past that puts token-based authentication in perspective is server-based authentication. 
+
+\paragraph{Server-Based Authentication.}
+A lot of modern-day API’s built on the Representational State Transfer(REST) programming paradigm which basis is the HTTP protocol which is stateless as well. A protocol that is stateless does not recall the actions that were taken beforehand which mean for example that if we authenticate the user, in the next request we have to authenticate the user again because the application will not know the user anymore [cf. (\cite{Serilleja:2015:Scothio})]. 
+
+The aim of server-based authentication is for the application to remember the user that logged on at the application. The application has to store the information on the server, which can be done in a few different ways on the session, usually in memory on the disk. The workflow of a server-based authentication starts with the server delivering the website and the user logging in with username and password. The server saves the information from the user login info in a session. After the session is established, the session is checked on the server for every request. If the session is valid, the server returns the requested data to the server. However, since modern single-application ant mobile applications are on the rise, this method to authenticate user shown some problems, especially when it comes to scalability [cf. (\cite{Serilleja:2015:Scothio})]. 
+
+The session handling with server-based authentication is especially hard on the server’s bandwidth. Most of the time the session gets established in memory on the server when the user authenticates. This approach leads to an enormous overhead. The second problem with this approach is that the information of the user is held in memory on the server. Since more and more companies are moving servers to the cloud, this is not only a security issue but replicating servers to scale is limited. Also nowadays users want to access their data at any moment from every device. Providing the user with the possibility to access data across multiple mobile devices is vital, which means cross-origin resource sharing has to be enabled. With server-based authentication, it is possible to run into problems with the forbidden request when the user tries to access data from another domain [cf. (\cite{Serilleja:2015:Scothio})].
+
+
+\paragraph{
+	Token-based authentication with JSON Web Token
+}
 
 The most important thing about token-based authentication is that it is stateless, much like HTTP. The server does not have to hold the session of the user over an extended period on the server. Instead, the user can request resources by offering a token generated by an authentication server. The token send in the query string or Authorization header can then be validated at the resource server, and the secure resource will be returned to the user. The approach of using JSON Web Tokens gives one the ability to scale applications without considering on which domain the user logged on. Another advantage besides being scalable is that token-based authentication gives one the possibility to reuse the same token for authenticating the user. Therefore, it gets easier to build applications that share permission with other application because many separate servers, running on multiple platforms and domains can reuse the same token. The approach also gives performance advantages compared to server-side authentication because there is no need to find and deserialize the session on each request. However, since it is best practice to encrypt the token, the token still needs to be validated, and the content needs to be parsed. One way to implement token-based authentication is with the help of JSON Web Tokens. JSON Web Tokens are gaining popularity fast and are backed by huge companies like Google and Microsoft. Also, the Internet Engineering Task Force defines a standard specification. OpenID and OAuth also use the JSON Web Token as a standard; therefore, the usage of the JSON Web Token will be explained in detail [cf. (\cite{Tkalec:2015})].
 
@@ -236,7 +287,7 @@ gQETEp8o3RvRHtfSu8Gx4UOhukt9_VxVdHmpFw
 The JWT Token in the figure above is presented as a sequence of URL-save base64url-encoded values. The different values are separated by a (‘.’) character. How many parts a JWT has is dependent on how the JWT is serialized. Either by using the JWS Compact Serialization or JWE Compact Serialization  [cf. (\cite{JWT:IETF:Jones:2015})].
 
 
-To make sense of this JWT token in the figure above it is best to look at each of the three parts of the JWT separately. When decoding the first part of the JWT, we receive a JSON object. Each part can be decoded individually but if a quick representation of a token is needed developers are the best advised to use \href{https://jwt.io/} {https://jwt.io/}. The website not only decodes the information of the token it also verifies the token. The figure above shows a warning that pops up if the token is not flawless. The verification of the token and the signing is done with multiple libraries that inform about specific vulnerabilities of the JSON Web Token. The first decoded part of the JWT gives us the following JSON.
+To make sense of this JWT token in the figure above it is best to look at each of the three parts of the JWT separately. When decoding the first part of the JWT, we receive a JSON object. Each part can be decoded individually but if a quick representation of a token is needed developers are the best advised to use \href{https://jwt.io/} {https://jwt.io/}. The website not only decodes the information of the token it also verifies the token. The figure above shows a warning that pops up if the token is not flawless. The verification of the token and the signing is done with multiple libraries that inform about certain vulnerabilities of the JSON Web Token. The first decoded part of the JWT gives us the following JSON.
 
 
 \lstset{
@@ -265,7 +316,7 @@ The JSON object in \ref{lst:joseheader} is the JOSE Header, representing the typ
 	\label{fig:jwtjwsjwe}
 \end{figure}
 
-The 'type' Header Parameter we can examine in \ref{lst:joseheader} indicates the kind of token, considering the example it is a JSON Web Token. The second parameter is the 'alg' Header Parameter and is specified in either the 'JSON Web Security (JWS)' reference documentation written by \cite{JWS:IETF:Jones:2015} or the JSON Web Encryption (JWE) reference documentation written by \cite{JWE:IETF:Jones:2015}. In this case, the JWT is a JWS since a JWE needs more specific Header Parameter. In the JWS the 'alg' Header Parameter gives information about the algorithm which was used to create the signature. Which kind of arguments are accepted by the 'alg' Header Parameter are explained in yet another specification called 'JSON Web Signature and Encryption Algorithms' written by \cite{JWA:Jones:2015}. In the example \ref{lst:joseheader} the 'HS256' algorithm is used, meaning that the JWS was MACed using the HMAC SHA-256 algorithm. The definition of the 'alg' Header Parameter in the 'JSON Web Signature (JWS)' reference documentation is very similar to the definition in the 'JSON Web Encryption (JWE)' reference documentation except the cryptographic algorithm is used to encrypt or determine the value of the CEK. \cite{JWE:IETF:Jones:2015} also defines an 'enc' Encrption Algoritmn Header, which is usde for content encryption on plaintext. The authenticated encryption performed produces a cipher text and the authentication tag. Also for the 'enc' Header Parameter, the valid arguments can be found in the 'Json Web Signature and Encryption Algorithms' written by \cite{JWA:Jones:2015}. The algorithm used must be an AEAD algorithm with a specified key length. There are further Header Parameter that can be defined, here are just the most important JOSE Header Parameter for the purpose of this document listed. 
+The 'type' Header Parameter we can examine in \ref{lst:joseheader} indicates the kind of token, considering the example it is a JSON Web Token. The second parameter is the 'alg' Header Parameter and is specified in either the 'JSON Web Security (JWS)' reference documentation written by \cite{JWS:IETF:Jones:2015} or the JSON Web Encryption (JWE) reference documentation written by \cite{JWE:IETF:Jones:2015}. In this case, the JWT is a JWS since a JWE needs more specific Header Parameter. In the JWS the 'alg' Header Parameter gives information about the algorithm which was used to create the signature. Which kind of arguments are accepted by the 'alg' Header Parameter are explained in yet another specification called 'JSON Web Signature and Encryption Algorithms' written by \cite{JWA:Jones:2015}. In the example \ref{lst:joseheader} the 'HS256' algorithm is used, meaning that the JWS was MACed using the HMAC SHA-256 algorithm. The definition of the 'alg' Header Parameter in the 'JSON Web Signature (JWS)' reference documentation is very similar to the definition in the 'JSON Web Encryption (JWE)' reference documentation except the cryptographic algorithm is used to encrypt or determine the value of the CEK. \cite{JWE:IETF:Jones:2015} also defines an 'enc' Encryption Algorithm Header, which is used for content encryption on plaintext. The authenticated encryption performed produces a ciphertext and the authentication tag. Also for the 'enc' Header Parameter, the valid arguments can be found in the 'JSON Web Signature and Encryption Algorithms' written by \cite{JWA:Jones:2015}. The algorithm used must be an AEAD algorithm with a specified key length. There is further Header Parameter that can be defined, here are just the most essential JOSE Header Parameter for this document listed. 
 
 The second decoded part of the example in \ref{lst:jwt} JWT Token, represents the claim set. The representation of the claim set is a JSON, where each key has to be unique. If the keys are duplicated one can either end up with a JSON parsing error or the last one of the duplicated keys is returned. 
 
@@ -297,7 +348,7 @@ AAAAAAAAAAI/AAAAAAAABNk/JyBmWMonaII/s96-c/photo.jpg",
 }
 \end{lstlisting}
 
-The decoded value form the example in Listing \ref{lst:jwt} of the Google OAuth 2.0 Playground \cite{Google:2018:OAuthPlayground} returns a JSON object shown in the Listing \ref{lst:claimset}. The claim set we receive is composed of mandatory and optional claims. Specifically requested in this example were the login, email and profile scope which affected the claims returned from the Google OAuth 2.0 API. Mandatory claims for the login with OpenID are iss, iat, aud, sub and exp and an optional clam that was returned from the API is azp. This claims will be discussed in more detail in the chapter on OpenID and OAuth 2.0. For the profile scope, the specific claims that were returned are name, picture, given\_name, family\_name, and locale. Email specific claims are email and email\_verified. Furthermore, identity providers can include additional elements that are neihter mandatory or optional claims [cf. ({\cite{Google:2018:OAuthPlayground}),(\cite{Siriwardena:JWTJWSJWE:2016})]}].
+The decoded value form the example in Listing \ref{lst:jwt} of the Google OAuth 2.0 Playground \cite{Google:2018:OAuthPlayground} returns a JSON object shown in the Listing \ref{lst:claimset}. The claim set we receive is composed of mandatory and optional claims. Specifically requested in this example were the login, email and profile scope which affected the claims returned from the Google OAuth 2.0 API. Mandatory claims for the login with OpenID are iss, iat, aud, sub and exp and an optional clam that was returned from the API is azp. This claims will be discussed in more detail in the chapter on OpenID and OAuth 2.0. For the profile scope, the specific claims that were returned are name, picture, given\_name, family\_name, and locale. Email specific claims are email and email\_verified. Furthermore, identity providers can include additional elements that are neither mandatory or optional claims [cf. ({\cite{Google:2018:OAuthPlayground}),(\cite{Siriwardena:JWTJWSJWE:2016})]}].
 
 The last and third part from the example in  Listing \ref{lst:jwt}  represents the base64url-encoded signature. To know which kind of signature the decoded code is resembling a peek at the JOSE Header will help. The JOSE Header as mentioned before gives information about the cryptographic elements that were used related to the signature. In case of Listing \ref{lst:signaturejwt} the Google OAuth 2.0 API uses RASSSA-PKCS1-V1\_5 with the SHA-256 hashing algorithm. However the \href{https://jwt.io/} {https://jwt.io/} website does not provide us with the decoded public key. 
 
@@ -340,7 +391,7 @@ To serialize an encrypted message, one has to follow either the JWS or the JWE s
 	}
 	\end{lstlisting}
 	
-	The first element is called the JOSE header which contains all the information that advertises the public key corresponding to the private key that was used to sign the message. Elements of the header include the jku, jwk, kid, x5u, x5c, x5t and x5t\#s256. The second element is the JWS Payload or the content to be signed, which does not have to be JSON. The following approach is used to construct the message: ASCII(BASE64URL-ENCODE(UTF8(JOSE Header)) '.' BASE64URL-ENCODE(JWS Payload)). 
+	The first element is called the JOSE header which contains all the information that advertises the public key corresponding to the private key that was used to sign the message. Elements of the header include the jku, jwk, kid, x5u, x5c, x5t and x5t\#s256. The second element is the JWS Payload or the content to be signed, which does not have to be JSON. To construct the message the following approach is used  ASCII(BASE64URL-ENCODE(UTF8(JOSE Header)) '.' BASE64URL-ENCODE(JWS Payload)). 
 	The last element is the JWS signature, which is computed over the message that was constructed beforehand, using the algorithm defined in the JOSE Header. These three key components together are called a JWS token. When using the JWE Compact Serialization, the output is called JWE token. Compared to the JWS token, which we saw above the JWS token consists of 5 different key components [cf. (\cite{JWS:IETF:Jones:2015}), (\cite{JWE:IETF:Jones:2015})].
 	
 	
@@ -364,195 +415,6 @@ To serialize an encrypted message, one has to follow either the JWS or the JWE s
 	
 	Both digital signatures and MACs can be used to provide integrity checking. However, specification warns that there significant differences that have to be considered when designing a protocol. MACs only provide the origination of the identification under specific circumstances. It is normally assumed that the private key used for the signature is only known by a single entity. Although in the case of MAC keys all the entities that use it for integrity computation need to know the MAC key in order to validate the message. That means that with MAC validation one can tell if a message is generated from one of the entities that know the symmetric MAC key and not where the message originated [cf. (\cite{JWT:IETF:Jones:2015})].
 
-
-\paragraph{Server-Based Authentication.}
-A lot of modern-day API’s built on the Representational State Transfer(REST) programming paradigm which basis is the HTTP protocol which is stateless as well. A protocol that is stateless does not recall the actions that were taken beforehand which means for example that if we authenticate the user, in the next request we have to authenticate the user again because the application will not know the user anymore [cf. (\cite{Serilleja:2015:Scothio})]. 
-
-The aim of server-based authentication is for the application to remember the user that logged on at the application. The application has to store the information on the server, which can be done in a few different ways on the session, usually in memory on the disk. The workflow of a server-based authentication starts with the server delivering the website and the user logging in with username and password. The server saves the information from the user login info in a session. After the session is established, the session is checked on the server for every request. If the session is valid, the server returns the requested data to the server. However, since modern single-application ant mobile applications are on the rise, this method to authenticate user shown some problems, especially when it comes to scalability [cf. (\cite{Serilleja:2015:Scothio})]. 
-
-The session handling with server-based authentication is especially hard on the server’s bandwidth. Most of the time the session gets established in memory on the server when the user authenticates. This approach leads to an enormous overhead. The second problem with this approach is that the information of the user is held in memory on the server. Since more and more companies are moving servers to the cloud, this is not only a security issue but replicating servers to scale is limited. Also nowadays users want to access their data at any moment from every device. Providing the user with the possibility to access data across multiple mobile devices is vital, which means cross-origin resource sharing has to be enabled. With server-based authentication, it is possible to run into problems with the forbidden request when the user tries to access data from another domain [cf. (\cite{Serilleja:2015:Scothio})].
-
-
-\paragraph{
-	Token-based authentication with JSON Web Token
-}
-
-The most important thing about token-based authentication is that it is stateless, much like HTTP. The server does not have to hold the session of the user over an extended period on the server. Instead, the user can request resources by offering a token generated by an authentication server. The token send in the query string or Authorization header can then be validated at the resource server, and the secure resource will be returned to the user. The approach of using JSON Web Tokens gives one the ability to scale applications without considering on which domain the user logged on. Another advantage besides being scalable is that token-based authentication gives one the possibility to reuse the same token for authenticating the user. Therefore, it gets easier to build applications that share permission with other application because many separate servers, running on multiple platforms and domains can reuse the same token. The approach also gives performance advantages compared to server-side authentication because there is no need to find and deserialize the session on each request. However, since it is best practice to encrypt the token, the token still needs to be validated, and the content needs to be parsed. One way to implement token-based authentication is with the help of JSON Web Tokens. JSON Web Tokens are gaining popularity fast and are backed by huge companies like Google and Microsoft. Also the Internet Engineering Task Force defines a standard specification. OpenID and OAuth also use the JSON Web Token as a standard; therefore, the usage of the JSON Web Token will be explained in detail [cf. (\cite{Tkalec:2015})].
-
-
-JSON Web Token (JWT) is a compact structure that holds information about the authentication of a user or claims. The structure is indented for space-constrained environments such as HTTP Authorization headers. The payload of the JSON Web Token is of JSON, enabling the claims to be digitally signed or integrity protected with a Message Authentication Code (MAC) and encrypted [cf. (\cite{JWT:IETF:Jones:2015})].
-
-The standard is used to transport data between interested parties. The transferred data can be for example the identity of a user or user’s entitlements. Furthermore, with the possibility of digital signatures and encryption data can be transferred securely over an unsecured channel. The signatures also allow asserting the identity of a user if the recipient trusts JWT asserting party [cf. (\cite{Siriwardena:JWTJWSJWE:2016})].
-
-An example of a JWT Token is an id\_token. Google provides for Developers an OAuth 2.0 Playground, where developers can choose a scope and try it out against the Google API. To get an excellent example of a JWT, I selected the OAuth2 API v2 and authorized the API [cf. (\cite{Google:2018:OAuthPlayground})].
-
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\linewidth]{images/googleOAuthPlaygroundOAuthAPI}
-	\caption[OAuth API]{Google Developers Playground OAuth 2.0 API}
-	\label{fig:googleoauthplaygroundoauthapi}
-\end{figure}
-
-After choosing and authorizing, the API Google returns an Authorization Code. This Authorization Code is specific for a certain Authentication Flow defined by OAuth and can then be exchanged for the tokens. As a result all information for the scopes that where selected beforehand is returned. Because OAuth 2 API v2 was selected, the returned value is an id\_token. This id\_token is a nice representation of a JWT and holds the standard information that are required according to the OAuth specification  [cf. (\cite{Google:2018:OAuthPlayground})].
-
-
-\lstset{caption=JWT Token,breaklines=true, breakatwhitespace=true, basicstyle=\small\ttfamily, label={lst:jwt}, tabsize=3, basewidth={0.55em}, fontadjust, language=XML}
-
-\begin{lstlisting}
-eyJhbGciOiJSUzI1NiIsImtpZCI6ImRhZDQ0NzM5NTc2NDg1ZWMzMGQyMjg4NDJlNzNh
-Y2UwYmMzNjdiYzQifQ
-.
-eyJhenAiOiI0MDc0MDg3MTgxOTIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJh
-dWQiOiI0MDc0MDg3MTgxOTIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIi
-OiIxMTIzMDE5MzgzMjI4MTAyMzk3MTIiLCJlbWFpbCI6ImNvcm5lbGlhcmF1Y2hAZ214
-LmF0IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJSdjJRQjZoZzFqdDZR
-aHRJWG5laWVnIiwiZXhwIjoxNTI5NzQ3MTk2LCJpc3MiOiJodHRwczovL2FjY291bnRz
-Lmdvb2dsZS5jb20iLCJpYXQiOjE1Mjk3NDM1OTYsIm5hbWUiOiJDb25ueSBSYXVjaCIs
-InBpY3R1cmUiOiJodHRwczovL2xoNC5nb29nbGV1c2VyY29udGVudC5jb20vLWJFbEt3
-aDVaNUJnL0FBQUFBQUFBQUFJL0FBQUFBQUFBQk5rL0p5Qm1XTW9uYUlJL3M5Ni1jL3Bo
-b3RvLmpwZyIsImdpdmVuX25hbWUiOiJDb25ueSIsImZhbWlseV9uYW1lIjoiUmF1Y2gi
-LCJsb2NhbGUiOiJkZSJ9
-.
-yibOtrXy9_-cfOWytzwGuE4zqLv-MK_2-PYIKR_xecJt9ACnMnNMSmio6i8Vu7U061wF
-OTb-qRennHbvy3lTRZLcTXttIrIUl-NdnZs2BrTSGWrw9aRzEjIHAXiY4fGRHj9VZXs_
-_J3Nn0EoBmT7Cnua2hb4U_X3hAyGpEvlSGKc5HvbyzOAtNh081Cyj1TI-AidCPTuC5vh
-68C55tLJ87PWNm8WU1rCPOPBdVTjhYlqJKCpgUJ39_p_MXL_uHBZXRrvbOyV_tZVlw47
-rjd8GFnBq1QqsYAR-6wrFbNL1pY6tPyriqZnQdi5KqYWPUwGpXbFDUfhZAmWXT8-PTsc
-gQETEp8o3RvRHtfSu8Gx4UOhukt9_VxVdHmpFw
-\end{lstlisting}
-
-
-The JWT Token in the figure above is presented as a sequence of URL-save base64url-encoded values. The different values are separated by a (‘.’) character. How many parts a JWT has is dependent on how the JWT is serialized. Either by using the JWS Compact Serialization or JWE Compact Serialization  [cf. (\cite{JWT:IETF:Jones:2015})].
-
-
-To make sense of this JWT token in the figure above it is best to look at each of the three parts of the JWT separately. When decoding the first part of the JWT we receive a JSON object. Each part can be decoded individually but if a quick representation of a token is needed developers are best advice to use \href{https://jwt.io/} {https://jwt.io/}. The website not only decodes the information of the token it also verifies the token.The figure above shows a warning that pops up if the token is not flawless. The verification of the token and the signing is done with multiple libraries that inform about certain vulnerabilities of the JSON Web Token. The first decoded part of the JWT gives us the following JSON.
-
-
-\lstset{
-	caption=JOSE Header,
-	label={lst:joseheader},
-	string=[s]{"}{"},
-	stringstyle=\color{blue},
-	comment=[l]{:},
-	commentstyle=\color{black}
-}
-\begin{lstlisting}
-{
-	"alg": "HS256",
-	"typ": "JWT"
-}
-\end{lstlisting}
-
-
-The JSON object in \ref{lst:joseheader} is the JOSE Header, representing the type of the token, the cryptographic operations applied and optionally additional properties of the JWT. Based on the information of the JOSE Header it can explained if the JWT is a JWS or a JWE. When speaking of JWT we speak of one of the implementations of JWT because in fact JWT does not exist itself. Concrete implementation of the JWT are JSON Web Signature (JWS) or JSON Web (Encryption). The figure below gives an optical representation of the structure [cf. (\cite{Siriwardena:JWTJWSJWE:2016})].
-
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.6\linewidth]{images/jwtjwsjwe}
-\caption[JWT Inheritence]{JWT Inheritance}
-\label{fig:jwtjwsjwe}
-\end{figure}
-
- The 'type' Header Parameter we can examine in \ref{lst:joseheader} indicates the kind of token, considering the example it is a JSON Web Token. The second parameter is the 'alg' Header Parameter and is specified in either the 'JSON Web Security (JWS)' reference documentation written by \cite{JWS:IETF:Jones:2015} or the JSON Web Encryption (JWE) reference documentation written by \cite{JWE:IETF:Jones:2015}. In this case the JWT is a JWS, since a JWE needs more specific Header Parameter. In the JWS the 'alg' Header Parameter gives information about the algorithm which was used to create the signature. Which kind of arguments are accepted by the 'alg' Header Parameter are explained in yet another specification called 'Json Web Signature and Encryption Algorithms' written by \cite{JWA:Jones:2015}. In the example \ref{lst:joseheader} the 'HS256' algorithm is used, meaning that the JWS was MACed using the HMAC SHA-256 algorithm. The definition of the 'alg' Header Parameter in the 'JSON Web Signature (JWS)' reference documentation is very similar to the definition in the 'JSON Web Encryption (JWE)' reference documentation except the cryptographic algorithmn is used to encrpt or determine the value of the CEK. \cite{JWE:IETF:Jones:2015} also defines an 'enc' Encrption Algoritmn Header, which is usde for content encryption on plaintext. The authenticated encryption performed produces a cipher text and the authentication tag. Also for the 'enc' Header Parameter the valid arguments can be found in the 'Json Web Signature and Encryption Algorithms' written by \cite{JWA:Jones:2015}. The algorithm used must be an AEAD algorithm with a specified key length. There are further Header Parameter that can be defined, here are just the most important JOSE Header Parameter for the purpose of this document listed. 
- 
- The second decoded part of the example in \ref{lst:jwt} JWT Token, represents the claim set. The representation of the claim set is a JSON, where each key has to be unique. If the keys are duplicated one can either end up with a JSON parsing error or the last one of the duplicated keys is returned. 
- 
- \lstset{
- 	caption=Claim Set,
- 	label={lst:claimset},
- 	string=[s]{"}{"},
- 	stringstyle=\color{blue},
- 	comment=[l]{:},
- 	commentstyle=\color{black}
- }
- \begin{lstlisting}
- {
-	 "azp": "407408718192.apps.googleusercontent.com",
-	 "aud": "407408718192.apps.googleusercontent.com",
-	 "sub": "112301938322810239712",
-	 "email": "corneliarauch@gmx.at",
-	 "email_verified": true,
-	 "at_hash": "Rv2QB6hg1jt6QhtIXneieg",
-	 "exp": 1529747196,
-	 "iss": "https://accounts.google.com",
-	 "iat": 1529743596,
-	 "name": "Conny Rauch",
-	 "picture": "https://lh4.googleusercontent.com/-bElKwh5Z5Bg/
-	 			 AAAAAAAAAAI/AAAAAAAABNk/JyBmWMonaII/s96-c/photo.jpg",
-	 "given_name": "Conny",
-	 "family_name": "Rauch",
-	 "locale": "de"
- }
- \end{lstlisting}
-
-The decoded value form the example in Listing \ref{lst:jwt} of the Google OAuth 2.0 Playground \cite{Google:2018:OAuthPlayground} returns a JSON object shown in the Listing \ref{lst:claimset}. The claim set we receive is composed of mandatory and optional claims. Specifically requested in this example were the login, email and profile scope which effected the claims returned from the Google OAuth 2.0 API. Mandatory claims for the login with OpenID are iss, iat, aud, sub and exp and an optional clam tha was returned form the API is azp. This claims will be discussed in more deteail in the chapter about OpenID and OAuth 2.0. For the profile scope the specific claims that were returned are name, picture, given\_name, family\_name and locale. Email specific claims are email and email\_verified. Furthermore identity providers can include additional elements that are neighter madatory or optional claims [cf. ({\cite{Google:2018:OAuthPlayground}),(\cite{Siriwardena:JWTJWSJWE:2016})]}].
-
-The last and third part from the example in  Listing \ref{lst:jwt}  represents the base64url-encoded signature. To know which kind of signature the decoded code is resembling a peak at the JOSE Header will help. The JOSE Header as mentioned before gives information about the cryptographic elements that were used related to the signature. In case of Listing \ref{lst:signaturejwt} the Google OAuth 2.0 API uses RASSSA-PKCS1-V1\_5 with the SHA-256 hashing algorithm. However the \href{https://jwt.io/} {https://jwt.io/} website does not provide us with the decoded public key. 
-
- \lstset{
-	caption=Signature JWT,
-	label={lst:signaturejwt},
-	string=[s]{"}{"},
-	stringstyle=\color{blue},
-	comment=[l]{:},
-	commentstyle=\color{black}
-}
-\begin{lstlisting}
-{
-RSASHA256(
-	base64UrlEncode(header) + "." +
-	base64UrlEncode(payload),
-	Public Key or Certificate.
-)
-}
-\end{lstlisting}
-
-
-To serialize an encrypted message, one has to follow either the JWS or the JWE specification. Each of the specification has the type’s compact serialization and serialization. Google OpenID Connect uses the compact serialization. In fact, the OpenID Connect specification suggest using the JWS compact serialization or the JWE compact serialization. In this paper only the compact serialization will be discussed, the specification of the other serialization method can be either looked up in the JWE specification or the JWS specification. To call a JWS or a JWE, a JWT it has to follow the compact serialization [cf. (\cite{JWS:IETF:Jones:2015}), ({\cite{JWE:IETF:Jones:2015})].
-	
-Aim of the JWS Compact Serialization is it to present content as a compact, URL-safe string, which is either digitally signed or MACed. It is not possible to use multiple signature or MAC in a JWS Compact Serialization and furthermore it is not allowed to use JWS Unprotected Headers. An unprotected header is a JSON object which includes the header element that are not integrity protected, which concludes that a protected header is a JSON object that is integrity protected by using MAC or digital signatures. A JWS Compact Serializations is represented as a concatenated string [cf. (\cite{JWS:IETF:Jones:2015})].
-
- \lstset{
-	caption=JWS Compact Serialization,
-	label={lst:jwscompactserialization},
-	string=[s]{"}{"},
-	stringstyle=\color{blue},
-	comment=[l]{:},
-	commentstyle=\color{black}
-}
-\begin{lstlisting}
-{
-BASE64URL(UTF8(JWS Protected Header)) '.'
-BASE64URL(JWS Payload) '.'
-BASE64URL(JWS Signature)
-}
-\end{lstlisting}
-
-The first element is called the JOSE header which contains all the information tha advertises the public key corresponding to the private key that was used to sign the message. Elements of the header include the jku, jwk, kid, x5u, x5c, x5t and x5t\#s256. The second element is the JWS Payload or the content to be signed, which does not have to be JSON. To constructed the message the following approach is used  ASCII(BASE64URL-ENCODE(UTF8(JOSE Header)) '.' BASE64URL-ENCODE(JWS Payload)). 
-The last element is the JWS signature, which is computed over the message that was constructed beforehand, using the algorithm defined in the JOSE header. These three key components together are called a JWS token. When using the JWE Compct Serialization the output is called JWE token. Compared to the JWS token, which we seen above the JWS token consists of 5 different key components [cf. (\cite{JWS:IETF:Jones:2015}), (\cite{JWE:IETF:Jones:2015})].
-
-
- \lstset{
-	caption=JWE Compact Serialization,
-	label={lst:jwecompactserialization},
-	string=[s]{"}{"},
-	stringstyle=\color{blue},
-	comment=[l]{:},
-	commentstyle=\color{black}
-}
-\begin{lstlisting}
-{
-BASE64URL-ENCODE(UTF8(JWE Protected Header)) '.'
-BASE64URL-ENCODE(JWE Encrypted Key) '.'
-BASE64URL-ENCODE(JWE Initialization Vector) '.'
-BASE64URL-ENCODE(JWE Ciphertext) '.'
-BASE64URL-ENCODE(JWE Authentication Tag)
-}
-\end{lstlisting}
-
-Both digital signatures and MACs can be used to provide integrity checking. However specification warns that there a significant differences that have to be consider when designing a protocol. MACs only provide the origination of the identification under specific circumstances. It is normally assumed that the private key used for the signature is only known by a single entity. Although in the case of MAC keys all the entities that use it for integrity computation need to know the MAC key in order to validate the message. That means that with MAC validation one can just tell if a message is generated from one of the entities that knows the symmetric MAC key and not where the message originated [cf. (\cite{JWT:IETF:Jones:2015})].
 
 \section{Single Sign-On}
 
