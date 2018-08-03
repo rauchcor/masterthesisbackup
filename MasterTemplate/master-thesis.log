@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  3 AUG 2018 11:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  3 AUG 2018 12:39
 entering extended mode
 **./master-thesis.tex
 (master-thesis.tex
@@ -1402,7 +1402,7 @@ LaTeX Info: Redefining \nameref on input line 148.
 \openout2 = `titlepages.aux'.
 
  (titlepages.tex
-<images/logo_FHJ_100mm_cmyk.pdf, id=83, 285.065pt x 58.2175pt>
+<images/logo_FHJ_100mm_cmyk.pdf, id=79, 285.065pt x 58.2175pt>
 File: images/logo_FHJ_100mm_cmyk.pdf Graphic file (type pdf)
 <use images/logo_FHJ_100mm_cmyk.pdf>
 Package pdftex.def Info: images/logo_FHJ_100mm_cmyk.pdf  used on input line 11.
@@ -1550,7 +1550,7 @@ LaTeX Font Info:    Try loading font information for TS1+ptm on input line 34.
 d"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [7]
-<images/componentsUserAuthenticationSystem.jpg, id=225, 320.2875pt x 222.723pt>
+<images/componentsUserAuthenticationSystem.jpg, id=226, 320.2875pt x 222.723pt>
 
 File: images/componentsUserAuthenticationSystem.jpg Graphic file (type jpg)
 <use images/componentsUserAuthenticationSystem.jpg>
@@ -1564,29 +1564,25 @@ Overfull \hbox (9.8305pt too wide) in paragraph at lines 99--100
  []
 
 [11] [12] [13] [14]
-<images/federation.jpg, id=307, 389.95688pt x 372.64218pt>
+<images/federation.jpg, id=309, 389.95688pt x 372.64218pt>
 File: images/federation.jpg Graphic file (type jpg)
 <use images/federation.jpg>
 Package pdftex.def Info: images/federation.jpg  used on input line 162.
 (pdftex.def)             Requested size: 330.05322pt x 315.41112pt.
  [15 <./images/federation.jpg>] [16] [17]
-Overfull \hbox (11.90863pt too wide) in paragraph at lines 212--213
+Overfull \hbox (11.90863pt too wide) in paragraph at lines 217--218
 []\T1/ptm/m/n/12 code id_token: The re-sponse in-cludes an Au-tho-riza-tion Cod
 e and an id_token. 
  []
 
-[18] [19]
-<images/googleOAuthPlaygroundOAuthAPI.jpg, id=364, 319.1925pt x 45.92157pt>
+[18] [19] [20]
+<images/googleOAuthPlaygroundOAuthAPI.jpg, id=375, 319.1925pt x 45.92157pt>
 File: images/googleOAuthPlaygroundOAuthAPI.jpg Graphic file (type jpg)
 <use images/googleOAuthPlaygroundOAuthAPI.jpg>
 Package pdftex.def Info: images/googleOAuthPlaygroundOAuthAPI.jpg  used on inpu
-t line 253.
+t line 257.
 (pdftex.def)             Requested size: 330.05322pt x 47.48401pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[20]
 ("C:\Users\rauchcor\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlan
 g1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -1595,44 +1591,65 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 c.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 263.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 267.
 
 ("C:\Users\rauchcor\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd
 "
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [21 <./images/googleOAuthPlaygroundOAuthAPI.jpg>]
-Overfull \hbox (3.61511pt too wide) in paragraph at lines 309--310
+Overfull \hbox (3.61511pt too wide) in paragraph at lines 313--314
 \T1/ptm/m/n/12 cryp-to-graphic op-er-a-tions ap-plied and op-tion-ally ad-di-ti
 onal prop-er-ties of the JWT. Based
  []
 
-<images/jwtjwsjwe.jpg, id=403, 114.318pt x 98.55pt>
+<images/jwtjwsjwe.jpg, id=401, 114.318pt x 98.55pt>
 File: images/jwtjwsjwe.jpg Graphic file (type jpg)
 <use images/jwtjwsjwe.jpg>
-Package pdftex.def Info: images/jwtjwsjwe.jpg  used on input line 314.
+Package pdftex.def Info: images/jwtjwsjwe.jpg  used on input line 318.
 (pdftex.def)             Requested size: 247.54149pt x 213.40617pt.
-[22 <./images/jwtjwsjwe.jpg>] [23] [24]
-Overfull \hbox (7.77957pt too wide) in paragraph at lines 394--396
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[22] [23 <./images/jwtjwsjwe.jpg>] [24]
+Overfull \hbox (7.77957pt too wide) in paragraph at lines 398--400
 \T1/ptm/m/n/12 be JSON. To con-struct the mes-sage the fol-low-ing ap-proach is
  used ASCII(BASE64URL-
  []
 
-[25] [26] [27] [28])
+[25] [26] [27] [28] [29])
 \openout2 = `chapters/practicalPart.aux'.
 
  (chapters/practicalPart.tex
 Chapter 3.
-[29
+[30
 
 
 
 
-] [30])
+]
+<images/architecture-identityserver.jpg, id=533, 515.67656pt x 309.40594pt>
+File: images/architecture-identityserver.jpg Graphic file (type jpg)
+<use images/architecture-identityserver.jpg>
+Package pdftex.def Info: images/architecture-identityserver.jpg  used on input 
+line 22.
+(pdftex.def)             Requested size: 330.05322pt x 198.03801pt.
+ [31 <./images/architecture-identityserver.jpg>]
+<images/self-signed-certicate.jpg, id=540, 863.09953pt x 168.2536pt>
+File: images/self-signed-certicate.jpg Graphic file (type jpg)
+<use images/self-signed-certicate.jpg>
+Package pdftex.def Info: images/self-signed-certicate.jpg  used on input line 5
+1.
+(pdftex.def)             Requested size: 330.05322pt x 64.34009pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[32] [33 <./images/self-signed-certicate.jpg>])
 \openout2 = `chapters/conclusion.aux'.
 
  (chapters/conclusion.tex
 Chapter 4.
-[31
+[34
 
 
 
@@ -1643,12 +1660,18 @@ Chapter 4.
  (acronyms.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 8.
-) [32
+) [35
 
 
 
 
 ]
+Overfull \hbox (1.77184pt too wide) in paragraph at lines 173--173
+[][]\T1/ptm/m/n/12 Boyd, R. (2012). \T1/ptm/m/it/12 Get-ting Started with OAuth
+ 2.0\T1/ptm/m/n/12 . Or-eilly and As-so-ciate Se-ries. O'Reilly
+ []
+
+
 Overfull \hbox (0.27829pt too wide) in paragraph at lines 173--173
 [][]\T1/ptm/m/n/12 Brock, Allen and Baier Do-minick (n.d.). \T1/ptm/m/it/12 Ide
 n-ti-ty-Server4Documentation. Re-lease 1.0.0\T1/ptm/m/n/12 .
@@ -1678,7 +1701,7 @@ Overfull \hbox (56.12276pt too wide) in paragraph at lines 173--173
  Avail-able from: <[][]$\T1/pcr/m/n/12 https : / / petsymposium .
  []
 
-[33
+[36
 
 
 ]
@@ -1694,9 +1717,9 @@ Overfull \hbox (42.41223pt too wide) in paragraph at lines 173--173
 s .
  []
 
-[34] [35]
+[37] [38]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 175.
- [36]
+ [39]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
  (master-thesis.aux (titlepages.aux) (chapters/introduction.aux)
 (chapters/authenticationAndAuthorization.aux) (chapters/practicalPart.aux)
@@ -1704,35 +1727,38 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 175.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 175.
 Package rerunfilecheck Info: File `master-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 0AEA839B66A2D48AC72DEAD8FA089DEB;1268.
+(rerunfilecheck)             Checksum: BCF6D48B70A06646D8EB016621C62350;1192.
 Package logreq Info: Writing requests to 'master-thesis.run.xml'.
 \openout1 = `master-thesis.run.xml'.
 
  )
 (\end occurred inside a group at level 2)
 
-### simple group (level 2) entered at line 374 ({)
+### simple group (level 2) entered at line 378 ({)
 ### simple group (level 1) entered at line 156 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 18685 strings out of 493305
- 309591 string characters out of 3128497
- 775805 words of memory out of 3000000
- 21709 multiletter control sequences out of 15000+200000
+ 18718 strings out of 493305
+ 310359 string characters out of 3128497
+ 776055 words of memory out of 3000000
+ 21730 multiletter control sequences out of 15000+200000
  60656 words of font info for 72 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
- 51i,7n,53p,2147b,2063s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/
-dvips/base/8r.enc}<C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/urw/courier/ucrr8a.pfb><C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/rauchcor/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/rauchcor/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rauchcor/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rauchcor/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on master-thesis.pdf (44 pages, 396021 bytes).
+ 47i,7n,51p,2147b,2069s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{figure.3.1} has been referenced but
+ does not exist, replaced by a fixed one
+
+{C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.en
+c}<C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/
+ucrr8a.pfb><C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw
+/helvetic/uhvr8a.pfb><C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/urw/times/utmb8a.pfb><C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rauchcor/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rauchcor/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on master-thesis.pdf (47 pages, 571969 bytes).
 PDF statistics:
- 656 PDF objects out of 1000 (max. 8388607)
- 189 named destinations out of 1000 (max. 500000)
- 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 689 PDF objects out of 1000 (max. 8388607)
+ 199 named destinations out of 1000 (max. 500000)
+ 188 words of extra memory for PDF output out of 10000 (max. 10000000)
 

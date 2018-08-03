@@ -56,6 +56,41 @@
       \range{pages}{13}
       \keyw{data privacy;government policies;US National Strategy for Trusted Identities in Cyberspace initiative;federated identity management systems;privacy-based characterization;privacy-driven taxonomy;public policy analysis;Authentication;Data storage systems;Identity management;Metasearch;authentication of humans;identity management systems;privacy}
     \endentry
+    \entry{Boyd:2012:GSOAuth}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=adf183c1dbe80b1c9cc1b1da45fcbdc8}{%
+           family={Boyd},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media, Incorporated}%
+      }
+      \strng{namehash}{adf183c1dbe80b1c9cc1b1da45fcbdc8}
+      \strng{fullhash}{adf183c1dbe80b1c9cc1b1da45fcbdc8}
+      \strng{bibnamehash}{adf183c1dbe80b1c9cc1b1da45fcbdc8}
+      \strng{authorbibnamehash}{adf183c1dbe80b1c9cc1b1da45fcbdc8}
+      \strng{authornamehash}{adf183c1dbe80b1c9cc1b1da45fcbdc8}
+      \strng{authorfullhash}{adf183c1dbe80b1c9cc1b1da45fcbdc8}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781449311605}
+      \field{series}{Oreilly and Associate Series}
+      \field{title}{Getting Started with OAuth 2.0}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://books.google.at/books?id=qcsoLHusAFsC
+      \endverb
+      \verb{url}
+      \verb https://books.google.at/books?id=qcsoLHusAFsC
+      \endverb
+    \endentry
     \entry{Boyed:2012:GSOA}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=3ad3403ee3680cec214a3a73bea4028a}{%

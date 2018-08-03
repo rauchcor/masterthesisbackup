@@ -47,9 +47,9 @@ The result of all design principles, security and privacy considerations should 
 
 \section{Identity Proofing}
 
-“Digital identity is the unique representation of a subject engaged in an online transaction. The process used to verify a subject’s association with their real-world identity is called identity proofing” (\citet{NIST:2017:DIG})
+“Digital identity is the unique representation of a subject engaged in an online transaction. The process used to verify a subject’s association with their real-world identity is called identity proofing” (\cite{NIST:2017:DIG})
 
-A digital identity as explained above is the result of what is called the authentication process. It is a way of identifying the user as whom he claims to be. In order to proof the users identity presentation, validation and verification of a minimum set of attributes is necessary [cf. (\citet{Boyed:2012:GSOA})]. 
+A digital identity as explained above is the result of what is called the authentication process. It is a way of identifying the user as whom he claims to be. In order to proof the users identity presentation, validation and verification of a minimum set of attributes is necessary [cf. (\cite{Boyd:2012:GSOAuth})]. 
 
 To become an authenticated the user has to go through certain steps on the way. These steps the user has to go through are enabled be typical components unique to the authentication process. \cite{Todorov:2007:MUI} identifies three typical components that are part of the authentication the Supplicant, the Authenticator and the Security Database. The Supplicant is the party that provides the evidence to prove the identity of a user or client. The result of the authentication process should be the authenticated user or client. The Authenticator, also called server, is responsible for ascertaining the user identity. After prove of identity, the authenticator can authorize or audit the user access to resources. Security Authority Database, which is storage or  a mechanism to check the user's credentials. The storage can be represented by as much as a flat file, a server on the network providing centralized user authentication or a distributed authentication server [cf. (\cite{Todorov:2007:MUI})]. 
 
@@ -73,9 +73,9 @@ It is vital that all the components like shown in (figure~\ref{fig:componentsuse
 	
 
 \section{Authentication}
-For a very typical authentication process, the user provides its username and password when the application demands it. If the user provides a correct username and password, an application assumes the user is indeed the owner of the account he wants to log on. The evidence provided by the user in the authentication process is called credentials. Most of the time as mentioned above credentials get provided in the form of username and password. Nevertheless, credentials also may take other forms like PIN’s, key cards, eye scanners and so on [cf. (\citet{Todorov:2007:MUI}), (\citet{Boyed:2012:GSOA})]. 
+For a very typical authentication process, the user provides its username and password when the application demands it. If the user provides a correct username and password, an application assumes the user is indeed the owner of the account he wants to log on. The evidence provided by the user in the authentication process is called credentials. Most of the time as mentioned above credentials get provided in the form of username and password. Nevertheless, credentials also may take other forms like PIN’s, key cards, eye scanners and so on [cf. (\cite{Todorov:2007:MUI}), (\cite{Boyd:2012:GSOAuth})]. 
 
-Credentials, which prove the identity of an entity and find use as authenticators in authentication systems, are called factors. \citet{NIST:2017:DIG} categorize following types of factors:
+Credentials, which prove the identity of an entity and find use as authenticators in authentication systems, are called factors. \cite{NIST:2017:DIG} categorize following types of factors:
 
 \begin{itemize}  
 	\item Something, the user, knows - Cognitive information the user has to remember. Examples include passwords, PIN, answers to secret questions.
@@ -84,7 +84,7 @@ Credentials, which prove the identity of an entity and find use as authenticator
 	\item What the user is - biometric information of the user. Examples include fingerprint, voice, and face. 
 \end{itemize}
 
-Other types of information which are not considered authentication factors but  can be used to enrich the authentication process according to \citet{Dasgupta:2017:AUA} are:
+Other types of information which are not considered authentication factors but  can be used to enrich the authentication process according to \cite{Dasgupta:2017:AUA} are:
 
 \begin{itemize}
 	\item Where the user is - the location of the user can is used as a fourth factor of authentication. Examples include GPS, IP addresses.
@@ -180,42 +180,46 @@ Client-Side Federation. Anonymous credentials systems provide authentication ass
 	
 	In the next section three very popular assertion technologies are discussed: SAML assertions, Kerberos tickets and OpenID Connect tokens. Those technologies are not all possible assertion technologies. However, they present the most commonly used in federated identity systems. 
 	
-\section{OAuth and OpenID Connect}
+\paragraph{OAuth and OpenID Connect}
 
 
-OAuth 2.0 is a protocol that is used for access control. The protocol adds an authori-zation layer – separating the Client from the Resource Owner. To gain access, an access token is used instead of the resource owner’s credentials. Access Tokens are issued by an Authorization Server and can be used  by the Client to gain access to protected resources hosted by the resource server. OAuth 2.0 uses a token service, which centralizes this logic and reduces complexity for the Client and the APIs [cf. (\cite{Brock:2018:ID4})]
+OAuth 2.0 is a protocol that is used for access control. The protocol adds an authorization layer – separating the Client from the Resource Owner. 
+The Client is not bound to any particular implementation characteristics and can make requests to protected resources on behalf of the resource owner. The OAuth 2.0 specification distinguishes between two Client Types, Confidential Clients, and Public Clients. Whereas Confidential Clients are capable of maintaining the confidentiality and Public Clients that are incapable of maintaining confidentiality [cf. (cf.\cite{Hardt:2012:OAuth2}, p.6-14)].
 
- OpenID Connect and OAuth 2.0 seem very similar, in fact OpenID Connect is a framework build on top of OAuth 2.0. Together they focus on Authentication and Access Control in a way that is suitable for modern applications. OpenID can verify the identity of an End-User and obtain basic profile information about the user. It uses Claims to communicate information to the End-User [cf. (\cite{Sakimura:2014:OpenIDConnect})]
- 
- OpenID Connect performs authentication and determines if the user is already logged on or to log on the user. The result is an authentication token which is returned to the user. \cite{Sakimura:2014:OpenIDConnect} defines three different way authentication can flow:
- 
- 
- \begin{enumerate}
- 	\item \textbf{Authorization Code Flow}  - The Authorization Code Flow returns an Authentification Code which can be used to be exchanged for an id\_token or an access\_token. This is used for Clients that can maintain a secret securly between themselves and the Authorization Server. Typically this aproach is used for sever-to-server communication when no interactive user is present. In this thesis, I focus on  user interaction thus, Ido not include an example [cf. (\cite{Sakimura:2014:OpenIDConnect}, p.10)]
- 	
- 		To use the Authorization Code Flow according to \cite{Sakimura:2014:OpenIDConnect} the the following request\_type indicates a Authorization Code Flow:
- 		\begin{itemize}
- 		\item	code: The response includes an Authorization Code. 
- 		\end{itemize}
- 	
- 	\item \textbf{Implicit Code Flow} - In the Implicit Code Flow the access token and the ID id token are directly returned to the Client. This behavior may expose information to the End-User or anyone who has access to the End-User’s Agent. Tokens are only returned from the Token Endpoint, the Authorization Endpoints is  not used. Unlike the Authorization Code Flow where separate request are used for authorization and authentification, here the Client will  receive the access token as a result ot the authentification. This also means that there is no refresh token.  This flow is used for Clients which are implemented in a browser using scripting language [cf. (\cite{Sakimura:2014:OpenIDConnect}, p.20), (\cite{Hardt:2012:OAuth2})]
- 	
- 	According to \cite{Sakimura:2014:OpenIDConnect}, the following request\_types indicate an Implicit Code Flow:
- 		\begin{itemize}
- 		\item	id\_token: The response must include the parameter id\_token. The response does not include an Authorization Code, Access Token, or Access Token Type. 
- 		\item  id\_token token: The response includes an Access Token, an Access Token Type and an id\_token.
- 	\end{itemize}
-  	
- 	\item \textbf{Hybrid Code Flow} - In the hybrid code flow, tokens are returned from the Authorization Endpoint and others are returned from the Token Endpoint. The Token Server will return  not only the id token but also the code. The Client then has to use the code in order to gain the access token through a back channel call. This means there is an additional round trip compared to the Implicit Code Flow. Using the code to receive the access token should minimize the risk of exposing the access token [cf. (\cite{Sakimura:2014:OpenIDConnect})].
- 	To use the Hybrid Code Flow according to de \cite{Sakimura:2014:OpenIDConnect} put forward that the following request\_types indicate a Hybrid Code Flow:
- 		\begin{itemize}
- 		\item	code id\_token: The response includes an Authorization Code and an id\_token.
- 		\item  code id\_token token: The response includes an Authorization Code, an Access Token, an Access Token Type and an id\_token. 
- 	\end{itemize} 
- 		
- \end{enumerate}
- 
- 
+The Resource Owner is a role according to (\cite{Sakimura:2014:OpenIDConnect}, p.6) can grant access to a protected resource also referred to as End-User, if the resource owner is a person. Furthermore, scopes are used to specify to which resources the resource owner wants to grant access. Requests that which are sent to an authorization endpoint include scopes that can be mandatory or optional parameters. Declaring the scopes is up to the provider. An access token is used to gain access instead of the resource owner’s credentials. 
+
+Access Tokens are issued by an Authorization Server and can be used by the Client to gain access to protected resources hosted by the resource server. The Authorization Server is responsible for issuing the access token and may be the same as the Resource Server. In literature, in fact,  different terms in literature do are used which describe what an identity server does. Among these are, some of them are Security Token Service, Identity Provider, Authorization Server and IP-STS. OAuth 2.0 uses a token service, which centralizes this logic and reduces complexity for the Client and the APIs [cf. (\cite{Sakimura:2014:OpenIDConnect}, p.6), (\cite{Brock:2018:ID4}), (\cite{Boyd:2012:GSOAuth})]
+
+OpenID Connect and OAuth 2.0 seem very similar, in fact, OpenID Connect is a framework build on top of OAuth 2.0. Together they focus on Authentication and Access Control in a way that is suitable for modern applications. OpenID can verify the identity of an End-User and obtain basic profile information about the user. It uses Claims to communicate information to the End-User [cf. (\cite{Sakimura:2014:OpenIDConnect})]
+
+OpenID Connect performs authentication and determines if the user is already logged on or to log on the user. The result is an authentication token which is returned to the user. \cite{Sakimura:2014:OpenIDConnect} defines three different way authentication can flow:
+
+
+\begin{enumerate}
+	\item \textbf{Authorization Code Flow}  - The Authorization Code Flow returns an Authentification Code which can be used to be exchanged for an id\_token or an access\_token. The Authorization Code is used for Clients that can maintain a secret securely between themselves and the Authorization Server. Typically this approach is used for server-to-server communication when no interactive user is present. In this thesis, the focus is on user interaction [cf. (\cite{Sakimura:2014:OpenIDConnect}, p.10)]
+	
+	To use the Authorization Code Flow according to \cite{Sakimura:2014:OpenIDConnect} the the following request\_type indicates a Authorization Code Flow:
+	\begin{itemize}
+		\item	code: The response includes an Authorization Code. 
+	\end{itemize}
+	
+	\item \textbf{Implicit Code Flow} - In the Implicit Code Flow the access token and the ID id token are directly returned to the Client. This behavior may expose information to the End-User or anyone who has access to the End-User’s Agent. Tokens are only returned from the Token Endpoint; the Authorization Endpoints is not used. Unlike the Authorization Code Flow where the separate request is used for authorization and authentification, here the Client will receive the access token as a result of the authentification which also means that there is no refresh token.  This flow is used for Clients who are implemented in a browser using scripting language [cf. (\cite{Sakimura:2014:OpenIDConnect}, p.20), (\cite{Hardt:2012:OAuth2})]
+	
+	According to \cite{Sakimura:2014:OpenIDConnect}, the following request\_types indicate an Implicit Code Flow:
+	\begin{itemize}
+		\item	id\_token: The response must include the parameter id\_token. The response does not include an Authorization Code, Access Token, or Access Token Type. 
+		\item  id\_token token: The response includes an Access Token, an Access Token Type and an id\_token.
+	\end{itemize}
+	
+	\item \textbf{Hybrid Code Flow} - In the hybrid code flow, tokens are returned from the Authorization Endpoint, and others are returned from the Token Endpoint. The Token Server will return not only the id token but also the code. The Client then has to use the code in order to gain the access token through a back channel call which means there is an additional round trip compared to the Implicit Code Flow. Using the code to receive the access token should minimize the risk of exposing the access token [cf. (\cite{Sakimura:2014:OpenIDConnect})].
+	To use the Hybrid Code Flow according to de \cite{Sakimura:2014:OpenIDConnect} put forward that the following request\_types indicate a Hybrid Code Flow:
+	\begin{itemize}
+		\item	code id\_token: The response includes an Authorization Code and an id\_token.
+		\item  code id\_token token: The response includes an Authorization Code, an Access Token, an Access Token Type and an id\_token. 
+	\end{itemize} 
+	
+\end{enumerate}
+
  
 
 

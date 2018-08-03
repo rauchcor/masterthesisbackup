@@ -22,24 +22,26 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.5}Popular Federation Systems}{14}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}OAuth and OpenID Connect}{16}{section.2.6}
+\contentsline {paragraph}{OAuth and OpenID Connect}{16}{section*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Token-base Authentication}{18}{section.2.7}
+\contentsline {section}{\numberline {2.6}Token-base Authentication}{19}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Server-Based Authentication.}{19}{section*.4}
+\contentsline {paragraph}{Server-Based Authentication.}{19}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{ Token-based authentication with JSON Web Token }{19}{section*.5}
+\contentsline {paragraph}{ Token-based authentication with JSON Web Token }{20}{section*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.8}Single Sign-On}{26}{section.2.8}
+\contentsline {section}{\numberline {2.7}Single Sign-On}{26}{section.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Practical Part}{29}{chapter.3}
+\contentsline {chapter}{\numberline {3}Practical Part}{30}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Use Case}{29}{section.3.1}
+\contentsline {section}{\numberline {3.1}Use Case}{30}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Risk Assessment}{30}{section.3.2}
+\contentsline {section}{\numberline {3.2}Risk Assessment}{31}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Solution}{30}{section.3.3}
+\contentsline {section}{\numberline {3.3}Solution}{31}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{31}{chapter.4}
+\contentsline {paragraph}{Identity Server}{32}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{36}{appendix*.7}
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{34}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{39}{appendix*.9}
