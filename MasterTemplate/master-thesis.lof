@@ -6,18 +6,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Componets Authentication}}{8}{figure.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Federation}}{15}{figure.2.2}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Federation}}{16}{figure.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces OAuth API}}{21}{figure.2.3}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces OAuth Authorization Process (\cite {LeBlanc:2011:SocialApplications}, p.353)\relax }}{18}{figure.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces JWT Inheritence}}{23}{figure.2.4}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces OAuth API}}{22}{figure.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.5}{\ignorespaces JWT Inheritence}}{24}{figure.2.5}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture IdentityServer4}}{31}{figure.3.1}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture IdentityServer4}}{32}{figure.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces \relax }}{31}{figure.3.2}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \relax }}{32}{figure.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Self signed Certicate with Powershell\relax }}{33}{figure.3.3}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Self signed Certicate with Powershell\relax }}{34}{figure.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces OpenID Discovery Document\relax }}{35}{figure.3.4}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

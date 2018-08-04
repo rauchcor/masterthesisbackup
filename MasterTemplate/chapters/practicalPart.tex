@@ -58,20 +58,26 @@ The certificate used in this application was created with Powershell like shown 
 
 The API Resources include the available APIs that can be called and included in the scope of a request. The Identity Resources are Resources that can be included in the returning id\_token. The Clients are the available Clients that can be configured and are able to use the Identity Server. Those Client Configurations indicate which Authorization Flow is used and how to retrive id\_token, access\_token and a possible refreh\_token. For simplifying reasons Identity Server provides an in Memory User Storage which can be used for Testing reasons. Other ways to define Users are via .NET Core Identity or IdentityServer4 EntityFramework. For the purpose of this implementation this Test Users where included in the Identity Server application:
 \begin{enumerate}
-	\item User1
-
+	\item User1:
 	\begin{itemize}
-	\item	Username: bob
+	\item  Username: bob
 	\item  Password: bob
 \end{itemize} 
-
-	\item User2
-
+	\item User2:
 \begin{itemize}
-	\item	Username: alice
+	\item  Username: alice
 	\item  Password: alice
 \end{itemize} 
-
 \end{enumerate}
+
+After the basic setup of the Identity Server it can be exminde if the Identity Server is running correctly by calling the discovory document. The discovery document can be used by the Clients and APIs to retrive necessary configuration data. The Identity Server has to run at local port 5000 and in the browser navigate to
+\url{http://localhost:5000/.well-known/openid-configuration}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/openid-discovery-document}
+	\caption{OpenID Discovery Document}
+	\label{fig:openid-discovery-document}
+\end{figure}
 
 \chapterend

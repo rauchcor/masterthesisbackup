@@ -935,6 +935,46 @@
       \verb https://www.rfc-editor.org/rfc/pdfrfc/rfc7516.txt.pdf
       \endverb
     \endentry
+    \entry{LeBlanc:2011:SocialApplications}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=bd47b3ea6ad38a2f65dcc39e2e32b614}{%
+           family={LeBlanc},
+           familyi={L\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=d006019519c4efa635ca0394d28c3296}{%
+           family={Tresler},
+           familyi={T\bibinitperiod},
+           given={Mary},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Sebastopol, CA 95472}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media, Inc}%
+      }
+      \strng{namehash}{bd47b3ea6ad38a2f65dcc39e2e32b614}
+      \strng{fullhash}{bd47b3ea6ad38a2f65dcc39e2e32b614}
+      \strng{bibnamehash}{bd47b3ea6ad38a2f65dcc39e2e32b614}
+      \strng{authorbibnamehash}{bd47b3ea6ad38a2f65dcc39e2e32b614}
+      \strng{authornamehash}{bd47b3ea6ad38a2f65dcc39e2e32b614}
+      \strng{authorfullhash}{bd47b3ea6ad38a2f65dcc39e2e32b614}
+      \strng{editorbibnamehash}{d006019519c4efa635ca0394d28c3296}
+      \strng{editornamehash}{d006019519c4efa635ca0394d28c3296}
+      \strng{editorfullhash}{d006019519c4efa635ca0394d28c3296}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-449-39491-2}
+      \field{title}{Programming Social Applications}
+      \warn{\item Entry 'LeBlanc:2011:SocialApplications' (references.bib): Invalid format '08-2011' of date field 'date' - ignoring}
+    \endentry
     \entry{Lynch:2017:IIG}{article}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=6b6d2b0d7149e7ec8e37b310dca31194}{%
@@ -1448,6 +1488,39 @@
       \verb{url}
       \verb https://medium.facilelogin.com/jwt-jws-and-jwe-for-not-so-dummies-b63310d201a3
       \endverb
+    \endentry
+    \entry{Spencer:2018:APISecurity}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=818bd7c2d6e5b5cd4fff057a5487b3d0}{%
+           family={Spencer},
+           familyi={S\bibinitperiod},
+           given={Travis},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Nordic APIs}%
+      }
+      \strng{namehash}{818bd7c2d6e5b5cd4fff057a5487b3d0}
+      \strng{fullhash}{818bd7c2d6e5b5cd4fff057a5487b3d0}
+      \strng{bibnamehash}{818bd7c2d6e5b5cd4fff057a5487b3d0}
+      \strng{authorbibnamehash}{818bd7c2d6e5b5cd4fff057a5487b3d0}
+      \strng{authornamehash}{818bd7c2d6e5b5cd4fff057a5487b3d0}
+      \strng{authorfullhash}{818bd7c2d6e5b5cd4fff057a5487b3d0}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{API Security: Deep Dive into OAuth and OpenID Connect}
+      \verb{urlraw}
+      \verb https://nordicapis.com/api-security-oauth-openid-connect-depth/
+      \endverb
+      \verb{url}
+      \verb https://nordicapis.com/api-security-oauth-openid-connect-depth/
+      \endverb
+      \warn{\item Entry 'Spencer:2018:APISecurity' (references.bib): Invalid format '04-2018' of date field 'date' - ignoring}
+      \warn{\item Entry 'Spencer:2018:APISecurity' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
     \endentry
     \entry{Steiner:Dog:1992}{article}{}
       \name{author}{1}{}{%

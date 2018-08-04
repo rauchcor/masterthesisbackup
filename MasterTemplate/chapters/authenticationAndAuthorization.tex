@@ -40,9 +40,7 @@ disclosure to unauthorized individuals and organizations. Integrity or integrity
 
 Each of the categorize can then be rated with a potential impact level which can be either low, moderate and high. The result of this risk assessment can then be the basis for choosing the appropriate identity, authentication and federation assurance level. The assurance level determination is just relevant for analyzing the risk of online transaction offered by digital services and should not be used for the complete business process which may include offline processing in a entirely segmented system. 
 
-
 The result of all design principles, security and privacy considerations should be a system, network or component that is trustworthy. According to \cite{Neumann:2018:PTC} trustworthiness is given if an entity satisfies its specified requirement, after a reliable assessment. The requirements that deserve especially consideration are, those that are critical to an enterprise, mission, system, network or other entity. One of the requirements to make a system trustworthy is a reliable authentication and authorization process. These processes are discussed in more detail in the next sections.
-
 
 
 \section{Identity Proofing}
@@ -144,7 +142,20 @@ In federated systems, the verifier of authentication information of the user is 
 \end{enumerate}
 For any assertion level, the IdP has to make sure that an RP cannot impersonate the IdP at another RP by signing the assertion. The signing of the assertion can be done by either a MAC using a shared key or a digital signature using an asymmetric key [cf. (\cite{NIST:2017:DIG}), (\cite{NIST:2017:DIGFA})].  
 
-One of the factors the differentiates the different federation assurance level is the usage of assertion binding. An assertion binding can be chosen based on the RP requirements of rather the RP needs additional proof of the binding of an assertion to a particular subscriber. The two different kind of assertion binding to chose from is the bearer and holder-of-key assertions. Any party can present a bearer assertion in order to prove to have the identity of the bearer. Based on this handling of bearer assertions it can be assumed, that if an attacker is successful in capturing a bearer assertion, he can represent the subscriber that was previously associated with this bearer assertion. The attacker could present the assertion or reference to the RP and impersonate the subscriber. The holder-of-key assertion in comparison holds a reference to a key which indicates which subscriber is representing the assertion. The key is signed and asserted by the issuer of the assertion  [cf. (\cite{NIST:2017:DIGFA})].
+One of the factors that differentiates federation assurance level is the usage of assertion binding. An assertion binding can be chosen based on the RP requirements of rather the RP needs additional proof of the binding of an assertion to a particular subscriber. The two different kind of assertion binding to chose from is the bearer and holder-of-key assertions. Any party can present a bearer assertion in order to prove to have the identity of the bearer. Based on this handling of bearer assertions it can be assumed, that if an attacker is successful in capturing a bearer assertion, he can represent the subscriber that was previously associated with this bearer assertion. The attacker could present the assertion or reference to the RP and impersonate the subscriber. The holder-of-key assertion in comparison holds a reference to a key which indicates which subscriber is representing the assertion. The key is signed and asserted by the issuer of the assertion  [cf. (\cite{NIST:2017:DIGFA})].
+
+Typically tokens are used for assertions, in this contexts tokens are software tokens which are used to provide access control for systems. The assertion binding described before can also be referred to as token profiles. Typically there are two kind of tokens that are frequently used, which is the access token and the refresh token. An access token, when it is valid can be used to access resources. If the access token is expired and not valid anymore and refresh token can be used to reclaim a new access token. OpenID Connect additionally defines an ID token which will be discussed later [cf. (\cite{Spencer:2018:APISecurity})]. 
+
+Furthermore tokens can be passed either by reference or by value. On the one hand if a tokens are passed by reference they have to be resolved at another instance. On the other hand a token can be passed by value and already has all the necessary information about the user to establish for example a session. Those two ways of passing a token are very important when it comes to security considerations. Also token have different types. The OAuth specification for example does not specify which kind of token has to be used. \cite{Spencer:2018:APISecurity} list some of the typical tokens: 
+
+\begin{itemize}
+	\item WS-Security token (SAML)
+	\item JWT tokens
+	\item Legacy tokens
+	\item Custom tokens
+\end{itemize}
+
+In praxis developers often use JSON Web Tokens because they are very flexible and allow to add additional claims. Also they use JSON and not XML like SAML tokens, which is much easier to process. More about JSON Tokenens can be read in the upcomming chapter Token-base Authentication [cf. (\cite{Spencer:2018:APISecurity})].
 
 
 
@@ -183,12 +194,26 @@ Client-Side Federation. Anonymous credentials systems provide authentication ass
 \paragraph{OAuth and OpenID Connect}
 
 
-OAuth 2.0 is a protocol that is used for access control. The protocol adds an authorization layer – separating the Client from the Resource Owner. 
+OAuth 2.0 is a protocol that is used for access control. OAuth2.0 is the newest version of  OAuth. Compared to the previous version OAuth1.0a, HTTPS is used for all request and the complicated signature process of tokens was replaced. Furthermore complexity was reduced and the usage is much simpler then in the first version. The new version OAuth 2.0 is not compatible with older versions [cf. (\cite{LeBlanc:2011:SocialApplications})].
+
+The protocol adds an authorization layer – separating the Client from the Resource Owner. 
 The Client is not bound to any particular implementation characteristics and can make requests to protected resources on behalf of the resource owner. The OAuth 2.0 specification distinguishes between two Client Types, Confidential Clients, and Public Clients. Whereas Confidential Clients are capable of maintaining the confidentiality and Public Clients that are incapable of maintaining confidentiality [cf. (cf.\cite{Hardt:2012:OAuth2}, p.6-14)].
 
 The Resource Owner is a role according to (\cite{Sakimura:2014:OpenIDConnect}, p.6) can grant access to a protected resource also referred to as End-User, if the resource owner is a person. Furthermore, scopes are used to specify to which resources the resource owner wants to grant access. Requests that which are sent to an authorization endpoint include scopes that can be mandatory or optional parameters. Declaring the scopes is up to the provider. An access token is used to gain access instead of the resource owner’s credentials. 
 
 Access Tokens are issued by an Authorization Server and can be used by the Client to gain access to protected resources hosted by the resource server. The Authorization Server is responsible for issuing the access token and may be the same as the Resource Server. In literature, in fact,  different terms in literature do are used which describe what an identity server does. Among these are, some of them are Security Token Service, Identity Provider, Authorization Server and IP-STS. OAuth 2.0 uses a token service, which centralizes this logic and reduces complexity for the Client and the APIs [cf. (\cite{Sakimura:2014:OpenIDConnect}, p.6), (\cite{Brock:2018:ID4}), (\cite{Boyd:2012:GSOAuth})]
+
+A typical request of a Client to access a resource on the Resource Server includes a number of request. In the end the Client should be able to access the protected resource. The proccess is shown in \ref{fig:oaut-process2}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/oaut-process2}
+	\caption{OAuth Authorization Process (\cite{LeBlanc:2011:SocialApplications}, p.353)}
+	\label{fig:oaut-process2}
+\end{figure}
+
+In the first two steps the Client redirects the User to the Resource Owner, to give the Client permission to access the protected resources. The User is then redirected to te callback location which is included in the original request and adds a verification code which confirms that the Client is entitled to access the requested resource. After the redirection to the callback location the Client sends a request with the verification code to the Authorization Server. If the request is a success the Authorization Server replies in step 4 with an access token and eventually an refresh token. With the received access token the Client can know make signed requests to the resource server and receive protected resources, like shown in step 5 and 6 [cf. (\cite{LeBlanc:2011:SocialApplications}, p. 353)]
+
 
 OpenID Connect and OAuth 2.0 seem very similar, in fact, OpenID Connect is a framework build on top of OAuth 2.0. Together they focus on Authentication and Access Control in a way that is suitable for modern applications. OpenID can verify the identity of an End-User and obtain basic profile information about the user. It uses Claims to communicate information to the End-User [cf. (\cite{Sakimura:2014:OpenIDConnect})]
 
@@ -224,7 +249,6 @@ OpenID Connect performs authentication and determines if the user is already log
 
 
 \section{Token-base Authentication}
-
 
 The way web developers write back-end applications has changed significantly with the rising popularity of single page and mobile applications. Backend-developers no longer spend a lot of time building markup. Instead, they build APIs for front-end applications to consume. The split up of front-end and back-end allows the back-end to focus on business logic and data management while the front-end solely focus on the representation of the content. The number one way single page and mobile web applications are authenticating users according to \cite{Tkalec:2015} is token-based authentication.
 

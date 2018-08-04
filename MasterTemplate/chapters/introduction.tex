@@ -17,7 +17,7 @@ This common problems with a modern application setup, where the backend applicat
 
 What are feasible ways to implement authentication and authorization for enterprises that depend on adaptability and focus on modern single page applications? How can businesses find out with identity management system is best suited for their use case? Furthermore, what are benefits of the token-based authentication with OAuth2 and OpenID Connect versus traditional authentication methods? These questions should be elaborated while considering common security risks of modern web applications.
 
-\section{Hypthesis}
+\section{Hypothesis}
 
 In modern architectures, a third party often is responsible for the implementation of the process of authentication and authorization of the user. Considering the setup of a company and the use case of the authentication and authorization of users, the requirements towards identity management can be very different. \cite{NIST:2017:DIG} suggest for identity management, to rely on standards and specifications that are widespread and documented. Example for tools and standards include Internet protocols for accessing services like REST, SOAP, and XML and federate identity standards for service authentication such as SAML, OAuth, and OpenID Connect.
 
@@ -25,6 +25,14 @@ In this thesis, the focus is on modern distributed architectures and ways to pro
 
 
 \section{Method}
+
+In order to prove the described hypothesis the following method is applied:
+  
+\begin{itemize}
+  	\item Acquire knowledge about authentication and authorization methods
+  	\item Analysis of risks based on a use case
+  	\item Develop a best practice example
+\end{itemize}
 
 The priority was to make extensive research on the topic to get an overview of the current state of authentication and authorization methods. After the research before starting to analyze the different methods of authentication and authorization, a case for an assessment is defined and described in detail. Based on this case a risk assessment is executed and the according to the level of assurance is a determent. The level of assurance need for this case allows choosing the appropriate technologies to mitigate risks and the impact of errors. With this set of technologies and example solution for a modern enterprise single page application is created to give a best practice example based on the theatrical gathered knowledge.
 
