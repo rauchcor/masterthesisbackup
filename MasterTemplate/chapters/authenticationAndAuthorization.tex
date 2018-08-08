@@ -157,94 +157,6 @@ Furthermore tokens can be passed either by reference or by value. On the one han
 
 In praxis developers often use JSON Web Tokens because they are very flexible and allow to add additional claims. Also they use JSON and not XML like SAML tokens, which is much easier to process. More about JSON Tokenens can be read in the upcomming chapter Token-base Authentication [cf. (\cite{Spencer:2018:APISecurity})].
 
-
-
-\section{Popular Federation Systems}
-
-Application security is a complex task and developing a customized siloed identity solution can be expensive. A Stand-alone identity store can besides being expensive also causes information assurance and administrative problems for organizations  [cf.(\cite{JerichoSystems:IS})]. 
-
-A federate authentication or identity federation says \cite{Boyed:2012:GSOA} is a system that is maintaining its accounts, for example, username and password databases, with the help of third-party service. Often big cooperate IT environments already use such solutions. Environment applications, for example, may trust an Active Directory server, an LDAP server or a SAML provider. Essentially switching to a federated identity solution should help to reduce the management burden that comes from managing multiple accounts and can lead to potential points of failure.  Furthermore users are giving control over there attributes' dissemination which leads to privacy violations and identity theft. Most of the existing identity federation solution focuses on individual system, each of which focuses on one of three general types of functionality - single sign-on, federated identity or anonymous credentials. Single sign-on system have the possibility to issue authentication assertion to multiple service providers. Examples for single-sign on are Passport, OpenID or Shibboleth. Federated identity systems are focused on managing multiple identities for a single user. Example for Federated identity are Project Liberty (http://projectliberty.org), Higgins (www.eclipse.org/higgins), PRIME (www.prime-project.eu), CardSpace, and
-Client-Side Federation. Anonymous credentials systems provide authentication assertions while not revealing the user's identity to a service provider. Examples include Idemix, U-Prove, and P-IMS [cf. (\cite{Birell:2013:FIMS}), {\cite{Boyed:2012:GSOA}].
-	
-	
-	As shown in (figure~\ref{fig:federation}) an identity system usually consists of three parties. The user/subscriber, service provider/resource provider, and the identity provider. Depending on the protocol which is used, different information passes between the three components at different times. While the user/subscriber communicates with the IdP and the RP over a browser the IDP and the RP can communicate over a front channel which works through redirects involving the subscriber or a back channel which is a direct connection not including the subscriber [cf. (\cite{NIST:2017:DIGFA})]. 
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.8\textwidth]{images/federation}
-		\caption[Federation]{Federation}
-		\label{fig:federation}
-	\end{figure}
-	
-	
-	The user/subscriber is usually associated with a real user, and its identity is represented by a set of attributes. Single user can be associated with multiple identities. A service/resource provider is responsible for making an authorization decision based on authentication assertion and the attributes derived from it. Many of the service providers implement their identity management, but in federate systems, the identity management is outsourced to the identity provider. An identity provider can be either a stand-alone service or be a part of the service provider. The responsibility of the IdP is it to authenticate the user, issuing authentication assertions, manage identities whereas the IdP has the right to create, update, release and delete attributes associated with the identity [cf. (\cite{Birell:2013:FIMS})]. 
-	
-	
-	\cite{NIST:2017:DIG} claims that identity federation is preferred over some siloed identity solution that each serve a single agency or Relying Party (RPs). Furthermore \cite{NIST:2017:DIG} lists specific benefits that come with using federated architectures, as can be examined before. 
-	
-	\begin{itemize}
-		\item Enhanced user experience. For example, an individual can be identity proofed once and reuse the issued credential at multiple RPs. 
-		\item Cost reduction to both the user (reduction in authenticators) and the agency (reduction in information technology infrastructure). 
-		\item Data minimization as agencies does not need to pay for collection, storage, disposal, and compliance activities related to storing personal information. 
-		\item Pseudonymous attribute assertions as agencies can request a minimized set of attributes, to include claims, to fulfill service delivery. 
-		\item Mission enablement as agencies can focus on the mission, rather than the business of identity management.
-	\end{itemize}
-	
-	In the next section three very popular assertion technologies are discussed: SAML assertions, Kerberos tickets and OpenID Connect tokens. Those technologies are not all possible assertion technologies. However, they present the most commonly used in federated identity systems. 
-	
-\paragraph{OAuth and OpenID Connect}
-
-
-OAuth 2.0 is a protocol that is used for access control. OAuth2.0 is the newest version of  OAuth. Compared to the previous version OAuth1.0a, HTTPS is used for all request and the complicated signature process of tokens was replaced. Furthermore complexity was reduced and the usage is much simpler then in the first version. The new version OAuth 2.0 is not compatible with older versions [cf. (\cite{LeBlanc:2011:SocialApplications})].
-
-The protocol adds an authorization layer – separating the Client from the Resource Owner. 
-The Client is not bound to any particular implementation characteristics and can make requests to protected resources on behalf of the resource owner. The OAuth 2.0 specification distinguishes between two Client Types, Confidential Clients, and Public Clients. Whereas Confidential Clients are capable of maintaining the confidentiality and Public Clients that are incapable of maintaining confidentiality [cf. (cf.\cite{Hardt:2012:OAuth2}, p.6-14)].
-
-The Resource Owner is a role according to (\cite{Sakimura:2014:OpenIDConnect}, p.6) can grant access to a protected resource also referred to as End-User, if the resource owner is a person. Furthermore, scopes are used to specify to which resources the resource owner wants to grant access. Requests that which are sent to an authorization endpoint include scopes that can be mandatory or optional parameters. Declaring the scopes is up to the provider. An access token is used to gain access instead of the resource owner’s credentials. 
-
-Access Tokens are issued by an Authorization Server and can be used by the Client to gain access to protected resources hosted by the resource server. The Authorization Server is responsible for issuing the access token and may be the same as the Resource Server. In literature, in fact,  different terms in literature do are used which describe what an identity server does. Among these are, some of them are Security Token Service, Identity Provider, Authorization Server and IP-STS. OAuth 2.0 uses a token service, which centralizes this logic and reduces complexity for the Client and the APIs [cf. (\cite{Sakimura:2014:OpenIDConnect}, p.6), (\cite{Brock:2018:ID4}), (\cite{Boyd:2012:GSOAuth})]
-
-A typical request of a Client to access a resource on the Resource Server includes a number of request. In the end the Client should be able to access the protected resource. The proccess is shown in \ref{fig:oaut-process2}.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\linewidth]{images/oaut-process2}
-	\caption{OAuth Authorization Process (\cite{LeBlanc:2011:SocialApplications}, p.353)}
-	\label{fig:oaut-process2}
-\end{figure}
-
-In the first two steps the Client redirects the User to the Resource Owner, to give the Client permission to access the protected resources. The User is then redirected to te callback location which is included in the original request and adds a verification code which confirms that the Client is entitled to access the requested resource. After the redirection to the callback location the Client sends a request with the verification code to the Authorization Server. If the request is a success the Authorization Server replies in step 4 with an access token and eventually an refresh token. With the received access token the Client can know make signed requests to the resource server and receive protected resources, like shown in step 5 and 6 [cf. (\cite{LeBlanc:2011:SocialApplications}, p. 353)]
-
-
-OpenID Connect and OAuth 2.0 seem very similar, in fact, OpenID Connect is a framework build on top of OAuth 2.0. Together they focus on Authentication and Access Control in a way that is suitable for modern applications. OpenID can verify the identity of an End-User and obtain basic profile information about the user. It uses Claims to communicate information to the End-User [cf. (\cite{Sakimura:2014:OpenIDConnect})]
-
-OpenID Connect performs authentication and determines if the user is already logged on or to log on the user. The result is an authentication token which is returned to the user. \cite{Sakimura:2014:OpenIDConnect} defines three different way authentication can flow:
-
-
-\begin{enumerate}
-	\item \textbf{Authorization Code Flow}  - The Authorization Code Flow returns an Authentification Code which can be used to be exchanged for an id\_token or an access\_token. The Authorization Code is used for Clients that can maintain a secret securely between themselves and the Authorization Server. Typically this approach is used for server-to-server communication when no interactive user is present. In this thesis, the focus is on user interaction [cf. (\cite{Sakimura:2014:OpenIDConnect}, p.10)]
-	
-	To use the Authorization Code Flow according to \cite{Sakimura:2014:OpenIDConnect} the the following request\_type indicates a Authorization Code Flow:
-	\begin{itemize}
-		\item	code: The response includes an Authorization Code. 
-	\end{itemize}
-	
-	\item \textbf{Implicit Code Flow} - In the Implicit Code Flow the access token and the ID id token are directly returned to the Client. This behavior may expose information to the End-User or anyone who has access to the End-User’s Agent. Tokens are only returned from the Token Endpoint; the Authorization Endpoints is not used. Unlike the Authorization Code Flow where the separate request is used for authorization and authentification, here the Client will receive the access token as a result of the authentification which also means that there is no refresh token.  This flow is used for Clients who are implemented in a browser using scripting language [cf. (\cite{Sakimura:2014:OpenIDConnect}, p.20), (\cite{Hardt:2012:OAuth2})]
-	
-	According to \cite{Sakimura:2014:OpenIDConnect}, the following request\_types indicate an Implicit Code Flow:
-	\begin{itemize}
-		\item	id\_token: The response must include the parameter id\_token. The response does not include an Authorization Code, Access Token, or Access Token Type. 
-		\item  id\_token token: The response includes an Access Token, an Access Token Type and an id\_token.
-	\end{itemize}
-	
-	\item \textbf{Hybrid Code Flow} - In the hybrid code flow, tokens are returned from the Authorization Endpoint, and others are returned from the Token Endpoint. The Token Server will return not only the id token but also the code. The Client then has to use the code in order to gain the access token through a back channel call which means there is an additional round trip compared to the Implicit Code Flow. Using the code to receive the access token should minimize the risk of exposing the access token [cf. (\cite{Sakimura:2014:OpenIDConnect})].
-	To use the Hybrid Code Flow according to de \cite{Sakimura:2014:OpenIDConnect} put forward that the following request\_types indicate a Hybrid Code Flow:
-	\begin{itemize}
-		\item	code id\_token: The response includes an Authorization Code and an id\_token.
-		\item  code id\_token token: The response includes an Authorization Code, an Access Token, an Access Token Type and an id\_token. 
-	\end{itemize} 
-	
-\end{enumerate}
-
  
 
 
@@ -336,13 +248,13 @@ To make sense of this JWT token in the figure above it is best to look at each o
 
 The JSON object in \ref{lst:joseheader} is the JOSE Header, representing the type of the token, the cryptographic operations applied and optionally additional properties of the JWT. Based on the information of the JOSE Header it can explain if the JWT is a JWS or a JWE. When speaking of JWT, we speak of one of the implementations of JWT because in fact, JWT does not exist itself. Concrete implementation of the JWT is JSON Web Signature (JWS) or JSON Web (Encryption). The figure below gives an optical representation of the structure [cf. (\cite{Siriwardena:JWTJWSJWE:2016})].
 
-
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.6\linewidth]{images/jwtjwsjwe}
-	\caption[JWT Inheritence]{JWT Inheritance}
-	\label{fig:jwtjwsjwe}
+	\includegraphics[width=0.8\linewidth]{images/jwtjwsjwe2}
+	\caption{JWT Inheritance}
+	\label{fig:jwtjwsjwe2}
 \end{figure}
+
 
 The 'type' Header Parameter we can examine in \ref{lst:joseheader} indicates the kind of token, considering the example it is a JSON Web Token. The second parameter is the 'alg' Header Parameter and is specified in either the 'JSON Web Security (JWS)' reference documentation written by \cite{JWS:IETF:Jones:2015} or the JSON Web Encryption (JWE) reference documentation written by \cite{JWE:IETF:Jones:2015}. In this case, the JWT is a JWS since a JWE needs more specific Header Parameter. In the JWS the 'alg' Header Parameter gives information about the algorithm which was used to create the signature. Which kind of arguments are accepted by the 'alg' Header Parameter are explained in yet another specification called 'JSON Web Signature and Encryption Algorithms' written by \cite{JWA:Jones:2015}. In the example \ref{lst:joseheader} the 'HS256' algorithm is used, meaning that the JWS was MACed using the HMAC SHA-256 algorithm. The definition of the 'alg' Header Parameter in the 'JSON Web Signature (JWS)' reference documentation is very similar to the definition in the 'JSON Web Encryption (JWE)' reference documentation except the cryptographic algorithm is used to encrypt or determine the value of the CEK. \cite{JWE:IETF:Jones:2015} also defines an 'enc' Encryption Algorithm Header, which is used for content encryption on plaintext. The authenticated encryption performed produces a ciphertext and the authentication tag. Also for the 'enc' Header Parameter, the valid arguments can be found in the 'JSON Web Signature and Encryption Algorithms' written by \cite{JWA:Jones:2015}. The algorithm used must be an AEAD algorithm with a specified key length. There is further Header Parameter that can be defined, here are just the most essential JOSE Header Parameter for this document listed. 
 
@@ -441,25 +353,136 @@ To serialize an encrypted message, one has to follow either the JWS or the JWE s
 	}
 	\end{lstlisting}
 	
-	Both digital signatures and MACs can be used to provide integrity checking. However, specification warns that there significant differences that have to be considered when designing a protocol. MACs only provide the origination of the identification under specific circumstances. It is normally assumed that the private key used for the signature is only known by a single entity. Although in the case of MAC keys all the entities that use it for integrity computation need to know the MAC key in order to validate the message. That means that with MAC validation one can tell if a message is generated from one of the entities that know the symmetric MAC key and not where the message originated [cf. (\cite{JWT:IETF:Jones:2015})].
+	Both digital signatures and MACs can be used to provide integrity checking. However, specification warns that there significant differences that have to be considered when designing a protocol. MACs only provide the origination of the identification under specific circumstances. It is normally assumed that the private key used for the signature is only known by a single entity. Although in the case of MAC keys all the entities that use it for integrity computation need to know the MAC key in order to validate the message. That means that with MAC validation one can tell if a message is generated from one of the entities that know the symmetric MAC key and not where the message originated [cf. (\cite{JWT:IETF:Jones:2015})].	
+	
+\section{Single Sign-On Federation Systems}
 
+Application security is a complex task and developing a customized siloed identity solution can be expensive. A Stand-alone identity store can besides being expensive also causes information assurance and administrative problems for organizations  [cf.(\cite{JerichoSystems:IS})]. 
 
-\section{Single Sign-On}
+A federate authentication or identity federation says \cite{Boyed:2012:GSOA} is a system that is maintaining its accounts, for example, username and password databases, with the help of third-party service. Often big cooperate IT environments already use such solutions. Environment applications, for example, may trust an Active Directory server, an LDAP server or a SAML provider [cf. (\cite{Birell:2013:FIMS}), {\cite{Boyed:2012:GSOA}].
+	
+	
+	As shown in (figure~\ref{fig:federation}) an identity system usually consists of three parties. The user/subscriber, service provider/resource provider, and the identity provider. Depending on the protocol which is used, different information passes between the three components at different times. While the user/subscriber communicates with the IdP and the RP over a browser the IDP and the RP can communicate over a front channel which works through redirects involving the subscriber or a back channel which is a direct connection not including the subscriber [cf. (\cite{NIST:2017:DIGFA})]. 
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\textwidth]{images/federation}
+		\caption[Federation]{Federation}
+		\label{fig:federation}
+	\end{figure}
+	
+	
+	The user/subscriber is usually associated with a real user, and its identity is represented by a set of attributes. Single user can be associated with multiple identities. A service/resource provider is responsible for making an authorization decision based on authentication assertion and the attributes derived from it. Many of the service providers implement their identity management, but in federate systems, the identity management is outsourced to the identity provider. An identity provider can be either a stand-alone service or be a part of the service provider. The responsibility of the IdP is it to authenticate the user, issuing authentication assertions, manage identities whereas the IdP has the right to create, update, release and delete attributes associated with the identity [cf. (\cite{Birell:2013:FIMS})]. 
+	
+	
+	\cite{NIST:2017:DIG} claims that identity federation is preferred over some siloed identity solution that each serve a single agency or Relying Party (RPs). Furthermore \cite{NIST:2017:DIG} lists specific benefits that come with using federated architectures, as can be examined before. 
+	
+	\begin{itemize}
+		\item Enhanced user experience. For example, an individual can be identity proofed once and reuse the issued credential at multiple RPs. 
+		\item Cost reduction to both the user (reduction in authenticators) and the agency (reduction in information technology infrastructure). 
+		\item Data minimization as agencies does not need to pay for collection, storage, disposal, and compliance activities related to storing personal information. 
+		\item Pseudonymous attribute assertions as agencies can request a minimized set of attributes, to include claims, to fulfill service delivery. 
+		\item Mission enablement as agencies can focus on the mission, rather than the business of identity management.
+	\end{itemize}
 
+ Essentially switching to a federated identity solution should help to reduce the management burden that comes from managing multiple accounts and can lead to potential points of failure.  Furthermore users are giving control over there attributes' dissemination which leads to privacy violations and identity theft. Most of the existing identity federation solution focuses on individual system, each of which focuses on one of three general types of functionality - single sign-on, federated identity or anonymous credentials. Single sign-on system have the possibility to issue authentication assertion to multiple service providers. Examples for single-sign on are Passport, OpenID or Shibboleth. Federated identity systems are focused on managing multiple identities for a single user. Example for Federated identity are Project Liberty (http://projectliberty.org), Higgins (www.eclipse.org/higgins), PRIME (www.prime-project.eu), CardSpace, and
+Client-Side Federation. Anonymous credentials systems provide authentication assertions while not revealing the user's identity to a service provider. Examples include Idemix, U-Prove, and P-IMS [cf. (\cite{Birell:2013:FIMS}), {\cite{Boyed:2012:GSOA}].
+	
+	\paragraph{Singel Sign-On}	The focus of this thesis is on mobile SSO solutions. Therefore only SSO solution will be discussed. The aim of SSO is to design an authentication system that serves the interests of the user as well as the interests of the service provider. Whereas the user prefers a simple process, the service provider requires a complicated authentication procedure. Ironically trying to make the authentication procedure more save often leads to weakening the whole system due to the user always finding new ways to bypass it. An example mentioned before is password fatigue. Another challenge that SSO is trying to tackle is that standard web authentication solutions that require the user to login with a password, only authenticate the user and are not capable of providing access control or revealing additional information about the user. Most SSO solutions, therefore, try to combine the authentication process and authorization [cf. (\cite{Prochazka:2010:UCA})].
+	
+	The paper Taxonomy of Single Sign-On System \cite{Pashalidis:2003:10.1007/3-540-45067-X_22} identifies four generic architectures for SSO systems. An SSO system has to authenticate a user to a SP. Because authentication also implies identification, SSO systems have to incorporate the lifecycle management of identifiers that can take various forms. The paper distinguishes between two main types of SSO systems. The first type is ‘pseudo-SSO’ and the second type is ‘true SSO’. Typical pseudo-SSO are providing automatic authentication for all SP specific authentication methods after the user initially authenticated with the pseudo-SSO component, which is called primary authentication. The responsibility of a pseudo-SSO service is to manage all identities. A user may have multiple SSO identities for a single SP, but in principle, one SSO identity corresponds to one SP. Compared to the pseudo-SSO system in a true-SSO system, the user has to initially authenticate with the Authentication Service Provider (ASP) that is required to have an established relationship with all SPs. The relationship between the ASP and the SP has to be trustworthy. A key functionality of the true-SSO service is that the only authentication that includes the user occurs between the user and the ASP. The SP will get notified of the authentication status, including information about the identity of the user, with so-called authentication assertions. The categorization of SSO architectures can be further distinguished by the location of the ASP/pseudo-SSO component. This component can be either local to the user platform or offered as a third-party service also called SSO-proxy. This further categorization leads \cite{Pashalidis:2003:10.1007/3-540-45067-X_22} to the four generic architectures mentioned above Local pseudo-SSO systems, Proxy-based pseudo-SSO systems, Local true SSO systems and Proxy-based true SSO systems.
+	
+	When opting for a particular SSO architecture, one has to consider the strength and weaknesses of each system carefully. The paper, therefore, analyses the four generic architectures regarding Pseudonymity and Unlinkability, Anonymous Network Access, Support for User Mobility, Deployment Costs, Maintenance Costs, Running Cost and Trust Relationships. Pseudonymity and Unlinkability refer to the fact that the user providers sensible information that needs to be protected and it should not be possible to correlate distinct identities of the same user and personal information, and potential properties should not be linked to the user. The unlinkability cannot be guaranteed for pseudo-SSO because the identities for the SSO are SP specific. To improve unlinkability   \cite{Pashalidis:2003:10.1007/3-540-45067-X_22} suggest to use an ‘anonymizing proxy’, for local SSO system additionally services are needed for proxy-based SSP it can be integrated. User mobility is supported for proxy-based SSO, for locale SSO there needs to be further services in place. The deployment cost is lower for pseudo-SSO systems then for true-SSO systems. However, the maintenance cost is higher because if any SPs change the whole logic of the pseudo-SSO system has to change. The running cost of pseudo-SSO is likely to be lower than for true-SSO systems. For the pseudo-SSO systems, the trust relationship between users and SP may be dynamically changing depending on the implementation, for true-SSO the trust relationship is established between ASP and SPs and is always consistent. Generally speaking are pseudo-SSO systems more suitable for a closed system where identity management is just for managing the life cycle of remaining credentials. For an open system maintaining credentials is not enough. Appropriate privacy protection services and privacy-aware Identity Management schemes should be therefore integrated with true SSO schemes [cf. (\cite{Pashalidis:2003:10.1007/3-540-45067-X_22})]. 
+	
+	
+	
+	 therefore two very popular assertion technologies are discussed: Shibboleth (SAML) and OpenID Connect. Those technologies are not all possible single sign-on assertion technologies. However, they present the most commonly used in federated identity systems. According to \cite{Lynch:2017:IIG} two SSO solutions gained broad acceptance. On the one hand, SAML-based federations using SOAP, focusing on large enterprises also including governments and educational networks. On the other hand, the Web Authorization Protocol was introduced which is a combination of the Protocols OpenID and OAuth. SAML federations have been customized to address the security concerns of those institutions that typically have a large user base, significantly protected resources, complex authorization patterns and data and services spread across multiple domains. However, in a Web 2.0 world, the SAML solutions where seen as too rigid and too severe to maintain; a lightweight SSO was needed, therefore the Web Authorization Protocol was designed. The approach of this protocol is taking advantage of the lightweight RESTful APIs which are reusing the existing HTTP architecture features and the JavaScript Object Notation(JSON).
+	
+	
+		
+	\paragraph{SAML}
+	One of the well-known solutions based on Security Assertion Markup Language version 2 (SAML2) is Shibboleth. Shibboleth is one of the leading middlewares for building identity federations in a higher education sphere. To offer authentication, authorization and attribute assertion between entities. \cite{Prochazka:2010:UCA} identifies the following entities defined by Shibboleth are Identity Provider (IdP), Service Provider (SP), Discovery Service, Metadata Operator and Federation Operator.
+	
+	The discovery service is used to find the users organization IdP. The IdP defines an attribute release policy and releases different sets of the user's attributes to different SPs. Users are only able to agree or disagree with the whole set of attributes because the decision comes from the IdP. When the user tries to log on, to a service of a Service Provider, he gets redirected to a page where he can choose and IdP previously found by the Discovery Service. If an SP wants to provide its service to multiple federations it has to negotiate policy and technical detail with each federation operator. The federation operator manages the federation policies and introduces SPs and IdPs. Furthermore, the federations operator has to maintain and manage the information about all entities in a federation which is contained in the Metadata. A problem with this architecture is that the SP has to keep track of changes of the technical specification of various federation operators to maintain the configuration for each federation operator. A solution would be a significant federation registration, but this is indeed not possible because of technical and administrative severity and political will. This solution is also somewhat misleading for users since they have to maintain multiple credentials, select from multiple identifiers and so on [cf.\cite{Prochazka:2010:UCA}].
+	
+	According to \cite{Prochazka:2010:UCA} Shibboleth is too restrictive, a solution with a centrally managed point of IdPs and SPs is preferred. Also, users should not have to deal with redundant accounts.		
+	
+	\paragraph{OAuth and OpenID Connect}
+	The second solution that is introduced her is OAuth 2.0 with OpenID Connect.	OAuth 2.0 is a protocol that is used for access control. OAuth2.0 is the newest version of  OAuth. Compared to the previous version OAuth1.0a, HTTPS is used for all request, and the complicated signature process of tokens was replaced. Furthermore, complexity was reduced, and the usage is much simpler than in the first version. The new version OAuth 2.0 is not compatible with older versions [cf. (\cite{LeBlanc:2011:SocialApplications})].
+	
+	The protocol adds an authorization layer – separating the Client from the Resource Owner. 
+	The Client is not bound to any particular implementation characteristics and can make requests to protected resources on behalf of the resource owner. The OAuth 2.0 specification distinguishes between two Client Types, Confidential Clients, and Public Clients. Whereas Confidential Clients are capable of maintaining the confidentiality and Public Clients that are incapable of maintaining confidentiality [cf. (cf.\cite{Hardt:2012:OAuth2}, p.6-14)].
+	
+	The Resource Owner is a role according to (\cite{Sakimura:2014:OpenIDConnect}, p.6) can grant access to a protected resource also referred to as End-User, if the resource owner is a person. Furthermore, scopes are used to specify to which resources the resource owner wants to grant access. Requests that which are sent to an authorization endpoint include scopes that can be mandatory or optional parameters. Declaring the scopes is up to the provider. An access token is used to gain access instead of the resource owner’s credentials. 
+	
+	Access Tokens are issued by an Authorization Server and can be used by the Client to gain access to protected resources hosted by the resource server. The Authorization Server is responsible for issuing the access token and may be the same as the Resource Server. In literature, in fact,  different terms in literature do are used which describe what an identity server does. Among these are, some of them are Security Token Service, Identity Provider, Authorization Server and IP-STS. OAuth 2.0 uses a token service, which centralizes this logic and reduces complexity for the Client and the APIs [cf. (\cite{Sakimura:2014:OpenIDConnect}, p.6), (\cite{Brock:2018:ID4}), (\cite{Boyd:2012:GSOAuth})]
+	
+	A typical request of a Client to access a resource on the Resource Server includes some requests. In the end, the Client should be able to access the protected resource. The process is shown in \ref{fig:oaut-process2}.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\linewidth]{images/oaut-process2}
+		\caption{OAuth Authorization Process (\cite{LeBlanc:2011:SocialApplications}, p.353)}
+		\label{fig:oaut-process2}
+	\end{figure}
+	
+	In the first two steps, the Client redirects the User to the Resource Owner, to give the Client permission to access the protected resources. The User is then redirected to the callback location which is included in the original request and adds a verification code which confirms that the Client is entitled to access the requested resource. After the redirection to the callback location, the Client sends a request with the verification code to the Authorization Server. If the request is a success, the Authorization Server replies in step 4 with an access token and eventually a refresh token. With the received access token the Client can know to make signed requests to the resource server and receive protected resources as shown in step 5 and 6 [cf. (\cite{LeBlanc:2011:SocialApplications}, p. 353)]
+	
+	OpenID Connect and OAuth 2.0 seem very similar, in fact, OpenID Connect is a framework build on top of OAuth 2.0. Together they focus on Authentication and Access Control in a way that is suitable for modern applications. OpenID can verify the identity of an End-User and obtain basic profile information about the user. It uses Claims to communicate information to the End-User [cf. (\cite{Sakimura:2014:OpenIDConnect})]
+	
+	OpenID Connect performs authentication and determines if the user is already logged on or to log on the user. The result is an authentication token which is returned to the user. A precondition of OpenID Connect is that the client, as well as the user, have to trust the IdP. The functions of the IdP are the same as in OAuth. The reason for that is that the newest version of OpenID is implemented on top of OAuth and extends the authentication process of OAuth  [cf. (\cite{Sakimura:2014:OpenIDConnect}), (\cite{Boyd:2012:GSOAuth}, p.51)]
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\linewidth]{images/openid-process}
+		\caption{OAuth 2.0 and OpenID Connect \cite{Lodderstedt:2014:OpenID}}
+		\label{fig:openid-process}
+	\end{figure}
+	
+	
+	In figure \ref{fig:openid-process} OAuth 2.0 and OpenID Connect \cite{Lodderstedt:2014:OpenID} the added Element of the OpenID Connect standard is marked with red. In order to implement the OpenID Connect Standard, the Client has to request the scope 'openid'. After the request, the progress is similar to the transitional OAuth authentication process, but when it comes to return of the access token, a additional ID Token is returned. This ID Token holds information about the user and the authentication. The only purpose of the ID Token is to log in the client. The only thin left after this is for the client to verify the ID Token [cf. \cite{Lodderstedt:2014:OpenID}]. 
+	
+	The ID Token is specified by \cite{Sakimura:2014:OpenIDConnect} as a JWT compared to OAuth were the type of token is irrelevant. The token is signed and has some particular claims. Further individual claims could also be added to the ID token. The ID token has claims that are required for the authentication process. Also, standard claims can be added which are predefined by OpenID Connect. Those claims could also be requested from UserInfo Endpoint shown as an additional endpoint in the figure \ref{fig:openid-process} OAuth 2.0 and OpenID Connect \cite{Lodderstedt:2014:OpenID}. The user info endpoint offers an API where additional user info can be requested [cf. (\cite{Sakimura:2014:OpenIDConnect})].
+	
+	\cite{Lodderstedt:2014:OpenID} says that OpenID Connect is a contemporary advancement from protocols like SAML. The protocol considers the ongoing development of web services and mobile applications. Furthermore, the implementation of the protocol is quite easy and uses little HTTP requests with minimal cryptographic overhead to accomplish a complete login process [cf. (\cite{Lodderstedt:2014:OpenID})]. 
+	
+	
+	
+	
+	
+	
+	\cite{Sakimura:2014:OpenIDConnect} defines three different way authentication can flow:
+	
+	
+	\begin{enumerate}
+		\item \textbf{Authorization Code Flow}  - The Authorization Code Flow returns an Authentification Code which can be used to be exchanged for an id\_token or an access\_token. The Authorization Code is used for Clients that can maintain a secret securely between themselves and the Authorization Server. Typically this approach is used for server-to-server communication when no interactive user is present. In this thesis, the focus is on user interaction [cf. (\cite{Sakimura:2014:OpenIDConnect}, p.10)]
+		
+		To use the Authorization Code Flow according to \cite{Sakimura:2014:OpenIDConnect} the the following request\_type indicates a Authorization Code Flow:
+		\begin{itemize}
+			\item	code: The response includes an Authorization Code. 
+		\end{itemize}
+		
+		\item \textbf{Implicit Code Flow} - In the Implicit Code Flow the access token and the ID id token are directly returned to the Client. This behavior may expose information to the End-User or anyone who has access to the End-User’s Agent. Tokens are only returned from the Token Endpoint; the Authorization Endpoints is not used. Unlike the Authorization Code Flow where the separate request is used for authorization and authentification, here the Client will receive the access token as a result of the authentification which also means that there is no refresh token.  This flow is used for Clients who are implemented in a browser using scripting language [cf. (\cite{Sakimura:2014:OpenIDConnect}, p.20), (\cite{Hardt:2012:OAuth2})]
+		
+		According to \cite{Sakimura:2014:OpenIDConnect}, the following request\_types indicate an Implicit Code Flow:
+		\begin{itemize}
+			\item	id\_token: The response must include the parameter id\_token. The response does not include an Authorization Code, Access Token, or Access Token Type. 
+			\item  id\_token token: The response includes an Access Token, an Access Token Type and an id\_token.
+		\end{itemize}
+		
+		\item \textbf{Hybrid Code Flow} - In the hybrid code flow, tokens are returned from the Authorization Endpoint, and others are returned from the Token Endpoint. The Token Server will return not only the id token but also the code. The Client then has to use the code in order to gain the access token through a back channel call which means there is an additional round trip compared to the Implicit Code Flow. Using the code to receive the access token should minimize the risk of exposing the access token [cf. (\cite{Sakimura:2014:OpenIDConnect})].
+		To use the Hybrid Code Flow according to de \cite{Sakimura:2014:OpenIDConnect} put forward that the following request\_types indicate a Hybrid Code Flow:
+		\begin{itemize}
+			\item	code id\_token: The response includes an Authorization Code and an id\_token.
+			\item  code id\_token token: The response includes an Authorization Code, an Access Token, an Access Token Type and an id\_token. 
+		\end{itemize} 
+		
+	\end{enumerate}
+	
+	Both OpenID and SAML SSO solution involve different layers of communication and exchange credentials using HTTP redirection and Javascript which leads to vulnerabilities. Vulnerabilities include Cross-Site Request Forgery and Cross Site Scripting. 
+	
 
-The aim of Single Sign-On(SSO) is to design an authentication system that serves the interests of the user as well as the interests of the service provider. Whereas the user prefers a simple process, the service provider requires a complicated authentication procedure. Ironically trying to make the authentication procedure more save often leads to weakening the whole system due to the user always finding new ways to bypass it. An example mentioned before is password fatigue. Another challenge that SSO is trying to tackle is that standard web authentication solutions that require the user to login with a password, only authenticate the user and are not capable of providing access control or revealing additional information about the user. Most SSO solutions, therefore, try to combine the authentication process and authorization [cf. (\cite{Prochazka:2010:UCA})].
-
-The paper Taxonomy of Single Sign-On System \cite{Pashalidis:2003:10.1007/3-540-45067-X_22} identifies four generic architectures for SSO systems. An SSO system has to authenticate a user to a SP. Because authentication also implies identification, SSO systems have to incorporate the lifecycle management of identifiers that can take various forms. The paper distinguishes between two main types of SSO systems. The first type is ‘pseudo-SSO’ and the second type is ‘true SSO’. Typical pseudo-SSO are providing automatic authentication for all SP specific authentication methods after the user initially authenticated with the pseudo-SSO component, which is called primary authentication. The responsibility of a pseudo-SSO service is to manage all identities. A user may have multiple SSO identities for a single SP, but in principle, one SSO identity corresponds to one SP. Compared to the pseudo-SSO system in a true-SSO system, the user has to initially authenticate with the Authentication Service Provider (ASP) that is required to have an established relationship with all SPs. The relationship between the ASP and the SP has to be trustworthy. A key functionality of the true-SSO service is that the only authentication that includes the user occurs between the user and the ASP. The SP will get notified of the authentication status, including information about the identity of the user, with so-called authentication assertions. The categorization of SSO architectures can be further distinguished by the location of the ASP/pseudo-SSO component. This component can be either local to the user platform or offered as a third-party service also called SSO-proxy. This further categorization leads \cite{Pashalidis:2003:10.1007/3-540-45067-X_22} to the four generic architectures mentioned above Local pseudo-SSO systems, Proxy-based pseudo-SSO systems, Local true SSO systems and Proxy-based true SSO systems.
-
-When opting for a particular SSO architecture, one has to consider the strength and weaknesses of each system carefully. The paper, therefore, analyses the four generic architectures regarding Pseudonymity and Unlinkability, Anonymous Network Access, Support for User Mobility, Deployment Costs, Maintenance Costs, Running Cost and Trust Relationships. Pseudonymity and Unlinkability refer to the fact that the user providers sensible information that needs to be protected and it should not be possible to correlate distinct identities of the same user and personal information, and potential properties should not be linked to the user. The unlinkability cannot be guaranteed for pseudo-SSO because the identities for the SSO are SP specific. To improve unlinkability   \cite{Pashalidis:2003:10.1007/3-540-45067-X_22} suggest to use an ‘anonymizing proxy’, for local SSO system additionally services are needed for proxy-based SSP it can be integrated. User mobility is supported for proxy-based SSO, for locale SSO there needs to be further services in place. The deployment cost is lower for pseudo-SSO systems then for true-SSO systems. However, the maintenance cost is higher because if any SPs change the whole logic of the pseudo-SSO system has to change. The running cost of pseudo-SSO is likely to be lower than for true-SSO systems. For the pseudo-SSO systems, the trust relationship between users and SP may be dynamically changing depending on the implementation, for true-SSO the trust relationship is established between ASP and SPs and is always consistent. Generally speaking are pseudo-SSO systems more suitable for a closed system where identity management is just for managing the life cycle of remaining credentials. For an open system maintaining credentials is not enough. Appropriate privacy protection services and privacy-aware Identity Management schemes should be therefore integrated with true SSO schemes [cf. (\cite{Pashalidis:2003:10.1007/3-540-45067-X_22})]. 
-
-
-According to \cite{Lynch:2017:IIG} two SSO solutions gained broad acceptance. On the one hand, SAML-based federations using SOAP, focusing on large enterprises also including governments and educational networks. On the other hand, the Web Authorization Protocol was introduced which is a combination of the Protocols OpenID and OAuth. SAML federations have been customized to address the security concerns of those institutions that typically have a large user base, significantly protected resources, complex authorization patterns and data and services spread across multiple domains. However, in a Web 2.0 world, the SAML solutions where seen as too rigid and too severe to maintain; a lightweight SSO was needed, therefore the Web Authorization Protocol was designed. The approach of this protocol is taking advantage of the lightweight RESTful APIs which are reusing the existing HTTP architecture features and the JavaScript Object Notation(JSON).
-
-One of the well-known solutions based on Security Assertion Markup Language version 2 (SAML2) is Shibboleth. Shibboleth is one of the leading middlewares for building identity federations in a higher education sphere. To offer authentication, authorization and attribute assertion between entities. \cite{Prochazka:2010:UCA} identifies the following entities defined by Shibboleth are Identity Provider (IdP), Service Provider (SP), Discovery Service, Metadata Operator and Federation Operator.
-
-The discovery service is used to find the users organization IdP. The IdP defines an attribute release policy and releases different sets of the user's attributes to different SPs. Users are only able to agree or disagree with the whole set of attributes because the decision comes from the IdP. When the user tries to log on, to a service of a Service Provider, he gets redirected to a page where he can choose and IdP previously found by the Discovery Service. If an SP wants to provide its service to multiple federations it has to negotiate policy and technical detail with each federation operator. The federation operator manages the federation policies and introduces SPs and IdPs. Furthermore, the federations operator has to maintain and manage the information about all entities in a federation which is contained in the Metadata. A problem with this architecture is that the SP has to keep track of changes of the technical specification of various federation operators to maintain the configuration for each federation operator. A solution would be a significant federation registration, but this is indeed not possible because of technical and administrative severity and political will. This solution is also somewhat misleading for users since they have to maintain multiple credentials, select from multiple identifiers and so on [cf.\cite{Prochazka:2010:UCA}].
-
-According to \cite{Prochazka:2010:UCA} Shibboleth is too restrictive, a solution with a centrally managed point of IdPs and SPs is preferred. Also, users should not have to deal with redundant accounts.
+	The authentication process for SSO solution includes redirects which can be exploited by attackers. As the SP redirects the User to the IdP, an attacker could intervene and send the user to a fake IdP. If the user does not recognize to swap from the real IdP to the fake IDP, the attacker ends up with the user's credentials. This problem is called a malicious IdP, also known as “phishing” and a very well-known attack against SSO. Another problem that a federation single sign-on system could be facing is a malicious RP or SP.After a User successfully authenticates on the IdP site, he is redirected back to the SP with a link. An attacker obtains a link with methods like sniffing and uses the link to get logged into the SP as the User [cf. (\cite{Xu:2015:SPSSO})].
+	
+	TODO:  comparision SAML and OAUTH OPENID
 
 \chapterend

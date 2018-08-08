@@ -20,28 +20,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.4}Assertion}{12}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Popular Federation Systems}{15}{section.2.5}
+\contentsline {section}{\numberline {2.5}Token-base Authentication}{15}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{OAuth and OpenID Connect}{17}{section*.4}
+\contentsline {paragraph}{Server-Based Authentication.}{15}{section*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Token-base Authentication}{20}{section.2.6}
+\contentsline {paragraph}{ Token-based authentication with JSON Web Token }{16}{section*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Server-Based Authentication.}{21}{section*.5}
+\contentsline {section}{\numberline {2.6}Single Sign-On Federation Systems}{23}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{ Token-based authentication with JSON Web Token }{21}{section*.6}
+\contentsline {paragraph}{Singel Sign-On}{25}{section*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Single Sign-On}{28}{section.2.7}
+\contentsline {paragraph}{SAML}{27}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Practical Part}{31}{chapter.3}
+\contentsline {paragraph}{OAuth and OpenID Connect}{27}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Use Case}{31}{section.3.1}
+\contentsline {chapter}{\numberline {3}Practical Part}{33}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Risk Assessment}{32}{section.3.2}
+\contentsline {section}{\numberline {3.1}Use Case}{33}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Solution}{32}{section.3.3}
+\contentsline {section}{\numberline {3.2}Risk Assessment}{34}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Identity Server}{33}{section*.7}
+\contentsline {section}{\numberline {3.3}Solution}{35}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{36}{chapter.4}
+\contentsline {paragraph}{Identity Server}{36}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{41}{appendix*.9}
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{40}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{46}{appendix*.11}

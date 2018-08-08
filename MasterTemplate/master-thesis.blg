@@ -1,28 +1,34 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'master-thesis.blg'
-[31] biber-MSWIN64:313> INFO - === 
-[58] Biber.pm:371> INFO - Reading 'master-thesis.bcf'
-[154] Biber.pm:857> INFO - Found 36 citekeys in bib section 0
-[169] Biber.pm:3976> INFO - Processing section 0
-[184] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
-[188] bibtex.pm:1500> INFO - LaTeX decoding ...
-[269] bibtex.pm:1316> INFO - Found BibTeX data source 'references.bib'
-[310] Utils.pm:193> WARN - Range field 'pages' in entry 'Rossvoll:2013:RUBIM' is malformed, falling back to literal
-[340] Utils.pm:193> WARN - Entry 'Steiner:Dog:1992' (references.bib): Invalid format '1993-06-5' of date field 'date' - ignoring
-[434] Utils.pm:193> WARN - Entry 'Spencer:2018:APISecurity' (references.bib): Invalid format '04-2018' of date field 'date' - ignoring
-[435] Utils.pm:193> WARN - Entry 'Spencer:2018:APISecurity' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
-[444] Utils.pm:193> WARN - month field 'Sept' in entry 'Birell:2013:FIMS' is not an integer - this will probably not sort properly.
-[448] Utils.pm:193> WARN - Entry 'LeBlanc:2011:SocialApplications' (references.bib): Invalid format '08-2011' of date field 'date' - ignoring
-[453] Utils.pm:193> WARN - Entry 'Hardt:2012:OAuth2' (references.bib): Invalid format '10-2012' of date field 'date' - ignoring
-[454] Utils.pm:193> WARN - Entry 'Hardt:2012:OAuth2' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
-[465] Utils.pm:193> WARN - Entry 'Sakimura:2014:OpenIDConnect' (references.bib): Invalid format '08-08-2014' of date field 'date' - ignoring
-[466] Utils.pm:193> WARN - Entry 'Sakimura:2014:OpenIDConnect' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
-[473] Utils.pm:193> WARN - Entry 'Brock:2018:ID4' (references.bib): Invalid format '08.2018' of date field 'date' - ignoring
-[473] Utils.pm:193> WARN - Entry 'Brock:2018:ID4' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
-[645] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[645] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[646] Biber.pm:3804> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[646] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[701] bbl.pm:617> INFO - Writing 'master-thesis.bbl' with encoding 'UTF-8'
-[738] bbl.pm:720> INFO - Output to master-thesis.bbl
-[738] Biber.pm:110> INFO - WARNINGS: 12
+[35] biber-MSWIN64:313> INFO - === 
+[67] Biber.pm:371> INFO - Reading 'master-thesis.bcf'
+[195] Biber.pm:857> INFO - Found 41 citekeys in bib section 0
+[215] Biber.pm:3976> INFO - Processing section 0
+[234] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
+[238] bibtex.pm:1500> INFO - LaTeX decoding ...
+[327] bibtex.pm:1316> INFO - Found BibTeX data source 'references.bib'
+[389] Utils.pm:193> WARN - Range field 'pages' in entry 'Rossvoll:2013:RUBIM' is malformed, falling back to literal
+[436] Utils.pm:193> WARN - Entry 'Steiner:Dog:1992' (references.bib): Invalid format '1993-06-5' of date field 'date' - ignoring
+[551] Utils.pm:193> WARN - Entry 'Spencer:2018:APISecurity' (references.bib): Invalid format '04-2018' of date field 'date' - ignoring
+[552] Utils.pm:193> WARN - Entry 'Spencer:2018:APISecurity' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
+[600] Utils.pm:193> WARN - month field 'Sept' in entry 'Birell:2013:FIMS' is not an integer - this will probably not sort properly.
+[626] Utils.pm:193> WARN - Entry 'LeBlanc:2011:SocialApplications' (references.bib): Invalid format '08-2011' of date field 'date' - ignoring
+[632] Utils.pm:193> WARN - Entry 'Hardt:2012:OAuth2' (references.bib): Invalid format '10-2012' of date field 'date' - ignoring
+[633] Utils.pm:193> WARN - Entry 'Hardt:2012:OAuth2' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
+[645] Utils.pm:193> WARN - Entry 'Sakimura:2014:OpenIDConnect' (references.bib): Invalid format '08-08-2014' of date field 'date' - ignoring
+[645] Utils.pm:193> WARN - Entry 'Sakimura:2014:OpenIDConnect' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
+[651] Utils.pm:193> WARN - Entry 'Brock:2018:ID4' (references.bib): Invalid format '08.2018' of date field 'date' - ignoring
+[652] Utils.pm:193> WARN - Entry 'Brock:2018:ID4' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
+[657] Utils.pm:193> WARN - Entry 'Lodderstedt:2014:OpenID' (references.bib): Invalid format '06-2014' of date field 'date' - ignoring
+[658] Utils.pm:193> WARN - Entry 'Lodderstedt:2014:OpenID' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
+[663] Utils.pm:193> WARN - Entry 'Xu:2015:SPSSO' (references.bib): Invalid format '12-2015' of date field 'date' - ignoring
+[664] Utils.pm:193> WARN - Entry 'Xu:2015:SPSSO' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
+[674] Utils.pm:193> WARN - Entry 'Google:2018:IdentityPlatform' (references.bib): Invalid format '08-2018' of date field 'date' - ignoring
+[675] Utils.pm:193> WARN - Entry 'Google:2018:IdentityPlatform' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
+[789] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[789] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[790] Biber.pm:3804> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[790] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[856] bbl.pm:617> INFO - Writing 'master-thesis.bbl' with encoding 'UTF-8'
+[900] bbl.pm:720> INFO - Output to master-thesis.bbl
+[900] Biber.pm:110> INFO - WARNINGS: 18

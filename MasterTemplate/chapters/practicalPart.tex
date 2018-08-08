@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapterstart
 
-Your text here \ldots
+TODO: Your text here \ldots
 \section{Use Case}
 This use case is entirely fictional but allows the reader to get a better understanding of the circumstances a that led to the design of a federated authentication solution. The scenario features a medium to large company with up to 1000 employees. The mission of the company is to provide a network and analyzing toolset which allows the customer of the product suite to improve security within his network and keep an overview of potential security risks. Previously the customers received monthly reports about their current state of the network. Each of the products and tools resulted in a separate report which was sent via E-Mail. To modernize the approach, the reports should be replaced by a modern single-page application that could be accessed by customers and by employees for administrative reasons. In this example, we call the solution 'Security Assessment Portal.' The Security Assessment Portal should give the customers an overview of current products and the performance of the network an example of the suit could be E-Mail-filtering.  
 
@@ -12,6 +12,21 @@ The company already has a particular set of internal applications that are used 
 
 \section{Risk Assessment}
 
+Risk Assessment is one of the essential elements when it comes to managing risks of an organization. The aim of risk assessment is it to identify, estimate, and prioritize risk to operations, assets, individuals, other organizations from the operations and use of the information system. The risks assessment should help to make decisions on how to respond to certain risk. The steps to a risk assessment are identifying potential threats, internal and external vulnerabilities, the impact to organizations given the potential for threats exploiting vulnerabilities and the likelihood of that harm to occur. There are three tiers according to (\cite{NIST:2012:GCRA}, p.1) in risk management:
+
+\begin{itemize}
+	\item Tier 1 - organizational level
+	\item Tier 2 - mission/business process level
+	\item Tier 3 - information system level
+\end{itemize}
+
+The first two Tiers are focusing on risks related to organizational governance and management activities, mission/business processes, enterprise architecture or the funding of information security programs. The third Tier focuses more on how to implement a risk management framework successfully [cf. (\cite{NIST:2012:GCRA}, p.1)]. 
+
+To prepare for a risk assessment, it helps to identify the purpose, scope, assumptions, and constraints beforehand. The purpose of this risk assessment is to make authorization-related decisions and conducting an initial assessment to identify potential threats, internal and external vulnerabilities, impact to organizations. The scope addresses the 3 Tier. The focal point is the risk assessment of a single sign-on federation system. Furthermore, the scope is defined by what the result is expected from the risk assessment. In this risk assessment, an authentication and authorization solution is needed for a specific use case. The assessment result should usually be reevaluated after the initial draft [cf. (\cite{NIST:2012:GCRA}, pp.24)].
+
+
+
+TODO: Your text here ...
 
 
 \section{Solution}
@@ -44,7 +59,10 @@ The project illustrating the use of Identity Server and the benefits of OpenID C
 
 \paragraph{Identity Server}
 
-This project is using the IdentityServer4 library by Brock Allen and Dominick Baier. The Project works as an Token Server which means that the Identity Server Project is responsible for authentication the user, managing the identities and provide and approve tokens. Furthermore the Identity Server implements different Authentication Flows. For the baisc Setup the Identity Server has to be added to the StartUp class and to ensure a secure communication a certificate has is created to sign request. For the basic setup Idenity Server provides us with DeveloperSigningCredentials which provides an dummy certificate. In this example application a real certificate is included. 
+This project is using the IdentityServer4 library by Brock Allen and Dominick Baier. The Project works as a Token Server which means that the Identity Server Project is responsible for authentication the user, managing the identities and provide and approve tokens. Furthermore, the Identity Server implements different Authentication Flows. 
+
+
+For the basic Setup, the Identity Server has to be added to the StartUp class and to ensure a secure communication a certificate has is created to sign the request. For the basic setup, Identity Server provides us with DeveloperSigningCredentials which provides a dummy certificate. In this example application, a real certificate is included. 
 
 \begin{figure}[h]
 	\centering
@@ -53,24 +71,24 @@ This project is using the IdentityServer4 library by Brock Allen and Dominick Ba
 	\label{fig:self-signed-certicate}
 \end{figure}
 
-The certificate used in this application was created with Powershell like shown in \ref{fig:self-signed-certicate}. The algorithm used in this certificate is RSA. Depending on the algorith that is used in the certificate a corresponding hashing algorith has to be used for the Client Secret.
+The certificate used in this application was created with Powershell as shown in \ref{fig:self-signed-certicate}. The algorithm used in this certificate is RSA. Depending on the algorithm that is used in the certificate a similar hashing algorithm has to be used for the Client Secret.
 
 
-The API Resources include the available APIs that can be called and included in the scope of a request. The Identity Resources are Resources that can be included in the returning id\_token. The Clients are the available Clients that can be configured and are able to use the Identity Server. Those Client Configurations indicate which Authorization Flow is used and how to retrive id\_token, access\_token and a possible refreh\_token. For simplifying reasons Identity Server provides an in Memory User Storage which can be used for Testing reasons. Other ways to define Users are via .NET Core Identity or IdentityServer4 EntityFramework. For the purpose of this implementation this Test Users where included in the Identity Server application:
+The API Resources include the available APIs that can be called and included in the scope of a request. The Identity Resources are Resources that can be included in the returning id\_token. The Clients are the available Clients that can be configured and can use the Identity Server. Those Client Configurations indicate which Authorization Flow is used and how to retrieve id\_token, access\_token, and a possible refreh\_token. For simplifying reasons, Identity Server provides an in Memory User Storage which can be used for Testing reasons. Other ways to define Users are via .NET Core Identity or IdentityServer4 EntityFramework. For the purpose of this implementation this Test Users where included in the Identity Server application:
 \begin{enumerate}
 	\item User1:
 	\begin{itemize}
-	\item  Username: bob
-	\item  Password: bob
-\end{itemize} 
+		\item  Username: bob
+		\item  Password: bob
+	\end{itemize} 
 	\item User2:
-\begin{itemize}
-	\item  Username: alice
-	\item  Password: alice
-\end{itemize} 
+	\begin{itemize}
+		\item  Username: alice
+		\item  Password: alice
+	\end{itemize} 
 \end{enumerate}
 
-After the basic setup of the Identity Server it can be exminde if the Identity Server is running correctly by calling the discovory document. The discovery document can be used by the Clients and APIs to retrive necessary configuration data. The Identity Server has to run at local port 5000 and in the browser navigate to
+After the basic setup of the Identity Server, it can be examined if the Identity Server is running correctly by calling the discovery document. The discovery document can be used by the Clients and APIs to retrieve necessary configuration data. The Identity Server has to run at local port 5000 and in the browser navigate to
 \url{http://localhost:5000/.well-known/openid-configuration}.
 
 \begin{figure}[h]
@@ -79,5 +97,32 @@ After the basic setup of the Identity Server it can be exminde if the Identity S
 	\caption{OpenID Discovery Document}
 	\label{fig:openid-discovery-document}
 \end{figure}
+
+The discovery document is located at a well-known location and is containing key-value pairs as a JSON structure. The key-value pairs int he discovery document represent multiple endpoint that ar used to authenticate a user including URIs of the authorization, token, userinfo, and public-keys endpoint. The use of a discovery document brings more flexibility to th protocol brings more flexibility. The application should have the discovery URL hard-coded in the application according to (\cite{Google:2018:IdentityPlatform}) the discovery document URL can then be used to fetch endpoints from the document and use them to for example send an authentication request [cf. (\cite{Google:2018:IdentityPlatform})].
+
+The metadata that is see in \ref{fig:openid-discovery-document} OpenID discovery document is a mixture of required elements with some recommended ones that are implemented by identity server. The required elements are issuer, authorization\_endpoint, token\_endpoint, jwks\_uri, response\_types\_supported, subject\_types\_supported and id\_token\_signing\_alg\_supported. The issuer in this case is our own address. The authorization\_endpoint is the URL OAuth 2.0 Authorization Endpoint. The user is redirected to the authorization server's authorization endpoint for authentication and authorization. The authentication request that is send to the authorization server can have different request parameters. These request parameters are defined by OAuth 2.0 and additional request parameters defined by OpenID Connect. The token\_endpoint is the URL of the OAuth 2.0 Token Endpoint. The RP can request access or optionally refresh tokens from the token endpoint. The user\_endpoint can be used to request additional information concerning the user. The response\_types\_supported is an important information about what kind of response is supported and ultimately what kind of authentication flow can be used based on that information like described in chapter \ref{chap:authenticationandauthorization} in Single-Sign on Federate Systems. The subject\_types\_supported is a list of subject identifier types. And last put not least id\_token\_signing\_alg\_supported is used to find out which JWS signing algorithm is used to encode the ID token and get the claims of the JWT. The algorithm RS256 must be included [cf. (\cite{Sakimura:OIDCC}, (\cite{Sakimura:OIDCD}))].. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/jwkDiscovoryDocument}
+	\caption{JWKS Endpint}
+	\label{fig:jwkdiscovorydocument}
+\end{figure}
+
+The jwks\_endpoint is worth a closer look. The JWKS endpoint is were the signer publishes a JWK SET to. The keys shown in (\ref{fig:jwkdiscovorydocument} JWKS Endpoint) can be rolled over by periodically adding new keys to the JWK Set. This also indicates if the cryptographic algorithms are configured correctly. E.g. : The message is using the kid of signing key in the JOSE Header to indicate which key has to be used to validate the signature. The algorithm used be the signing party has to be supported by the recipient and can be either and Asymmetric Signature or a Symmetric Signature. 
+When using RSA or ECDSA signatures the alg Header Parameter has to be set to the correct algorithm and the private key used to sign must be associated with the public key published by the sender.When using MAC- based signatures the alg Header Parameter has to be set to the correct algorithm and the MAC key is the octets of the UTF-8 representation of the client\_secret. MAC-based signatures can not be used by public Clients because they can not keep secrets.  All metadata types are listed in the the specification of OpenID Discovery Document from \cite{Sakimura:OIDCD} [cf. (\cite{Sakimura:OIDCC}, (\cite{Sakimura:OIDCD}))]. 
+
+
+
+
+
+
+\paragraph{ProjectApiNetCore}
+
+
+
+ 
+
+TODO: Your text here...
 
 \chapterend

@@ -6,22 +6,26 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Componets Authentication}}{8}{figure.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Federation}}{16}{figure.2.2}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces OAuth API}}{17}{figure.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces OAuth Authorization Process (\cite {LeBlanc:2011:SocialApplications}, p.353)\relax }}{18}{figure.2.3}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces JWT Inheritance\relax }}{19}{figure.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces OAuth API}}{22}{figure.2.4}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Federation}}{24}{figure.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces JWT Inheritence}}{24}{figure.2.5}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces OAuth Authorization Process (\cite {LeBlanc:2011:SocialApplications}, p.353)\relax }}{29}{figure.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.6}{\ignorespaces OAuth 2.0 and OpenID Connect \cite {Lodderstedt:2014:OpenID}\relax }}{30}{figure.2.6}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture IdentityServer4}}{32}{figure.3.1}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture IdentityServer4}}{35}{figure.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces \relax }}{32}{figure.3.2}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces \relax }}{35}{figure.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Self signed Certicate with Powershell\relax }}{34}{figure.3.3}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Self signed Certicate with Powershell\relax }}{36}{figure.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces OpenID Discovery Document\relax }}{35}{figure.3.4}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces OpenID Discovery Document\relax }}{37}{figure.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces JWKS Endpint\relax }}{38}{figure.3.5}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

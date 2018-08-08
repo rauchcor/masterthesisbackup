@@ -360,6 +360,40 @@
       \field{title}{Advances in User Authentication}
       \field{year}{2017}
     \endentry
+    \entry{Google:2018:IdentityPlatform}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=c976b172954b87a445f5370710d4e3d5}{%
+           family={Google},
+           familyi={G\bibinitperiod},
+           given={Inc.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Google Inc.}%
+      }
+      \strng{namehash}{c976b172954b87a445f5370710d4e3d5}
+      \strng{fullhash}{c976b172954b87a445f5370710d4e3d5}
+      \strng{bibnamehash}{c976b172954b87a445f5370710d4e3d5}
+      \strng{authorbibnamehash}{c976b172954b87a445f5370710d4e3d5}
+      \strng{authornamehash}{c976b172954b87a445f5370710d4e3d5}
+      \strng{authorfullhash}{c976b172954b87a445f5370710d4e3d5}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Google Identity Platform}
+      \field{title}{Developers Google}
+      \verb{urlraw}
+      \verb https://developers.google.com/identity/protocols/OpenIDConnect#discovery
+      \endverb
+      \verb{url}
+      \verb https://developers.google.com/identity/protocols/OpenIDConnect#discovery
+      \endverb
+      \warn{\item Entry 'Google:2018:IdentityPlatform' (references.bib): Invalid format '08-2018' of date field 'date' - ignoring}
+      \warn{\item Entry 'Google:2018:IdentityPlatform' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
+    \endentry
     \entry{NIST:2017:DIGEIP}{manual}{}
       \name{author}{7}{uniquelist=2}{%
         {{uniquename=0,uniquepart=base,hash=7a9927de15214d1bf5f7b12a22a04740}{%
@@ -975,6 +1009,39 @@
       \field{title}{Programming Social Applications}
       \warn{\item Entry 'LeBlanc:2011:SocialApplications' (references.bib): Invalid format '08-2011' of date field 'date' - ignoring}
     \endentry
+    \entry{Lodderstedt:2014:OpenID}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=c810c6e897884044b611eb7a087c09e3}{%
+           family={Lodderstedt},
+           familyi={L\bibinitperiod},
+           given={Torsten},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {heise.de}%
+      }
+      \strng{namehash}{c810c6e897884044b611eb7a087c09e3}
+      \strng{fullhash}{c810c6e897884044b611eb7a087c09e3}
+      \strng{bibnamehash}{c810c6e897884044b611eb7a087c09e3}
+      \strng{authorbibnamehash}{c810c6e897884044b611eb7a087c09e3}
+      \strng{authornamehash}{c810c6e897884044b611eb7a087c09e3}
+      \strng{authorfullhash}{c810c6e897884044b611eb7a087c09e3}
+      \field{sortinit}{L}
+      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OpenID Connect: Login mit OAuth, Teil 1 – Grundlagen}
+      \verb{urlraw}
+      \verb https://www.heise.de/developer/artikel/OpenID-Connect-Login-mit-OAuth-Teil-1-Grundlagen-2218446.html?seite=all
+      \endverb
+      \verb{url}
+      \verb https://www.heise.de/developer/artikel/OpenID-Connect-Login-mit-OAuth-Teil-1-Grundlagen-2218446.html?seite=all
+      \endverb
+      \warn{\item Entry 'Lodderstedt:2014:OpenID' (references.bib): Invalid format '06-2014' of date field 'date' - ignoring}
+      \warn{\item Entry 'Lodderstedt:2014:OpenID' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
+    \endentry
     \entry{Lynch:2017:IIG}{article}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=6b6d2b0d7149e7ec8e37b310dca31194}{%
@@ -1038,6 +1105,37 @@
       \verb{url}
       \verb http://www.csl.sri.com/users/neumann/chats4.pdf
       \endverb
+    \endentry
+    \entry{NIST:2012:GCRA}{manual}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=f7fdb9d3d200f4785066312798f776fe}{%
+           family={NIST\bibnamedelimb (National\bibnamedelimb Institute\bibnamedelimb of\bibnamedelima Technology)},
+           familyi={N\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim o\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={U.S.\bibnamedelimi Department\bibnamedelimb of\bibnamedelima Commerce},
+           giveni={U\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim o\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{2}{%
+        {NIST (National Institute of Standards}%
+        {Technology)}%
+      }
+      \strng{namehash}{f7fdb9d3d200f4785066312798f776fe}
+      \strng{fullhash}{f7fdb9d3d200f4785066312798f776fe}
+      \strng{bibnamehash}{f7fdb9d3d200f4785066312798f776fe}
+      \strng{authorbibnamehash}{f7fdb9d3d200f4785066312798f776fe}
+      \strng{authornamehash}{f7fdb9d3d200f4785066312798f776fe}
+      \strng{authorfullhash}{f7fdb9d3d200f4785066312798f776fe}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Special Publication 800-30}
+      \field{month}{09}
+      \field{subtitle}{Information Security}
+      \field{title}{Guide for Conducting Risk Assessment}
+      \field{year}{2012}
     \endentry
     \entry{Pashalidis:2003:10.1007/3-540-45067-X_22}{inproceedings}{}
       \name{author}{2}{}{%
@@ -1252,6 +1350,61 @@
       \field{pages}{pp 364-370}
       \range{pages}{-1}
       \warn{\item Range field 'pages' in entry 'Rossvoll:2013:RUBIM' is malformed, falling back to literal}
+    \endentry
+    \entry{Sakimura:OIDCD}{manual}{}
+      \name{author}{4}{uniquelist=4}{%
+        {{uniquename=0,uniquepart=base,hash=eebb42075b60148aa7107e41262f056f}{%
+           family={Sakimura},
+           familyi={S\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=fc7b2f652546db5bf03feb0236e6df52}{%
+           family={Bradley},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=e8cd213a3d041f0c368fbe6f8807c6ef}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=0bff7b57eeb61457b5e6980200f9aca8}{%
+           family={Jay},
+           familyi={J\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0777606a408e3115578be45ae7e17430}
+      \strng{fullhash}{0777606a408e3115578be45ae7e17430}
+      \strng{bibnamehash}{0777606a408e3115578be45ae7e17430}
+      \strng{authorbibnamehash}{0777606a408e3115578be45ae7e17430}
+      \strng{authornamehash}{0777606a408e3115578be45ae7e17430}
+      \strng{authorfullhash}{0777606a408e3115578be45ae7e17430}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{8}
+      \field{month}{11}
+      \field{title}{OpenID Connect Core 1.0 incorparating errata set 1}
+      \field{urlday}{8}
+      \field{urlmonth}{8}
+      \field{urlyear}{2018}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://openid.net/specs/openid-connect-discovery-1_0.html
+      \endverb
+      \verb{url}
+      \verb http://openid.net/specs/openid-connect-discovery-1_0.html
+      \endverb
     \endentry
     \entry{Sakimura:OIDCC}{manual}{}
       \name{author}{5}{uniquelist=4}{%
@@ -1646,6 +1799,40 @@
       \field{journaltitle}{Forbes}
       \field{title}{Dealing With Password Fatigue}
       \field{year}{2009}
+    \endentry
+    \entry{Xu:2015:SPSSO}{thesis}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=2df1bac51b87b4958a703cbfdd9e8ea8}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Fangyuan},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Tufts University}%
+      }
+      \strng{namehash}{2df1bac51b87b4958a703cbfdd9e8ea8}
+      \strng{fullhash}{2df1bac51b87b4958a703cbfdd9e8ea8}
+      \strng{bibnamehash}{2df1bac51b87b4958a703cbfdd9e8ea8}
+      \strng{authorbibnamehash}{2df1bac51b87b4958a703cbfdd9e8ea8}
+      \strng{authornamehash}{2df1bac51b87b4958a703cbfdd9e8ea8}
+      \strng{authorfullhash}{2df1bac51b87b4958a703cbfdd9e8ea8}
+      \field{sortinit}{X}
+      \field{sortinithash}{b0b62a29ee4a21a0e618fed53a0313cc}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Security and Privacy Concern for Single Sign-on Protocols}
+      \field{type}{Project}
+      \verb{urlraw}
+      \verb http://www.cs.tufts.edu/comp/116/archive/fall2015/fxu.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.cs.tufts.edu/comp/116/archive/fall2015/fxu.pdf
+      \endverb
+      \warn{\item Entry 'Xu:2015:SPSSO' (references.bib): Invalid format '12-2015' of date field 'date' - ignoring}
+      \warn{\item Entry 'Xu:2015:SPSSO' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
     \endentry
   \enddatalist
 \endrefsection
