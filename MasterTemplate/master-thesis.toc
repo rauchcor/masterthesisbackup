@@ -44,6 +44,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Identity Server}{36}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{40}{chapter.4}
+\contentsline {paragraph}{ProjectApiNetCore}{40}{section*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{46}{appendix*.11}
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{42}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{48}{appendix*.12}

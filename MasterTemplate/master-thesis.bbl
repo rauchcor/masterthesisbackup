@@ -1675,6 +1675,43 @@
       \warn{\item Entry 'Spencer:2018:APISecurity' (references.bib): Invalid format '04-2018' of date field 'date' - ignoring}
       \warn{\item Entry 'Spencer:2018:APISecurity' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
     \endentry
+    \entry{NIST:2018:RMF}{online}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=cc619a5b8cec2e4ffd3cecf6f941d0f8}{%
+           family={Standards},
+           familyi={S\bibinitperiod},
+           given={NIST\bibnamedelimb (National\bibnamedelima Institute},
+           giveni={N\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0,
+           prefix={of},
+           prefixi={o\bibinitperiod},
+           prefixun=0}}%
+        {{uniquename=0,uniquepart=base,hash=091e5f7159deb4219a5cf836f4a9c360}{%
+           family={Technology)},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{9a0062c72189cdc861348912d626f98a}
+      \strng{fullhash}{9a0062c72189cdc861348912d626f98a}
+      \strng{bibnamehash}{9a0062c72189cdc861348912d626f98a}
+      \strng{authorbibnamehash}{9a0062c72189cdc861348912d626f98a}
+      \strng{authornamehash}{9a0062c72189cdc861348912d626f98a}
+      \strng{authorfullhash}{9a0062c72189cdc861348912d626f98a}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Risk Management Framework (RMF) Overview}
+      \field{title}{Risk Management}
+      \verb{urlraw}
+      \verb https://csrc.nist.gov/Projects/Risk-Management/Risk-Management-Framework-(RMF)-Overview#1
+      \endverb
+      \verb{url}
+      \verb https://csrc.nist.gov/Projects/Risk-Management/Risk-Management-Framework-(RMF)-Overview#1
+      \endverb
+      \warn{\item Entry 'NIST:2018:RMF' (references.bib): Invalid format '06-2018' of date field 'date' - ignoring}
+      \warn{\item Entry 'NIST:2018:RMF' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
+    \endentry
     \entry{Steiner:Dog:1992}{article}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=c91253cae326aecb3224badef12e7741}{%

@@ -1,34 +1,36 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'master-thesis.blg'
-[35] biber-MSWIN64:313> INFO - === 
+[38] biber-MSWIN64:313> INFO - === 
 [67] Biber.pm:371> INFO - Reading 'master-thesis.bcf'
-[195] Biber.pm:857> INFO - Found 41 citekeys in bib section 0
-[215] Biber.pm:3976> INFO - Processing section 0
-[234] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
+[190] Biber.pm:857> INFO - Found 42 citekeys in bib section 0
+[212] Biber.pm:3976> INFO - Processing section 0
+[232] Biber.pm:4136> INFO - Looking for bibtex format file 'references.bib' for section 0
 [238] bibtex.pm:1500> INFO - LaTeX decoding ...
-[327] bibtex.pm:1316> INFO - Found BibTeX data source 'references.bib'
-[389] Utils.pm:193> WARN - Range field 'pages' in entry 'Rossvoll:2013:RUBIM' is malformed, falling back to literal
-[436] Utils.pm:193> WARN - Entry 'Steiner:Dog:1992' (references.bib): Invalid format '1993-06-5' of date field 'date' - ignoring
-[551] Utils.pm:193> WARN - Entry 'Spencer:2018:APISecurity' (references.bib): Invalid format '04-2018' of date field 'date' - ignoring
-[552] Utils.pm:193> WARN - Entry 'Spencer:2018:APISecurity' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
-[600] Utils.pm:193> WARN - month field 'Sept' in entry 'Birell:2013:FIMS' is not an integer - this will probably not sort properly.
-[626] Utils.pm:193> WARN - Entry 'LeBlanc:2011:SocialApplications' (references.bib): Invalid format '08-2011' of date field 'date' - ignoring
-[632] Utils.pm:193> WARN - Entry 'Hardt:2012:OAuth2' (references.bib): Invalid format '10-2012' of date field 'date' - ignoring
-[633] Utils.pm:193> WARN - Entry 'Hardt:2012:OAuth2' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
-[645] Utils.pm:193> WARN - Entry 'Sakimura:2014:OpenIDConnect' (references.bib): Invalid format '08-08-2014' of date field 'date' - ignoring
-[645] Utils.pm:193> WARN - Entry 'Sakimura:2014:OpenIDConnect' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
-[651] Utils.pm:193> WARN - Entry 'Brock:2018:ID4' (references.bib): Invalid format '08.2018' of date field 'date' - ignoring
-[652] Utils.pm:193> WARN - Entry 'Brock:2018:ID4' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
-[657] Utils.pm:193> WARN - Entry 'Lodderstedt:2014:OpenID' (references.bib): Invalid format '06-2014' of date field 'date' - ignoring
-[658] Utils.pm:193> WARN - Entry 'Lodderstedt:2014:OpenID' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
-[663] Utils.pm:193> WARN - Entry 'Xu:2015:SPSSO' (references.bib): Invalid format '12-2015' of date field 'date' - ignoring
-[664] Utils.pm:193> WARN - Entry 'Xu:2015:SPSSO' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
-[674] Utils.pm:193> WARN - Entry 'Google:2018:IdentityPlatform' (references.bib): Invalid format '08-2018' of date field 'date' - ignoring
-[675] Utils.pm:193> WARN - Entry 'Google:2018:IdentityPlatform' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
-[789] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[789] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[790] Biber.pm:3804> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[790] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
-[856] bbl.pm:617> INFO - Writing 'master-thesis.bbl' with encoding 'UTF-8'
-[900] bbl.pm:720> INFO - Output to master-thesis.bbl
-[900] Biber.pm:110> INFO - WARNINGS: 18
+[342] bibtex.pm:1316> INFO - Found BibTeX data source 'references.bib'
+[396] Utils.pm:193> WARN - Range field 'pages' in entry 'Rossvoll:2013:RUBIM' is malformed, falling back to literal
+[434] Utils.pm:193> WARN - Entry 'Steiner:Dog:1992' (references.bib): Invalid format '1993-06-5' of date field 'date' - ignoring
+[540] Utils.pm:193> WARN - Entry 'Spencer:2018:APISecurity' (references.bib): Invalid format '04-2018' of date field 'date' - ignoring
+[541] Utils.pm:193> WARN - Entry 'Spencer:2018:APISecurity' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
+[582] Utils.pm:193> WARN - month field 'Sept' in entry 'Birell:2013:FIMS' is not an integer - this will probably not sort properly.
+[606] Utils.pm:193> WARN - Entry 'LeBlanc:2011:SocialApplications' (references.bib): Invalid format '08-2011' of date field 'date' - ignoring
+[611] Utils.pm:193> WARN - Entry 'Hardt:2012:OAuth2' (references.bib): Invalid format '10-2012' of date field 'date' - ignoring
+[612] Utils.pm:193> WARN - Entry 'Hardt:2012:OAuth2' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
+[622] Utils.pm:193> WARN - Entry 'Sakimura:2014:OpenIDConnect' (references.bib): Invalid format '08-08-2014' of date field 'date' - ignoring
+[623] Utils.pm:193> WARN - Entry 'Sakimura:2014:OpenIDConnect' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
+[627] Utils.pm:193> WARN - Entry 'Brock:2018:ID4' (references.bib): Invalid format '08.2018' of date field 'date' - ignoring
+[628] Utils.pm:193> WARN - Entry 'Brock:2018:ID4' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
+[632] Utils.pm:193> WARN - Entry 'Lodderstedt:2014:OpenID' (references.bib): Invalid format '06-2014' of date field 'date' - ignoring
+[633] Utils.pm:193> WARN - Entry 'Lodderstedt:2014:OpenID' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
+[637] Utils.pm:193> WARN - Entry 'Xu:2015:SPSSO' (references.bib): Invalid format '12-2015' of date field 'date' - ignoring
+[638] Utils.pm:193> WARN - Entry 'Xu:2015:SPSSO' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
+[646] Utils.pm:193> WARN - Entry 'NIST:2018:RMF' (references.bib): Invalid format '06-2018' of date field 'date' - ignoring
+[647] Utils.pm:193> WARN - Entry 'NIST:2018:RMF' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
+[653] Utils.pm:193> WARN - Entry 'Google:2018:IdentityPlatform' (references.bib): Invalid format '08-2018' of date field 'date' - ignoring
+[654] Utils.pm:193> WARN - Entry 'Google:2018:IdentityPlatform' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring
+[781] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[782] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[782] Biber.pm:3804> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[782] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[859] bbl.pm:617> INFO - Writing 'master-thesis.bbl' with encoding 'UTF-8'
+[910] bbl.pm:720> INFO - Output to master-thesis.bbl
+[910] Biber.pm:110> INFO - WARNINGS: 20

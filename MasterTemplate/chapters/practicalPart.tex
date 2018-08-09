@@ -24,7 +24,9 @@ The first two Tiers are focusing on risks related to organizational governance a
 
 To prepare for a risk assessment, it helps to identify the purpose, scope, assumptions, and constraints beforehand. The purpose of this risk assessment is to make authorization-related decisions and conducting an initial assessment to identify potential threats, internal and external vulnerabilities, impact to organizations. The scope addresses the 3 Tier. The focal point is the risk assessment of a single sign-on federation system. Furthermore, the scope is defined by what the result is expected from the risk assessment. In this risk assessment, an authentication and authorization solution is needed for a specific use case. The assessment result should usually be reevaluated after the initial draft [cf. (\cite{NIST:2012:GCRA}, pp.24)].
 
+Typically a risk assessment is a very complex task that takes a lot of time an many external sources to be representative, like for example expert opinions. If put together correctly one should end up with a Risk Management Framework (RMF). A RMF provides a process that integrates security and risk management activities into the system development life cycle. The system can be applied to both new and legacy systems. \cite{NIST:2018:RMF} defines 6 Steps in this RMF. The steps are Categorize, Select, Implement, Assess, Authorize and Monitor [cf. (\cite{NIST:2018:RMF})]. 
 
+However since a full RMF is out of the scope a scaled down version that is specific to digital identity risk management is conducted. Modern digital services often combine identity proofing, authentication and federation requirements in one single bundle. It is better to look at each of this components separately to delivery the best identity service [cf. (\cite{NIST:2017:DIG})].  
 
 TODO: Your text here ...
 
@@ -49,17 +51,28 @@ Identity Server4 is an ASP.NET framework that uses the specifics of OpenID Conne
 The project illustrating the use of Identity Server and the benefits of OpenID Connect an OAuth is a Visual Studio Project mostly written in C\# and Typescript. The project example for Identity Server includes four different projects:
 
 \begin{itemize}
-	\item Identity Server - The Identity Server is a .NetCore Project with basic Implementation of an Identity Server which serves as a Token Server. 
-	\item ProjectApiNetCore - This application is a .NetCore2.0 API Application with basic API that returns the users Claims if he is authenticated.
-	\item Angular Client - The Angular Client is a .NetCore MVC Angular Project used as a Client that can be accessed by an End-User who can authenticate with the Identity Server and requests protected resources of the API ProjectApiNetCore.This project uses the Implicit Code Flow. 
-	\item MVC Client - The MVC Client is a .Net Core MVC Project used as a Client that can be accessed by an End-User and can authenticate with the Identity Server and requests protected resources of the API ProjectApiNetCore. This project uses the Hybrid Code Flow. 
+	\item Identity Server - The Identity Server is a ASP.NET Core Project with basic Implementation of an Identity Server which serves as a Token Server. 
+	\item ProjectApiNetCore - This application is a ASP.NET Core 2.0 API Application with basic API that returns the users Claims if he is authenticated.
+	\item Angular Client - The Angular Client is a ASP.NET Core MVC Angular Project used as a Client that can be accessed by an End-User who can authenticate with the Identity Server and requests protected resources of the API ProjectApiNetCore.This project uses the Implicit Code Flow. 
+	\item MVC Client - The MVC Client is a ASP.NET Core MVC Project used as a Client that can be accessed by an End-User and can authenticate with the Identity Server and requests protected resources of the API ProjectApiNetCore. This project uses the Hybrid Code Flow. 
 \end{itemize}
 
 
 
 \paragraph{Identity Server}
 
-This project is using the IdentityServer4 library by Brock Allen and Dominick Baier. The Project works as a Token Server which means that the Identity Server Project is responsible for authentication the user, managing the identities and provide and approve tokens. Furthermore, the Identity Server implements different Authentication Flows. 
+This project is using the IdentityServer4 library by Brock Allen and Dominick Baier. The Project works as a Token Server which means that the Identity Server Project is responsible for authentication the user, managing the identities and provide and approve tokens. Furthermore, the Identity Server implements different Authentication Flows.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/middlewareIdentityServer}
+	\caption{IdentityServer Middleware}
+	\label{fig:middlewareidentityserver}
+\end{figure}
+ 
+
+IdentityServer4 adds endpoints of OAuth 2.0 and OpenID Connect to an arbitrary ASP.NET Core application as shown in \ref{fig:middlewareidentityserver}. The identity server can be as complex as the developer wants but \cite{Brock:2018:ID4} recommends to keep the attack surface as small as possible by just including authentication related UI only [cf. (\cite{Brock:2018:ID4})]. 
 
 
 For the basic Setup, the Identity Server has to be added to the StartUp class and to ensure a secure communication a certificate has is created to sign the request. For the basic setup, Identity Server provides us with DeveloperSigningCredentials which provides a dummy certificate. In this example application, a real certificate is included. 
@@ -97,10 +110,9 @@ After the basic setup of the Identity Server, it can be examined if the Identity
 	\caption{OpenID Discovery Document}
 	\label{fig:openid-discovery-document}
 \end{figure}
+The discovery document is located at a well-known location and is containing key-value pairs as a JSON structure. The key-value pairs int he discovery document represent multiple endpoints that are used to authenticate a user including URIs of the authorization, token, userinfo, and public-keys endpoint. The use of a discovery document brings more flexibility to the protocol brings more flexibility. The application should have the discovery URL hard-coded in the application according to (\cite{Google:2018:IdentityPlatform}) the discovery document URL can then be used to fetch endpoints from the document and use them to for example send an authentication request [cf. (\cite{Google:2018:IdentityPlatform})].
 
-The discovery document is located at a well-known location and is containing key-value pairs as a JSON structure. The key-value pairs int he discovery document represent multiple endpoint that ar used to authenticate a user including URIs of the authorization, token, userinfo, and public-keys endpoint. The use of a discovery document brings more flexibility to th protocol brings more flexibility. The application should have the discovery URL hard-coded in the application according to (\cite{Google:2018:IdentityPlatform}) the discovery document URL can then be used to fetch endpoints from the document and use them to for example send an authentication request [cf. (\cite{Google:2018:IdentityPlatform})].
-
-The metadata that is see in \ref{fig:openid-discovery-document} OpenID discovery document is a mixture of required elements with some recommended ones that are implemented by identity server. The required elements are issuer, authorization\_endpoint, token\_endpoint, jwks\_uri, response\_types\_supported, subject\_types\_supported and id\_token\_signing\_alg\_supported. The issuer in this case is our own address. The authorization\_endpoint is the URL OAuth 2.0 Authorization Endpoint. The user is redirected to the authorization server's authorization endpoint for authentication and authorization. The authentication request that is send to the authorization server can have different request parameters. These request parameters are defined by OAuth 2.0 and additional request parameters defined by OpenID Connect. The token\_endpoint is the URL of the OAuth 2.0 Token Endpoint. The RP can request access or optionally refresh tokens from the token endpoint. The user\_endpoint can be used to request additional information concerning the user. The response\_types\_supported is an important information about what kind of response is supported and ultimately what kind of authentication flow can be used based on that information like described in chapter \ref{chap:authenticationandauthorization} in Single-Sign on Federate Systems. The subject\_types\_supported is a list of subject identifier types. And last put not least id\_token\_signing\_alg\_supported is used to find out which JWS signing algorithm is used to encode the ID token and get the claims of the JWT. The algorithm RS256 must be included [cf. (\cite{Sakimura:OIDCC}, (\cite{Sakimura:OIDCD}))].. 
+The metadata that is seen in \ref{fig:openid-discovery-document} OpenID discovery document is a mixture of required elements with some recommended ones that are implemented by the identity server. The required elements are issuer, authorization\_endpoint, token\_endpoint, jwks\_uri, response\_types\_supported, subject\_types\_supported and id\_token\_signing\_alg\_supported. The issuer, in this case, is this Identity Servers address. The authorization\_endpoint is the URL OAuth 2.0 Authorization Endpoint. The user is redirected to the authorization server's authorization endpoint for authentication and authorization. The authentication request that is sent to the authorization server can have different request parameters. These request parameters are defined by OAuth 2.0 and additional request parameters defined by OpenID Connect. The token\_endpoint is the URL of the OAuth 2.0 Token Endpoint. The RP can request access or optionally refresh tokens from the token endpoint. The user\_endpoint can be used to request additional information concerning the user. The response\_types\_supported is important information about what kind of response is supported and ultimately what kind of authentication flow can be used based on that information like described in chapter \ref{chap:authenticationandauthorization} in Single-Sign on Federate Systems. The subject\_types\_supported is a list of subject identifier types. Moreover, last but not least id\_token\_signing\_alg\_supported is used to find out which JWS is signing algorithm is used to encode the ID token and get the claims of the JWT. The algorithm RS256 must be included [cf. (\cite{Sakimura:OIDCC}, (\cite{Sakimura:OIDCD}))].. 
 
 \begin{figure}[h]
 	\centering
@@ -109,17 +121,25 @@ The metadata that is see in \ref{fig:openid-discovery-document} OpenID discovery
 	\label{fig:jwkdiscovorydocument}
 \end{figure}
 
-The jwks\_endpoint is worth a closer look. The JWKS endpoint is were the signer publishes a JWK SET to. The keys shown in (\ref{fig:jwkdiscovorydocument} JWKS Endpoint) can be rolled over by periodically adding new keys to the JWK Set. This also indicates if the cryptographic algorithms are configured correctly. E.g. : The message is using the kid of signing key in the JOSE Header to indicate which key has to be used to validate the signature. The algorithm used be the signing party has to be supported by the recipient and can be either and Asymmetric Signature or a Symmetric Signature. 
-When using RSA or ECDSA signatures the alg Header Parameter has to be set to the correct algorithm and the private key used to sign must be associated with the public key published by the sender.When using MAC- based signatures the alg Header Parameter has to be set to the correct algorithm and the MAC key is the octets of the UTF-8 representation of the client\_secret. MAC-based signatures can not be used by public Clients because they can not keep secrets.  All metadata types are listed in the the specification of OpenID Discovery Document from \cite{Sakimura:OIDCD} [cf. (\cite{Sakimura:OIDCC}, (\cite{Sakimura:OIDCD}))]. 
+The jwks\_endpoint is worth a closer look. JWKS SET is published to the JWKS endpoint. The keys shown in (\ref{fig:jwkdiscovorydocument} JWKS Endpoint) can be rolled over by periodically adding new keys to the JWK Set. This also indicates if the cryptographic algorithms are configured correctly. E.g. : The message is using the kid of signing key in the JOSE Header to indicate which key has to be used to validate the signature. The algorithm used by the signing party has to be supported by the recipient and can be either and Asymmetric Signature or a Symmetric Signature. 
+When using RSA or ECDSA signatures, the alg Header Parameter has to be set to the correct algorithm, and the private key used to sign must be associated with the public key published by the sender. When using MAC-based signatures, the alg Header Parameter has to be set to the correct algorithm, and the MAC key is the octets of the UTF-8 representation of the client\_secret. MAC-based signatures cannot be used by public Clients because they cannot keep secrets.  All metadata types are listed in the specification of OpenID Discovery Document from \cite{Sakimura:OIDCD} [cf. (\cite{Sakimura:OIDCC}, (\cite{Sakimura:OIDCD}))]. 
 
-
-
-
-
+After calling the OpenID discovery document and the JWKS endpoint, one can be ensured that the basic setup of the IdentityServer works. Next, a resource that is worth beeing protected by the Identity Server has to be created. 
 
 \paragraph{ProjectApiNetCore}
 
+This ProcjectApiNetcore is an ASP.NET Core application. This application represents the Resource Server and serves the Protected Resources. In this particular example, the API provides a list of Products the user bought from the company and the possibility to download the report that gives information about the current state of the product. The example API provides dummy data for the particular request. For easy testing of the API and designing the API, swagger.io is used. Furthermore, swagger.io (\url{https://swagger.io/}) gives a nice developer experience with an interactive API documentation. In addition, it is possible to generate code out of the swagger documentation for different programming languages with tools like NSwag (\url{https://github.com/RSuter/NSwag}).
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/apis}
+	\caption{API documentation with Swagger}
+	\label{fig:apis}
+\end{figure}
+
+All of the routes shown in \ref{fig:apis} API documentation with Swagger, are secured with the help of the IdentityServer4.AccessTokenValidation NuGet package. Each Controller gets an Authorize annotation. 
+To configure the right authentication method, ASP.NET Core 2.0 offers the possibility to add the authentication to the pipeline with Dependency Injection via the method Configure Services in the Startup.class.
+In the StartUp class of the API Project the AddAuthentication with the Value "JwtBearerDefaults.AuthenticationSchemeMakes "Bearer" the default authentication scheme “Bearer”. With the AddIdentityServerAuthentication it is defined which Token server can be used to validate the incoming token and make sure that this token is from a trusted issuer. It adds the Identity Server access token validation handler into DI and also it is checked if the token is valid to be used with this API (aka scope). Adding UseAuthentication to the Configure method int the Startup class adds the authentication middleware to the pipeline so authentication will be performed automatically on every call into the host.  Multiple authentication schemes can be used. A list of authentication schemes is then passed to the Authorize attribute separated with a comma. The default scheme results in the HttpContext.User property is set to that identity. After adding the Authentication logic to the API Project, the resources should be protected know. To check if the resources are protected the Swagger documentation can be used. Therefore one has to navigate to \url{http://localhost:5001/swagger/v1/swagger.json} and try out one of the methods shown in (\ref{fig:apis}) API Documentation with Swagger. This should result in a 401 Unauthorized HTTP response code.
 
  
 
