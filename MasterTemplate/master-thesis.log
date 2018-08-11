@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  9 AUG 2018 19:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  11 AUG 2018 08:44
 entering extended mode
 **./master-thesis.tex
 (master-thesis.tex
@@ -1330,6 +1330,18 @@ Package biblatex Info: ... file 'master-thesis.bbl' found.
 (master-thesis.bbl
 
 Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Bolton:2003:EAuth':
+(biblatex)                - Entry 'Bolton:2003:EAuth' (references.bib): Invalid
+ format '12-2003' of date field 'date' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Bolton:2003:EAuth':
+(biblatex)                - Entry 'Bolton:2003:EAuth' (references.bib): Invalid
+ format '08-2018' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
 (biblatex)                with 'Brock:2018:ID4':
 (biblatex)                - Entry 'Brock:2018:ID4' (references.bib): Invalid fo
 rmat '08.2018' of date field 'date' - ignoring.
@@ -1423,6 +1435,18 @@ Package biblatex Warning: Biber reported the following issues
 (biblatex)                with 'NIST:2018:RMF':
 (biblatex)                - Entry 'NIST:2018:RMF' (references.bib): Invalid for
 mat '08-2018' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'NIST:2004:FIOPS':
+(biblatex)                - Entry 'NIST:2004:FIOPS' (references.bib): Invalid f
+ormat '02-2004' of date field 'date' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'NIST:2004:FIOPS':
+(biblatex)                - Entry 'NIST:2004:FIOPS' (references.bib): Invalid f
+ormat '08-2018' of date field 'urldate' - ignoring.
 
 
 Package biblatex Warning: Biber reported the following issues
@@ -1621,11 +1645,11 @@ Chapter 2.
 File: images/componentsUserAuthenticationSystem.jpg Graphic file (type jpg)
 <use images/componentsUserAuthenticationSystem.jpg>
 Package pdftex.def Info: images/componentsUserAuthenticationSystem.jpg  used on
- input line 56.
+ input line 58.
 (pdftex.def)             Requested size: 330.05322pt x 229.51599pt.
  [8 <./images/componentsUserAuthenticationSystem.jpg>] [9]
 [10]
-Overfull \hbox (9.8305pt too wide) in paragraph at lines 97--98
+Overfull \hbox (9.8305pt too wide) in paragraph at lines 100--101
 \T1/ptm/m/n/12 scribes the draw-backs SFA has com-pared to MFA, pri-mar-ily the
  uni-ver-sal used password-
  []
@@ -1635,9 +1659,9 @@ Overfull \hbox (9.8305pt too wide) in paragraph at lines 97--98
 File: images/googleOAuthPlaygroundOAuthAPI.jpg Graphic file (type jpg)
 <use images/googleOAuthPlaygroundOAuthAPI.jpg>
 Package pdftex.def Info: images/googleOAuthPlaygroundOAuthAPI.jpg  used on inpu
-t line 193.
+t line 198.
 (pdftex.def)             Requested size: 330.05322pt x 47.48401pt.
-
+ [17 <./images/googleOAuthPlaygroundOAuthAPI.jpg>]
 ("C:\Users\rauchcor\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlan
 g1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -1646,24 +1670,24 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 c.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 203.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 208.
 
 ("C:\Users\rauchcor\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd
 "
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [17 <./images/googleOAuthPlaygroundOAuthAPI.jpg>] [18]
-Overfull \hbox (3.61511pt too wide) in paragraph at lines 249--250
+) [18]
+Overfull \hbox (3.61511pt too wide) in paragraph at lines 254--255
 \T1/ptm/m/n/12 cryp-to-graphic op-er-a-tions ap-plied and op-tion-ally ad-di-ti
 onal prop-er-ties of the JWT. Based
  []
 
-<images/jwtjwsjwe2.jpg, id=385, 377.53546pt x 194.22563pt>
+<images/jwtjwsjwe2.jpg, id=380, 377.53546pt x 194.22563pt>
 File: images/jwtjwsjwe2.jpg Graphic file (type jpg)
 <use images/jwtjwsjwe2.jpg>
-Package pdftex.def Info: images/jwtjwsjwe2.jpg  used on input line 253.
+Package pdftex.def Info: images/jwtjwsjwe2.jpg  used on input line 258.
 (pdftex.def)             Requested size: 330.05322pt x 169.79881pt.
 [19 <./images/jwtjwsjwe2.jpg>] [20] [21]
-Overfull \hbox (7.77957pt too wide) in paragraph at lines 334--336
+Overfull \hbox (7.77957pt too wide) in paragraph at lines 339--341
 \T1/ptm/m/n/12 be JSON. To con-struct the mes-sage the fol-low-ing ap-proach is
  used ASCII(BASE64URL-
  []
@@ -1672,23 +1696,23 @@ Overfull \hbox (7.77957pt too wide) in paragraph at lines 334--336
 <images/federation.jpg, id=473, 389.95688pt x 372.64218pt>
 File: images/federation.jpg Graphic file (type jpg)
 <use images/federation.jpg>
-Package pdftex.def Info: images/federation.jpg  used on input line 368.
+Package pdftex.def Info: images/federation.jpg  used on input line 373.
 (pdftex.def)             Requested size: 330.05322pt x 315.41112pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [23] [24 <./images/federation.jpg>] [25] [26]
-Overfull \hbox (5.05615pt too wide) in paragraph at lines 410--411
+Overfull \hbox (5.05615pt too wide) in paragraph at lines 417--418
 \T1/ptm/m/n/12 OAuth2.0 is the newest ver-sion of OAuth. Com-pared to the pre-v
 i-ous ver-sion OAuth1.0a,
  []
 
 [27]
-<images/oaut-process2.jpg, id=524, 817.55438pt x 462.97969pt>
+<images/oaut-process2.jpg, id=523, 817.55438pt x 462.97969pt>
 File: images/oaut-process2.jpg Graphic file (type jpg)
 <use images/oaut-process2.jpg>
-Package pdftex.def Info: images/oaut-process2.jpg  used on input line 423.
+Package pdftex.def Info: images/oaut-process2.jpg  used on input line 430.
 (pdftex.def)             Requested size: 330.05322pt x 186.91232pt.
 
 
@@ -1698,14 +1722,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <images/openid-process.jpg, id=538, 418.18735pt x 286.82156pt>
 File: images/openid-process.jpg Graphic file (type jpg)
 <use images/openid-process.jpg>
-Package pdftex.def Info: images/openid-process.jpg  used on input line 436.
+Package pdftex.def Info: images/openid-process.jpg  used on input line 443.
 (pdftex.def)             Requested size: 330.05322pt x 226.38521pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [29 <./images/oaut-process2.jpg>] [30 <./images/openid-process.jpg>]
-Overfull \hbox (11.90863pt too wide) in paragraph at lines 475--476
+Overfull \hbox (11.90863pt too wide) in paragraph at lines 482--483
 []\T1/ptm/m/n/12 code id_token: The re-sponse in-cludes an Au-tho-riza-tion Cod
 e and an id_token. 
  []
@@ -1720,64 +1744,59 @@ Chapter 3.
 
 
 
-] [34]
-<images/architecture-identityserver.jpg, id=597, 515.67656pt x 309.40594pt>
+] [34] [35] [36]
+<images/architecture-identityserver.jpg, id=617, 515.67656pt x 309.40594pt>
 File: images/architecture-identityserver.jpg Graphic file (type jpg)
 <use images/architecture-identityserver.jpg>
 Package pdftex.def Info: images/architecture-identityserver.jpg  used on input 
-line 39.
-(pdftex.def)             Requested size: 330.05322pt x 198.03801pt.
- [35 <./images/architecture-identityserver.jpg>]
-<images/middlewareIdentityServer.png, id=606, 963.6pt x 542.025pt>
+line 70.
+(pdftex.def)             Requested size: 371.30595pt x 222.79099pt.
+ [37 <./images/architecture-identityserver.jpg>]
+<images/middlewareIdentityServer.png, id=624, 963.6pt x 542.025pt>
 File: images/middlewareIdentityServer.png Graphic file (type png)
 <use images/middlewareIdentityServer.png>
 Package pdftex.def Info: images/middlewareIdentityServer.png  used on input lin
-e 69.
-(pdftex.def)             Requested size: 288.79422pt x 162.44333pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[36]
-<images/self-signed-certicate.jpg, id=616, 863.09953pt x 168.2536pt>
+e 100.
+(pdftex.def)             Requested size: 330.05322pt x 185.65071pt.
+ [38 <./images/middlewareIdentityServer.png>]
+<images/self-signed-certicate.jpg, id=635, 863.09953pt x 168.2536pt>
 File: images/self-signed-certicate.jpg Graphic file (type jpg)
 <use images/self-signed-certicate.jpg>
-Package pdftex.def Info: images/self-signed-certicate.jpg  used on input line 8
-2.
+Package pdftex.def Info: images/self-signed-certicate.jpg  used on input line 1
+13.
 (pdftex.def)             Requested size: 330.05322pt x 64.34009pt.
- [37 <./images/middlewareIdentityServer.png> <./images/self-signed-certicate.jp
-g>]
-<images/openid-discovery-document.jpg, id=624, 340.27126pt x 193.84921pt>
+ [39 <./images/self-signed-certicate.jpg>]
+<images/openid-discovery-document.jpg, id=644, 340.27126pt x 193.84921pt>
 File: images/openid-discovery-document.jpg Graphic file (type jpg)
 <use images/openid-discovery-document.jpg>
 Package pdftex.def Info: images/openid-discovery-document.jpg  used on input li
-ne 109.
+ne 140.
 (pdftex.def)             Requested size: 330.05322pt x 188.03645pt.
 
-Overfull \hbox (20.25949pt too wide) in paragraph at lines 115--116
+Overfull \hbox (20.25949pt too wide) in paragraph at lines 146--147
 \T1/ptm/m/n/12 re-sponse_types_supported, sub-ject_types_supported and id_token
 _signing_alg_supported.
  []
 
-[38 <./images/openid-discovery-document.jpg>]
-<images/jwkDiscovoryDocument.jpg, id=639, 271.76532pt x 106.52296pt>
+[40 <./images/openid-discovery-document.jpg>]
+<images/jwkDiscovoryDocument.jpg, id=657, 271.76532pt x 106.52296pt>
 File: images/jwkDiscovoryDocument.jpg Graphic file (type jpg)
 <use images/jwkDiscovoryDocument.jpg>
-Package pdftex.def Info: images/jwkDiscovoryDocument.jpg  used on input line 11
-9.
+Package pdftex.def Info: images/jwkDiscovoryDocument.jpg  used on input line 15
+0.
 (pdftex.def)             Requested size: 288.79422pt x 113.20311pt.
- [39 <./images/jwkDiscovoryDocument.jpg>]
-<images/apis.jpg, id=651, 750.17766pt x 291.71484pt>
+ [41 <./images/jwkDiscovoryDocument.jpg>]
+<images/apis.jpg, id=671, 750.17766pt x 291.71484pt>
 File: images/apis.jpg Graphic file (type jpg)
 <use images/apis.jpg>
-Package pdftex.def Info: images/apis.jpg  used on input line 135.
+Package pdftex.def Info: images/apis.jpg  used on input line 166.
 (pdftex.def)             Requested size: 288.79422pt x 112.29942pt.
- [40 <./images/apis.jpg>] [41])
+ [42 <./images/apis.jpg>] [43])
 \openout2 = `chapters/conclusion.aux'.
 
  (chapters/conclusion.tex
 Chapter 4.
-[42
+[44
 
 
 
@@ -1788,12 +1807,12 @@ Chapter 4.
  (acronyms.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 8.
- [43
+ [45
 
 
 
 
-]) [44]
+]) [46]
 Overfull \hbox (1.77184pt too wide) in paragraph at lines 173--173
 [][]\T1/ptm/m/n/12 Boyd, R. (2012). \T1/ptm/m/it/12 Get-ting Started with OAuth
  2.0\T1/ptm/m/n/12 . Or-eilly and As-so-ciate Se-ries. O'Reilly
@@ -1835,7 +1854,7 @@ Overfull \hbox (9.96892pt too wide) in paragraph at lines 173--173
 . com / identity / protocols /
  []
 
-[45
+[47
 
 
 ]
@@ -1851,13 +1870,13 @@ Overfull \hbox (42.41223pt too wide) in paragraph at lines 173--173
 s .
  []
 
-[46]
+[48]
 Overfull \hbox (13.58199pt too wide) in paragraph at lines 173--173
 \T1/pcr/m/n/12 artikel / OpenID -[] Connect -[] Login -[] mit -[] OAuth -[] Tei
 l -[] 1 -[] Grundlagen -[]
  []
 
-[47]
+[49]
 Overfull \hbox (7.73238pt too wide) in paragraph at lines 173--173
 \T1/ptm/m/n/12 Nordic APIs. Avail-able from: <[][]$\T1/pcr/m/n/12 https : / / n
 ordicapis . com / api -[] security -[]
@@ -1869,8 +1888,9 @@ Overfull \hbox (33.18198pt too wide) in paragraph at lines 173--173
 t -[] Framework -[]
  []
 
+[50]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 175.
-[48]
+ [51]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
  (master-thesis.aux (titlepages.aux) (chapters/introduction.aux)
 (chapters/authenticationAndAuthorization.aux) (chapters/practicalPart.aux)
@@ -1878,30 +1898,25 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 175.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 175.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 175.
 Package rerunfilecheck Info: File `master-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: B267D888E18B78076C6CED26E60EC926;1135.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
+(rerunfilecheck)             Checksum: 6591353796F3EDC245E6C201A11C971D;1135.
 Package logreq Info: Writing requests to 'master-thesis.run.xml'.
 \openout1 = `master-thesis.run.xml'.
 
  )
 (\end occurred inside a group at level 3)
 
-### simple group (level 3) entered at line 388 ({)
-### simple group (level 2) entered at line 362 ({)
-### simple group (level 1) entered at line 314 ({)
+### simple group (level 3) entered at line 393 ({)
+### simple group (level 2) entered at line 367 ({)
+### simple group (level 1) entered at line 319 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 18900 strings out of 493305
- 313513 string characters out of 3128497
- 779032 words of memory out of 3000000
- 21851 multiletter control sequences out of 15000+200000
+ 18946 strings out of 493305
+ 314198 string characters out of 3128497
+ 779827 words of memory out of 3000000
+ 21885 multiletter control sequences out of 15000+200000
  60656 words of font info for 72 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
- 48i,7n,64p,2148b,1943s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 48i,7n,64p,2148b,1938s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{figure.3.1} has been referenced but
  does not exist, replaced by a fixed one
 
@@ -1913,9 +1928,9 @@ ucrr8a.pfb><C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw
 9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rauchcor/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rauchcor/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on master-thesis.pdf (56 pages, 1072577 bytes).
+Output written on master-thesis.pdf (59 pages, 1082645 bytes).
 PDF statistics:
- 862 PDF objects out of 1000 (max. 8388607)
- 253 named destinations out of 1000 (max. 500000)
+ 900 PDF objects out of 1000 (max. 8388607)
+ 265 named destinations out of 1000 (max. 500000)
  210 words of extra memory for PDF output out of 10000 (max. 10000000)
 

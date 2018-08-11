@@ -3,11 +3,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapterstart
 
-TODO: Your text here \ldots
+The practical part of this work is made up of three parts: the use case, a risk assessment and an example solution based on what was learned from the risk assessment. In the first part a use case is described. The use case tries to picture a typical scenario that requires thoughtful consideration of authentication and authorization technologies depending on the requirements of the use case. Based on the uses case a small risk assessment is done. This risk assessment should help to choose an appropriate level of assurance for identity proofing, authentication and federation. Based on this risk assessment a small application is implemented. The solution represents a federate single-sign on solution which uses modern open source authentication and authorization protocols. This procedure should help developers to choose appropriate authentication and authorization methods for a particular use case. The goal is to balance usability and security. 
 \section{Use Case}
-This use case is entirely fictional but allows the reader to get a better understanding of the circumstances a that led to the design of a federated authentication solution. The scenario features a medium to large company with up to 1000 employees. The mission of the company is to provide a network and analyzing toolset which allows the customer of the product suite to improve security within his network and keep an overview of potential security risks. Previously the customers received monthly reports about their current state of the network. Each of the products and tools resulted in a separate report which was sent via E-Mail. To modernize the approach, the reports should be replaced by a modern single-page application that could be accessed by customers and by employees for administrative reasons. In this example, we call the solution 'Security Assessment Portal.' The Security Assessment Portal should give the customers an overview of current products and the performance of the network an example of the suit could be E-Mail-filtering.  
+This use case is entirely fictional but allows the reader to get a better understanding of the circumstances a that led to the design of a federated authentication solution. 
 
-The company already has a particular set of internal applications that are used by the employees within the company network. The company internally uses active directory for authorization on local machines. All applications until now are accessible within the companies network and use windows authentication. The application should be accessible by employees as well as customers whereas customers should not receive access to the company network. The data of the customers are sensible and therefore worth protecting. Because of the highly sensible data, certain customer do not need which to authenticate with an external provider. The application should be hosted within the company a solution for customers to access the application from outside is needed.
+The use case features a medium to large company with up to 1000 employees. The mission of the company is to provide a network and analyzing toolset which allows the customer of the product suite to improve security within his network and keep an overview of potential security risks. Previously the customers received monthly reports about their current state of the network. Each of the products and tools resulted in a separate report which was sent via E-Mail. To modernize the approach, the reports should be replaced by a modern single-page application that could be accessed by customers and by employees for administrative reasons. In this example, we call the solution 'Security Assessment Portal.' The Security Assessment Portal should give the customers an overview of current products and the performance of the network an example of the suit could be E-Mail-filtering.  
+
+The company already has a particular set of internal applications that are used by the employees within the company network. The company internally uses active directory for authorization on local machines. All applications until now are accessible within the companies network and use windows authentication. The application should be accessible by employees as well as customers whereas customers should not receive access to the company network. The data of the customers are sensible and therefore worth protecting. Because of the highly sensible data, certain customer do not need which to authenticate with an external provider. The application should be hosted within the company a solution for customers to access the application from outside is needed. The company needs an authentication solution that meets all the outlined requirements while balancing usability and security. 
 
 
 \section{Risk Assessment}
@@ -26,7 +28,36 @@ To prepare for a risk assessment, it helps to identify the purpose, scope, assum
 
 Typically a risk assessment is a very complex task that takes a lot of time an many external sources to be representative, like for example expert opinions. If put together correctly one should end up with a Risk Management Framework (RMF). A RMF provides a process that integrates security and risk management activities into the system development life cycle. The system can be applied to both new and legacy systems. \cite{NIST:2018:RMF} defines 6 Steps in this RMF. The steps are Categorize, Select, Implement, Assess, Authorize and Monitor [cf. (\cite{NIST:2018:RMF})]. 
 
-However since a full RMF is out of the scope a scaled down version that is specific to digital identity risk management is conducted. Modern digital services often combine identity proofing, authentication and federation requirements in one single bundle. It is better to look at each of this components separately to delivery the best identity service [cf. (\cite{NIST:2017:DIG})].  
+However since a full RMF is out of the scope a scaled down version that is specific to digital identity risk management is conducted. Modern digital services often combine identity proofing, authentication and federation requirements in one single bundle. It is better to look at each of this components separately to delivery the best identity service [cf. (\cite{NIST:2017:DIG})]. 
+
+
+For the risk assessment it is evaluated which assurance levels are appropriate. Identity proofing assurance level describes the robustness of the process to determine the identity of an individual and should help to avoid identity proofing errors. To determine the robustness of the authentication process and the binding of an authenticator and a specific individual's identifier the authentication assurance level is used. Furthermore choosing an appropriate authentication assurance level should help to avoid authentication errors. The last one of the assurance level is the federated assurance level which is optional since not all identity systems need a federated identity solution. The federated assurance level determines the robustness of the assertion protocol the federation uses to communicate authentication and attribute information and should help to avoid federation errors. All of the assurance levels a described in more detail in the sections \ref{identityProofing} Identity Proofing, \ref{authentication} Authentication and  \ref{assertion} Assertion [cf. (\cite{NIST:2017:DIG}, p.19)]. 
+
+To determine assurance levels the potential risk and the measures to minimize the impact of this risk are identified. Two factors are crucial for this task. The first factor is the potential harm or impact, and the second the likelihood of such harm or impact. \cite{Bolton:2003:EAuth}, pp.3 splits harm and impact into these categories:
+
+\begin{itemize}
+	\item Inconvenience, distress, or damage to standing or reputation
+	\item Financial loss or agency liability
+	\item Harm to agency programs or public interests
+	\item Unauthorized release of sensitive information
+	\item Personal safety
+	\item Civil or criminal violations
+\end{itemize}
+
+Assurance levels are determined by assessing the potential impact of these categories. \cite{NIST:2004:FIOPS} defines three levels of potential impact concerning security objectives confidentiality, integrity and availability. Those levels of potential impacts can affect either the organization or individuals should there be a breach of security. The levels of impact defined by \cite{NIST:2004:FIOPS} are:
+
+\begin{itemize}
+	\item Low
+	\item Moderate
+	\item High
+\end{itemize}
+
+
+If the level is low  the loss of confidentiality, integrity or availability has a limited effect. This can mean for example minor damage to organizational assets, minor financial loss, minor harm to individuals or the capability of the company to fulfill their mission is degraded. If the level of impact is moderate the effects of loss of confidentiality, integrity or availability are serious. Impacts can be significant damage to organizational assets, significant financial loss, significant harm to individuals or significant degradation of mission fulfillment. The last level of potential impact is hight, meaning that the effects can be severe or catastrophic. This means for example major damage to organizational assets, major financial lost, harm to individuals involving loss of life or serious life threatening injuries and loss of capability to fulfill mission [cf. (\cite{NIST:2004:FIOPS}, pp.6)].
+
+
+
+ 
 
 TODO: Your text here ...
 
@@ -36,7 +67,7 @@ The \cite{Sakimura:2014:OpenIDConnect} explains that modern applications have di
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{images/architecture-identityserver}
+	\includegraphics[width=0.9\linewidth]{images/architecture-identityserver}
 	\caption[Architecture IdentityServer4]{}
 	\caption{}
 	\label{fig:architecture-identityserver}
@@ -66,7 +97,7 @@ This project is using the IdentityServer4 library by Brock Allen and Dominick Ba
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{images/middlewareIdentityServer}
+	\includegraphics[width=0.8\linewidth]{images/middlewareIdentityServer}
 	\caption{IdentityServer Middleware}
 	\label{fig:middlewareidentityserver}
 \end{figure}

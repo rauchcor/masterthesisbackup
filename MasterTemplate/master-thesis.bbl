@@ -56,6 +56,43 @@
       \range{pages}{13}
       \keyw{data privacy;government policies;US National Strategy for Trusted Identities in Cyberspace initiative;federated identity management systems;privacy-based characterization;privacy-driven taxonomy;public policy analysis;Authentication;Data storage systems;Identity management;Metasearch;authentication of humans;identity management systems;privacy}
     \endentry
+    \entry{Bolton:2003:EAuth}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=0e54e9ade69d91908dc5745109a891ea}{%
+           family={Bolton},
+           familyi={B\bibinitperiod},
+           given={Joshua\bibnamedelima b.},
+           giveni={J\bibinitperiod\bibinitdelim b\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Washington D.C.}%
+      }
+      \list{organization}{2}{%
+        {OMB (Office of Management}%
+        {Budget)}%
+      }
+      \strng{namehash}{0e54e9ade69d91908dc5745109a891ea}
+      \strng{fullhash}{0e54e9ade69d91908dc5745109a891ea}
+      \strng{bibnamehash}{0e54e9ade69d91908dc5745109a891ea}
+      \strng{authorbibnamehash}{0e54e9ade69d91908dc5745109a891ea}
+      \strng{authornamehash}{0e54e9ade69d91908dc5745109a891ea}
+      \strng{authorfullhash}{0e54e9ade69d91908dc5745109a891ea}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{E-Authentication Guidance for Federal Agencies}
+      \verb{urlraw}
+      \verb https://georgewbush-whitehouse.archives.gov/omb/memoranda/fy04/m04-04.pdf
+      \endverb
+      \verb{url}
+      \verb https://georgewbush-whitehouse.archives.gov/omb/memoranda/fy04/m04-04.pdf
+      \endverb
+      \warn{\item Entry 'Bolton:2003:EAuth' (references.bib): Invalid format '12-2003' of date field 'date' - ignoring}
+      \warn{\item Entry 'Bolton:2003:EAuth' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
+    \endentry
     \entry{Boyd:2012:GSOAuth}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=adf183c1dbe80b1c9cc1b1da45fcbdc8}{%
@@ -1711,6 +1748,46 @@
       \endverb
       \warn{\item Entry 'NIST:2018:RMF' (references.bib): Invalid format '06-2018' of date field 'date' - ignoring}
       \warn{\item Entry 'NIST:2018:RMF' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{NIST:2004:FIOPS}{misc}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,uniquepart=base,hash=cc619a5b8cec2e4ffd3cecf6f941d0f8}{%
+           family={Standards},
+           familyi={S\bibinitperiod},
+           given={NIST\bibnamedelimb (National\bibnamedelima Institute},
+           giveni={N\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0,
+           prefix={of},
+           prefixi={o\bibinitperiod},
+           prefixun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d32e4fbf6f22a3543b41a78e1efe3f30}{%
+           family={Technology))},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {NIST}%
+      }
+      \strng{namehash}{a241fcc5176b53eb18ca0ef9dea4f43e}
+      \strng{fullhash}{a241fcc5176b53eb18ca0ef9dea4f43e}
+      \strng{bibnamehash}{a241fcc5176b53eb18ca0ef9dea4f43e}
+      \strng{authorbibnamehash}{a241fcc5176b53eb18ca0ef9dea4f43e}
+      \strng{authornamehash}{a241fcc5176b53eb18ca0ef9dea4f43e}
+      \strng{authorfullhash}{a241fcc5176b53eb18ca0ef9dea4f43e}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Standards for Security Categorization of Federal Information and Information Systems}
+      \field{title}{Federal Informataion Processing Standard Publication}
+      \verb{urlraw}
+      \verb https://csrc.nist.gov/csrc/media/publications/fips/199/final/documents/fips-pub-199-final.pdf
+      \endverb
+      \verb{url}
+      \verb https://csrc.nist.gov/csrc/media/publications/fips/199/final/documents/fips-pub-199-final.pdf
+      \endverb
+      \warn{\item Entry 'NIST:2004:FIOPS' (references.bib): Invalid format '02-2004' of date field 'date' - ignoring}
+      \warn{\item Entry 'NIST:2004:FIOPS' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
     \endentry
     \entry{Steiner:Dog:1992}{article}{}
       \name{author}{1}{}{%
