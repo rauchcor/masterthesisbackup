@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  15 AUG 2018 12:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  15 AUG 2018 12:55
 entering extended mode
 **./master-thesis.tex
 (master-thesis.tex
@@ -1783,73 +1783,60 @@ Overfull \hbox (7.63972pt too wide) in paragraph at lines 59--72
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [36] [37] [38] [39] [40] [41]
-<images/architecture-identityserver.jpg, id=706, 515.67656pt x 309.40594pt>
+<images/architecture-identityserver.jpg, id=696, 515.67656pt x 309.40594pt>
 File: images/architecture-identityserver.jpg Graphic file (type jpg)
 <use images/architecture-identityserver.jpg>
 Package pdftex.def Info: images/architecture-identityserver.jpg  used on input 
-line 191.
+line 170.
 (pdftex.def)             Requested size: 371.30595pt x 222.79099pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[42] [43 <./images/architecture-identityserver.jpg>]
-<images/middlewareIdentityServer.png, id=726, 963.6pt x 542.025pt>
+ [42 <./images/architecture-identityserver.jpg>]
+<images/middlewareIdentityServer.png, id=703, 963.6pt x 542.025pt>
 File: images/middlewareIdentityServer.png Graphic file (type png)
 <use images/middlewareIdentityServer.png>
 Package pdftex.def Info: images/middlewareIdentityServer.png  used on input lin
-e 223.
+e 202.
 (pdftex.def)             Requested size: 330.05322pt x 185.65071pt.
-<images/self-signed-certicate.jpg, id=731, 863.09953pt x 168.2536pt>
-File: images/self-signed-certicate.jpg Graphic file (type jpg)
-<use images/self-signed-certicate.jpg>
-Package pdftex.def Info: images/self-signed-certicate.jpg  used on input line 2
-36.
-(pdftex.def)             Requested size: 330.05322pt x 64.34009pt.
- [44 <./images/middlewareIdentityServer.png> <./images/self-signed-certicate.jp
-g>]
-<images/openid-discovery-document.jpg, id=740, 340.27126pt x 193.84921pt>
-File: images/openid-discovery-document.jpg Graphic file (type jpg)
-<use images/openid-discovery-document.jpg>
-Package pdftex.def Info: images/openid-discovery-document.jpg  used on input li
-ne 263.
-(pdftex.def)             Requested size: 330.05322pt x 188.03645pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<images/self-signed-certicate.jpg, id=708, 863.09953pt x 168.2536pt>
+File: images/self-signed-certicate.jpg Graphic file (type jpg)
+<use images/self-signed-certicate.jpg>
+Package pdftex.def Info: images/self-signed-certicate.jpg  used on input line 2
+15.
+(pdftex.def)             Requested size: 330.05322pt x 64.34009pt.
+[43] [44 <./images/middlewareIdentityServer.png> <./images/self-signed-certicat
+e.jpg>]
+<images/openid-discovery-document.jpg, id=722, 340.27126pt x 193.84921pt>
+File: images/openid-discovery-document.jpg Graphic file (type jpg)
+<use images/openid-discovery-document.jpg>
+Package pdftex.def Info: images/openid-discovery-document.jpg  used on input li
+ne 242.
+(pdftex.def)             Requested size: 330.05322pt x 188.03645pt.
 
-Overfull \hbox (20.25949pt too wide) in paragraph at lines 269--270
+Overfull \hbox (20.25949pt too wide) in paragraph at lines 248--249
 \T1/ptm/m/n/12 re-sponse_types_supported, sub-ject_types_supported and id_token
 _signing_alg_supported.
  []
 
-[45]
-<images/jwkDiscovoryDocument.jpg, id=755, 271.76532pt x 106.52296pt>
+[45 <./images/openid-discovery-document.jpg>]
+<images/jwkDiscovoryDocument.jpg, id=736, 271.76532pt x 106.52296pt>
 File: images/jwkDiscovoryDocument.jpg Graphic file (type jpg)
 <use images/jwkDiscovoryDocument.jpg>
-Package pdftex.def Info: images/jwkDiscovoryDocument.jpg  used on input line 27
-3.
+Package pdftex.def Info: images/jwkDiscovoryDocument.jpg  used on input line 25
+2.
 (pdftex.def)             Requested size: 288.79422pt x 113.20311pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[46 <./images/openid-discovery-document.jpg>]
-<images/apis.jpg, id=767, 750.17766pt x 291.71484pt>
+ [46 <./images/jwkDiscovoryDocument.jpg>]
+<images/apis.jpg, id=748, 750.17766pt x 291.71484pt>
 File: images/apis.jpg Graphic file (type jpg)
 <use images/apis.jpg>
-Package pdftex.def Info: images/apis.jpg  used on input line 289.
+Package pdftex.def Info: images/apis.jpg  used on input line 268.
 (pdftex.def)             Requested size: 288.79422pt x 112.29942pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[47 <./images/jwkDiscovoryDocument.jpg>] [48 <./images/apis.jpg>])
+ [47 <./images/apis.jpg>] [48])
 \openout2 = `chapters/conclusion.aux'.
 
-
-(chapters/conclusion.tex
+ (chapters/conclusion.tex
 Chapter 4.
 [49
 
@@ -1953,7 +1940,12 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
 Package rerunfilecheck Info: File `master-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 06E382CFCCA90FAF654C9D28B7D89ADE;1136.
+(rerunfilecheck)             Checksum: 4D1CD91AAD1AFD00A64B45757731C556;1136.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
 Package logreq Info: Writing requests to 'master-thesis.run.xml'.
 \openout1 = `master-thesis.run.xml'.
 
@@ -1965,13 +1957,13 @@ Package logreq Info: Writing requests to 'master-thesis.run.xml'.
 ### simple group (level 1) entered at line 346 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 19071 strings out of 493305
- 315651 string characters out of 3128497
- 778189 words of memory out of 3000000
+ 19051 strings out of 493305
+ 315503 string characters out of 3128497
+ 778187 words of memory out of 3000000
  21950 multiletter control sequences out of 15000+200000
  60656 words of font info for 72 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
- 61i,16n,70p,3050b,1959s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,16n,70p,3048b,1959s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{figure.3.1} has been referenced but
  does not exist, replaced by a fixed one
 
@@ -1983,9 +1975,9 @@ ucrr8a.pfb><C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw
 9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rauchcor/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rauchcor/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on master-thesis.pdf (64 pages, 1105766 bytes).
+Output written on master-thesis.pdf (64 pages, 1104546 bytes).
 PDF statistics:
- 1008 PDF objects out of 1200 (max. 8388607)
- 321 named destinations out of 1000 (max. 500000)
+ 986 PDF objects out of 1000 (max. 8388607)
+ 301 named destinations out of 1000 (max. 500000)
  210 words of extra memory for PDF output out of 10000 (max. 10000000)
 

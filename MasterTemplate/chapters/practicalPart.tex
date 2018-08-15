@@ -37,7 +37,7 @@ To determine assurance levels the potential risk and the measures to minimize th
 	\item Civil or criminal violations
 \end{itemize}
 
-Assurance levels are determined by assessing the potential impact of these categories. \cite{NIST:2004:FIOPS} defines three levels of potential impact concerning security objectives confidentiality, integrity and availability. Those levels of potential impacts can affect either the organization or individuals should there be a breach of security. The levels of impact defined by \cite{NIST:2004:FIOPS} are:
+Assurance levels are determined by assessing the potential impact of these categories. \cite{NIST:2004:FIOPS} defines three levels of potential impact concerning security objectives confidentiality, integrity, and availability. Those levels of potential impacts can affect either the organization or individuals should there be a breach of security. The levels of impact defined by \cite{NIST:2004:FIOPS} are:
 
 \begin{itemize}
 	\item Low
@@ -46,16 +46,16 @@ Assurance levels are determined by assessing the potential impact of these categ
 \end{itemize}
 
 
-If the level is low  the loss of confidentiality, integrity or availability has a limited effect. This can mean for example minor damage to organizational assets, short-term inconvenience, short-term distress, short-term embarrassment, limited reveal of personal or sensitive information to unauthorized parties with minor impact, minor financial loss, risk of civil or criminal violation which would not ordinary be subject to enforcement efforts, minor harm to individuals or the capability of the company to fulfill their mission is degraded. If the level of impact is moderate the effects of loss of confidentiality, integrity or availability are serious. Impacts can be significant damage to organizational assets, significant financial loss, serious short-term or limited longterm inconvenience,  serious short-term or limited longterm distress,  serious short-term or limited longterm damage to standing reputation, release of personal or sensitive information to unauthorized parties with moderate impact, risk of civil or criminal violations which may be subject to enforcement efforts, significant harm to individuals or significant degradation of mission fulfillment. The last level of potential impact is hight, meaning that the effects can be severe or catastrophic. This means for example major damage to organizational assets, major financial lost, severe or serious long-term inconvenience, severe or serious long-term distress, severe or serious long-term damage to standing reputation, release of personal or sensitive information to unauthorized parties with high impact, risk of civil or criminal violation with special importance to enforcement programs, harm to individuals involving loss of life or serious life threatening injuries and loss of capability to fulfill the mission [cf. (\cite{NIST:2004:FIOPS}, pp.6), (\cite{NIST:2017:DIG}, pp.21)].
+If the level is low the loss of confidentiality, integrity or availability has a limited effect. This can mean for example minor damage to organizational assets, short-term inconvenience, short-term distress, short-term embarrassment, limited reveal of personal or sensitive information to unauthorized parties with minor impact, minor financial loss, risk of civil or criminal violation which would not ordinary be subject to enforcement efforts, minor harm to individuals or the capability of the company to fulfill their mission is degraded. If the level of impact is moderate the effects of loss of confidentiality, integrity or availability are serious. Impacts can be significant damage to organizational assets, significant financial loss, serious short-term or limited long-term inconvenience,  serious short-term or limited long-term distress,  serious short-term or limited long-term damage to standing reputation, release of personal or sensitive information to unauthorized parties with moderate impact, risk of civil or criminal violations which may be subject to enforcement efforts, significant harm to individuals or significant degradation of mission fulfillment. The last level of potential impact is hight, meaning that the effects can be severe or catastrophic. This means for example major damage to organizational assets, major financial loss, severe or serious long-term inconvenience, severe or serious long-term distress, severe or serious long-term damage to standing reputation, release of personal or sensitive information to unauthorized parties with high impact, risk of civil or criminal violation with special importance to enforcement programs, harm to individuals involving loss of life or serious life-threatening injuries and loss of capability to fulfill the mission [cf. (\cite{NIST:2004:FIOPS}, pp.6), (\cite{NIST:2017:DIG}, pp.21)].
 
 
-To determine the minimum LOA needed the results of the risk assessment. The risk assessment impact profile can then be compared to the impact profiles associated with each assurance level. The table \ref{tab:maxImpacts} 'Maximum Potential Impacts for each Assurance Level' can hep to determine the required assurance level by finding the lowest level whose impact profile meets or exceeds the potential impact for every category analyzed in the risk assessment [cf. (\cite{NIST:2017:DIG}, p.25)].
+To determine the minimum LOA needed the results of the risk assessment. The risk assessment impact profile can then be compared to the impact profiles associated with each assurance level. The table \ref{tab:maxImpacts} 'Maximum Potential Impacts for each Assurance Level' can help to determine the required assurance level by finding the lowest level whose impact profile meets or exceeds the potential impact for every category analyzed in the risk assessment [cf. (\cite{NIST:2017:DIG}, p.25)].
 
 \begin{table}[h]
-		\centering
-			\begingroup
-		\setlength{\tabcolsep}{10pt} % Default value: 6pt
-		\renewcommand{\arraystretch}{1.5} % 
+	\centering
+	\begingroup
+	\setlength{\tabcolsep}{10pt} % Default value: 6pt
+	\renewcommand{\arraystretch}{1.5} % 
 	\begin{tabular}{lccc}
 		\hline
 		\rowcolor[HTML]{656565} 
@@ -68,22 +68,22 @@ To determine the minimum LOA needed the results of the risk assessment. The risk
 		\multicolumn{1}{|l|}{Personal safty}                                                                                        & \multicolumn{1}{c|}{N/A}        & \multicolumn{1}{c|}{Low}        & \multicolumn{1}{c|}{Mod/High}   \\ \hline
 		\multicolumn{1}{|l|}{Civil or criminal violation}                                                                           & \multicolumn{1}{c|}{N/A}        & \multicolumn{1}{c|}{Low/Mod}    & \multicolumn{1}{c|}{High}       \\ \hline
 	\end{tabular}
-\endgroup
+	\endgroup
 	\caption{Maximum Potential Impacts for Each Assurance Level (\cite{NIST:2017:DIG}, p.25)} \label{tab:maxImpacts}
 \end{table}
 
-When analyzing the risk it should be considered that there could be more then one error and multiple parties could be involved in the process. Furthermore the potential impacts description often include relative terms like 'minor' and 'serious' which meaning will depend on the context. Over time and with experience the meaning of these relative terms becomes more definite [cf. (\cite{NIST:2017:DIG}, p.26)].
- 
-One of the most useful documents is NIST's 'Guide for Conducting Security Risk assessment'. The guide follows activities related to NIST'S guide of 'Risk Management Framework' which can be either applied to new or legacy information systems. Typically a risk assessment is a very complex task that takes a lot of time an many external sources to be representative, like for example expert opinions. If put together correctly one should end up with a Risk Management Framework (RMF). A RMF provides a process that integrates security and risk management activities into the system development life cycle. The system can be applied to both new and legacy systems. \cite{NIST:2018:RMF} defines 6 Steps in this RMF. The steps include the categorization of information system, selection of baseline security controls, implementation of security controls, assessment of the security controls, authorize information system operation based on the determination of risk and monitoring security controls. Many industrial standard risk assessment methods across a wide array of fields and industries are based on these guides.  In this practical part an initial risk assessment is done which should provide a general feeling on how to to a risk assessment. The guide to success of a real life risk assessment is documentation, review and improvement.  However since a full RMF is out of the scope a scaled down version that is specific to digital identity risk management is conducted  (\cite{NIST:2018:RMF}].
+When analyzing the risk, it should be considered that there could be more than one error and multiple parties could be involved in the process. Furthermore, the potential impacts description often include relative terms like 'minor' and 'serious' which meaning will depend on the context. Over time and with experience the meaning of these relative terms becomes more definite [cf. (\cite{NIST:2017:DIG}, p.26)].
+
+One of the most useful documents is NIST's 'Guide for Conducting Security Risk assessment'. The guide follows activities related to NIST'S guide of 'Risk Management Framework' which can be either applied to new or legacy information systems. Typically a risk assessment is a very complex task that takes much time many external sources to be representative, like for example expert opinions. If put together correctly one should end up with a Risk Management Framework (RMF). An RMF provides a process that integrates security and risk management activities into the system development life cycle. The system can be applied to both new and legacy systems. \cite{NIST:2018:RMF} defines 6 Steps in this RMF. The steps include the categorization of the information system, selection of baseline security controls, implementation of security controls, assessment of the security controls, authorize information system operation based on the determination of risk and monitoring security controls. Many industrial standard risk assessment methods across a wide array of fields and industries are based on these guides.  In this practical part, an initial risk assessment is done which should provide a general feeling on how to do a risk assessment. The guide to the success of a real-life risk assessment is documentation, review, and improvement.  However, since a full RMF is out of the scope of a scaled down version that is specific to digital identity risk management is conducted  (\cite{NIST:2018:RMF}].
 
 
-To prepare for a risk assessment, it helps to identify the purpose, scope, assumptions, and constraints beforehand. The purpose of this risk assessment is to make authorization-related decisions and conducting an initial assessment to identify potential threats, internal and external vulnerabilities which impact the organizations. The scope addresses the 3 Tier -  information system level with focal point on the risk assessment of a single sign-on federation system. Furthermore, the scope is defined by the result expected from the risk assessment. In this risk assessment, the result should be an authentication and authorization solution for a specific use case. The assessment result should usually be reevaluated after the initial draft. [cf. (\cite{NIST:2012:GCRA}, pp.24)].
+To prepare for a risk assessment, it helps to identify the purpose, scope, assumptions, and constraints beforehand. The purpose of this risk assessment is to make authorization-related decisions and conducting an initial assessment to identify potential threats, internal and external vulnerabilities which impact the organizations. The scope addresses the 3 Tier -  information system level with a focal point on the risk assessment of a single sign-on federation system. Furthermore, the scope is defined by the result expected from the risk assessment. In this risk assessment, the result should be an authentication and authorization solution for a specific use case. The assessment result should usually be reevaluated after the initial draft. [cf. (\cite{NIST:2012:GCRA}, pp.24)].
 
-Before starting with the risk assessment a risk model hat to be chosen for the risk assessment. The model can be translated into risk factors which then can be assessed, these risk factor consist of threat, vulnerability, impact, likelihood and predisposed conditions.  A threat is a ny circumstance with the potential to impact the organization. Threat events are caused by threat sources. Threat sources that should be considered in the model can address broad thread sources or very specific threat sources. Potential threat sources can be adversarial like Insider, Outsider, Trusted Insider Privileged Insider, Customer, Competitor. A thread source can also be accidental like User, Privileged User/Administrator or structural like IT-Equipment (Storage, Communication, Processing), Environmental(Temperature/Humidity, Power Supply) or Natural (Fire, Bombing, Earthquake, Sunspots). These potential sources can then cause threat events which can be expressed very general or can also be very specific.Which thread are considered depend highly on the company. A company might choose to only considered previous observed events or all possible events. Examples for potential threat sources are Cause integrity loss by injecting false but believable data into organizational information systems, Obtain unauthorized access, Obtain sensitive data/information from publicly accessible information systems, Cause disclosure of critical and/or sensitive information by authorized users, Conduct externally-based session hijacking, Conduct simple Denial of Service (DoS) attack, Craft phishing attacks and so on. The likelihood is a weighted risk factor based on the probability that a given threat is capable of exploring a given vulnerability. A vulnerability is a existing weakness in an information system, system security procedures, internal controls, or implementation that could be exploited by a threat source. Most vulnerabilities are caused by security controls that are not implemented or not implemented correctly and still retain some weakness. Some recommended security controls are described in 'Recommended Security Controls for Federal Information Systems and Organizations'. The implementation of appropriate security controls is an important task that can have major impart on the operations and assests of a company. Security controls are used to protect the confidentiality integrity and availability of a system and its information. Examples are Identifier Management, Authenticator Management or Authenticator Feedback. Closely related to vulnerabilities are predisposed condition which is a condition within a company which affects the likelihood that threat events one initiated result in adverse impact on the organization like the involvement of PII. The consequences that an successfully exploited vulnerability by a threat source has is then described by the impact  [cf. (\cite{NIST:2012:GCRA}, pp17, pp35, pp70)].
+Before starting with the risk assessment a risk model hat to be chosen for the risk assessment. The model can be translated into risk factors which then can be assessed; these risk factors consist of threat, vulnerability, impact, likelihood and predisposing conditions.  A threat is a circumstance with the potential to impact the organization. Threat events are caused by threat sources. Threat sources that should be considered in the model can address broad threat sources or particular threat sources. Potential threat sources can be adversarial like Insider, Outsider, Trusted Insider Privileged Insider, Customer, Competitor. A thread source can also be accidental like User, Privileged User/Administrator or structural like IT-Equipment (Storage, Communication, Processing), Environmental(Temperature/Humidity, Power Supply) or Natural (Fire, Bombing, Earthquake, Sunspots). These potential sources can then cause threat events which can be expressed very general or can also be very specific. Which thread are considered depend highly on the company. A company might choose to only consider previously observed events or all possible events. Examples of potential threat sources are Cause integrity loss by injecting false but believable data into organizational information systems, Obtain unauthorized access, Obtain sensitive data/information from publicly accessible information systems, Cause disclosure of critical and/or sensitive information by authorized users, Conduct externally-based session hijacking, Conduct simple Denial of Service (DoS) attack, Craft phishing attacks and so on. The likelihood is a weighted risk factor based on the probability that a given threat is capable of exploring a given vulnerability. A vulnerability is an existing weakness in an information system, system security procedures, internal controls, or implementation that could be exploited by a threat source. Most vulnerabilities are caused by security controls that are not implemented or not implemented correctly and still retain some weakness. Some recommended security controls are described in 'Recommended Security Controls for Federal Information Systems and Organizations'. The implementation of appropriate security controls is an important task that can have a major impact on the operations and assets of a company. Security controls are used to protect the confidentiality integrity and availability of a system and its information. Examples are Identifier Management, Authenticator Management or Authenticator Feedback. Closely related to vulnerabilities is a predisposed condition which is a condition within a company which affects the likelihood that threat events one initiated result in adverse impact on the organization like the involvement of PII. The consequences that a successfully exploited vulnerability by a threat source has is then described by the impact  [cf. (\cite{NIST:2012:GCRA}, pp17, pp35, pp70)].
 
-Last but not least before stating a risk assessment based on a risk model an analytic approach and an assessment approach should be considered. The assessment approach can be quantitative, qualitative or semi-quantitative each of the factors including three assessment scales with corresponding different representations. A quantitative e assessment is based an the use of numbers whereas the qualitative assessment typically uses nonnumerical categories or levels like very low, low, moderate, high, very high. Finally, semi-quantitative assessment is a combination of a quantitative and a qualitative assessment using bins, scales or representative numbers which meaning ar not maintained in other contexts. For low impact information systems, the qualitative values ares used while for moderate-and hight-impact systems, the most granular semi-quantitative values are used. The analysis approach is either threat-oriented, asset/impact-oriented or vulnerability-oriented. The analysis approach basically lets one choose the starting point of the risk assessment. The risk assessment starting point van be either based on existing vulnerabilities or assets in the company or possible threats  [cf. (\cite{NIST:2012:GCRA}, pp17)].
+Last but not least before stating a risk assessment based on a risk model an analytic approach and an assessment approach should be considered. The assessment approach can be quantitative, qualitative or semi-quantitative each of the factors including three assessment scales with different corresponding representations. A quantitative assessment is based on the use of numbers whereas the qualitative assessment typically uses nonnumerical categories or levels like very low, low, moderate, high, very high. Finally, semi-quantitative assessment is a combination of a quantitative and a qualitative assessment using bins, scales or representative numbers which meaning are not maintained in other contexts. For low impact information systems, the qualitative values are used while for moderate-and high-impact systems; the most granular semi-quantitative values are used. The analysis approach is either threat-oriented, asset/impact-oriented or vulnerability-oriented. The analysis approach lets one choose the starting point of the risk assessment. The risk assessment starting point can be either based on existing vulnerabilities or assets in the company or possible threats  [cf. (\cite{NIST:2012:GCRA}, pp17)].
 
-Based on this knowledge a view examples considering the use case above where conducted. The following steps where followed based on the descriptions above Identify Threat, Identify Vulnerability, Current Controls, Likelihood of Impact, Effect of Impact and Risk Determination. The Likelihood of Impact can be assigned a value from low to high whereas high means it is very likely that a vulnerability is exploited by a threat. The lowest value of Likelihood of Impact is 0.1 and the highest is 1. The Effect of the Impact is assigned a value between 0 to 100. A low Effect of Impact means that the consequences are low and hight Effect of Impact means that the consequences are severe. To determine to overall risk of a threat the Likelihood is multiplied with the Impact (Likelihood x Impact) resulting in the risk levels:
+Based on this knowledge a view examples considering the use case above where conducted. The following steps were followed based on the descriptions above Identify Threat, Identify Vulnerability, Current Controls, Likelihood of Impact, Effect of Impact and Risk Determination. Since it is an initial risk assessment, there are no Current Controls. Therefore, this step is left out. The Likelihood of Impact can be assigned a value from low to high whereas high means it is very likely that a vulnerability is exploited by a threat. The lowest value of Likelihood of Impact is 0.1, and the highest is 1. The Effect of the Impact is assigned a value between 0 to 100. A low Effect of Impact means that the consequences are low and hight Effect of Impact means that the consequences are severe. To determine to the overall risk of a threat, the Likelihood is multiplied with the Impact (Likelihood x Impact) resulting in the risk levels:
 
 \begin{itemize}
 	\item Low =     0-33
@@ -91,94 +91,73 @@ Based on this knowledge a view examples considering the use case above where con
 	\item High =   67-100
 \end{itemize}
 
-Since this analysis is about identity proofing, authentication and federation errors a few threats  where chosen to be analyzed with the risk assessment to be analyzed. It should be noted that this does not represent a complete risk assessment since there are more factors to be possible considered. The risk analyses sees outsiders which want to harm the company and users as potential threat sources. 
+Since this analysis is about identity proofing, authentication and federation error a few threats were chosen to be analyzed with the risk assessment to be analyzed. It should be noted that this does not represent a complete risk assessment since there are more factors to be considered. The risk analyses see outsiders who want to harm the company and users as potential threat sources. 
 
 \paragraph{Identity Proofing Risk 1}
 
 \begin{enumerate}
-	\item Technical Threat : An attacker successfully proofs as someone else
-	\item Vulnerability :
-	\item Current Controls : 
-	\item Likelihood :
-	\item Impact :
-	\item \textbf{Risk Determination} : 
+	\item Technical Threat: An attacker successfully proofs as someone else
+	\item Vulnerability: Phishing over unencrypted network communication
+	\item Likelihood: 0.5
+	\item Impact: 80 (Inconvenience, distress)
+	\item \textbf{Risk Determination}: 0.5 x 80 = 40 (Medium Risk) 
 \end{enumerate}
 
 \paragraph{Identity Proofing Risk 2}
 \begin{enumerate}
-	\item Technical Threat : Collecting and securely storing more information about a person than is required to successfully provide the digital service
-	\item Vulnerability :
-	\item Current Controls : 
-	\item Likelihood :
-	\item Impact :
-	\item \textbf{Risk Determination} : 
-\end{enumerate}
-
-\paragraph{Identity Proofing Risk 3}
-\begin{enumerate}
-	\item Technical Threat : Number of retries allowed (brute force)
-	\item Vulnerability :
-	\item Current Controls : 
-	\item Likelihood :
-	\item Impact :
-	\item \textbf{Risk Determination} : 
+	\item Technical Threat: Collecting and securely storing more information about a person that is required to successfully provide the digital service
+	\item Vulnerability: Identity Provider is collecting more information than needed from the user on login. Users might not trust the application or not use it
+	\item Likelihood: 0.8
+	\item Impact: 30  (Unauthorized release of sensitive information)
+	\item \textbf{Risk Determination} : 0.8 x 30 = 24 (Low Risk)
 \end{enumerate}
 
 
 \paragraph{Authentication Risk 1}
 \begin{enumerate}
-	\item Technical Threat : False claimant using a credential that is not rightfully theirs
-	\item Vulnerability :
-	\item Current Controls : 
-	\item Likelihood :
-	\item Impact :
-	\item \textbf{Risk Determination} : 
+	\item Technical Threat: False claimant using a credential that is not rightfully theirs
+	\item Vulnerability: User keeps credentials at an insecure place
+	\item Likelihood: 0.9
+	\item Impact: 80 (Inconvenience, distress and Unauthorized release of sensitive information )
+	\item \textbf{Risk Determination}: 0.9 x 80 = 72 (High Risk) 
 \end{enumerate}
 
 \paragraph{Authentication Risk 2}
 \begin{enumerate}
-	\item Technical Threat : Account is compromised and user is using same identifier and authenticator for other accounts
-	\item Vulnerability :
-	\item Current Controls : 
-	\item Likelihood :
-	\item Impact :
-	\item \textbf{Risk Determination} : 
-\end{enumerate}
-
-\paragraph{Authentication Risk 3}
-\begin{enumerate}
-	\item Technical Threat : Feedback from application allows unauthorized user to compromise authentication mechanism
-	\item Vulnerability :
-	\item Current Controls : 
-	\item Likelihood :
-	\item Impact :
-	\item \textbf{Risk Determination} : 
+	\item Technical Threat: Account is compromised and user is using same identifier and authenticator for other accounts
+	\item Vulnerability: User uses same credentials for multiply accounts
+	\item Likelihood: 0.8
+	\item Impact: 80 (Inconvenience, distress and Unauthorized release of sensitive information)
+	\item \textbf{Risk Determination}: 0.8 x 80 = 64 (Medium Risk)
 \end{enumerate}
 
 \paragraph{Federation Risk 1 }
 \begin{enumerate}
-	\item Technical Threat : An identity assertion is compromised
-	\item Vulnerability :
-	\item Current Controls : 
-	\item Likelihood :
-	\item Impact :
-	\item \textbf{Risk Determination} : 
+	\item Technical Threat: An identity assertion is compromised
+	\item Vulnerability: Transaction involving third party not over protected channel
+	\item Likelihood: 0.6
+	\item Impact: 40 (Inconvenience, distress)
+	\item \textbf{Risk Determination}: 0.6 x 40 = 24 (Low Risk)
 \end{enumerate}
 
-\paragraph{Federation Risk 2}
+\paragraph{Federation Risk 2 }
 \begin{enumerate}
-	\item Technical Threat : Transaction involving third party not over protected channel
-	\item Vulnerability :
-	\item Current Controls : 
-	\item Likelihood :
-	\item Impact :
-	\item \textbf{Risk Determination} : 
+	\item Technical Threat: Identity Server is unavailable
+	\item Vulnerability: Environmental influences 
+	\item Likelihood: 0.1
+	\item Impact: 100 (Inconvenience, distress and Financial loss)
+	\item \textbf{Risk Determination}: 0.1 x 100 = 10 (Low Risk)
 \end{enumerate}
 
 
+An initial risk assessment can take a long time but once conducted the following risk assessments will be much quicker. Modern digital services often combine identity proofing, authentication and federation requirements in one single bundle. It is better to look at each of this components separately to delivery the best identity service. The outcome of the separate component can then be compared to \ref{tab:maxImpacts} Maximum Potential Impacts on Each Assurance Level and which assurance Level is associated with the risk outcome. Therefore the highest risk is taken and associated with the appropriate assurance level. After the initial risk assessment with just a view threats that were analyzed the associated risk level for identity proofing would be 2, for authentication risk, it would be 3, and for federated risk, the assurance level would be 1 [cf. (\cite{NIST:2017:DIG}), (\cite{NIST:2018:RMF}].
+
+To make it easier to chose an initial assurance level the 'Digital Identity Guidelines' provide an additional assessment of the risk assessment on how to choose appropriate assurance level. Therefore we three flowcharts are provided that need to be followed and then point to an appropriate assurance level:
 
 
-Modern digital services often combine identity proofing, authentication and federation requirements in one single bundle. It is better to look at each of this components separately to delivery the best identity service [cf. (\cite{NIST:2017:DIG}), (\cite{NIST:2018:RMF}].
+
+
+
 
 TODO: Your text here ...
 

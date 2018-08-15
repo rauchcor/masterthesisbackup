@@ -44,24 +44,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Identity Proofing Risk 2}{40}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Identity Proofing Risk 3}{40}{section*.12}
+\contentsline {paragraph}{Authentication Risk 1}{40}{section*.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Authentication Risk 1}{40}{section*.13}
+\contentsline {paragraph}{Authentication Risk 2}{40}{section*.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Authentication Risk 2}{41}{section*.14}
+\contentsline {paragraph}{Federation Risk 1 }{41}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Authentication Risk 3}{41}{section*.15}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Federation Risk 1 }{41}{section*.16}
-\defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Federation Risk 2}{42}{section*.17}
+\contentsline {paragraph}{Federation Risk 2 }{41}{section*.15}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.3}Solution}{42}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Identity Server}{44}{section*.18}
+\contentsline {paragraph}{Identity Server}{43}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{ProjectApiNetCore}{47}{section*.19}
+\contentsline {paragraph}{ProjectApiNetCore}{47}{section*.17}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Conclusion and Outlook}{49}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{56}{appendix*.21}
+\contentsline {chapter}{References}{56}{appendix*.19}
