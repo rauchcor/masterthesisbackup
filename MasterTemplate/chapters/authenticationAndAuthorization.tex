@@ -63,13 +63,24 @@ To become an authenticated the user has to go through certain steps on the way. 
 
 It is vital that all the components like shown in (figure~\ref{fig:componentsuserauthenticationsystem}), of a user authentication system can communicate independently of each other. Whether or not all communication channels are used depends on the authentication mechanism and the model of trust that it implements. For example, the Kerberos authentication protocol does not feature direct communication between the authenticator and security server [cf. (\cite{Todorov:2007:MUI})]. 
 
-\cite{NIST:2017:DIGEIP} also describes components that are similar to the ones described by \cite{Todorov:2007:MUI} in (figure~\ref{fig:componentsuserauthenticationsystem}). Furthermore \cite{NIST:2017:DIGEIP} describes additional expectations of the identity proofing process. The expected outcome of the identity proofing process should be that the claimed identity is linked to a single, unique identity, whereas the provided evidence for the claimed identity has to be validated to proof it is correct, genuine and exists in the real world. Furthermore \cite{NIST:2017:DIGEIP} describes three different identity assurance level:
+\cite{NIST:2017:DIGEIP} also describes components that are similar to the ones described by \cite{Todorov:2007:MUI} in (figure~\ref{fig:componentsuserauthenticationsystem}). Furthermore \cite{NIST:2017:DIGEIP} describes additional expectations of the identity proofing process. The expected outcome of the identity proofing process should be that the claimed identity is linked to a single, unique identity, whereas the provided evidence for the claimed identity has to be validated to proof it is correct, genuine and exists in the real world. Furthermore \cite{NIST:2017:DIGEIP} describes three different identity assurance level shown in \ref{tab:ial} Identity Assurance Levels.
 
-\begin{enumerate}
-	\item \textbf{Identity Assurance level 1} - There is no need to link the applicant to a real-life identity. All attributes provided ar self-asserted and are neither validated nor verified.
-	\item \textbf{Identity Assurance level 2} -  The evidence provided supports the real-world existence of the claimed identity. The identity proofing has to be either remote or physical-present. Attributes can be asserted by CSPs to RPs in support of pseudonymous identity with verified attributes. 
-	\item \textbf{Identity Assurance level 3} - The identity proofing requires physical presence. Attributes must be verified by a authorized and trained CSP. 
-\end{enumerate}
+
+\begin{table}[h]
+	\centering
+	\begingroup
+	\setlength{\tabcolsep}{10pt} % Default value: 6pt
+	\renewcommand{\arraystretch}{1.5} % 
+	\begin{tabular}{cl}
+		\hline
+		\multicolumn{2}{c}{\cellcolor[HTML]{656565}{\color[HTML]{FFFFFF} Identity Assurance Level}}                                                                                                                                                                   \\ \hline
+		\multicolumn{1}{|c|}{\textbf{IAL1}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}There is no need to link the applicant to a real-life identity.   All\\ attributes provided are self asserted and are neither validated nor \\ verified.\end{tabular}}   \\ \hline
+		\multicolumn{1}{|c|}{\textbf{IAL2}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}The evidence provided supports the real-world existence of the \\ claimed identity. The identity proofing has to be either  remote \\ or physical present.\end{tabular}} \\ \hline
+		\multicolumn{1}{|c|}{\textbf{IAL3}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}The identity profing requries physical presence. Attributes must\\ be verified by a authorized and trained CSP.\end{tabular}}                                            \\ \hline
+	\end{tabular}
+\endgroup
+	\caption{Identity Assurance Levels (\cite{NIST:2017:DIG}, p.18)} \label{tab:ial}
+\end{table}
 	
 
 \section{Authentication}
@@ -108,13 +119,24 @@ Due to the problem of password fatigue and default passwords, one factor like a 
 
 When designing an authentication process by using multiple factors the designers of the process should be acutely aware of the type of application and the information that has to be secured. For example, a solution for an international bank should have different standards than an app for a making a grocery list. On the one hand, challenging and complex authentication processes for trivial applications might scare away users. On the other hand, simple methods for applications protecting sensitive data might drive users away as well. Application designers should always try to find a middle way that suits both parties, the application owners and the users [cf. (\cite{NIST:2017:DIG})]. 
 
-\cite{NIST:2017:DIGAL} defines three different authenticator assurance levels to make sure the system a company is designing uses the appropriate authenticators for their purpose. Each of the authenticator assurance levels has to fulfill all the requirements of their successor. \cite{NIST:2017:DIGAL} describes three levels: 
-\begin{enumerate}
-	\item \textbf{Authenticator Assurance Level 1} - The first level states that defines that a claimant has to provide some kind of assurance that he controls an authenticator bound to subscribers account through a secure authentication protocol. The assurance can be either in the form of a single-factor or multi-factor authentication.
-	\item \textbf{Authenticator Assurance Level 2} - The second level requires the use of at least two distinct authentication factors. The confidence that the claimant controls the authenticators of the subscriber's account is high at this level. Appropriated cryptographic techniques are required.  
-	\item \textbf{Authenticator Assurance Level 3} - The third level of authentication provides a very high level of confidence that the claimant is in possession of the authenticators bound to the subscriber. Claimants need to prove possession of the key with two distinct authenticators through a secure authentication protocol. One of the authenticators needs to be hardware-based.
-\end{enumerate}
+\cite{NIST:2017:DIGAL} defines three different authenticator assurance levels to make sure the system a company is designing uses the appropriate authenticators for their purpose. Each of the authenticator assurance levels has to fulfill all the requirements of their successor. \cite{NIST:2017:DIGAL} describes three levels shown in \ref{tab:aal} Authenticator Assurance Levels.
 
+
+\begin{table}[h]
+	\centering
+	\begingroup
+	\setlength{\tabcolsep}{10pt} % Default value: 6pt
+	\renewcommand{\arraystretch}{1.5} % 
+	\begin{tabular}{cl}
+		\hline
+	\multicolumn{2}{c}{\cellcolor[HTML]{656565}{\color[HTML]{FFFFFF} Authenticator Assurance Level}}                                                                                                                                                                                                                                                                                                                                     \\ \hline
+	\multicolumn{1}{|c|}{\textbf{AAL1}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}The first level defines that a claimant has to provide some kind of\\ assurance that he controls an authenticator bound to a subscribers\\ account through a secure authentication protocol. The guarantee can be\\ either in the form of a single-factor or multi-factor authentication.\end{tabular}}                                         \\ \hline
+	\multicolumn{1}{|c|}{\textbf{AAL2}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}The second level requires the use of at least two distinct authentication\\ factors. The confidence that the claimant controls the authenticators of\\ the subscirber's account is hight at this level. Appropriate cryptorgraphic\\ techniques are required.\end{tabular}}                                                                     \\ \hline
+	\multicolumn{1}{|c|}{\textbf{AAL3}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}The third level provides a very high level of confidence that the claimant\\ is in possession of the authenticators bound to the subscriber. Claimants\\ need to prove possession of the key with two distinct authenticators\\ through a secure authentication protocol. One of the authetnicators needs\\ to be hardware-based.\end{tabular}} \\ \hline
+	\end{tabular}
+	\endgroup
+	\caption{Authenticator Assurance Levels (\cite{NIST:2017:DIG}, p.19)} \label{tab:aal}
+\end{table}
 
 
 To reflect on authentication, it can be said that authentication is a critical part of every application. As users are getting more concerned on security, the pressure on developers grows to provide a solution that secures sensible data while keeping up usability standards, which can often be a trade-off. Complex applications need complex security which can mean high costs for individually developed solutions; therefore application developers should also think about using federated authentication solutions.
@@ -128,22 +150,27 @@ Systems offer a user login process or sign-in process, in order to receive the i
 
 In federated systems, the verifier of authentication information of the user is called Identity Provider (IdP), and the party that receives and uses information is called the Relying Party(RP). In the context of the federated identification systems the user, or the one that is trying to access information form a system is called the subscriber. The IdP generates an assertion for the verifier associated with the subscriber. This process allows subscribers to access multiple RPs without maintaining separate credentials and the process also supports singe-sign on. \cite{NIST:2017:DIGFA}
 
-\cite{NIST:2017:DIG} defines different levels of federation assurance that define how assertion should be constructed and secured for a given transaction. Each successive level has to fulfill the requirements of all lower level. Federation assurance levels defined by \cite{NIST:2017:DIGFA} are:
+\cite{NIST:2017:DIG} defines different levels of federation assurance that define how assertion should be constructed and secured for a given transaction. Each successive level has to fulfill the requirements of all lower level. Federation assurance levels defined by \cite{NIST:2017:DIGFA} are shown in \ref{tab:fal} Federation Assurance Levels.
 
-\begin{enumerate}
-	\item \textbf{Federation Assurance Level 1}  - The first level requires a bearer assertion,
-	signed with approved cryptography by an IdP, for example, OpenID Connect
-	Basic Client profile or Security Assertion Markup Language (SAML) Web SSO
-	Artifact Binding profile with no additional feature.
+
+
+\begin{table}[h]
+	\centering
+	\begingroup
+	\setlength{\tabcolsep}{10pt} % Default value: 6pt
+	\renewcommand{\arraystretch}{1.5} % 
+	\begin{tabular}{cl}
+		\hline
+	\multicolumn{2}{c}{\cellcolor[HTML]{656565}{\color[HTML]{FFFFFF} Federation Assurance Level}}                                                                                                                                                                                                                                                                   \\ \hline
+	\multicolumn{1}{|c|}{\textbf{FAL1}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}The first level requires a bearer assertion, signed with approved cryptography\\ by an IdP, for example, OpenID Connect Basic Client profile or Security As-\\ sertion Markup Language (SAML) Web SSO Artifact Binding profile with no\\ additional feature.\end{tabular}} \\ \hline
+	\multicolumn{1}{|c|}{\textbf{FAL2}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}The second level requires an assertion like the OpenID Connect ID Token or\\ SAML Assertion, to be encrypted with the public key of the RP, whereas the\\ RP is the only party that can decrypt the bearer assertion.\end{tabular}}                                        \\ \hline
+	\multicolumn{1}{|c|}{\textbf{FAL3}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}Additonally to the first two levels the last federation assertion level requires\\ the subscriber to prove that he is in possession of a key that is bound to the\\ assertion (holder of key assertion) and initially was used to authenticate to\\ the IdP.\end{tabular}} \\ \hline
 	
-	\item \textbf{Federation Assurance Level 2} - The second level requires an assertion like the
-	OpenID Connect ID Token or SAML Assertion, to be encrypted with the public
-	key of the RP, whereas the RP is the only party that can decrypt the bearer
-	assertion.
-	
-	\item \textbf{Federation Assurance Level 3} - Additionally to the first two levels the last federation assertion level requires the subscriber to prove that he is in possession of a key that is bound to the assertion (holder of key assertion) and initially was used to authenticate to the IdP. 
-	
-\end{enumerate}
+	\end{tabular}
+	\endgroup
+	\caption{Federated Assurance Levels (\cite{NIST:2017:DIG}, p.19)} \label{tab:fal}
+\end{table}
+
 For any assertion level, the IdP has to make sure that an RP cannot impersonate the IdP at another RP by signing the assertion. The signing of the assertion can be done by either a MAC using a shared key or a digital signature using an asymmetric key [cf. (\cite{NIST:2017:DIG}), (\cite{NIST:2017:DIGFA})].  
 
 One of the factors that differentiates federation assurance level is the usage of assertion binding. An assertion binding can be chosen based on the RP requirements of rather the RP needs additional proof of the binding of an assertion to a particular subscriber. The two different kind of assertion binding to chose from is the bearer and holder-of-key assertions. Any party can present a bearer assertion in order to prove to have the identity of the bearer. Based on this handling of bearer assertions it can be assumed, that if an attacker is successful in capturing a bearer assertion, he can represent the subscriber that was previously associated with this bearer assertion. The attacker could present the assertion or reference to the RP and impersonate the subscriber. The holder-of-key assertion in comparison holds a reference to a key which indicates which subscriber is representing the assertion. The key is signed and asserted by the issuer of the assertion  [cf. (\cite{NIST:2017:DIGFA})].

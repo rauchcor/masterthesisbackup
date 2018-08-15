@@ -18,21 +18,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Authentication}{9}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Assertion}{12}{section.2.4}
+\contentsline {section}{\numberline {2.4}Assertion}{13}{section.2.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.5}Token-based Authentication}{15}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.1}Server-Based Authentication.}{15}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.1}Server-Based Authentication.}{16}{subsection.2.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5.2} Token-based authentication with JSON Web Token }{16}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.2} Token-based authentication with JSON Web Token }{17}{subsection.2.5.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.6}Single Sign-On Federation Systems}{23}{section.2.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.6.1}Singel Sign-On}{25}{subsection.2.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{SAML}{27}{section*.4}
+\contentsline {paragraph}{SAML}{27}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{OAuth and OpenID Connect}{28}{section*.5}
+\contentsline {paragraph}{OAuth and OpenID Connect}{28}{section*.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Practical Part}{33}{chapter.3}
 \defcounter {refsection}{0}\relax 
@@ -40,12 +40,28 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}Risk Assessment}{34}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Solution}{37}{section.3.3}
+\contentsline {paragraph}{Identity Proofing Risk 1}{40}{section*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Identity Server}{38}{section*.6}
+\contentsline {paragraph}{Identity Proofing Risk 2}{40}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{ProjectApiNetCore}{41}{section*.7}
+\contentsline {paragraph}{Identity Proofing Risk 3}{40}{section*.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{44}{chapter.4}
+\contentsline {paragraph}{Authentication Risk 1}{40}{section*.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{51}{appendix*.9}
+\contentsline {paragraph}{Authentication Risk 2}{41}{section*.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Authentication Risk 3}{41}{section*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Federation Risk 1 }{41}{section*.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Federation Risk 2}{42}{section*.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Solution}{42}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Identity Server}{44}{section*.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{ProjectApiNetCore}{47}{section*.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{49}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{56}{appendix*.21}
