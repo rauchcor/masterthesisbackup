@@ -498,6 +498,105 @@
       \field{title}{Digital Identity Guidelines}
       \field{year}{2017}
     \endentry
+    \entry{NIST:2017:SecurityNPrivacyControls}{manual}{}
+      \name{author}{12}{uniquelist=2}{%
+        {{uniquename=0,uniquepart=base,hash=7a9927de15214d1bf5f7b12a22a04740}{%
+           family={Grassi},
+           familyi={G\bibinitperiod},
+           given={Paul\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=1,uniquepart=given,hash=64d6e12bfa074b29d39d7531e4fd5d76}{%
+           family={Fenton},
+           familyi={F\bibinitperiod},
+           given={JamesL.},
+           giveni={J\bibinitperiod},
+           givenun=1}}%
+        {{uniquename=0,uniquepart=base,hash=1634d2b77f5dcc6c13316c1b34344ff3}{%
+           family={Newton},
+           familyi={N\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0,
+           suffix={Elain},
+           suffixi={E\bibinitperiod},
+           suffixun=0}}%
+        {{uniquename=0,uniquepart=base,hash=a9bbc3c35da8e126852f4e76465d40cc}{%
+           family={Perner},
+           familyi={P\bibinitperiod},
+           given={Ray\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=fb5a79d6e92d378bb94a3de00ae0137f}{%
+           family={Regenscheid},
+           familyi={R\bibinitperiod},
+           given={Andrew\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d9fbc66ea3007fd8374b405020f08934}{%
+           family={Burr},
+           familyi={B\bibinitperiod},
+           given={William\bibnamedelima E.},
+           giveni={W\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=d25eb5f05ebc722fa7ded6bc194f072f}{%
+           family={Richer},
+           familyi={R\bibinitperiod},
+           given={Justin\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=cb06073aa3ac999b86360804ccfabcff}{%
+           family={Lefkovitz},
+           familyi={L\bibinitperiod},
+           given={Naomi\bibnamedelima B.},
+           giveni={N\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=8250c014f4be9c4c4f6c6c6395f24620}{%
+           family={Danker},
+           familyi={D\bibinitperiod},
+           given={Jamie\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=17c2d6846077646d795a8d5caeeca944}{%
+           family={Choong},
+           familyi={C\bibinitperiod},
+           given={Yee-Yin},
+           giveni={Y\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=9dedd4426e4df6c6b57fd5665a3d7e9f}{%
+           family={Greene},
+           familyi={G\bibinitperiod},
+           given={Kirsten\bibnamedelima K.},
+           giveni={K\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{uniquename=0,uniquepart=base,hash=438c0fa1bf607de27f2908149e582513}{%
+           family={Theafanos},
+           familyi={T\bibinitperiod},
+           given={Mary\bibnamedelima F.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{2}{%
+        {NIST (National Institute of Standards}%
+        {Technology)}%
+      }
+      \strng{namehash}{a252c66974469605b81315e04d485b77}
+      \strng{fullhash}{248e89274bd22b3701bd02770d47f822}
+      \strng{bibnamehash}{248e89274bd22b3701bd02770d47f822}
+      \strng{authorbibnamehash}{248e89274bd22b3701bd02770d47f822}
+      \strng{authornamehash}{a252c66974469605b81315e04d485b77}
+      \strng{authorfullhash}{248e89274bd22b3701bd02770d47f822}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Special Publication 800-53 Revision}
+      \field{month}{04}
+      \field{title}{Recommended Security Controls for Federal Information Systems and Organizations}
+      \field{year}{2014}
+    \endentry
     \entry{NIST:2017:DIGAL}{manual}{}
       \name{author}{12}{uniquelist=2}{%
         {{uniquename=0,uniquepart=base,hash=7a9927de15214d1bf5f7b12a22a04740}{%
@@ -758,6 +857,39 @@
       \warn{\item Entry 'Hardt:2012:OAuth2' (references.bib): Invalid format '10-2012' of date field 'date' - ignoring}
       \warn{\item Entry 'Hardt:2012:OAuth2' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
     \endentry
+    \entry{Hudson:2015:SecurityRisk}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=f505211e178b9fdbc2d69015756d1f56}{%
+           family={Hudson},
+           familyi={H\bibinitperiod},
+           given={Harris},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Tripwire}%
+      }
+      \strng{namehash}{f505211e178b9fdbc2d69015756d1f56}
+      \strng{fullhash}{f505211e178b9fdbc2d69015756d1f56}
+      \strng{bibnamehash}{f505211e178b9fdbc2d69015756d1f56}
+      \strng{authorbibnamehash}{f505211e178b9fdbc2d69015756d1f56}
+      \strng{authornamehash}{f505211e178b9fdbc2d69015756d1f56}
+      \strng{authorfullhash}{f505211e178b9fdbc2d69015756d1f56}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Targeted Security Risk Assessments Using NIST Guidlines}
+      \verb{urlraw}
+      \verb https://www.tripwire.com/state-of-security/risk-based-security-for-executives/risk-management/targeted-security-risk-assessments-using-nist-guidelines/
+      \endverb
+      \verb{url}
+      \verb https://www.tripwire.com/state-of-security/risk-based-security-for-executives/risk-management/targeted-security-risk-assessments-using-nist-guidelines/
+      \endverb
+      \warn{\item Entry 'Hudson:2015:SecurityRisk' (references.bib): Invalid format '09-2015' of date field 'date' - ignoring}
+      \warn{\item Entry 'Hudson:2015:SecurityRisk' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
+    \endentry
     \entry{Google:2018:OAuthPlayground}{online}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=2720e823db87672e3be1971d976ca746}{%
@@ -1005,6 +1137,38 @@
       \verb{url}
       \verb https://www.rfc-editor.org/rfc/pdfrfc/rfc7516.txt.pdf
       \endverb
+    \endentry
+    \entry{KeyCloack}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=734ab021fd663f22048fc9fdaa74bd1f}{%
+           family={KeyCloack},
+           familyi={K\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Keycloak http://www.keycloak.org}%
+      }
+      \strng{namehash}{734ab021fd663f22048fc9fdaa74bd1f}
+      \strng{fullhash}{734ab021fd663f22048fc9fdaa74bd1f}
+      \strng{bibnamehash}{734ab021fd663f22048fc9fdaa74bd1f}
+      \strng{authorbibnamehash}{734ab021fd663f22048fc9fdaa74bd1f}
+      \strng{authornamehash}{734ab021fd663f22048fc9fdaa74bd1f}
+      \strng{authorfullhash}{734ab021fd663f22048fc9fdaa74bd1f}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{published with GitBook}
+      \field{subtitle}{Keycloak 1.9.8.Final}
+      \field{title}{Sever Administration Guide - KEYCLOAK}
+      \verb{urlraw}
+      \verb https://www.keycloak.org/docs/1.9/server_admin_guide/topics/sso-protocols/saml-vs-oidc.html
+      \endverb
+      \verb{url}
+      \verb https://www.keycloak.org/docs/1.9/server_admin_guide/topics/sso-protocols/saml-vs-oidc.html
+      \endverb
+      \warn{\item Entry 'KeyCloack' (references.bib): Invalid format '08-2018' of date field 'date' - ignoring}
+      \warn{\item Entry 'KeyCloack' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
     \endentry
     \entry{LeBlanc:2011:SocialApplications}{book}{}
       \name{author}{1}{}{%
@@ -1604,6 +1768,36 @@
       \verb{url}
       \verb http://www.cs.virginia.edu/~evans/cs551/saltzer/
       \endverb
+    \endentry
+    \entry{Schwartz:2016:OAuthVsSamel}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=8ed2f40e41ad8c7d986d01dc349290b5}{%
+           family={Schwartz},
+           familyi={S\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8ed2f40e41ad8c7d986d01dc349290b5}
+      \strng{fullhash}{8ed2f40e41ad8c7d986d01dc349290b5}
+      \strng{bibnamehash}{8ed2f40e41ad8c7d986d01dc349290b5}
+      \strng{authorbibnamehash}{8ed2f40e41ad8c7d986d01dc349290b5}
+      \strng{authornamehash}{8ed2f40e41ad8c7d986d01dc349290b5}
+      \strng{authorfullhash}{8ed2f40e41ad8c7d986d01dc349290b5}
+      \field{sortinit}{S}
+      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OAuth vs. Saml vs. OpenIDConnect}
+      \verb{urlraw}
+      \verb https://www.gluu.org/blog/oauth-vs-saml-vs-openid-connect/
+      \endverb
+      \verb{url}
+      \verb https://www.gluu.org/blog/oauth-vs-saml-vs-openid-connect/
+      \endverb
+      \warn{\item Entry 'Schwartz:2016:OAuthVsSamel' (references.bib): Invalid format '12-2016' of date field 'date' - ignoring}
+      \warn{\item Entry 'Schwartz:2016:OAuthVsSamel' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
     \endentry
     \entry{Serilleja:2015:Scothio}{online}{}
       \name{author}{1}{}{%

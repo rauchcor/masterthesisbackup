@@ -34,30 +34,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{OAuth and OpenID Connect}{28}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Practical Part}{33}{chapter.3}
+\contentsline {chapter}{\numberline {3}Practical Part}{34}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Use Case}{33}{section.3.1}
+\contentsline {section}{\numberline {3.1}Use Case}{34}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Risk Assessment}{34}{section.3.2}
+\contentsline {section}{\numberline {3.2}Risk Assessment}{35}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Identity Proofing Risk 1}{40}{section*.10}
+\contentsline {paragraph}{Identity Proofing Risk 1}{41}{section*.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Identity Proofing Risk 2}{40}{section*.11}
+\contentsline {paragraph}{Identity Proofing Risk 2}{41}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Authentication Risk 1}{40}{section*.12}
+\contentsline {paragraph}{Authentication Risk 1}{41}{section*.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Authentication Risk 2}{40}{section*.13}
+\contentsline {paragraph}{Authentication Risk 2}{42}{section*.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Federation Risk 1 }{41}{section*.14}
+\contentsline {paragraph}{Federation Risk 1 }{42}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Federation Risk 2 }{41}{section*.15}
+\contentsline {paragraph}{Federation Risk 2 }{42}{section*.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Solution}{42}{section.3.3}
+\contentsline {section}{\numberline {3.3}Solution}{46}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Identity Server}{43}{section*.16}
+\contentsline {paragraph}{Identity Server}{47}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{ProjectApiNetCore}{47}{section*.17}
+\contentsline {paragraph}{ProjectApiNetCore}{51}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{49}{chapter.4}
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{53}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{56}{appendix*.19}
+\contentsline {chapter}{References}{60}{appendix*.19}
