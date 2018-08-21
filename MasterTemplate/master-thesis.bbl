@@ -19,6 +19,33 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
+    \entry{OAuth:2018:Flow}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=2a723769d08b0732d8563ffe6bdaee7d}{%
+           family={Auth0},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{2a723769d08b0732d8563ffe6bdaee7d}
+      \strng{fullhash}{2a723769d08b0732d8563ffe6bdaee7d}
+      \strng{bibnamehash}{2a723769d08b0732d8563ffe6bdaee7d}
+      \strng{authorbibnamehash}{2a723769d08b0732d8563ffe6bdaee7d}
+      \strng{authornamehash}{2a723769d08b0732d8563ffe6bdaee7d}
+      \strng{authorfullhash}{2a723769d08b0732d8563ffe6bdaee7d}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Which OAuth 2.0 flow should I use?}
+      \verb{urlraw}
+      \verb https://auth0.com/docs/api-auth/which-oauth-flow-to-use
+      \endverb
+      \verb{url}
+      \verb https://auth0.com/docs/api-auth/which-oauth-flow-to-use
+      \endverb
+      \warn{\item Entry 'OAuth:2018:Flow' (references.bib): Invalid format '08-2018' of date field 'date' - ignoring}
+      \warn{\item Entry 'OAuth:2018:Flow' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
+    \endentry
     \entry{Birell:2013:FIMS}{article}{}
       \name{author}{2}{}{%
         {{uniquename=0,uniquepart=base,hash=f19b43270836be231e59a7920fa959be}{%

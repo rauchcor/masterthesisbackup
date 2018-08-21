@@ -4,7 +4,9 @@
 \chapterstart
 
 The practical part of this work is made up of three parts: the use case, a risk assessment and an example solution based on what was learned from the risk assessment. In the first part a use case is described. The use case tries to picture a typical scenario that requires thoughtful consideration of authentication and authorization technologies depending on the requirements of the use case. Based on the uses case a small risk assessment is done. This risk assessment should help to choose an appropriate level of assurance for identity proofing, authentication and federation. Based on this risk assessment a small application is implemented. The solution represents a federate single-sign on solution which uses modern open source authentication and authorization protocols. This procedure should help developers to choose appropriate authentication and authorization methods for a particular use case. The goal is to balance usability and security. 
+
 \section{Use Case}
+\label{usecase}
 This use case is entirely fictional but allows the reader to get a better understanding of the circumstances a that led to the design of a federated authentication solution. 
 
 The use case features a medium to large company with up to 1000 employees. The mission of the company is to provide a network and analyzing toolset which allows the customer of the product suite to improve security within his network and keep an overview of potential security risks. Previously the customers received monthly reports about their current state of the network. Each of the products and tools resulted in a separate report which was sent via E-Mail. To modernize the approach, the reports should be replaced by a modern single-page application that could be accessed by customers and by employees for administrative reasons. In this example, we call the solution 'Security Assessment Portal.' The Security Assessment Portal should give the customers an overview of current products and the performance of the network an example of the suit could be E-Mail-Filtering. The example will be focused on an E-Mail-Filtering-Report and the data which is exposed via the report. It is very important to have a good overview of the data that is used within the application in order to establish appropriate security controls. The Email-Filtering-Report will display a chart per domain. The chart includes data about the amount of e-mails which were blocked, received or carried a virus. 
@@ -119,7 +121,7 @@ Since this analysis is about identity proofing, authentication and federation er
 	\item Vulnerability: User keeps credentials at an insecure place
 	\item Likelihood: 0.9
 	\item Impact: 60 (Inconvenience, distress and Unauthorized release of sensitive information )
-	\item \textbf{Risk Determination}: 0.9 x 70 = 64 (High Risk) 
+	\item \textbf{Risk Determination}: 0.9 x 70 = 64 (Medium Risk) 
 \end{enumerate}
 
 \paragraph{Authentication Risk 2}
@@ -203,11 +205,10 @@ The \cite{Sakimura:2014:OpenIDConnect} explains that modern applications have di
 For example, a browser might call a Web App, and a Web App calls a Web API or perhaps a Native App calls a Web API, which is calling another Web API. Each application has to implement security functions to maintain a secure flow throughout these interactions. Implementing this security features for each involved application leads to a lot of duplicated code and inconsistencies. A different approach to implement security throughout these flows is using a token service. A token service brings the benefit of being able to encapsulate these security functions. Security functions can be updated and hosted at a single point which prevents duplicated functions across applications and security flaws. The advantages of a token service or token based application are also outlined in the section \ref{tokenBasedAuthentication} Token-based Authentication. Furthermore the chapter hold examples of JSON Tokens and how they are asserted. The concept of JSON Tokens is very important in token-based authentication systems and ensures confidentiality and integrity [cf. (\cite{Sakimura:2014:OpenIDConnect})].
 
 
-The chapter \ref{riskassessment} Risk Assessment states that the Level of Assurance for Identity Proofing should be 2. The second level of assurance for identity proofing suggests that no real-world existence of the claimed identity has to present. The other identity proofing assurance level can be looked up in chapter \ref{identityProofing} Identity Proofing. The presentation of the real-existence can be either remote or physical. Furthermore the figure \ref{fig:ialflow} suggest that since a identity should be resolved uniquely in our use case and it is ok to accept references a federation is recommended.  
+Based on the chapter \ref{riskassessment} Risk Assessment the architecture of the authentication system for the use case described in chapter \ref{usecases} Use Case is chosen. The LOA for Identity Proofing should be according to the risk assessment the second one. The second level of assurance for identity proofing suggests that no real-world existence of the claimed identity has to present. The other identity proofing assurance levels can be looked up in chapter \ref{identityProofing} Identity Proofing. The presentation of the real-existence can be either remote or physical. Furthermore the figure \ref{fig:ialflow} suggest that since a identity should be resolved uniquely in our use case and it is ok to accept references, a federation solution is recommended. In order to successfully proof an identity the client or user has to provide valid credentials to authenticate at the service. The  authentication assurance level is also analyzed in the chapter \ref{riskassessment} Risk Assessment. According to this initial risk assessment the level of assurance should be two. The second level of authentication assurance suggests to use at least two distinct authentication factors and the use of strong cryptographic techniques. However since this was the first risk assessment conducted the first level of assertion for authentication will be used because two distinct authentication factors would be normally used for just really sensitive personal data like for a bank app. The first level of assurance for authentication suggest the use of just one authentication factor. Furthermore, since the first identity proofing flow chart also suggested to use federation, the according federation assurance level based on the risk assessment should be the first. The first level of assurance states to use a bearer assertion signed with approved cryptography by an IdP like OpenID Connect Basic Client profile. Therefor the solution will use an token service which login functionality is  accepting one distinct authentication factor and asserts the user with bearer tokens. 
 
 
-
-Identity Server4 is an ASP.NET framework that uses the specifics of OpenID Connect and OAuth 2.0 to enable Authentication and Authorization related features. Features include Authentication as a Service, which provides a centralized login logic for all applications, Single sign-on, Access Control for APIs and Federation Gateway. The Identity Server 4 will be used as a Token Server in the practical part [cf. (\cite{Brock:2018:ID4})]
+The languages chosen for the example application are C\# and Angular 2. The solution is created with a very usefull ASP.NET framework called Identity Server4. Identity Server4 uses the specifics of OpenID Connect and OAuth 2.0 to enable Authentication and Authorization related features. Features include Authentication as a Service, which provides a centralized login logic for all applications, Single sign-on, Access Control for APIs and Federation Gateway. The Identity Server 4 will be used as a Token Server in the practical part [cf. (\cite{Brock:2018:ID4})]
 
 The project illustrating the use of Identity Server and the benefits of OpenID Connect an OAuth is a Visual Studio Project mostly written in C\# and Typescript. The project example for Identity Server includes four different projects:
 
@@ -302,8 +303,83 @@ All of the routes shown in \ref{fig:apis} API documentation with Swagger, are se
 To configure the right authentication method, ASP.NET Core 2.0 offers the possibility to add the authentication to the pipeline with Dependency Injection via the method Configure Services in the Startup.class.
 In the StartUp class of the API Project the AddAuthentication with the Value "JwtBearerDefaults.AuthenticationSchemeMakes "Bearer" the default authentication scheme “Bearer”. With the AddIdentityServerAuthentication it is defined which Token server can be used to validate the incoming token and make sure that this token is from a trusted issuer. It adds the Identity Server access token validation handler into DI and also it is checked if the token is valid to be used with this API (aka scope). Adding UseAuthentication to the Configure method int the Startup class adds the authentication middleware to the pipeline so authentication will be performed automatically on every call into the host.  Multiple authentication schemes can be used. A list of authentication schemes is then passed to the Authorize attribute separated with a comma. The default scheme results in the HttpContext.User property is set to that identity. After adding the Authentication logic to the API Project, the resources should be protected know. To check if the resources are protected the Swagger documentation can be used. Therefore one has to navigate to \url{http://localhost:5001/swagger/v1/swagger.json} and try out one of the methods shown in (\ref{fig:apis}) API Documentation with Swagger. This should result in a 401 Unauthorized HTTP response code.
 
- 
 
-TODO: Your text here...
+\paragraph{Client}The client represents the UI of the 'Security Assessment Portal' with the initial E-Mail-Filtering functionality. The project is an Angular Solution that follows the Implicit Code Flow described in chapter \ref{OAuthAndOpenID}. The Implicit Code Flow is chosen over the other code Flows based on the type of application, level of trust and the user experience that should be provided. The first decision is based on rather the machine that hosts the application is the resource owner as well. If this is the case no end-user authorization is needed. In this use-case the resource owner is accessible over the API we provided which is hosted on a different server. If the application is a regular web app the Authorization Code Flow would be recommended. However since the client we are hosting is a Angular SPA app the Implicit Code Flow should be used. The application directly receives an access token and no additional round trips are needed to exchange an received authorization code. The implicit code flow does not return a refresh token because it can not be kept secret but there is the possibility of a silent authentication. The silent authentication is initiated with a request to the authentication request with the parameter 'promt=none'. On success the client is redirected to the redirect\_uri with an successful authentication response. If the user is not already logged on the client is redirected to the redirect\_uri wit an error response [cf. \cite{OAuth:2018:Flow}].  
+
+
+For the Implicit Code Flow, the Identity Server has to define a Client that Allows the Grant Type Implicit as shown in \ref{fig:implicitcodeflow} Implicit Code Flow- Identity Server Configuration. The defined Client can be identified with the ClientId. This particular Client also requests the explicit consent of the Client for the requested Scopes. In this case, the Client is allowed to request the well known Scopes OpenId and Profile. In order to receive an id\_token and therefore configure OpenId Connect the scope OpenId has to be requested. The Profile scope gives general information about the user. Also, an API scope is added for ‘securityPortalApi’, which represents the API Project holding the Resources. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/implicit_code_flow}
+	\caption{Implicit Code Flow - Identity Server Configuration}
+	\label{fig:implicitcodeflow}
+\end{figure}
+
+
+AllowAccessTokensViaBrowser makes sure that the access\_token can be directly returned to the Browser after the client authenticates itself. AllowCorsOrignins allows the given resource to make Cross-Origin-Requests to the Identity Server. Cross-Origin-Request is a request that is made from another domain outside the domain from which the first resource was served. Furthermore, the RedirectUris have to be present, in order for the Identity Server to know where to return after the login attempt was successful. 
+
+
+In the Angular Solution, a Service to handle authentication was created. The service handles requests to the API which is hosting the Protected Resources. The Angular Solution uses the ‘oidc-client’ library that is suggested by the Identity Server framework to handle authentication requests. To call the Identity Server the following setting shown in \ref{fig:implicitcodeflowangular} Implicit Code Flow - Angular.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/implicit_code_flow_angular}
+	\caption{Implicit Code Flow - Angular}
+	\label{fig:implicitcodeflowangular}
+\end{figure}
+
+
+The client\_id in the Angular Solution has to be the same as the ClientId configured in the Identity Server Project. The same is true for the redirect\_uri and post\_logout\_redirect\_uri. Otherwise, the request would result in an error. For example, if a scope is requested which does not exist according to the Identity Server, an invalid scope exception is thrown. Furthermore, the response\_type has to be according to the used Authorization Flow in the in IdentityServer's client configuration. In the Identity Server Solution, the  Implicit Code Flow was configured, therefore "id\_token token" was defined. The response of these response types will include an access token, an access token type and an id\_token.  
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/secure_page_requires_login}
+	\caption{Secure Page Login}
+	\label{fig:securepagerequireslogin}
+\end{figure}
+
+For the Client to receive an id\_token and in this example an access\_token from the Authorization Server (Identity Server Project), the client has to prepare an Authentication Request and send it to the Authorization Server. The Angular has two possible ways to trigger the login with the Identity Server. In the navigation on the left-hand side there is a Homepage that can be accessed by everyone, then there is a Secure Page that just can be accessed by logged in users and the Login Page, which automatically triggers a request to the Authorization Server.
+
+
+
+The \ref{fig:securepagerequireslogin} Secure Page Login, shows the Menu of the application. If the user tries to access the Secure Page without being logged he is redirected to the "Login is required" Page. In order to access the secure area, the End-User has to authenticate with the Authorization Server.
+To authenticate with the Authorization Server the user has to press the Login button. After the Login button is pressed, the End-User is redirected to the Authorization Server Login Page. The design of this screen can be adjusted in the Identity Server Project. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/login_identity_server}
+	\caption{Login Mask Identity Server}
+	\label{fig:loginidentityserver}
+\end{figure}
+
+
+The figure \ref{fig:loginidentityserver} Login Mask Identity server shows the form where the End-User can log in with the End-User’s credentials. In the Identity Server Project, two Test-User are registered. Therefore either as Alice or Bob can currently log in to the application and view the secured Page. 
+The Authorization Server can also request consent from the User for the requested Claims. In the Identity Server Project, it is configured that the consent of the End-User is required. In consequence of this configuration, the user is prompted an additional screen. This screen is shown in \ref{fig:consentscreen} Consent Screen, would not appear if the consent was not required by the identity server. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/consent_screen}
+	\caption{Consent Screen}
+	\label{fig:consentscreen}
+\end{figure}
+
+
+The Angular Application is requesting consent for the requested scopes openId, profile and securityPortalApi. The openId Scope is required because otherwise, we would not be able to receive an id\_token. User Profile gives additional information about the User, and the  Security Assessment Portal API is a custom API that was added to the scope and allows the user to make requests to this API and the protected resources. 
+
+
+After the End-User has given its consent, the End-User gets redirected back to the Client with an id\_token and an access\_token. The id\_token can be validated, and an End-User’s Subject Identifier is retrieved.
+
+It the authentication with the Authorization Server was successful the End-User is now authenticated. As an authenticated user the End-User can now also access the Secure Page. With access\_token the received access token calls to the custom API Project can be executed. For example, the claims of the user that are correlating to the scopes can be received and put in a useful context as seen in \ref{fig:claims}.
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/claims}
+	\caption{Claims}
+	\label{fig:claims}
+\end{figure}
+
+
 
 \chapterend
