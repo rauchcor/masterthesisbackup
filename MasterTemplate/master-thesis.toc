@@ -10,7 +10,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.4}Method}{3}{section.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Related Work}{4}{chapter.2}
+\contentsline {chapter}{\numberline {2}Related Work to Identity Management}{4}{chapter.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Security Considerations}{5}{section.2.1}
 \defcounter {refsection}{0}\relax 
@@ -20,46 +20,46 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.4}Assertion}{13}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Token-based Authentication}{15}{section.2.5}
+\contentsline {section}{\numberline {2.5}Token-based Authentication}{16}{section.2.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5.1}Server-Based Authentication.}{16}{subsection.2.5.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5.2} Token-based authentication with JSON Web Token }{17}{subsection.2.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Single Sign-On Federation Systems}{23}{section.2.6}
+\contentsline {section}{\numberline {2.6}Single Sign-On Federation Systems}{24}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6.1}Singel Sign-On}{25}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.1}Single Sign-On}{26}{subsection.2.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{SAML}{27}{section*.7}
+\contentsline {paragraph}{SAML}{28}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{OAuth and OpenID Connect}{28}{section*.8}
+\contentsline {paragraph}{OAuth and OpenID Connect}{29}{section*.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Practical Part}{34}{chapter.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Use Case}{34}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Risk Assessment}{35}{section.3.2}
+\contentsline {section}{\numberline {3.2}Risk Assessment}{36}{section.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Identity Proofing Risk 1}{41}{section*.10}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Identity Proofing Risk 2}{41}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Authentication Risk 1}{41}{section*.12}
+\contentsline {paragraph}{Authentication Risk 1}{42}{section*.12}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Authentication Risk 2}{42}{section*.13}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Federation Risk 1 }{42}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Federation Risk 2 }{42}{section*.15}
+\contentsline {paragraph}{Federation Risk 2 }{43}{section*.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Solution}{46}{section.3.3}
+\contentsline {section}{\numberline {3.3}Solution}{45}{section.3.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Identity Server}{48}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{ProjectApiNetCore}{51}{section*.17}
+\contentsline {paragraph}{ProjectApiNetCore}{52}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Client}{52}{section*.18}
+\contentsline {paragraph}{Client}{53}{section*.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{58}{chapter.4}
+\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{59}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{65}{appendix*.20}
+\contentsline {chapter}{References}{69}{appendix*.24}

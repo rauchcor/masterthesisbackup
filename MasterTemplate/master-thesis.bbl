@@ -1494,7 +1494,7 @@
       \field{year}{2016}
       \field{dateera}{ce}
     \endentry
-    \entry{Prochazka:2010:UCA}{inproceedings}{}
+    \entry{Prochazka:2010:UCA}{book}{}
       \name{author}{3}{}{%
         {{uniquename=0,uniquepart=base,hash=05689dbbea26946320dfd6e6db03e377}{%
            family={Procházka},
@@ -1539,7 +1539,7 @@
       \field{title}{User centric authentication for web applications}
       \field{year}{2010}
     \endentry
-    \entry{Rossvoll:2013:RUBIM}{inproceedings}{}
+    \entry{Rossvoll:2013:RUBIM}{book}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=a1b29a84318920478bad10ef04094773}{%
            family={Røssvoll},
@@ -2135,7 +2135,7 @@
       \field{title}{Dealing With Password Fatigue}
       \field{year}{2009}
     \endentry
-    \entry{Xu:2015:SPSSO}{thesis}{}
+    \entry{Xu:2015:SPSSO}{misc}{}
       \name{author}{1}{}{%
         {{uniquename=0,uniquepart=base,hash=2df1bac51b87b4958a703cbfdd9e8ea8}{%
            family={Xu},

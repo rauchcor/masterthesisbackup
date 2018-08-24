@@ -4,31 +4,33 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Componets Authentication}}{8}{figure.2.1}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces "On the Internet, nobody knows you are a dog"(\cite {Steiner:Dog:1992})\relax }}{4}{figure.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces OAuth API}}{18}{figure.2.2}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Componets Authentication}}{9}{figure.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces JWT Inheritance\relax }}{20}{figure.2.3}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces OAuth API}}{18}{figure.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Federation}}{24}{figure.2.4}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces JWT Inheritance\relax }}{20}{figure.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces OAuth Authorization Process (\cite {LeBlanc:2011:SocialApplications}, p.353)\relax }}{29}{figure.2.5}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Federation}}{25}{figure.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces OAuth 2.0 and OpenID Connect \cite {Lodderstedt:2014:OpenID}\relax }}{30}{figure.2.6}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces OAuth Authorization Process (\cite {LeBlanc:2011:SocialApplications}, p.353)\relax }}{30}{figure.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces OAuth 2.0 and OpenID Connect \cite {Lodderstedt:2014:OpenID}\relax }}{31}{figure.2.7}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Identity Proofing Assurance Flow Chart (\cite {NIST:2017:DIG}, p 27)\relax }}{43}{figure.3.1}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Identity Proofing Assurance Flow Chart (\cite {NIST:2017:DIG}, p 27)\relax }}{44}{figure.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Authentication Assurance Flow Chart (\cite {NIST:2017:DIG}, p 30)\relax }}{44}{figure.3.2}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Authentication Assurance Flow Chart (\cite {NIST:2017:DIG}, p 30)\relax }}{45}{figure.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Federation Assurance Flow Chart (\cite {NIST:2017:DIG}, p 32)\relax }}{45}{figure.3.3}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Federation Assurance Flow Chart (\cite {NIST:2017:DIG}, p 32)\relax }}{46}{figure.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Architecture IdentityServer4}}{46}{figure.3.4}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Architecture IdentityServer4}}{47}{figure.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Architecture IdentityServer4 (\cite {Brock:2018:ID4}\relax }}{46}{figure.3.5}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Architecture IdentityServer4 (\cite {Brock:2018:ID4}\relax }}{47}{figure.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces IdentityServer Middleware\relax }}{48}{figure.3.6}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces IdentityServer Middleware\relax }}{49}{figure.3.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Self signed Certicate with Powershell\relax }}{49}{figure.3.7}
 \defcounter {refsection}{0}\relax 
@@ -38,16 +40,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.10}{\ignorespaces API documentation with Swagger\relax }}{52}{figure.3.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Implicit Code Flow - Identity Server Configuration\relax }}{53}{figure.3.11}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Implicit Code Flow - Identity Server Configuration\relax }}{54}{figure.3.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Implicit Code Flow - Angular\relax }}{54}{figure.3.12}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Implicit Code Flow - Angular\relax }}{55}{figure.3.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Secure Page Login\relax }}{54}{figure.3.13}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Secure Page Login\relax }}{55}{figure.3.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Login Mask Identity Server\relax }}{55}{figure.3.14}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Login Mask Identity Server\relax }}{56}{figure.3.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Consent Screen\relax }}{56}{figure.3.15}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Consent Screen\relax }}{57}{figure.3.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Claims\relax }}{57}{figure.3.16}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Claims\relax }}{58}{figure.3.16}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
