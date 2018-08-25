@@ -107,10 +107,12 @@
       \strng{authorfullhash}{0e54e9ade69d91908dc5745109a891ea}
       \field{sortinit}{B}
       \field{sortinithash}{276475738cc058478c1677046f857703}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{E-Authentication Guidance for Federal Agencies}
+      \field{year}{2003}
       \verb{urlraw}
       \verb https://georgewbush-whitehouse.archives.gov/omb/memoranda/fy04/m04-04.pdf
       \endverb
@@ -190,33 +192,35 @@
            given={Allen},
            giveni={A\bibinitperiod},
            givenun=0}}%
-        {{uniquename=0,uniquepart=base,hash=f3f320e7126fa30aa2ea9912ce6c5914}{%
-           family={Dominick},
-           familyi={D\bibinitperiod},
-           given={Baier},
-           giveni={B\bibinitperiod},
+        {{uniquename=0,uniquepart=base,hash=027b065650f4331bbcdcc5f78f0b4d78}{%
+           family={Baier},
+           familyi={B\bibinitperiod},
+           given={Dominick},
+           giveni={D\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{faf52596887bdd5e8041ef1a829dfbbf}
-      \strng{fullhash}{faf52596887bdd5e8041ef1a829dfbbf}
-      \strng{bibnamehash}{faf52596887bdd5e8041ef1a829dfbbf}
-      \strng{authorbibnamehash}{faf52596887bdd5e8041ef1a829dfbbf}
-      \strng{authornamehash}{faf52596887bdd5e8041ef1a829dfbbf}
-      \strng{authorfullhash}{faf52596887bdd5e8041ef1a829dfbbf}
+      \strng{namehash}{7629abf66fedef7abed04fe54d26c437}
+      \strng{fullhash}{7629abf66fedef7abed04fe54d26c437}
+      \strng{bibnamehash}{7629abf66fedef7abed04fe54d26c437}
+      \strng{authorbibnamehash}{7629abf66fedef7abed04fe54d26c437}
+      \strng{authornamehash}{7629abf66fedef7abed04fe54d26c437}
+      \strng{authorfullhash}{7629abf66fedef7abed04fe54d26c437}
       \field{sortinit}{B}
       \field{sortinithash}{276475738cc058478c1677046f857703}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{subtitle}{Release 1.0.0}
       \field{title}{IdentityServer4Documentation}
+      \field{year}{2018}
       \verb{urlraw}
       \verb https://media.readthedocs.org/pdf/identityserver4/release/identityserver4.pdf
       \endverb
       \verb{url}
       \verb https://media.readthedocs.org/pdf/identityserver4/release/identityserver4.pdf
       \endverb
-      \warn{\item Entry 'Brock:2018:ID4' (references.bib): Invalid format '08.2018' of date field 'date' - ignoring}
+      \warn{\item Entry 'Brock:2018:ID4' (references.bib): Invalid format '08-2018' of date field 'date' - ignoring}
       \warn{\item Entry 'Brock:2018:ID4' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
     \endentry
     \entry{Brooks:2017:IPE}{manual}{}
@@ -424,14 +428,47 @@
       \field{title}{Advances in User Authentication}
       \field{year}{2017}
     \endentry
+    \entry{Google:2018:OAuthPlayground}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{subtitle}{OAuth 2.0 Playground}
+      \field{title}{Google Developers}
+      \field{urlmonth}{7}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developers.google.com/oauthplayground/
+      \endverb
+      \verb{url}
+      \verb https://developers.google.com/oauthplayground/
+      \endverb
+    \endentry
     \entry{Google:2018:IdentityPlatform}{online}{}
       \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=c976b172954b87a445f5370710d4e3d5}{%
+        {{uniquename=1,uniquepart=given,hash=c976b172954b87a445f5370710d4e3d5}{%
            family={Google},
            familyi={G\bibinitperiod},
            given={Inc.},
            giveni={I\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \list{organization}{1}{%
         {Google Inc.}%
@@ -904,10 +941,12 @@
       \strng{authorfullhash}{f505211e178b9fdbc2d69015756d1f56}
       \field{sortinit}{H}
       \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Targeted Security Risk Assessments Using NIST Guidlines}
+      \field{year}{2015}
       \verb{urlraw}
       \verb https://www.tripwire.com/state-of-security/risk-based-security-for-executives/risk-management/targeted-security-risk-assessments-using-nist-guidelines/
       \endverb
@@ -916,42 +955,6 @@
       \endverb
       \warn{\item Entry 'Hudson:2015:SecurityRisk' (references.bib): Invalid format '09-2015' of date field 'date' - ignoring}
       \warn{\item Entry 'Hudson:2015:SecurityRisk' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
-    \endentry
-    \entry{Google:2018:OAuthPlayground}{online}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=2720e823db87672e3be1971d976ca746}{%
-           family={Inc.},
-           familyi={I\bibinitperiod},
-           given={Google},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{2720e823db87672e3be1971d976ca746}
-      \strng{fullhash}{2720e823db87672e3be1971d976ca746}
-      \strng{bibnamehash}{2720e823db87672e3be1971d976ca746}
-      \strng{authorbibnamehash}{2720e823db87672e3be1971d976ca746}
-      \strng{authornamehash}{2720e823db87672e3be1971d976ca746}
-      \strng{authorfullhash}{2720e823db87672e3be1971d976ca746}
-      \field{sortinit}{I}
-      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{7}
-      \field{subtitle}{OAuth 2.0 Playground}
-      \field{title}{Google Developers}
-      \field{urlmonth}{7}
-      \field{urlyear}{2018}
-      \field{year}{2018}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://developers.google.com/oauthplayground/
-      \endverb
-      \verb{url}
-      \verb https://developers.google.com/oauthplayground/
-      \endverb
     \endentry
     \entry{JerichoSystems:IS}{online}{}
       \name{author}{1}{}{%
@@ -1182,12 +1185,14 @@
       \strng{authorfullhash}{734ab021fd663f22048fc9fdaa74bd1f}
       \field{sortinit}{K}
       \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{published with GitBook}
       \field{subtitle}{Keycloak 1.9.8.Final}
       \field{title}{Sever Administration Guide - KEYCLOAK}
+      \field{year}{2018}
       \verb{urlraw}
       \verb https://www.keycloak.org/docs/1.9/server_admin_guide/topics/sso-protocols/saml-vs-oidc.html
       \endverb
@@ -1230,11 +1235,13 @@
       \strng{editorfullhash}{d006019519c4efa635ca0394d28c3296}
       \field{sortinit}{L}
       \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-1-449-39491-2}
       \field{title}{Programming Social Applications}
+      \field{year}{2011}
       \warn{\item Entry 'LeBlanc:2011:SocialApplications' (references.bib): Invalid format '08-2011' of date field 'date' - ignoring}
     \endentry
     \entry{Lodderstedt:2014:OpenID}{online}{}
@@ -1257,10 +1264,12 @@
       \strng{authorfullhash}{c810c6e897884044b611eb7a087c09e3}
       \field{sortinit}{L}
       \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{OpenID Connect: Login mit OAuth, Teil 1 – Grundlagen}
+      \field{year}{2014}
       \verb{urlraw}
       \verb https://www.heise.de/developer/artikel/OpenID-Connect-Login-mit-OAuth-Teil-1-Grundlagen-2218446.html?seite=all
       \endverb
@@ -1334,11 +1343,47 @@
       \verb http://www.csl.sri.com/users/neumann/chats4.pdf
       \endverb
     \endentry
+    \entry{NIST:2004:FIOPS}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=2e7ba6c807b5f74018238736a8553c83}{%
+           family={NIST},
+           familyi={N\bibinitperiod},
+           given={U.S.\bibnamedelimi Department\bibnamedelimb of\bibnamedelima Commerce},
+           giveni={U\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim o\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {NIST}%
+      }
+      \strng{namehash}{2e7ba6c807b5f74018238736a8553c83}
+      \strng{fullhash}{2e7ba6c807b5f74018238736a8553c83}
+      \strng{bibnamehash}{2e7ba6c807b5f74018238736a8553c83}
+      \strng{authorbibnamehash}{2e7ba6c807b5f74018238736a8553c83}
+      \strng{authornamehash}{2e7ba6c807b5f74018238736a8553c83}
+      \strng{authorfullhash}{2e7ba6c807b5f74018238736a8553c83}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Standards for Security Categorization of Federal Information and Information Systems}
+      \field{title}{Federal Information Processing Standard Publication}
+      \field{year}{2004}
+      \verb{urlraw}
+      \verb https://csrc.nist.gov/csrc/media/publications/fips/199/final/documents/fips-pub-199-final.pdf
+      \endverb
+      \verb{url}
+      \verb https://csrc.nist.gov/csrc/media/publications/fips/199/final/documents/fips-pub-199-final.pdf
+      \endverb
+      \warn{\item Entry 'NIST:2004:FIOPS' (references.bib): Invalid format '02-2004' of date field 'date' - ignoring}
+      \warn{\item Entry 'NIST:2004:FIOPS' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
+    \endentry
     \entry{NIST:2012:GCRA}{manual}{}
       \name{author}{1}{}{%
-        {{uniquename=0,uniquepart=base,hash=f7fdb9d3d200f4785066312798f776fe}{%
-           family={NIST\bibnamedelimb (National\bibnamedelimb Institute\bibnamedelimb of\bibnamedelima Technology)},
-           familyi={N\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim o\bibinitperiod\bibinitdelim T\bibinitperiod},
+        {{uniquename=0,uniquepart=base,hash=2e7ba6c807b5f74018238736a8553c83}{%
+           family={NIST},
+           familyi={N\bibinitperiod},
            given={U.S.\bibnamedelimi Department\bibnamedelimb of\bibnamedelima Commerce},
            giveni={U\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim o\bibinitperiod\bibinitdelim C\bibinitperiod},
            givenun=0}}%
@@ -1347,12 +1392,12 @@
         {NIST (National Institute of Standards}%
         {Technology)}%
       }
-      \strng{namehash}{f7fdb9d3d200f4785066312798f776fe}
-      \strng{fullhash}{f7fdb9d3d200f4785066312798f776fe}
-      \strng{bibnamehash}{f7fdb9d3d200f4785066312798f776fe}
-      \strng{authorbibnamehash}{f7fdb9d3d200f4785066312798f776fe}
-      \strng{authornamehash}{f7fdb9d3d200f4785066312798f776fe}
-      \strng{authorfullhash}{f7fdb9d3d200f4785066312798f776fe}
+      \strng{namehash}{2e7ba6c807b5f74018238736a8553c83}
+      \strng{fullhash}{2e7ba6c807b5f74018238736a8553c83}
+      \strng{bibnamehash}{2e7ba6c807b5f74018238736a8553c83}
+      \strng{authorbibnamehash}{2e7ba6c807b5f74018238736a8553c83}
+      \strng{authornamehash}{2e7ba6c807b5f74018238736a8553c83}
+      \strng{authorfullhash}{2e7ba6c807b5f74018238736a8553c83}
       \field{sortinit}{N}
       \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
       \field{extradatescope}{labelyear}
@@ -1364,6 +1409,39 @@
       \field{subtitle}{Information Security}
       \field{title}{Guide for Conducting Risk Assessment}
       \field{year}{2012}
+    \endentry
+    \entry{NIST:2018:RMF}{online}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=2e7ba6c807b5f74018238736a8553c83}{%
+           family={NIST},
+           familyi={N\bibinitperiod},
+           given={U.S.\bibnamedelimi Department\bibnamedelimb of\bibnamedelima Commerce},
+           giveni={U\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim o\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2e7ba6c807b5f74018238736a8553c83}
+      \strng{fullhash}{2e7ba6c807b5f74018238736a8553c83}
+      \strng{bibnamehash}{2e7ba6c807b5f74018238736a8553c83}
+      \strng{authorbibnamehash}{2e7ba6c807b5f74018238736a8553c83}
+      \strng{authornamehash}{2e7ba6c807b5f74018238736a8553c83}
+      \strng{authorfullhash}{2e7ba6c807b5f74018238736a8553c83}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Risk Management Framework (RMF) Overview}
+      \field{title}{Risk Management}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://csrc.nist.gov/Projects/Risk-Management/Risk-Management-Framework-(RMF)-Overview#1
+      \endverb
+      \verb{url}
+      \verb https://csrc.nist.gov/Projects/Risk-Management/Risk-Management-Framework-(RMF)-Overview#1
+      \endverb
+      \warn{\item Entry 'NIST:2018:RMF' (references.bib): Invalid format '06-2018' of date field 'date' - ignoring}
+      \warn{\item Entry 'NIST:2018:RMF' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
     \endentry
     \entry{Pashalidis:2003:10.1007/3-540-45067-X_22}{inproceedings}{}
       \name{author}{2}{}{%
@@ -1742,18 +1820,20 @@
       \strng{authorfullhash}{9ef3b3b5880c77d7869cf7a3f5646442}
       \field{sortinit}{S}
       \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{subtitle}{1.0 incorporating errata set 1}
       \field{title}{OpenID Connect Core}
+      \field{year}{2014}
       \verb{urlraw}
       \verb http://openid.net/specs/openid-connect-core-1_0.html#toc
       \endverb
       \verb{url}
       \verb http://openid.net/specs/openid-connect-core-1_0.html#toc
       \endverb
-      \warn{\item Entry 'Sakimura:2014:OpenIDConnect' (references.bib): Invalid format '08-08-2014' of date field 'date' - ignoring}
+      \warn{\item Entry 'Sakimura:2014:OpenIDConnect' (references.bib): Invalid format '08-2014' of date field 'date' - ignoring}
       \warn{\item Entry 'Sakimura:2014:OpenIDConnect' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
     \endentry
     \entry{Saltzer:PICS}{online}{}
@@ -1813,10 +1893,12 @@
       \strng{authorfullhash}{8ed2f40e41ad8c7d986d01dc349290b5}
       \field{sortinit}{S}
       \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{OAuth vs. Saml vs. OpenIDConnect}
+      \field{year}{2016}
       \verb{urlraw}
       \verb https://www.gluu.org/blog/oauth-vs-saml-vs-openid-connect/
       \endverb
@@ -1920,10 +2002,13 @@
       \strng{authorfullhash}{818bd7c2d6e5b5cd4fff057a5487b3d0}
       \field{sortinit}{S}
       \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{month}{04}
       \field{title}{API Security: Deep Dive into OAuth and OpenID Connect}
+      \field{year}{2018}
       \verb{urlraw}
       \verb https://nordicapis.com/api-security-oauth-openid-connect-depth/
       \endverb
@@ -1932,83 +2017,6 @@
       \endverb
       \warn{\item Entry 'Spencer:2018:APISecurity' (references.bib): Invalid format '04-2018' of date field 'date' - ignoring}
       \warn{\item Entry 'Spencer:2018:APISecurity' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
-    \endentry
-    \entry{NIST:2018:RMF}{online}{}
-      \name{author}{2}{}{%
-        {{uniquename=0,uniquepart=base,hash=cc619a5b8cec2e4ffd3cecf6f941d0f8}{%
-           family={Standards},
-           familyi={S\bibinitperiod},
-           given={NIST\bibnamedelimb (National\bibnamedelima Institute},
-           giveni={N\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim I\bibinitperiod},
-           givenun=0,
-           prefix={of},
-           prefixi={o\bibinitperiod},
-           prefixun=0}}%
-        {{uniquename=0,uniquepart=base,hash=091e5f7159deb4219a5cf836f4a9c360}{%
-           family={Technology)},
-           familyi={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{9a0062c72189cdc861348912d626f98a}
-      \strng{fullhash}{9a0062c72189cdc861348912d626f98a}
-      \strng{bibnamehash}{9a0062c72189cdc861348912d626f98a}
-      \strng{authorbibnamehash}{9a0062c72189cdc861348912d626f98a}
-      \strng{authornamehash}{9a0062c72189cdc861348912d626f98a}
-      \strng{authorfullhash}{9a0062c72189cdc861348912d626f98a}
-      \field{sortinit}{S}
-      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
-      \field{labeldatesource}{nodate}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{subtitle}{Risk Management Framework (RMF) Overview}
-      \field{title}{Risk Management}
-      \verb{urlraw}
-      \verb https://csrc.nist.gov/Projects/Risk-Management/Risk-Management-Framework-(RMF)-Overview#1
-      \endverb
-      \verb{url}
-      \verb https://csrc.nist.gov/Projects/Risk-Management/Risk-Management-Framework-(RMF)-Overview#1
-      \endverb
-      \warn{\item Entry 'NIST:2018:RMF' (references.bib): Invalid format '06-2018' of date field 'date' - ignoring}
-      \warn{\item Entry 'NIST:2018:RMF' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
-    \endentry
-    \entry{NIST:2004:FIOPS}{misc}{}
-      \name{author}{2}{}{%
-        {{uniquename=0,uniquepart=base,hash=cc619a5b8cec2e4ffd3cecf6f941d0f8}{%
-           family={Standards},
-           familyi={S\bibinitperiod},
-           given={NIST\bibnamedelimb (National\bibnamedelima Institute},
-           giveni={N\bibinitperiod\bibinitdelim (\bibinitperiod\bibinitdelim I\bibinitperiod},
-           givenun=0,
-           prefix={of},
-           prefixi={o\bibinitperiod},
-           prefixun=0}}%
-        {{uniquename=0,uniquepart=base,hash=d32e4fbf6f22a3543b41a78e1efe3f30}{%
-           family={Technology))},
-           familyi={T\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {NIST}%
-      }
-      \strng{namehash}{a241fcc5176b53eb18ca0ef9dea4f43e}
-      \strng{fullhash}{a241fcc5176b53eb18ca0ef9dea4f43e}
-      \strng{bibnamehash}{a241fcc5176b53eb18ca0ef9dea4f43e}
-      \strng{authorbibnamehash}{a241fcc5176b53eb18ca0ef9dea4f43e}
-      \strng{authornamehash}{a241fcc5176b53eb18ca0ef9dea4f43e}
-      \strng{authorfullhash}{a241fcc5176b53eb18ca0ef9dea4f43e}
-      \field{sortinit}{S}
-      \field{sortinithash}{322b1d5276f2f6c1bccdcd15920dbee6}
-      \field{labeldatesource}{nodate}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{subtitle}{Standards for Security Categorization of Federal Information and Information Systems}
-      \field{title}{Federal Informataion Processing Standard Publication}
-      \verb{urlraw}
-      \verb https://csrc.nist.gov/csrc/media/publications/fips/199/final/documents/fips-pub-199-final.pdf
-      \endverb
-      \verb{url}
-      \verb https://csrc.nist.gov/csrc/media/publications/fips/199/final/documents/fips-pub-199-final.pdf
-      \endverb
-      \warn{\item Entry 'NIST:2004:FIOPS' (references.bib): Invalid format '02-2004' of date field 'date' - ignoring}
-      \warn{\item Entry 'NIST:2004:FIOPS' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
     \endentry
     \entry{Steiner:Dog:1992}{article}{}
       \name{author}{1}{}{%
