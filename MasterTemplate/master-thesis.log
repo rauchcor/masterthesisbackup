@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  27 AUG 2018 17:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  27 AUG 2018 20:15
 entering extended mode
 **./master-thesis.tex
 (master-thesis.tex
@@ -1787,7 +1787,7 @@ File: images/federation.jpg Graphic file (type jpg)
 Package pdftex.def Info: images/federation.jpg  used on input line 408.
 (pdftex.def)             Requested size: 330.05322pt x 315.41112pt.
  [24] [25 <./images/federation.jpg>] [26] [27] [28]
-Overfull \hbox (2.18694pt too wide) in paragraph at lines 446--447
+Overfull \hbox (2.18694pt too wide) in paragraph at lines 447--448
 \T1/ptm/m/n/12 with OpenID Con-nect. OAuth 2.0 is a pro-to-col that is used for
  ac-cess con-trol. OAuth2.0
  []
@@ -1796,17 +1796,17 @@ Overfull \hbox (2.18694pt too wide) in paragraph at lines 446--447
 <images/oaut-process2.jpg, id=586, 817.55438pt x 462.97969pt>
 File: images/oaut-process2.jpg Graphic file (type jpg)
 <use images/oaut-process2.jpg>
-Package pdftex.def Info: images/oaut-process2.jpg  used on input line 455.
+Package pdftex.def Info: images/oaut-process2.jpg  used on input line 456.
 (pdftex.def)             Requested size: 330.05322pt x 186.91232pt.
  [30 <./images/oaut-process2.jpg>]
 <images/openid-process.jpg, id=604, 418.18735pt x 286.82156pt>
 File: images/openid-process.jpg Graphic file (type jpg)
 <use images/openid-process.jpg>
-Package pdftex.def Info: images/openid-process.jpg  used on input line 473.
+Package pdftex.def Info: images/openid-process.jpg  used on input line 474.
 (pdftex.def)             Requested size: 330.05322pt x 226.38521pt.
  [31 <./images/openid-process.jpg>]
 [32]
-Overfull \hbox (11.90863pt too wide) in paragraph at lines 513--514
+Overfull \hbox (11.90863pt too wide) in paragraph at lines 514--515
 []\T1/ptm/m/n/12 code id_token: The re-sponse in-cludes an Au-tho-riza-tion Cod
 e and an id_token. 
  []
@@ -1865,121 +1865,126 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 ] [51 <./images/architecture-identityserver.jpg>] [52]
-<images/middlewareIdentityServer.png, id=841, 161.47829pt x 145.29282pt>
+<images/middlewareIdentityServer.png, id=842, 161.47829pt x 145.29282pt>
 File: images/middlewareIdentityServer.png Graphic file (type png)
 <use images/middlewareIdentityServer.png>
 Package pdftex.def Info: images/middlewareIdentityServer.png  used on input lin
-e 50.
+e 51.
 (pdftex.def)             Requested size: 247.54149pt x 222.74066pt.
-<images/self-signed-certicate.jpg, id=845, 729.47531pt x 97.11281pt>
+ [53 <./images/middlewareIdentityServer.png>]
+<images/self-signed-certicate.jpg, id=852, 729.47531pt x 97.11281pt>
 File: images/self-signed-certicate.jpg Graphic file (type jpg)
 <use images/self-signed-certicate.jpg>
 Package pdftex.def Info: images/self-signed-certicate.jpg  used on input line 6
-3.
+4.
 (pdftex.def)             Requested size: 371.30595pt x 49.43054pt.
- [53 <./images/middlewareIdentityServer.png> <./images/self-signed-certicate.jp
-g>]
-<images/openid-discovery-document.jpg, id=854, 272.89453pt x 190.46156pt>
+<images/openid-discovery-document.jpg, id=855, 272.89453pt x 190.46156pt>
 File: images/openid-discovery-document.jpg Graphic file (type jpg)
 <use images/openid-discovery-document.jpg>
 Package pdftex.def Info: images/openid-discovery-document.jpg  used on input li
-ne 90.
+ne 91.
 (pdftex.def)             Requested size: 330.05322pt x 230.36908pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Overfull \hbox (0.43538pt too wide) in paragraph at lines 96--97
+[54 <./images/self-signed-certicate.jpg>]
+Overfull \hbox (0.43538pt too wide) in paragraph at lines 97--98
 \T1/ptm/m/n/12 sub-ject_types_supported and id_token_signing_alg_supported. The
  is-suer, in this case,
  []
 
-[54]
-<images/jwkDiscovoryDocument.jpg, id=870, 226.59656pt x 100.50047pt>
+[55 <./images/openid-discovery-document.jpg>]
+<images/jwkDiscovoryDocument.jpg, id=875, 226.59656pt x 100.50047pt>
 File: images/jwkDiscovoryDocument.jpg Graphic file (type jpg)
 <use images/jwkDiscovoryDocument.jpg>
 Package pdftex.def Info: images/jwkDiscovoryDocument.jpg  used on input line 10
-0.
+1.
 (pdftex.def)             Requested size: 288.79422pt x 128.08655pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[55 <./images/openid-discovery-document.jpg>]
-<images/apis.jpg, id=880, 750.17766pt x 291.71484pt>
+ [56 <./images/jwkDiscovoryDocument.jpg>]
+<images/apis.jpg, id=886, 750.17766pt x 291.71484pt>
 File: images/apis.jpg Graphic file (type jpg)
 <use images/apis.jpg>
-Package pdftex.def Info: images/apis.jpg  used on input line 116.
+Package pdftex.def Info: images/apis.jpg  used on input line 117.
 (pdftex.def)             Requested size: 288.79422pt x 112.29942pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (100.4547pt too wide) in paragraph at lines 121--124
+Overfull \hbox (100.4547pt too wide) in paragraph at lines 122--125
 []\T1/ptm/m/n/12 All of the routes shown in fig-ure [][]4.7[][], are se-cured w
 ith the help of the Iden-ti-ty-Server4.AccessTokenValidation
  []
 
-[56 <./images/jwkDiscovoryDocument.jpg>] [57 <./images/apis.jpg>]
+[57 <./images/apis.jpg>]
 <images/implicit_code_flow.jpg, id=897, 358.33875pt x 284.18672pt>
 File: images/implicit_code_flow.jpg Graphic file (type jpg)
 <use images/implicit_code_flow.jpg>
-Package pdftex.def Info: images/implicit_code_flow.jpg  used on input line 133.
+Package pdftex.def Info: images/implicit_code_flow.jpg  used on input line 134.
 
 (pdftex.def)             Requested size: 330.05322pt x 261.7715pt.
- [58 <./images/implicit_code_flow.jpg>]
-<images/implicit_code_flow_angular.jpg, id=905, 309.78235pt x 155.83218pt>
-File: images/implicit_code_flow_angular.jpg Graphic file (type jpg)
-<use images/implicit_code_flow_angular.jpg>
-Package pdftex.def Info: images/implicit_code_flow_angular.jpg  used on input l
-ine 146.
-(pdftex.def)             Requested size: 330.05322pt x 166.02782pt.
-
-Overfull \hbox (29.72667pt too wide) in paragraph at lines 152--153
-\T1/ptm/m/n/12 the Iden-tity Server Project. The same is true for the redi-rect
-_uri and post_logout_redirect_uri.
- []
-
-<images/secure_page_requires_login.jpg, id=906, 1213.53375pt x 320.69812pt>
-File: images/secure_page_requires_login.jpg Graphic file (type jpg)
-<use images/secure_page_requires_login.jpg>
-Package pdftex.def Info: images/secure_page_requires_login.jpg  used on input l
-ine 156.
-(pdftex.def)             Requested size: 330.05322pt x 87.2209pt.
-[59 <./images/implicit_code_flow_angular.jpg> <./images/secure_page_requires_lo
-gin.jpg>]
-<images/login_identity_server.jpg, id=912, 1001.24063pt x 839.38594pt>
-File: images/login_identity_server.jpg Graphic file (type jpg)
-<use images/login_identity_server.jpg>
-Package pdftex.def Info: images/login_identity_server.jpg  used on input line 1
-70.
-(pdftex.def)             Requested size: 288.79422pt x 242.10927pt.
-<images/consent_screen.jpg, id=915, 472.01344pt x 379.04109pt>
-File: images/consent_screen.jpg Graphic file (type jpg)
-<use images/consent_screen.jpg>
-Package pdftex.def Info: images/consent_screen.jpg  used on input line 181.
-(pdftex.def)             Requested size: 288.79422pt x 231.91454pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[60 <./images/login_identity_server.jpg>]
-<images/claims.jpg, id=921, 526.96875pt x 330.48468pt>
+<images/implicit_code_flow_angular.jpg, id=899, 309.78235pt x 155.83218pt>
+File: images/implicit_code_flow_angular.jpg Graphic file (type jpg)
+<use images/implicit_code_flow_angular.jpg>
+Package pdftex.def Info: images/implicit_code_flow_angular.jpg  used on input l
+ine 147.
+(pdftex.def)             Requested size: 330.05322pt x 166.02782pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (29.72667pt too wide) in paragraph at lines 153--154
+\T1/ptm/m/n/12 the Iden-tity Server Project. The same is true for the redi-rect
+_uri and post_logout_redirect_uri.
+ []
+
+[58]
+<images/secure_page_requires_login.jpg, id=907, 1213.53375pt x 320.69812pt>
+File: images/secure_page_requires_login.jpg Graphic file (type jpg)
+<use images/secure_page_requires_login.jpg>
+Package pdftex.def Info: images/secure_page_requires_login.jpg  used on input l
+ine 157.
+(pdftex.def)             Requested size: 330.05322pt x 87.2209pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[59 <./images/implicit_code_flow.jpg>]
+<images/login_identity_server.jpg, id=913, 1001.24063pt x 839.38594pt>
+File: images/login_identity_server.jpg Graphic file (type jpg)
+<use images/login_identity_server.jpg>
+Package pdftex.def Info: images/login_identity_server.jpg  used on input line 1
+71.
+(pdftex.def)             Requested size: 288.79422pt x 242.10927pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/consent_screen.jpg, id=916, 472.01344pt x 379.04109pt>
+File: images/consent_screen.jpg Graphic file (type jpg)
+<use images/consent_screen.jpg>
+Package pdftex.def Info: images/consent_screen.jpg  used on input line 182.
+(pdftex.def)             Requested size: 288.79422pt x 231.91454pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[60 <./images/implicit_code_flow_angular.jpg> <./images/secure_page_requires_lo
+gin.jpg>]
+<images/claims.jpg, id=922, 526.96875pt x 330.48468pt>
 File: images/claims.jpg Graphic file (type jpg)
 <use images/claims.jpg>
-Package pdftex.def Info: images/claims.jpg  used on input line 197.
+Package pdftex.def Info: images/claims.jpg  used on input line 198.
 (pdftex.def)             Requested size: 288.79422pt x 181.12166pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[61 <./images/consent_screen.jpg>] [62 <./images/claims.jpg>])
+[61 <./images/login_identity_server.jpg>] [62 <./images/consent_screen.jpg> <./
+images/claims.jpg>])
 \openout2 = `chapters/conclusion.aux'.
 
-
-(chapters/conclusion.tex
+ (chapters/conclusion.tex
 Chapter 5.
 [63
 
@@ -2128,10 +2133,10 @@ Package logreq Info: Writing requests to 'master-thesis.run.xml'.
 ### simple group (level 1) entered at line 353 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 19181 strings out of 493305
- 318975 string characters out of 3128497
- 783791 words of memory out of 3000000
- 22015 multiletter control sequences out of 15000+200000
+ 19183 strings out of 493305
+ 319003 string characters out of 3128497
+ 783840 words of memory out of 3000000
+ 22017 multiletter control sequences out of 15000+200000
  60656 words of font info for 72 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
  61i,16n,70p,3058b,1578s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2149,9 +2154,9 @@ ucrr8a.pfb><C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw
 9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rauchcor/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rauchcor/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on master-thesis.pdf (82 pages, 2165573 bytes).
+Output written on master-thesis.pdf (82 pages, 2166386 bytes).
 PDF statistics:
- 1190 PDF objects out of 1200 (max. 8388607)
+ 1191 PDF objects out of 1200 (max. 8388607)
  346 named destinations out of 1000 (max. 500000)
  284 words of extra memory for PDF output out of 10000 (max. 10000000)
 
