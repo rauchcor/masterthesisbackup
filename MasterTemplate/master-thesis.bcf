@@ -2139,7 +2139,6 @@
     <bcf:citekey order="172">Sakimura:OIDCD</bcf:citekey>
     <bcf:citekey order="173">Sakimura:OIDCD</bcf:citekey>
     <bcf:citekey order="174">OAuth:2018:Flow</bcf:citekey>
-    <bcf:citekey order="175">NIST:2012:GCRA</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
