@@ -20,36 +20,38 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Identity Proofing Assurance Flow Chart (\cite {NIST:2017:DIG}, p 27)\relax }}{45}{figure.3.1}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Identity Proofing Assurance Flow Chart (\cite {NIST:2017:DIG}, p 27)\relax }}{46}{figure.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Authentication Assurance Flow Chart (\cite {NIST:2017:DIG}, p 30)\relax }}{46}{figure.3.2}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Authentication Assurance Flow Chart (\cite {NIST:2017:DIG}, p 30)\relax }}{47}{figure.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Federation Assurance Flow Chart (\cite {NIST:2017:DIG}, p 32)\relax }}{47}{figure.3.3}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Federation Assurance Flow Chart (\cite {NIST:2017:DIG}, p 32)\relax }}{48}{figure.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Architecture IdentityServer4}}{48}{figure.3.4}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Architecture IdentityServer4 (\cite {Brock:2018:ID4})\relax }}{48}{figure.3.5}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Architecture IdentityServer4}}{51}{figure.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces IdentityServer Middleware\relax }}{50}{figure.3.6}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Architecture IdentityServer4 (\cite {Brock:2018:ID4})\relax }}{51}{figure.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Self signed Certicate with Powershell\relax }}{50}{figure.3.7}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces IdentityServer Middleware\relax }}{53}{figure.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.8}{\ignorespaces OpenID Discovery Document\relax }}{51}{figure.3.8}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Self signed Certicate with Powershell\relax }}{53}{figure.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.9}{\ignorespaces JWKS Endpint\relax }}{52}{figure.3.9}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces OpenID Discovery Document\relax }}{55}{figure.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.10}{\ignorespaces API documentation with Swagger\relax }}{53}{figure.3.10}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces JWKS Endpint\relax }}{55}{figure.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Implicit Code Flow - Identity Server Configuration\relax }}{55}{figure.3.11}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces API documentation with Swagger\relax }}{56}{figure.4.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Implicit Code Flow - Angular\relax }}{56}{figure.3.12}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Implicit Code Flow - Identity Server Configuration\relax }}{58}{figure.4.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Secure Page Login\relax }}{56}{figure.3.13}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Implicit Code Flow - Angular\relax }}{59}{figure.4.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Login Mask Identity Server\relax }}{57}{figure.3.14}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Secure Page Login\relax }}{59}{figure.4.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Consent Screen\relax }}{58}{figure.3.15}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Login Mask Identity Server\relax }}{60}{figure.4.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Claims\relax }}{58}{figure.3.16}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Consent Screen\relax }}{61}{figure.4.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Claims\relax }}{61}{figure.4.13}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

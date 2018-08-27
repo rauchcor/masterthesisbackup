@@ -235,7 +235,6 @@ An example of a JWT is an id\_token. Google provides for Developers an OAuth 2.0
 
 After choosing and authorizing with a Google Account, the Google API returns an Authorization Code. This Authorization Code is specific for a certain Authentication Flow defined by OAuth and can then be exchanged for the tokens. As a result, all information for the scopes that were selected beforehand is returned. Because OAuth 2 API v2 was selected, the returned value is an id\_token. This id\_token is a nice representation of a JWT and holds the standard information that is required according to the OAuth specification  [cf. (\cite{Google:2018:OAuthPlayground})].
 
-
 \lstset{caption=JWT Token,breaklines=true, breakatwhitespace=true, basicstyle=\small\ttfamily, label={lst:jwt}, tabsize=3, basewidth={0.55em}, fontadjust, language=XML}
 \begin{lstlisting}
 eyJhbGciOiJSUzI1NiIsImtpZCI6ImRhZDQ0NzM5NTc2NDg1ZWMzMGQyMjg4NDJlNzNh
@@ -260,6 +259,7 @@ rjd8GFnBq1QqsYAR-6wrFbNL1pY6tPyriqZnQdi5KqYWPUwGpXbFDUfhZAmWXT8-PTsc
 gQETEp8o3RvRHtfSu8Gx4UOhukt9_VxVdHmpFw
 \end{lstlisting}
 
+\goodbreak
 
 The JWT Token in the listing~\ref{lst:jwt} is presented as a sequence of URL-save base64url-encoded values. The different values are separated by a (‘.’) character. How many parts a JWT has is dependent on how the JWT is serialized. Either by using the JWS Compact Serialization or JWE Compact Serialization [cf. (\cite{JWT:IETF:Jones:2015})].
 
@@ -295,7 +295,8 @@ The 'type' Header Parameter we can examine in listing~\ref{lst:joseheader} indic
 	\label{fig:jwtjwsjwe2}
 \end{figure}
 
-The second decoded part of the example in listing ~\ref{lst:jwt} JWT Token, represents the claim set. The representation of the claim set is a JSON, where each key has to be unique. If the keys are duplicated a JSON parsing can occur or the last one of the duplicated keys is returned. 
+The second decoded part of the example in listing ~\ref{lst:jwt}, represents the claim set. The representation of the claim set is a JSON, where each key has to be unique. If the keys are duplicated a JSON parsing can occur or the last one of the duplicated keys is returned. 
+\pagebreak[4]
 
 \lstset{
 	caption=Claim Set,
@@ -328,6 +329,7 @@ AAAAAAAAAAI/AAAAAAAABNk/JyBmWMonaII/s96-c/photo.jpg",
 The decoded value from the example in listing~\ref{lst:jwt} of the Google OAuth 2.0 Playground  by Google (2018), returns a JSON object shown in the listing \ref{lst:claimset}. The claim set we receive is composed of mandatory and optional claims. Specifically requested in this example were the login, email and profile scope which affected the claims returned from the Google OAuth 2.0 API. Mandatory claims for the login with OpenID are iss, iat, aud, sub and exp and an optional clam that was returned from the API is azp. This claims will be discussed in more detail in the chapter on OpenID and OAuth 2.0. For the profile scope, the specific claims that were returned are name, picture, given\_name, family\_name, and locale. Email specific claims are email and email\_verified. Furthermore, identity providers can include additional elements that are neither mandatory or optional claims [cf. ({\cite{Google:2018:OAuthPlayground}), (\cite{Siriwardena:JWTJWSJWE:2016})]}].
 
 The last and third part from the example in listing \ref{lst:jwt}  represents the base64url-encoded signature. To know which kind of signature the decoded code is resembling a peek at the JOSE Header will help. The JOSE Header as mentioned before gives information about the cryptographic elements that were used related to the signature. In case of listing~\ref{lst:signaturejwt} the Google OAuth 2.0 API uses RASSSA-PKCS1-V1\_5 with the SHA-256 hashing algorithm. However, the \href{https://jwt.io/} {https://jwt.io/} website does not provide us with the decoded public key. 
+\pagebreak[4]
 
 \lstset{
 	caption=Signature JWT,
@@ -448,18 +450,19 @@ Boyed (2012) says that a federate authentication or identity federation, is a sy
 		
 		The Resource Owner is a role according to Sakimura et al. (2014) which can grant access to a protected resource also referred to as End-User, if the resource owner is a person. Furthermore, scopes are used to specify to which resources the resource owner wants to grant access. Requests which are sent to an authorization endpoint include scopes that can be mandatory or optional parameters. Declaring the scopes is up to the provider. An access token is used to gain access instead of the resource owner’s credentials [cf. (\cite{Sakimura:2014:OpenIDConnect}, p.6)]. 
 		
-		Access Tokens are issued by an Authorization Server and can be used by the Client to gain access to protected resources hosted by the resource server. The Authorization Server is responsible for issuing the access token and may be the same as the Resource Server. In literature, different terms are used do describe what an identity server does. Among these are Security Token Service, Identity Provider, Authorization Server and IP-STS. OAuth 2.0 uses a token service, which centralizes this logic and reduces complexity for the Client and the APIs [cf. (\cite{Sakimura:2014:OpenIDConnect}, p. 6), (\cite{Brock:2018:ID4}), (\cite{Boyd:2012:GSOAuth})]
-		
-		A typical request of a Client to access a resource on the Resource Server includes some requests. In the end, the Client should be able to access the protected resource. The process is shown in figure \ref{fig:oaut-process2}.
-		
-		\begin{figure}[h]
+			\begin{figure}[h]
 			\centering
 			\includegraphics[width=0.8\linewidth]{images/oaut-process2}
 			\caption{OAuth Authorization Process (\cite{LeBlanc:2011:SocialApplications}, p. 353)}
 			\label{fig:oaut-process2}
 		\end{figure}
 		
+		Access Tokens are issued by an Authorization Server and can be used by the Client to gain access to protected resources hosted by the resource server. The Authorization Server is responsible for issuing the access token and may be the same as the Resource Server. In literature, different terms are used do describe what an identity server does. Among these are Security Token Service, Identity Provider, Authorization Server and IP-STS. OAuth 2.0 uses a token service, which centralizes this logic and reduces complexity for the Client and the APIs [cf. (\cite{Sakimura:2014:OpenIDConnect}, p. 6), (\cite{Brock:2018:ID4}), (\cite{Boyd:2012:GSOAuth})]
+		
+		A typical request of a Client to access a resource on the Resource Server includes some requests. In the end, the Client should be able to access the protected resource. The process is shown in figure \ref{fig:oaut-process2}.
+			
 		In the first two steps, the Client redirects the User to the Resource Owner, to give the Client permission to access the protected resources. The User is then redirected to the callback location which is included in the original request and adds a verification code which confirms that the Client is entitled to access the requested resource. After the redirection to the callback location, the Client sends a request with the verification code to the Authorization Server. If the request is a success, the Authorization Server replies in step 4 with an access token and eventually a refresh token. With the received access token the client can now make signed requests to the resource server and receive in return protected resources as shown in step five and six inf figure~\ref{fig:oaut-process2} [cf. (\cite{LeBlanc:2011:SocialApplications}, p. 353)]
+		
 		
 		OpenID Connect and OAuth 2.0 seem very similar OpenID Connect is a framework built on top of OAuth 2.0. Together they focus on Authentication and Access Control in a way that is suitable for modern applications. OpenID can verify the identity of an End-User and obtain basic profile information about the user. It uses Claims to communicate information to the End-User [cf. (\cite{Sakimura:2014:OpenIDConnect})]
 		

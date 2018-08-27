@@ -28,13 +28,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.6}Single Sign-On Federation Systems}{24}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6.1}Single Sign-On}{26}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.1}Single Sign-On}{27}{subsection.2.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{SAML}{28}{section*.8}
+\contentsline {paragraph}{SAML}{29}{section*.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{OAuth and OpenID Connect}{29}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Practical Part}{35}{chapter.3}
+\contentsline {chapter}{\numberline {3}Analysis of Identity Management}{35}{chapter.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Use Case}{35}{section.3.1}
 \defcounter {refsection}{0}\relax 
@@ -42,24 +42,28 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Identity Proofing Risk 1}{42}{section*.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Identity Proofing Risk 2}{42}{section*.12}
+\contentsline {paragraph}{Identity Proofing Risk 2}{43}{section*.12}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Authentication Risk 1}{43}{section*.13}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Authentication Risk 2}{43}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Federation Risk 1 }{43}{section*.15}
+\contentsline {paragraph}{Federation Risk 1 }{44}{section*.15}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{Federation Risk 2 }{44}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Solution}{47}{section.3.3}
+\contentsline {section}{\numberline {3.3}Results}{49}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Identity Server}{49}{section*.17}
+\contentsline {chapter}{\numberline {4}Implementation of Identity Management}{50}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{ProjectApiNetCore}{53}{section*.18}
+\contentsline {section}{\numberline {4.1}Practical Implementation}{50}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Client}{54}{section*.19}
+\contentsline {paragraph}{Identity Server}{52}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Conclusion and Outlook}{60}{chapter.4}
+\contentsline {paragraph}{ProjectApiNetCore}{56}{section*.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{70}{appendix*.25}
+\contentsline {paragraph}{Client}{57}{section*.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Conclusion and Outlook}{63}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{73}{appendix*.28}
