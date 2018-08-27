@@ -3,11 +3,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapterstart
 
-The practical part of this work consists of three parts: the use case, a risk assessment and an example solution based on what was learned from the risk assessment. In the first part a use case is described. The use case tries to picture a typical scenario that requires thoughtful consideration of authentication and authorization technologies depending on the requirements of the use case. Based on the use case a small risk assessment is done. This risk assessment should help to choose an appropriate level of assurance for identity proofing, authentication and federation. Based on this risk assessment a small application is implemented. The procedure of conducting a risk assessment first should help developers to choose appropriate authentication and authorization methods for a particular use case.  
+ Based on this risk assessment a small solution representing the identity management is implemented. The procedure of conducting a risk assessment should help developers to choose appropriate authentication and authorization methods for a particular use case. The chapter is split up into two parts. The first part describes how the architecture of the solution was chosen and the second part explains how the identity management of the solution works. 
 
 
+\section{Architecture}
+\label{architecture}
 
-\section{Practical Implementation}
 The Sakimura et al. (2014) explains that modern applications have different requirements than their predecessors, due to new distributed architectures that allow enterprises to be more flexible. Cloud or microservice architectures require different interactions between applications.The below (figure~\ref{fig:architecture-identityserver}) shows the most common interactions for modern applications [cf. (\cite{Sakimura:2014:OpenIDConnect})].
 
 \begin{figure}[h]
@@ -18,15 +19,15 @@ The Sakimura et al. (2014) explains that modern applications have different requ
 	\label{fig:architecture-identityserver}
 \end{figure}
 
-
-
 For example, a browser might call a Web App, and a Web App calls a Web API or perhaps a Native App calls a Web API, which is calling another Web API. Each application has to implement security functions to maintain a secure flow throughout these interactions. Implementing this security features for each involved application leads to a lot of duplicated code and inconsistencies. A different approach to implement security throughout these flows is using a token service. A token service brings the benefit of being able to encapsulate these security functions. Security functions can be updated and hosted at a single point which prevents duplicated functions across applications and security flaws. The advantages of a token service or token based application are also outlined in the section \ref{tokenBasedAuthentication}. Furthermore the chapter \ref{tokenBasedAuthentication} hold examples of JSON Tokens and how they are asserted. The concept of JSON Tokens is very important in token-based authentication systems and ensures confidentiality and integrity [cf. (\cite{Sakimura:2014:OpenIDConnect})].
-
 
 Based on the chapter \ref{riskassessment} the architecture of the authentication system for the use case described in chapter \ref{usecase} is chosen. The LOA for Identity Proofing should be according to the risk assessment the second one - other LOA are covered in chapter \ref{identityProofing}. The second level of assurance for identity proofing suggests that no real-world existence of the claimed identity has to be present. The other identity proofing assurance levels can be looked up in chapter \ref{identityProofing} Identity Proofing. The presentation of the real-existence can be either remote or physical. Furthermore the figure~\ref{fig:ialflow} suggest that since a identity should be resolved uniquely in our use case and it is ok to accept references therefore a federation solution is recommended. In order to successfully proof an identity the client or user has to provide valid credentials to authenticate at the service. The  authentication assurance level is also analyzed in the chapter \ref{riskassessment}. According to this initial risk assessment the level of assurance should be two other LOA are described in chapter \ref{authentication}. The second level of authentication assurance suggests to use at least two distinct authentication factors and the use of strong cryptographic techniques. However since this was the first risk assessment conducted, the first level for authentication will be used because two distinct authentication factors would be normally used for really sensitive personal data like in a bank app. The first level of assurance for authentication suggest the use of just one authentication factor. Furthermore, since the first identity proofing flow chart also suggested to use federation, the according federation assurance level based on the risk assessment should be the first. The first level of assurance states to use a bearer assertion signed with approved cryptography by an IdP like OpenID Connect Basic Client profile. Therefor the solution will use an token service which login functionality is  accepting one distinct authentication factor and asserts the user with bearer tokens. 
 
 
-The languages chosen for the example application are C\# and Angular 2. The solution is created with a very useful ASP.NET framework called Identity Server4. Identity Server4 uses the specifics of OpenID Connect and OAuth 2.0 to enable authentication and authorization related features. Features include authentication as a Service, which provides a centralized login logic for all applications, Single sign-on, Access Control for APIs and Federation Gateway. The Identity Server 4 will be used as a Token Server in the practical part [cf. (\cite{Brock:2018:ID4})]
+
+\section{Implementation}
+
+The implementation is based on the architecture descibed in \ref{architecture}. The languages chosen for the example application are C\# and Angular 2. The solution is created with a very useful ASP.NET framework called Identity Server4. Identity Server4 uses the specifics of OpenID Connect and OAuth 2.0 to enable authentication and authorization related features. Features include authentication as a Service, which provides a centralized login logic for all applications, Single sign-on, Access Control for APIs and Federation Gateway. The Identity Server 4 will be used as a Token Server in the practical part [cf. (\cite{Brock:2018:ID4})]
 
 The project illustrating the use of Identity Server and the benefits of OpenID Connect an OAuth is a Visual Studio Project mostly written in C\# and Typescript. The project example for Identity Server includes four different projects:
 

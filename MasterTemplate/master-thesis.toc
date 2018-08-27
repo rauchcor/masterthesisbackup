@@ -56,9 +56,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Implementation of Identity Management}{50}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Practical Implementation}{50}{section.4.1}
+\contentsline {section}{\numberline {4.1}Architecture}{50}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Identity Server}{52}{section*.20}
+\contentsline {section}{\numberline {4.2}Implementation}{52}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Identity Server}{53}{section*.20}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{ProjectApiNetCore}{56}{section*.21}
 \defcounter {refsection}{0}\relax 
