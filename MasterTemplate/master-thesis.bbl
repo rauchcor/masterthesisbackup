@@ -33,10 +33,12 @@
       \strng{authorfullhash}{2a723769d08b0732d8563ffe6bdaee7d}
       \field{sortinit}{A}
       \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Which OAuth 2.0 flow should I use?}
+      \field{year}{2018}
       \verb{urlraw}
       \verb https://auth0.com/docs/api-auth/which-oauth-flow-to-use
       \endverb

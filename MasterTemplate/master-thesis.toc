@@ -64,7 +64,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{ProjectApiNetCore}{56}{section*.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Client}{58}{section*.22}
+\contentsline {paragraph}{Client}{57}{section*.22}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Conclusion and Outlook}{63}{chapter.5}
 \defcounter {refsection}{0}\relax 
