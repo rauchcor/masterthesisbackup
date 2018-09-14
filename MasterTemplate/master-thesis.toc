@@ -26,13 +26,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.5.2} Token-based authentication with JSON Web Token }{18}{subsection.2.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Single Sign-On Federation Systems}{24}{section.2.6}
+\contentsline {section}{\numberline {2.6}Single Sign-On Federation Systems}{25}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6.1}Single Sign-On}{26}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.1}Single Sign-On}{27}{subsection.2.6.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{SAML}{29}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{OAuth and OpenID Connect}{29}{section*.9}
+\contentsline {paragraph}{OAuth and OpenID Connect}{30}{section*.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Analysis of Identity Management}{35}{chapter.3}
 \defcounter {refsection}{0}\relax 

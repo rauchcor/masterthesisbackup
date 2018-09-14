@@ -10,13 +10,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.3}{\ignorespaces OAuth API}}{19}{figure.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces JWT Inheritance\relax }}{21}{figure.2.4}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces JWT Inheritance (\cite {Siriwardena:JWTJWSJWE:2016})\relax }}{22}{figure.2.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Federation}}{25}{figure.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces OAuth Authorization Process (\cite {LeBlanc:2011:SocialApplications}, p. 353)\relax }}{30}{figure.2.6}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces OAuth Authorization Process (LeBlanc, cited in Rauch(2016))\relax }}{31}{figure.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.7}{\ignorespaces OAuth 2.0 and OpenID Connect (\cite {Lodderstedt:2014:OpenID})\relax }}{31}{figure.2.7}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces OAuth 2.0 and OpenID Connect (Lodderstedt, cited in Rauch(2016))\relax }}{32}{figure.2.7}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
@@ -34,7 +34,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.3}{\ignorespaces IdentityServer Middleware\relax }}{53}{figure.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Self signed Certicate with Powershell\relax }}{54}{figure.4.4}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Self signed certificate with Powershell\relax }}{54}{figure.4.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.5}{\ignorespaces OpenID Discovery Document\relax }}{55}{figure.4.5}
 \defcounter {refsection}{0}\relax 

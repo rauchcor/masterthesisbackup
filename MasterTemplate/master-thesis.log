@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  28 AUG 2018 13:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.20)  14 SEP 2018 11:00
 entering extended mode
 **./master-thesis.tex
 (master-thesis.tex
@@ -1477,6 +1477,12 @@ mat '08-2018' of date field 'urldate' - ignoring.
 
 
 Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Rauch:2016:Security':
+(biblatex)                - Entry 'Rauch:2016:Security' (references.bib): Inval
+id format '04-2016' of date field 'date' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
 (biblatex)                with 'Rossvoll:2013:RUBIM':
 (biblatex)                - Range field 'pages' in entry 'Rossvoll:2013:RUBIM' 
 is malformed, falling back to literal.
@@ -1709,7 +1715,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
  (chapters/authenticationAndAuthorization.tex
 Chapter 2.
-<images/on-the-internet-peter-steine.jpg, id=265, 812.03375pt x 903.375pt>
+<images/on-the-internet-peter-steine.jpg, id=263, 812.03375pt x 903.375pt>
 File: images/on-the-internet-peter-steine.jpg Graphic file (type jpg)
 <use images/on-the-internet-peter-steine.jpg>
 Package pdftex.def Info: images/on-the-internet-peter-steine.jpg  used on input
@@ -1721,7 +1727,7 @@ Package pdftex.def Info: images/on-the-internet-peter-steine.jpg  used on input
 
 
  <./images/on-the-internet-peter-steine.jpg>] [5] [6] [7] [8]
-<images/identity_proofing_architectur.jpg, id=310, 336.50719pt x 254.82703pt>
+<images/identity_proofing_architectur.jpg, id=308, 336.50719pt x 254.82703pt>
 File: images/identity_proofing_architectur.jpg Graphic file (type jpg)
 <use images/identity_proofing_architectur.jpg>
 Package pdftex.def Info: images/identity_proofing_architectur.jpg  used on inpu
@@ -1745,13 +1751,13 @@ Overfull \hbox (31.09981pt too wide) in paragraph at lines 172--181
  []
 
 [15] [16] [17] [18]
-<images/googleOAuthPlaygroundOAuthAPI.jpg, id=414, 319.1925pt x 45.92157pt>
+<images/googleOAuthPlaygroundOAuthAPI.jpg, id=412, 319.1925pt x 45.92157pt>
 File: images/googleOAuthPlaygroundOAuthAPI.jpg Graphic file (type jpg)
 <use images/googleOAuthPlaygroundOAuthAPI.jpg>
 Package pdftex.def Info: images/googleOAuthPlaygroundOAuthAPI.jpg  used on inpu
-t line 233.
+t line 235.
 (pdftex.def)             Requested size: 330.05322pt x 47.48401pt.
-
+ [19 <./images/googleOAuthPlaygroundOAuthAPI.jpg>]
 ("C:\Users\rauchcor\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlan
 g1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -1760,48 +1766,60 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 c.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 241.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 245.
 
 ("C:\Users\rauchcor\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd
 "
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [19 <./images/googleOAuthPlaygroundOAuthAPI.jpg>] [20]
-<images/jwtjwsjwe2.jpg, id=465, 377.53546pt x 194.22563pt>
+) [20]
+<images/jwtjwsjwe2.jpg, id=458, 377.53546pt x 194.22563pt>
 File: images/jwtjwsjwe2.jpg Graphic file (type jpg)
 <use images/jwtjwsjwe2.jpg>
-Package pdftex.def Info: images/jwtjwsjwe2.jpg  used on input line 295.
+Package pdftex.def Info: images/jwtjwsjwe2.jpg  used on input line 300.
 (pdftex.def)             Requested size: 330.05322pt x 169.79881pt.
- [21 <./images/jwtjwsjwe2.jpg>] [22]
-Overfull \hbox (13.15533pt too wide) in paragraph at lines 375--377
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[21] [22 <./images/jwtjwsjwe2.jpg>] [23]
+Overfull \hbox (13.15533pt too wide) in paragraph at lines 382--384
 \T1/ptm/m/n/12 be JSON. The fol-low-ing ap-proach is used to con-struct the mes
 -sage: ASCII(BASE64URL-
  []
 
-[23]
-<images/federation.jpg, id=531, 389.95688pt x 372.64218pt>
+[24]
+<images/federation.jpg, id=539, 389.95688pt x 372.64218pt>
 File: images/federation.jpg Graphic file (type jpg)
 <use images/federation.jpg>
-Package pdftex.def Info: images/federation.jpg  used on input line 410.
+Package pdftex.def Info: images/federation.jpg  used on input line 415.
 (pdftex.def)             Requested size: 330.05322pt x 315.41112pt.
- [24] [25 <./images/federation.jpg>] [26] [27] [28] [29]
+ [25 <./images/federation.jpg>] [26] [27] [28] [29]
 <images/oaut-process2.jpg, id=585, 817.55438pt x 462.97969pt>
 File: images/oaut-process2.jpg Graphic file (type jpg)
 <use images/oaut-process2.jpg>
-Package pdftex.def Info: images/oaut-process2.jpg  used on input line 458.
+Package pdftex.def Info: images/oaut-process2.jpg  used on input line 467.
 (pdftex.def)             Requested size: 330.05322pt x 186.91232pt.
- [30 <./images/oaut-process2.jpg>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[30]
 <images/openid-process.jpg, id=603, 510.40688pt x 371.51297pt>
 File: images/openid-process.jpg Graphic file (type jpg)
 <use images/openid-process.jpg>
-Package pdftex.def Info: images/openid-process.jpg  used on input line 476.
+Package pdftex.def Info: images/openid-process.jpg  used on input line 485.
 (pdftex.def)             Requested size: 330.05322pt x 240.25043pt.
- [31 <./images/openid-process.jpg>] [32]
-Overfull \hbox (11.90863pt too wide) in paragraph at lines 516--517
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[31 <./images/oaut-process2.jpg>] [32 <./images/openid-process.jpg>] [33]
+Overfull \hbox (11.90863pt too wide) in paragraph at lines 525--526
 []\T1/ptm/m/n/12 code id_token: The re-sponse in-cludes an Au-tho-riza-tion Cod
 e and an id_token. 
  []
 
-[33] [34])
+[34])
 \openout2 = `chapters/analysis.aux'.
 
  (chapters/analysis.tex
@@ -1817,19 +1835,19 @@ Overfull \hbox (7.63972pt too wide) in paragraph at lines 76--89
  []
 
 [39] [40] [41] [42] [43] [44]
-<images/ial_flow_red.jpg, id=764, 357.58594pt x 395.60297pt>
+<images/ial_flow_red.jpg, id=763, 357.58594pt x 395.60297pt>
 File: images/ial_flow_red.jpg Graphic file (type jpg)
 <use images/ial_flow_red.jpg>
 Package pdftex.def Info: images/ial_flow_red.jpg  used on input line 236.
 (pdftex.def)             Requested size: 412.56497pt x 456.455pt.
  [45] [46 <./images/ial_flow_red.jpg>]
-<images/aal_flow_colored.jpg, id=778, 380.92313pt x 343.6589pt>
+<images/aal_flow_colored.jpg, id=777, 380.92313pt x 343.6589pt>
 File: images/aal_flow_colored.jpg Graphic file (type jpg)
 <use images/aal_flow_colored.jpg>
 Package pdftex.def Info: images/aal_flow_colored.jpg  used on input line 246.
 (pdftex.def)             Requested size: 412.56497pt x 372.2158pt.
  [47 <./images/aal_flow_colored.jpg>]
-<images/fal_flow_colored.jpg, id=787, 395.22656pt x 382.42876pt>
+<images/fal_flow_colored.jpg, id=786, 395.22656pt x 382.42876pt>
 File: images/fal_flow_colored.jpg Graphic file (type jpg)
 <use images/fal_flow_colored.jpg>
 Package pdftex.def Info: images/fal_flow_colored.jpg  used on input line 256.
@@ -1846,27 +1864,27 @@ Chapter 4.
 
 
 ]
-<images/architecture-identityserver.jpg, id=817, 515.67656pt x 309.40594pt>
+<images/architecture-identityserver.jpg, id=816, 515.67656pt x 309.40594pt>
 File: images/architecture-identityserver.jpg Graphic file (type jpg)
 <use images/architecture-identityserver.jpg>
 Package pdftex.def Info: images/architecture-identityserver.jpg  used on input 
 line 19.
 (pdftex.def)             Requested size: 371.30595pt x 222.79099pt.
  [51 <./images/architecture-identityserver.jpg>] [52]
-<images/middlewareIdentityServer.png, id=841, 161.47829pt x 145.29282pt>
+<images/middlewareIdentityServer.png, id=840, 161.47829pt x 145.29282pt>
 File: images/middlewareIdentityServer.png Graphic file (type png)
 <use images/middlewareIdentityServer.png>
 Package pdftex.def Info: images/middlewareIdentityServer.png  used on input lin
 e 55.
 (pdftex.def)             Requested size: 247.54149pt x 222.74066pt.
-<images/self-signed-certicate.jpg, id=845, 729.47531pt x 97.11281pt>
+<images/self-signed-certicate.jpg, id=844, 729.47531pt x 97.11281pt>
 File: images/self-signed-certicate.jpg Graphic file (type jpg)
 <use images/self-signed-certicate.jpg>
 Package pdftex.def Info: images/self-signed-certicate.jpg  used on input line 6
 8.
 (pdftex.def)             Requested size: 371.30595pt x 49.43054pt.
  [53 <./images/middlewareIdentityServer.png>]
-<images/openid-discovery-document.jpg, id=854, 272.89453pt x 190.46156pt>
+<images/openid-discovery-document.jpg, id=853, 272.89453pt x 190.46156pt>
 File: images/openid-discovery-document.jpg Graphic file (type jpg)
 <use images/openid-discovery-document.jpg>
 Package pdftex.def Info: images/openid-discovery-document.jpg  used on input li
@@ -1883,33 +1901,33 @@ Overfull \hbox (0.43538pt too wide) in paragraph at lines 101--102
  []
 
 [55 <./images/openid-discovery-document.jpg>]
-<images/jwkDiscovoryDocument.jpg, id=874, 226.59656pt x 100.50047pt>
+<images/jwkDiscovoryDocument.jpg, id=873, 226.59656pt x 100.50047pt>
 File: images/jwkDiscovoryDocument.jpg Graphic file (type jpg)
 <use images/jwkDiscovoryDocument.jpg>
 Package pdftex.def Info: images/jwkDiscovoryDocument.jpg  used on input line 10
 5.
 (pdftex.def)             Requested size: 288.79422pt x 128.08655pt.
  [56 <./images/jwkDiscovoryDocument.jpg>]
-<images/apis.jpg, id=886, 750.17766pt x 291.71484pt>
+<images/apis.jpg, id=885, 750.17766pt x 291.71484pt>
 File: images/apis.jpg Graphic file (type jpg)
 <use images/apis.jpg>
 Package pdftex.def Info: images/apis.jpg  used on input line 121.
 (pdftex.def)             Requested size: 288.79422pt x 112.29942pt.
  [57 <./images/apis.jpg>]
-<images/implicit_code_flow.jpg, id=898, 358.33875pt x 284.18672pt>
+<images/implicit_code_flow.jpg, id=897, 358.33875pt x 284.18672pt>
 File: images/implicit_code_flow.jpg Graphic file (type jpg)
 <use images/implicit_code_flow.jpg>
 Package pdftex.def Info: images/implicit_code_flow.jpg  used on input line 135.
 
 (pdftex.def)             Requested size: 330.05322pt x 261.7715pt.
  [58 <./images/implicit_code_flow.jpg>]
-<images/implicit_code_flow_angular.jpg, id=907, 309.78235pt x 155.83218pt>
+<images/implicit_code_flow_angular.jpg, id=906, 309.78235pt x 155.83218pt>
 File: images/implicit_code_flow_angular.jpg Graphic file (type jpg)
 <use images/implicit_code_flow_angular.jpg>
 Package pdftex.def Info: images/implicit_code_flow_angular.jpg  used on input l
 ine 152.
 (pdftex.def)             Requested size: 330.05322pt x 166.02782pt.
-<images/secure_page_requires_login.jpg, id=908, 1213.53375pt x 320.69812pt>
+<images/secure_page_requires_login.jpg, id=907, 1213.53375pt x 320.69812pt>
 File: images/secure_page_requires_login.jpg Graphic file (type jpg)
 <use images/secure_page_requires_login.jpg>
 Package pdftex.def Info: images/secure_page_requires_login.jpg  used on input l
@@ -1920,7 +1938,7 @@ ine 162.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [59 <./images/implicit_code_flow_angular.jpg>]
-<images/login_identity_server.jpg, id=914, 1001.24063pt x 839.38594pt>
+<images/login_identity_server.jpg, id=913, 1001.24063pt x 839.38594pt>
 File: images/login_identity_server.jpg Graphic file (type jpg)
 <use images/login_identity_server.jpg>
 Package pdftex.def Info: images/login_identity_server.jpg  used on input line 1
@@ -1928,12 +1946,12 @@ Package pdftex.def Info: images/login_identity_server.jpg  used on input line 1
 (pdftex.def)             Requested size: 288.79422pt x 242.10927pt.
  [60 <./images/secure_page_requires_login.jpg> <./images/login_identity_server.
 jpg>]
-<images/consent_screen.jpg, id=921, 472.01344pt x 379.04109pt>
+<images/consent_screen.jpg, id=920, 472.01344pt x 379.04109pt>
 File: images/consent_screen.jpg Graphic file (type jpg)
 <use images/consent_screen.jpg>
 Package pdftex.def Info: images/consent_screen.jpg  used on input line 187.
 (pdftex.def)             Requested size: 288.79422pt x 231.91454pt.
-<images/claims.jpg, id=923, 526.96875pt x 330.48468pt>
+<images/claims.jpg, id=922, 526.96875pt x 330.48468pt>
 File: images/claims.jpg Graphic file (type jpg)
 <use images/claims.jpg>
 Package pdftex.def Info: images/claims.jpg  used on input line 203.
@@ -2091,22 +2109,19 @@ Package logreq Info: Writing requests to 'master-thesis.run.xml'.
  )
 (\end occurred inside a group at level 2)
 
-### simple group (level 2) entered at line 404 ({)
-### simple group (level 1) entered at line 355 ({)
+### simple group (level 2) entered at line 411 ({)
+### simple group (level 1) entered at line 362 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 19182 strings out of 493305
- 318991 string characters out of 3128497
- 783818 words of memory out of 3000000
- 22016 multiletter control sequences out of 15000+200000
+ 19187 strings out of 493305
+ 319190 string characters out of 3128497
+ 783884 words of memory out of 3000000
+ 22020 multiletter control sequences out of 15000+200000
  60656 words of font info for 72 fonts, out of 3000000 for 9000
  1142 hyphenation exceptions out of 8191
- 61i,16n,70p,3058b,1943s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{cite.0@Pashalidis:2003:10.1007/3-54
-0-45067-X_22} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.4.1} has been referenced but does not exist,
- replaced by a fixed one
+ 61i,16n,70p,3058b,1578s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{figure.4.1} has been referenced but
+ does not exist, replaced by a fixed one
 
 {C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.en
 c}<C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/
@@ -2116,9 +2131,9 @@ ucrr8a.pfb><C:/Users/rauchcor/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw
 9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rauchcor/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rauchcor/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on master-thesis.pdf (82 pages, 2221879 bytes).
+Output written on master-thesis.pdf (82 pages, 2222430 bytes).
 PDF statistics:
  1192 PDF objects out of 1200 (max. 8388607)
- 346 named destinations out of 1000 (max. 500000)
+ 347 named destinations out of 1000 (max. 500000)
  284 words of extra memory for PDF output out of 10000 (max. 10000000)
 

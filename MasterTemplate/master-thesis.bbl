@@ -1445,7 +1445,7 @@
       \warn{\item Entry 'NIST:2018:RMF' (references.bib): Invalid format '06-2018' of date field 'date' - ignoring}
       \warn{\item Entry 'NIST:2018:RMF' (references.bib): Invalid format '08-2018' of date field 'urldate' - ignoring}
     \endentry
-    \entry{Pashalidis:2003:10.1007/3-540-45067-X_22}{inproceedings}{}
+    \entry{Pashalidis:2003:10.1007/3-540-45067-X_22}{book}{}
       \name{author}{2}{}{%
         {{uniquename=0,uniquepart=base,hash=065f91cc854aadf82a3831cd8ae72a73}{%
            family={Pashalidis},
@@ -1618,6 +1618,39 @@
       \field{month}{05}
       \field{title}{User centric authentication for web applications}
       \field{year}{2010}
+    \endentry
+    \entry{Rauch:2016:Security}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,uniquepart=base,hash=96d7b0b297bbf4fc74f7cefcd09596a8}{%
+           family={Rauch},
+           familyi={R\bibinitperiod},
+           given={Cornelia},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {FH Joanneum}%
+      }
+      \list{language}{1}{%
+        {German}%
+      }
+      \strng{namehash}{96d7b0b297bbf4fc74f7cefcd09596a8}
+      \strng{fullhash}{96d7b0b297bbf4fc74f7cefcd09596a8}
+      \strng{bibnamehash}{96d7b0b297bbf4fc74f7cefcd09596a8}
+      \strng{authorbibnamehash}{96d7b0b297bbf4fc74f7cefcd09596a8}
+      \strng{authornamehash}{96d7b0b297bbf4fc74f7cefcd09596a8}
+      \strng{authorfullhash}{96d7b0b297bbf4fc74f7cefcd09596a8}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{Authentifizierung und Autorisierung in mobilen Szenarien}
+      \field{title}{Security von RESTful Webservices}
+      \field{type}{Bacelorthesis}
+      \field{year}{2016}
+      \warn{\item Entry 'Rauch:2016:Security' (references.bib): Invalid format '04-2016' of date field 'date' - ignoring}
     \endentry
     \entry{Rossvoll:2013:RUBIM}{book}{}
       \name{author}{1}{}{%
